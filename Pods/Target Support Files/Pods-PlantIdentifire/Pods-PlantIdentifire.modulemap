@@ -1,0 +1,6 @@
+framework module Pods_PlantIdentifire {
+  umbrella header "Pods-PlantIdentifire-umbrella.h"
+
+  export *
+  module * { export * }
+}

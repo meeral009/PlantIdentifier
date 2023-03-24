@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnbordingCell" customModule="PlantIdentifire" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnbordingCell" id="gTV-IL-0wX" customClass="OnbordingCell" customModule="PlantIdentifire" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="569"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="569"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zay-TW-Zzq">
+                        <rect key="frame" x="59" y="5" width="348" height="290"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="348" id="ReP-bN-SL2"/>
+                            <constraint firstAttribute="height" constant="290" id="jSu-gM-itu">
+                                <variation key="heightClass=regular-widthClass=regular" constant="490"/>
+                            </constraint>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a Photo of Plant.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18A-YY-9Ri">
+                        <rect key="frame" x="90" y="340" width="286" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="UTf-5C-mDE">
+                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                            </constraint>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="50"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U83-4g-HZv">
+                        <rect key="frame" x="50" y="431" width="366" height="62.333333333333314"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="62.329999999999998" id="xZ3-pz-Wuc">
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            </constraint>
+                        </constraints>
+                        <string key="text">Just take a photo of the plant you
+want to ID, Make sure the
+photo is clear.</string>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="32"/>
+                        </variation>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="zay-TW-Zzq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="0UX-2X-j5C"/>
+                <constraint firstItem="zay-TW-Zzq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="30b-bb-29n"/>
+                <constraint firstItem="U83-4g-HZv" firstAttribute="centerX" secondItem="18A-YY-9Ri" secondAttribute="centerX" id="51Z-H0-gC4"/>
+                <constraint firstAttribute="trailing" secondItem="U83-4g-HZv" secondAttribute="trailing" constant="50" id="9Zw-WX-5ij"/>
+                <constraint firstItem="18A-YY-9Ri" firstAttribute="centerX" secondItem="zay-TW-Zzq" secondAttribute="centerX" id="9aE-tO-uek"/>
+                <constraint firstAttribute="trailing" secondItem="18A-YY-9Ri" secondAttribute="trailing" constant="90" id="I6m-m3-KP5"/>
+                <constraint firstItem="U83-4g-HZv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="50" id="hoc-36-bvt"/>
+                <constraint firstItem="U83-4g-HZv" firstAttribute="top" secondItem="18A-YY-9Ri" secondAttribute="bottom" constant="20" id="ko4-Dc-BZY"/>
+                <constraint firstItem="18A-YY-9Ri" firstAttribute="top" secondItem="zay-TW-Zzq" secondAttribute="bottom" constant="45" id="njr-iy-a0e">
+                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                </constraint>
+                <constraint firstItem="18A-YY-9Ri" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="90" id="wjA-EK-twe"/>
+            </constraints>
+            <size key="customSize" width="466" height="569"/>
+            <connections>
+                <outlet property="lblSubTitle" destination="U83-4g-HZv" id="OR8-mM-l4U"/>
+                <outlet property="lblTitle" destination="18A-YY-9Ri" id="5g3-du-dDl"/>
+                <outlet property="vwImage" destination="zay-TW-Zzq" id="dur-so-bqy"/>
+            </connections>
+            <point key="canvasLocation" x="456.48854961832058" y="202.46478873239437"/>
+        </collectionViewCell>
+    </objects>
+</document>
