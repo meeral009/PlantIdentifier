@@ -22,6 +22,9 @@
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--SettingsVC-->
@@ -534,10 +537,10 @@ Features:
                                             <outlet property="delegate" destination="UIt-gM-LM6" id="e8K-Dw-IvI"/>
                                         </connections>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-BL-WiD" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="424" width="320" height="70"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq6-BL-WiD">
+                                        <rect key="frame" x="0.0" y="344" width="320" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="3cR-uU-fbi"/>
+                                            <constraint firstAttribute="height" constant="150" id="3cR-uU-fbi"/>
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-2x-lAP">
@@ -622,7 +625,7 @@ click this Button</string>
                         <outlet property="btnEdit" destination="zla-dq-J2J" id="jzD-hc-Nbi"/>
                         <outlet property="lblMycollection" destination="hhv-9L-MV1" id="hft-62-Jph"/>
                         <outlet property="noDataView" destination="NQD-2x-lAP" id="6sJ-mG-dsY"/>
-                        <outlet property="vwBanner" destination="Mq6-BL-WiD" id="hit-oU-KFd"/>
+                        <outlet property="viewNativeAds" destination="Mq6-BL-WiD" id="I34-LG-JVu"/>
                         <outlet property="vwTable" destination="2P3-2Y-mIP" id="jLN-jv-cJf"/>
                     </connections>
                 </viewController>
@@ -1314,6 +1317,53 @@ kinds of plants living in nature. </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mN1-HW-PuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1099" y="-505"/>
+        </scene>
+        <!--LoadingVC-->
+        <scene sceneID="29w-br-j92">
+            <objects>
+                <viewController storyboardIdentifier="LoadingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rF1-Qp-ZD1" customClass="LoadingVC" customModule="PlantIdentifire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="twt-0b-g9K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-WB-gvv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Bya-Dr-aRQ">
+                                        <rect key="frame" x="141.5" y="246.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Ads..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STi-HT-PU3">
+                                        <rect key="frame" x="111.5" y="303.5" width="97" height="18"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Bya-Dr-aRQ" firstAttribute="centerX" secondItem="7CA-WB-gvv" secondAttribute="centerX" id="F3P-1D-XUI"/>
+                                    <constraint firstItem="STi-HT-PU3" firstAttribute="centerX" secondItem="7CA-WB-gvv" secondAttribute="centerX" id="Nsd-Yj-JET"/>
+                                    <constraint firstItem="STi-HT-PU3" firstAttribute="top" secondItem="Bya-Dr-aRQ" secondAttribute="bottom" constant="20" id="ciX-jB-D7w"/>
+                                    <constraint firstItem="Bya-Dr-aRQ" firstAttribute="centerY" secondItem="7CA-WB-gvv" secondAttribute="centerY" constant="-19" id="s8e-Lk-Dvk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MqM-Of-95k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7CA-WB-gvv" firstAttribute="leading" secondItem="twt-0b-g9K" secondAttribute="leading" id="0zu-Bi-QzO"/>
+                            <constraint firstItem="MqM-Of-95k" firstAttribute="trailing" secondItem="7CA-WB-gvv" secondAttribute="trailing" id="CBX-Wg-DZ3"/>
+                            <constraint firstAttribute="bottom" secondItem="7CA-WB-gvv" secondAttribute="bottom" id="i9c-rI-g4j"/>
+                            <constraint firstItem="7CA-WB-gvv" firstAttribute="top" secondItem="twt-0b-g9K" secondAttribute="top" id="tfG-V1-ArE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblLoading" destination="STi-HT-PU3" id="iPA-Fe-l61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4t-gd-LWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="212"/>
         </scene>
     </scenes>
     <designables>

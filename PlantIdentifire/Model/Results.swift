@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import SVProgressHUD
+
 
 class Results: Codable {
 
@@ -37,7 +37,8 @@ class Results: Codable {
     {
 
         if isShowLoader {
-            SVProgressHUD.show(withStatus: "Loading..")
+            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
+        
         }
         
         let obj = ["url":"https://bs.floristic.org/image/o/e9d801196734f91b9c860308f052fd91f6f25868",
@@ -49,7 +50,7 @@ class Results: Codable {
             data in
             
             if isShowLoader {
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             print("response: \(data)")
             
@@ -75,14 +76,14 @@ class Results: Codable {
         } failure : { (error) in
             if isShowLoader {
                 
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             
             failure(0, error, .server)
             
         } connectionFailed: { (connectionError) in
             if isShowLoader {
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             failure(0, connectionError, .connection)
         }

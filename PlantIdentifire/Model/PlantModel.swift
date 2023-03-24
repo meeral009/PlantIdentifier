@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import SVProgressHUD
+
 
 //MARK: - Error enum
 enum ErrorType: String {
@@ -60,14 +60,16 @@ class PlantModel: Codable {
  func uploadPlantImage( plantImage: UIImage?, isShowLoader : Bool, success withResponse: @escaping (_ id : String) -> Void, failure: @escaping FailureBlock) {
        
        if isShowLoader {
-           SVProgressHUD.show(withStatus: "Identifying Plant...")
+        
+           ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying Plant...")
+
        }
         
         ServiceManager.callsendImageAPI(url: URL(string: "https://bs.plantnet.org/v1/image")!, param: [:], image: plantImage, imageKey: "file") {
             response in
             
             if isShowLoader {
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             let dict = response as? [String:Any] ?? [:]
             let id = dict["id"] as? String ?? ""
@@ -75,14 +77,14 @@ class PlantModel: Codable {
             
         } failure : { (error) in
             if isShowLoader {
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             print("error")
            failure(0, error, .server)
             
         } connectionFailed: { (connectionError) in
             if isShowLoader {
-                SVProgressHUD.dismiss()
+                ERProgressHud.sharedInstance.hide()
             }
             print("error")
         failure(0, connectionError, .connection)

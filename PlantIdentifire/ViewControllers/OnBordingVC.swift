@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class OnBordingVC: UIViewController {
     
@@ -23,12 +24,15 @@ class OnBordingVC: UIViewController {
 //MARK: - Variables
     var slides : [OnboardingModel] = []
     var currentPage = 0
+    // Interstitial Ad
+    var interstitialAd: GADInterstitialAd?
 
 //MARK: - view lifecycle Methods
     
   override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.loadInterstitialAd()
         // Do any additional setup after loading the view.
     }
     
@@ -37,7 +41,14 @@ class OnBordingVC: UIViewController {
     
     @IBAction func btnSkipAction(_ sender: Any) {
         UserDefaults.isCheckOnBording = false
-        
+        // Load Interstitial Ad
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            if self.interstitialAd != nil {
+                self.interstitialAd?.present(fromRootViewController: self)
+            } else {
+                print("Ad wasn't ready")
+            }
+        }
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -50,7 +61,14 @@ class OnBordingVC: UIViewController {
         if currentPage == slides.count - 1 {
            // set true for avoid inbording scren.  
             UserDefaults.isCheckOnBording = true
-            
+            // Load Interstitial Ad
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                if self.interstitialAd != nil {
+                    self.interstitialAd?.present(fromRootViewController: self)
+                } else {
+                    print("Ad wasn't ready")
+                }
+            }
             let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
             let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -126,4 +144,22 @@ extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,U
        
     }
     
+}
+// MARK: - Load Interstitial ad
+extension OnBordingVC: GADFullScreenContentDelegate {
+    func loadInterstitialAd() {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: adMob.interstitialAdID.rawValue,
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let ad = ad {
+                self.interstitialAd = ad
+            }
+        })
+    }
 }

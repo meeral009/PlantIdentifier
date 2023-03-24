@@ -19,12 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize the Google Mobile Ads SDK.
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+       
+        GADMobileAds.sharedInstance().start { status in
+            AdsManager.shared.loadInterstitialAd()
+            AdsManager.shared.requestAppOpenAd()
+        }
         return true
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-       self.loadInterstitialAd()
+        AdsManager.shared.tryToPresentAppOpenAd()
     }
 
     // MARK: - Core Data stack
@@ -120,33 +124,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
-// MARK: - Load Interstitial ad
-extension AppDelegate: GADFullScreenContentDelegate {
-    func loadInterstitialAd() {
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: adMob.interstitialAdID.rawValue,
-                               request: request,
-                               completionHandler: { [self] ad, error in
-            if let error = error {
-                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                return
-            }
-            
-            if let ad = ad {
-                self.interstitialAd = ad
-                // Load Interstitial Ad
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    if self.interstitialAd != nil {
-                        self.interstitialAd?.present(fromRootViewController: (self.window?.rootViewController)!)
-                    } else {
-                        print("Ad wasn't ready")
-                    }
-                }
-            }
-        })
-    }
-}
-
-
 

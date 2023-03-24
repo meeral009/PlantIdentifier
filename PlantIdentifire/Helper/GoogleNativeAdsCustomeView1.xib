@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoogleNativeAdsCustomeView1" customModule="NotesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="367"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eme-TS-ViE" customClass="GADNativeAdView">
+                    <rect key="frame" x="0.0" y="0.0" width="457" height="367"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-QX-u2v">
+                            <rect key="frame" x="12" y="30" width="433" height="276"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gLA-9W-XuG">
+                                    <rect key="frame" x="0.0" y="0.0" width="433" height="55"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E1C-qw-l8Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="cm7-sl-24b">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="55"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" secondItem="E1C-qw-l8Q" secondAttribute="height" multiplier="1:1" id="hnl-Yh-MM6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="r4i-Ho-bpS">
+                                            <rect key="frame" x="63" y="0.0" width="370" height="55"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Headline" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UN-Tb-sTo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="1lZ-V1-769"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                                    <color key="textColor" name="AppBlack"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="14"/>
+                                                    </variation>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-NB-hFS">
+                                                    <rect key="frame" x="0.0" y="28" width="370" height="27"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Body that is really really long and can take up to two lines or sometimes even more." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JJ-eG-VqP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="27"/>
+                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="3JJ-eG-VqP" firstAttribute="leading" secondItem="gKc-NB-hFS" secondAttribute="leading" id="Cg1-Dp-wSR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3JJ-eG-VqP" secondAttribute="bottom" id="VdH-vS-hQ4"/>
+                                                        <constraint firstItem="3JJ-eG-VqP" firstAttribute="top" secondItem="gKc-NB-hFS" secondAttribute="top" id="foA-aJ-xkU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3JJ-eG-VqP" secondAttribute="trailing" id="gHZ-A8-sbJ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="jx7-8H-iAd" customClass="GADMediaView">
+                                    <rect key="frame" x="0.0" y="63" width="433" height="213"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enm-5s-ZaT" customClass="View" customModule="NotesApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Ad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kG-TX-Rds">
+                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="12"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="UpY-h8-7qX"/>
+                                <constraint firstAttribute="bottom" secondItem="0kG-TX-Rds" secondAttribute="bottom" id="YKl-Rh-92a"/>
+                                <constraint firstAttribute="trailing" secondItem="0kG-TX-Rds" secondAttribute="trailing" id="fcT-oQ-73o"/>
+                                <constraint firstAttribute="width" constant="25" id="rza-5h-qJU"/>
+                                <constraint firstItem="0kG-TX-Rds" firstAttribute="top" secondItem="enm-5s-ZaT" secondAttribute="top" id="w3R-a4-LSB"/>
+                                <constraint firstItem="0kG-TX-Rds" firstAttribute="leading" secondItem="enm-5s-ZaT" secondAttribute="leading" id="xmt-m4-A53"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hE-sc-Q1E" customClass="Button" customModule="NotesApp" customModuleProvider="target">
+                            <rect key="frame" x="10" y="314" width="437" height="45"/>
+                            <color key="backgroundColor" name="AppColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="1Vj-w9-R1D">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="45"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                            <state key="normal" title="Install">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="AppWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zPt-QX-u2v" secondAttribute="trailing" constant="12" id="CxY-Nk-KD7"/>
+                        <constraint firstAttribute="trailing" secondItem="6hE-sc-Q1E" secondAttribute="trailing" constant="10" id="Frl-5g-x86"/>
+                        <constraint firstItem="zPt-QX-u2v" firstAttribute="top" secondItem="eme-TS-ViE" secondAttribute="top" constant="30" id="NEX-4c-kqS"/>
+                        <constraint firstItem="enm-5s-ZaT" firstAttribute="top" secondItem="eme-TS-ViE" secondAttribute="top" id="PZ7-jv-dpy"/>
+                        <constraint firstAttribute="bottom" secondItem="6hE-sc-Q1E" secondAttribute="bottom" constant="8" id="UaS-1f-1vq"/>
+                        <constraint firstItem="enm-5s-ZaT" firstAttribute="leading" secondItem="eme-TS-ViE" secondAttribute="leading" id="a8k-gN-jd5"/>
+                        <constraint firstItem="6hE-sc-Q1E" firstAttribute="top" secondItem="zPt-QX-u2v" secondAttribute="bottom" constant="8" id="dJb-uY-dOP"/>
+                        <constraint firstItem="6hE-sc-Q1E" firstAttribute="leading" secondItem="eme-TS-ViE" secondAttribute="leading" constant="10" id="nZH-CW-C8G"/>
+                        <constraint firstItem="zPt-QX-u2v" firstAttribute="leading" secondItem="eme-TS-ViE" secondAttribute="leading" constant="12" id="rR2-Yq-sYf"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="bodyView" destination="3JJ-eG-VqP" id="HQR-7F-Lsz"/>
+                        <outlet property="callToActionView" destination="6hE-sc-Q1E" id="uoS-iW-DIG"/>
+                        <outlet property="headlineView" destination="0UN-Tb-sTo" id="yiV-9z-eFF"/>
+                        <outlet property="iconView" destination="E1C-qw-l8Q" id="PmU-PD-sRh"/>
+                        <outlet property="mediaView" destination="jx7-8H-iAd" id="h9z-zC-iWo"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eme-TS-ViE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XrA-3i-bca"/>
+                <constraint firstItem="eme-TS-ViE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dCL-nl-fd1"/>
+                <constraint firstAttribute="trailing" secondItem="eme-TS-ViE" secondAttribute="trailing" id="tmP-6B-Fcr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eme-TS-ViE" secondAttribute="bottom" id="vBs-MP-9QZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adUIView" destination="eme-TS-ViE" id="fdF-La-uiA"/>
+                <outlet property="imgIconWidthConstant" destination="cm7-sl-24b" id="bOW-Du-po7"/>
+            </connections>
+            <point key="canvasLocation" x="267.1875" y="108.27464788732395"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppColor">
+            <color red="0.094117647058823528" green="0.32941176470588235" blue="0.72941176470588232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

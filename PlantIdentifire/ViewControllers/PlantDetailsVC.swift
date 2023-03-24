@@ -5,36 +5,33 @@
 //  Created by admin on 25/11/22.
 //
 
-import UIKit
-import SDWebImage
 import CoreData
-import SVProgressHUD
 import GoogleMobileAds
-
+import SDWebImage
+import UIKit
 
 class PlantDetailsVC: UIViewController {
+    // MARK: - IBOutlates
     
-    //MARK: - IBOutlates
+    @IBOutlet var sliderCollectionView: UICollectionView!
     
-    @IBOutlet weak var sliderCollectionView: UICollectionView!
+    @IBOutlet var plantImageCollectionView: UICollectionView!
     
-    @IBOutlet weak var plantImageCollectionView: UICollectionView!
+    @IBOutlet var pageView: UIPageControl!
     
-    @IBOutlet weak var pageView: UIPageControl!
+    @IBOutlet var detailView: UIView!
     
-    @IBOutlet weak var detailView: UIView!
+    @IBOutlet var nativeAdPlaceholder: UIView!
+    @IBOutlet var horizonataltackView: UIStackView!
     
-    @IBOutlet weak var nativeAdPlaceholder: UIView!
-    @IBOutlet weak var horizonataltackView: UIStackView!
+    @IBOutlet var btnFav: UIButton!
+    @IBOutlet var lblPlantName: UILabel!
+    @IBOutlet var lblFamily: UILabel!
+    @IBOutlet var lblauthor: UILabel!
+    @IBOutlet var lblGenus: UILabel!
     
-    
-    @IBOutlet weak var btnFav: UIButton!
-    @IBOutlet weak var lblPlantName: UILabel!
-    @IBOutlet weak var lblFamily: UILabel!
-    @IBOutlet weak var lblauthor: UILabel!
-    @IBOutlet weak var lblGenus: UILabel!
-    
-    //MARK: - variables
+    // MARK: - variables
+
     var id = ""
     var message = ""
     var image = UIImage()
@@ -42,13 +39,12 @@ class PlantDetailsVC: UIViewController {
     var arrImages = [Images]()
     var plantListImages = [Images]()
     
-    var resultsModelFromList =  [Results]()
+    var resultsModelFromList = [Results]()
     var counter = 0
- 
- 
+    
     var isChecked = false
-    var updateId : String?
-    var imageString : String?
+    var updateId: String?
+    var imageString: String?
     var isFromHome = false
     
     /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
@@ -63,47 +59,42 @@ class PlantDetailsVC: UIViewController {
         super.viewDidLoad()
         self.setUpUi()
         
-        if !isFromHome {
-            self.gatePlantDetailAPI(id : self.id)
+        if !self.isFromHome {
+            self.gatePlantDetailAPI(id: self.id)
         }
         // Do any additional setup after loading the view.
     }
     
-  
     @IBAction func btnBackAction(_ sender: Any) {
-        
-        if isFromHome {
+        if self.isFromHome {
             self.navigationController?.popViewController(animated: true)
-        }else {
+        } else {
             self.dismiss(animated: true)
         }
-    
     }
     
     @IBAction func btnisFavAction(_ sender: UIButton) {
         self.showToast(message: "Plant Saved")
-//        isChecked = !isChecked
-//     if isChecked {
-//
-//            sender.setImage(UIImage(named:"heart"), for: .normal)
-//            self.updateData()
-//
-//        } else {
-//
-//            self.updateData()
-//            sender.setImage(UIImage(named:"blankheart"), for: .normal)
-//        }
+        //        isChecked = !isChecked
+        //     if isChecked {
+        //
+        //            sender.setImage(UIImage(named:"heart"), for: .normal)
+        //            self.updateData()
+        //
+        //        } else {
+        //
+        //            self.updateData()
+        //            sender.setImage(UIImage(named:"blankheart"), for: .normal)
+        //        }
     }
 }
 
-//MARK: - Userdefine function
+// MARK: - Userdefine function
+
 extension PlantDetailsVC {
-    
-    func setUpUi(){
-     
-        self.nativeAdPlaceholder.isHidden  = true
+    func setUpUi() {
+        self.nativeAdPlaceholder.isHidden = true
         self.pageView.currentPage = 0
-        
         
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
@@ -117,45 +108,34 @@ extension PlantDetailsVC {
         // load native ad
         if self.isConnectedToNetwork() {
             self.loadAd()
-        }else {
+        } else {
             self.nativeAdPlaceholder.isHidden = true
         }
         
-        
-        if isFromHome {
-           
-                self.setDataFromList(plantModel: self.resultsModelFromList)
-           
-           
+        if self.isFromHome {
+            self.setDataFromList(plantModel: self.resultsModelFromList)
         }
-       
-       
     }
     
     @objc func changeImage() {
-     
-     if counter < self.arrImages.count
- {
-         let index = IndexPath.init(item: counter, section: 0)
-         self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-         pageView.currentPage = counter
-         counter += 1
-         
-     } else {
-         
-         counter = 0
-         let index = IndexPath.init(item: counter, section: 0)
-         self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-         pageView.currentPage = counter
-         counter = 1
-         
-     }
-         
-     }
+        if self.counter < self.arrImages.count {
+            let index = IndexPath(item: counter, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+            self.pageView.currentPage = self.counter
+            self.counter += 1
+            
+        } else {
+            self.counter = 0
+            let index = IndexPath(item: counter, section: 0)
+            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+            self.pageView.currentPage = self.counter
+            self.counter = 1
+        }
+    }
     
     func loadXIB() {
         guard let nibObjects = Bundle.main.loadNibNamed("NativeAdView", owner: nil, options: nil),
-            let  adView = nibObjects.first as? GADNativeAdView
+              let adView = nibObjects.first as? GADNativeAdView
         else {
             return
         }
@@ -166,9 +146,9 @@ extension PlantDetailsVC {
     
     func setAdView(_ view: GADNativeAdView) {
         // Remove the previous ad view.
-        nativeAdView = view
-        nativeAdPlaceholder.addSubview(nativeAdView)
-        nativeAdView.translatesAutoresizingMaskIntoConstraints = false
+        self.nativeAdView = view
+        self.nativeAdPlaceholder.addSubview(self.nativeAdView)
+        self.nativeAdView.translatesAutoresizingMaskIntoConstraints = false
         
         // Layout constraints for positioning the native ad view to stretch the entire width and height
         // of the nativeAdPlaceholder.
@@ -187,11 +167,11 @@ extension PlantDetailsVC {
     
     func loadAd() {
         self.adLoader = GADAdLoader(
-            adUnitID:adMob.nativeAdID.rawValue, rootViewController: self,
+            adUnitID: adMob.nativeAdID.rawValue, rootViewController: self,
             adTypes: [.native], options: nil)
         self.adLoader.delegate = self
         self.adLoader.load(GADRequest())
-      //self.nativeAdPlaceholder.isHidden = false
+        // self.nativeAdPlaceholder.isHidden = false
     }
     
     // show current date
@@ -203,147 +183,124 @@ extension PlantDetailsVC {
         return DateInFormat
     }
     
-    //set the data for save to core.
-    func setPlantdata(plant : Plants , name : String , description : String , family : String , image : String , isfav : Bool , id : String){
-        
+    // set the data for save to core.
+    func setPlantdata(plant: Plants, name: String, description: String, family: String, image: String, isfav: Bool, id: String) {
         plant.id = UUID().uuidString
         self.updateId = plant.id
         plant.name = name
         plant.desc = description
         plant.image = image
         plant.family = family
-        plant.date = getCurrentShortDate()
+        plant.date = self.getCurrentShortDate()
         plant.isFav = isfav
         plant.plantId = id
-        
     }
     
-    //set update data for isfav logic
-    func setEditData(plant : Plants){
-        
+    // set update data for isfav logic
+    func setEditData(plant: Plants) {
         plant.id = self.updateId
-        plant.name =  self.lblPlantName.text
+        plant.name = self.lblPlantName.text
         plant.desc = description
         plant.image = self.imageString
-        plant.family =  self.lblFamily.text
-        plant.date = getCurrentShortDate()
+        plant.family = self.lblFamily.text
+        plant.date = self.getCurrentShortDate()
         plant.isFav = self.isChecked
-        plant.plantId = id
-        
+        plant.plantId = self.id
     }
     
-    
-    func setDataFromList ( plantModel : [Results]) {
-        
-        if message != "Not a plant." {
-        // Set data from first element of Images array from response
-        if let arrImages = plantModel.first?.images {
-            
-            self.arrImages.append(contentsOf: arrImages)
-            
-            DispatchQueue.main.async {
-                self.pageView.numberOfPages = self.arrImages.count
-            }
-            
-            self.lblPlantName.text =  plantModel.first?.species?.name
-            self.lblFamily.text = plantModel.first?.species?.family
-            self.lblauthor.text =  plantModel.first?.species?.author
-            self.lblGenus.text =  plantModel.first?.species?.genus
-        }
-        
-        // Set data from second element of Images array from response
-        if let plantImages = plantModel[1].images{
-            
-            self.plantListImages.append(contentsOf: plantImages)
-            
-        }
-        
-        }else {
-            
-            self.showAlert(with: "Choose another image that have plant.")
-           
-        }
-        
-    }
-    
-    // api calling for plat details
-    func gatePlantDetailAPI(id : String) {
-        
-        Results.getPlantDetailsAPI(isShowLoader: true , id: id ) { plantModel , message in
-            print(plantModel)
-            if message != "Not a plant." {
+    func setDataFromList(plantModel: [Results]) {
+        if self.message != "Not a plant." {
             // Set data from first element of Images array from response
             if let arrImages = plantModel.first?.images {
-                
                 self.arrImages.append(contentsOf: arrImages)
                 
                 DispatchQueue.main.async {
                     self.pageView.numberOfPages = self.arrImages.count
                 }
                 
-                self.lblPlantName.text =  plantModel.first?.species?.name
+                self.lblPlantName.text = plantModel.first?.species?.name
                 self.lblFamily.text = plantModel.first?.species?.family
-                self.lblauthor.text =  plantModel.first?.species?.author
-                self.lblGenus.text =  plantModel.first?.species?.genus
-                
-                
-                //Set Core data to insert recent serach details
-                
-                //convert image into base64 string
-                //Use image name from bundle to create NSData
-                let image : UIImage = self.image
-                //Now use image to create into NSData format
-                let imageData:NSData = image.pngData()! as NSData
-                
-                let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-                self.imageString = strBase64
-                
-                // check navigate from then not insert.
-                if !self.isFromHome {
-                    self.savedata(name: plantModel.first?.species?.name ?? "", desc: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", family: plantModel.first?.species?.family ?? "", image:  strBase64  , isfav: self.isChecked)
-                }
+                self.lblauthor.text = plantModel.first?.species?.author
+                self.lblGenus.text = plantModel.first?.species?.genus
             }
             
             // Set data from second element of Images array from response
-            if let plantImages = plantModel[1].images{
-                
+            if let plantImages = plantModel[1].images {
                 self.plantListImages.append(contentsOf: plantImages)
-                
             }
             
-            }else {
-                
-                self.showAlert(with: "Choose another image that have plant.")
-               
-            }
-            
-        } failure: { statuscode, error, customError in
-            self.showAlert(with: error)
+        } else {
+            self.showAlert(with: "Choose another image that have plant.")
         }
-
     }
     
+    // api calling for plat details
+    func gatePlantDetailAPI(id: String) {
+        Results.getPlantDetailsAPI(isShowLoader: true, id: id) { plantModel, message in
+            print(plantModel)
+            if message != "Not a plant." {
+                // Set data from first element of Images array from response
+                if let arrImages = plantModel.first?.images {
+                    self.arrImages.append(contentsOf: arrImages)
+                    
+                    DispatchQueue.main.async {
+                        self.pageView.numberOfPages = self.arrImages.count
+                    }
+                    
+                    self.lblPlantName.text = plantModel.first?.species?.name
+                    self.lblFamily.text = plantModel.first?.species?.family
+                    self.lblauthor.text = plantModel.first?.species?.author
+                    self.lblGenus.text = plantModel.first?.species?.genus
+                    
+                    // Set Core data to insert recent serach details
+                    
+                    // convert image into base64 string
+                    // Use image name from bundle to create NSData
+                    let image: UIImage = self.image
+                    // Now use image to create into NSData format
+                    let imageData: NSData = image.pngData()! as NSData
+                    
+                    let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+                    self.imageString = strBase64
+                    
+                    // check navigate from then not insert.
+                    if !self.isFromHome {
+                        self.savedata(name: plantModel.first?.species?.name ?? "", desc: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", family: plantModel.first?.species?.family ?? "", image: strBase64, isfav: self.isChecked)
+                    }
+                }
+                
+                // Set data from second element of Images array from response
+                if let plantImages = plantModel[1].images {
+                    self.plantListImages.append(contentsOf: plantImages)
+                }
+                
+            } else {
+                self.showAlert(with: "Choose another image that have plant.")
+            }
+            
+        } failure: { _, error, _ in
+            self.showAlert(with: error)
+        }
+    }
 }
 
-//MARK: - UICollectionview delegate method
-extension PlantDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
+// MARK: - UICollectionview delegate method
+
+extension PlantDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.sliderCollectionView {
-            
             return self.arrImages.count
-        }else {
+        } else {
             return self.plantListImages.count
         }
-      
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderImageCell", for: indexPath) as! SliderImageCell
         if collectionView == self.sliderCollectionView {
             cell.vwImage.sd_setImage(with: URL(string: self.arrImages[indexPath.row].s ?? ""))
-        }
-        else {
+        } else {
             cell.layer.cornerRadius = 15
             cell.vwImage.sd_setImage(with: URL(string: self.plantListImages[indexPath.row].s ?? ""))
         }
@@ -351,16 +308,14 @@ extension PlantDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         if collectionView == self.sliderCollectionView {
-            return CGSize(width: collectionView.frame.width , height: collectionView.frame.height)
-        }else {
+            return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        } else {
             if UIDevice.current.userInterfaceIdiom == .phone {
-                return CGSize(width : collectionView.frame.width / 4 - 3, height: 100)
-            }else {
-                return CGSize(width : collectionView.frame.width / 4 - 3, height: 200)
+                return CGSize(width: collectionView.frame.width / 4 - 3, height: 100)
+            } else {
+                return CGSize(width: collectionView.frame.width / 4 - 3, height: 200)
             }
-        
         }
     }
     
@@ -371,15 +326,12 @@ extension PlantDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
-    
 }
 
-//MARK: - Core data method
+// MARK: - Core data method
 
 extension PlantDetailsVC {
-    
-    func savedata(name : String , desc : String , family : String , image : String , isfav : Bool) {
-        
+    func savedata(name: String, desc: String, family: String, image: String, isfav: Bool) {
         var context: NSManagedObjectContext
         if #available(iOS 10.0, *) {
             context = appDelegate.persistentContainer.viewContext
@@ -391,17 +343,14 @@ extension PlantDetailsVC {
         // save
         print("Save")
         let Plants = NSEntityDescription.insertNewObject(forEntityName: "Plants", into: context) as! Plants
-        self.setPlantdata(plant: Plants, name: name, description: desc, family: family, image: image , isfav: isfav, id: id)
-            
+        self.setPlantdata(plant: Plants, name: name, description: desc, family: family, image: image, isfav: isfav, id: self.id)
+        
         try? context.save()
         self.dismiss(animated: true)
-      
     }
-    
     
     // update data for only isfavoutite key
     func updateData() {
-    
         var context: NSManagedObjectContext
         if #available(iOS 10.0, *) {
             context = appDelegate.persistentContainer.viewContext
@@ -411,10 +360,10 @@ extension PlantDetailsVC {
         }
         
         var plants: Plants!
-
+        
         let fetchUser: NSFetchRequest<Plants> = Plants.fetchRequest()
         if let id = self.updateId {
-           fetchUser.predicate = NSPredicate(format: "id = %@", id as String)
+            fetchUser.predicate = NSPredicate(format: "id = %@", id as String)
         }
         
         let results = try? context.fetch(fetchUser)
@@ -427,9 +376,7 @@ extension PlantDetailsVC {
         
         do {
             try context.save()
-        } catch {
-
-        }
+        } catch {}
     }
 }
 
@@ -439,17 +386,14 @@ extension PlantDetailsVC: GADAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
         print("\(adLoader) failed with error: \(error.localizedDescription)")
         
-       self.nativeAdPlaceholder.isHidden = true
+        self.nativeAdPlaceholder.isHidden = true
     }
 }
 
 // MARK: - GADNativeAdLoaderDelegate implementation
 
-extension PlantDetailsVC : GADNativeAdLoaderDelegate {
-    
+extension PlantDetailsVC: GADNativeAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        
-        
         // Set ourselves as the native ad delegate to be notified of native ad events.
         nativeAd.delegate = self
         // Deactivate the height constraint that was set when the previous video ad loaded.
@@ -468,7 +412,6 @@ extension PlantDetailsVC : GADNativeAdLoaderDelegate {
             // By acting as the delegate to the GADVideoController, this ViewController receives messages
             // about events in the video lifecycle.
             mediaContent.videoController.delegate = self
-            
         }
         
         // This app uses a fixed width for the GADMediaView and changes its height to match the aspect
@@ -495,7 +438,6 @@ extension PlantDetailsVC : GADNativeAdLoaderDelegate {
         
         (self.nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
         self.nativeAdView.iconView?.isHidden = nativeAd.icon == nil
-    
         
         (self.nativeAdView.storeView as? UILabel)?.text = nativeAd.store
         self.nativeAdView.storeView?.isHidden = nativeAd.store == nil
@@ -513,12 +455,12 @@ extension PlantDetailsVC : GADNativeAdLoaderDelegate {
         // required to make the ad clickable.
         // Note: this should always be done after populating the ad views.
         self.nativeAdView.nativeAd = nativeAd
-        
     }
 }
+
 // MARK: - GADNativeAdDelegate implementation
+
 extension PlantDetailsVC: GADNativeAdDelegate {
-    
     func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
         print("\(#function) called")
     }
@@ -545,8 +487,7 @@ extension PlantDetailsVC: GADNativeAdDelegate {
 }
 
 // MARK: - GADVideoControllerDelegate implementation
-extension PlantDetailsVC : GADVideoControllerDelegate {
+
+extension PlantDetailsVC: GADVideoControllerDelegate {
     func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {}
 }
-
-

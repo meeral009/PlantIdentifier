@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-import SVProgressHUD
+
 import GoogleMobileAds
 
 class HomeVC: UIViewController {
@@ -27,36 +27,47 @@ class HomeVC: UIViewController {
     /// The height constraint applied to the ad view, where necessary.
     var heightConstraint: NSLayoutConstraint?
     /// The native ad view that is being presented.
-    var nativeAdView: GADNativeAdView!
-    
+//    var nativeAdView: GADNativeAdView!
+    var googleNativeAds = GoogleNativeAds()
     @IBOutlet weak var btnEdit: UIButton!
     
     //MARK: - IBOutlates
     @IBOutlet weak var vwTable: UITableView!
     
-    @IBOutlet weak var vwBanner: GADBannerView!
     @IBOutlet weak var noDataView: UIView!
     @IBOutlet weak var lblMycollection: UILabel!
+    @IBOutlet var viewNativeAds: UIView! {
+        didSet {
+            viewNativeAds.isHidden = true
+        }
+    }
+    
     //MARK: - Variables
     var isChecked = false
     var isAdLoded = false
     var isfav = false
     var adBannerView = GADBannerView()
-    
+    var isShowNativeAds = false
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
-        
-        if self.isConnectedToNetwork(){
-            self.loadBannerAd()
-       }
-       
+   
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
-   
+        if let nativeAds = NATIVE_ADS {
+            self.viewNativeAds.isHidden = false
+            self.isShowNativeAds = true
+            self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
+        }
+        googleNativeAds.loadAds(self) { nativeAdsTemp in
+            NATIVE_ADS = nativeAdsTemp
+            if !self.isShowNativeAds{
+                self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
+            }
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -83,33 +94,6 @@ class HomeVC: UIViewController {
 //MARK: - Userdefined Function
 extension HomeVC {
     
-
-    func loadXIB() {
-        
-        guard let nibObjects = Bundle.main.loadNibNamed("BannerNativeAdView", owner: nil, options: nil),
-            let adView = nibObjects.first as? GADNativeAdView
-             
-        else {
-            return
-        }
-        
-        self.nativeAdView = adView
-        
-    }
-    
-    
-    
-    // load banner ad
-    func loadBannerAd() {
-        
-        self.vwBanner.adUnitID = adMob.bannerAdID.rawValue
-        self.vwBanner.rootViewController = self
-        self.vwBanner.load(GADRequest())
-        self.vwBanner.delegate = self
-    //    self.vwBanner.isHidden = false
-    //    self.vwBannerNSConstraintHeight.constant = 70
-    }
-
     func setUpUi(){
     
         self.vwTable.register(UINib(nibName: "PlantDetiailCell", bundle: nil), forCellReuseIdentifier: "PlantDetiailCell")
@@ -124,10 +108,7 @@ extension HomeVC {
     //  self.loadBannerAd()
       self.btnEdit.addTarget(self, action: #selector(onEditClick(_:)), for: .touchUpInside)
     
-      if self.isConnectedToNetwork() {
-           loadBannerAd()
-      }
-       
+     
        
     }
     
@@ -181,7 +162,7 @@ extension HomeVC : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
         vc?.hidesBottomBarWhenPushed = true
         vc?.isFromHome = true
@@ -302,25 +283,6 @@ extension HomeVC {
     
 }
 
-
-//MARK: - Banner Ad Delegates
-extension HomeVC :  GADBannerViewDelegate {
-    
-    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("bannerViewDidReceiveAd")
-        self.vwBanner.isHidden = false
-       // self.vwBannerNSConstraintHeight.constant = 100
-    }
-    
-    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-       print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-       self.vwBanner.isHidden = true
-       //self.vwBannerNSConstraintHeight.constant = 0
-    }
-
-
-    
-}
 
 
 

@@ -9,7 +9,7 @@ target 'PlantIdentifire' do
   pod 'STTabbar'
   pod 'YPImagePicker'
   pod 'Alamofire'
-  pod 'SVProgressHUD'
+ 
   pod 'SDWebImage', '~> 5.0'
   pod 'Google-Mobile-Ads-SDK'
 end

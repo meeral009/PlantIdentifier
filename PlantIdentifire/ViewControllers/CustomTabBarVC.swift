@@ -64,7 +64,6 @@ extension CustomTabBarVC {
        
         } failure: { statuscode, error, customError in
             print(error)
-            
             self.showAlert(with: error)
         }
     }
@@ -148,7 +147,9 @@ extension CustomTabBarVC {
 
         /* Multiple media implementation */
         picker.didFinishPicking { [weak picker] items, cancelled in
-
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                AdsManager.shared.presentInterstitialAd()
+            }
             if cancelled {
                 print("Picker was canceled")
                 picker?.dismiss(animated: true, completion: nil)
@@ -175,7 +176,9 @@ extension CustomTabBarVC {
                 }
             }
         }
-       present(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: {
+            
+        })
     }
     
     
