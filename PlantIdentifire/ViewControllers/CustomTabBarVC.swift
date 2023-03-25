@@ -44,6 +44,9 @@ extension CustomTabBarVC {
         if let myTabbar = tabBar as? STTabbar {
             
             myTabbar.centerButtonActionHandler = {
+                DispatchQueue.main.async {
+                    AdsManager.shared.presentInterstitialAd()
+                }
                 print("Center Button Tapped")
                 self.presentCameraScreen()
             }
@@ -147,9 +150,7 @@ extension CustomTabBarVC {
 
         /* Multiple media implementation */
         picker.didFinishPicking { [weak picker] items, cancelled in
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
-                AdsManager.shared.presentInterstitialAd()
-            }
+           
             if cancelled {
                 print("Picker was canceled")
                 picker?.dismiss(animated: true, completion: nil)
@@ -165,7 +166,9 @@ extension CustomTabBarVC {
                     
                     picker?.dismiss(animated: true, completion: {
                         [weak self] in
-                        
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            AdsManager.shared.presentInterstitialAd()
+                        }
                         print("here api call")
                         self?.uploadPlantImage(image: photo.image)
                         

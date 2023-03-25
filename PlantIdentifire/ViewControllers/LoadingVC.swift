@@ -34,21 +34,22 @@ class LoadingVC: UIViewController {
         
         delay(0.7) {
             if interstitialAd != nil {
-                AdsManager.shared.presentInterstitialAd()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    AdsManager.shared.presentInterstitialAd()
+                }
                 
                 if UserDefaults.isCheckOnBording {
                     // Load Interstitial Ad
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
                         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
                         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
                         appDelegate.window?.rootViewController = redViewController
                     }
-                       
-                    
-            
+                
                 } else {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
                         self.navigationController?.pushViewController(vc!, animated: true)
                     }

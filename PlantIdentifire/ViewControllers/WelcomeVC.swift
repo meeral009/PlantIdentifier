@@ -28,38 +28,6 @@ class WelcomeVC: UIViewController {
     
     @IBAction func btngetStartedAction(_ sender: Any) {
         
-        
-        
-//        if UserDefaults.isCheckOnBording {
-//            // Load Interstitial Ad
-//            if interstitialAd != nil {
-//               DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-//                   self.loadingVC()
-//               }
-//
-//            } else {
-//                let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-//                let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController = redViewController
-//            }
-//
-//        } else {
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
-//            self.navigationController?.pushViewController(vc!, animated: true)
-//        }
-    }
-}
-
-// MARK: - UserDEfined Function
-
-extension WelcomeVC {
-    func setUpUI() {
-        self.vwGetStarted.layer.cornerRadius = 15
-        
-        self.googleNativeAds.loadAds(self) { nativeAdsTemp in
-            NATIVE_ADS = nativeAdsTemp
-        }
         var i = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             i+=0.5
@@ -73,6 +41,19 @@ extension WelcomeVC {
                 }
             }
         }
+    }
+}
+
+// MARK: - UserDEfined Function
+
+extension WelcomeVC {
+    func setUpUI() {
+        self.vwGetStarted.layer.cornerRadius = 15
+        
+        self.googleNativeAds.loadAds(self) { nativeAdsTemp in
+            NATIVE_ADS = nativeAdsTemp
+        }
+
         
     }
     

@@ -488,7 +488,7 @@ Features:
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-Jd-6Mz">
-                                        <rect key="frame" x="48" y="60" width="224.5" height="28.5"/>
+                                        <rect key="frame" x="47.5" y="60" width="225" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -840,8 +840,26 @@ click this Button</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-uG-BjT">
+                                                        <rect key="frame" x="20" y="190" width="280" height="375.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                <real key="value" value="0.10000000000000001"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                <size key="value" width="0.0" height="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-wD-wRE">
-                                                        <rect key="frame" x="20" y="205" width="69" height="23.5"/>
+                                                        <rect key="frame" x="20" y="583.5" width="69" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.2666666667" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -850,7 +868,7 @@ click this Button</string>
                                                         </variation>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-Xb-KEr">
-                                                        <rect key="frame" x="20" y="248.5" width="280" height="100"/>
+                                                        <rect key="frame" x="20" y="627" width="280" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="PrY-Bx-Y2y">
@@ -869,24 +887,6 @@ click this Button</string>
                                                             <outlet property="delegate" destination="pk5-Lx-t19" id="uvy-hn-x4i"/>
                                                         </connections>
                                                     </collectionView>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-uG-BjT">
-                                                        <rect key="frame" x="20" y="368.5" width="280" height="368.5"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                <real key="value" value="0.10000000000000001"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                <real key="value" value="5"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="0.0" height="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz0-CH-S0W">
                                                         <rect key="frame" x="225" y="22.5" width="75" height="35"/>
                                                         <constraints>
@@ -909,22 +909,22 @@ click this Button</string>
                                                     <constraint firstItem="FAO-wD-wRE" firstAttribute="leading" secondItem="xsD-f6-Kg7" secondAttribute="leading" id="PEN-zw-SFw"/>
                                                     <constraint firstItem="xhw-bW-6sf" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" id="cAn-h9-ZM1"/>
                                                     <constraint firstAttribute="trailing" secondItem="xsD-f6-Kg7" secondAttribute="trailing" constant="20" id="cWU-aQ-HSl"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ZiG-uG-BjT" secondAttribute="bottom" constant="10" id="dGz-C7-GhH"/>
                                                     <constraint firstItem="ZiG-uG-BjT" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" id="hCr-BI-tpE"/>
                                                     <constraint firstItem="xsD-f6-Kg7" firstAttribute="top" secondItem="xhw-bW-6sf" secondAttribute="bottom" constant="50" id="hiz-XF-ass">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                                                     </constraint>
-                                                    <constraint firstItem="ZiG-uG-BjT" firstAttribute="top" secondItem="LtI-Xb-KEr" secondAttribute="bottom" constant="20" id="iew-dW-jfu"/>
                                                     <constraint firstItem="LtI-Xb-KEr" firstAttribute="top" secondItem="FAO-wD-wRE" secondAttribute="bottom" constant="20" id="k7D-cG-jVn"/>
                                                     <constraint firstItem="xhw-bW-6sf" firstAttribute="top" secondItem="Rza-5s-kdG" secondAttribute="top" constant="30" id="loe-fW-Wgf"/>
-                                                    <constraint firstItem="FAO-wD-wRE" firstAttribute="top" secondItem="xsD-f6-Kg7" secondAttribute="bottom" constant="25" id="ma5-yT-9aL"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZiG-uG-BjT" secondAttribute="trailing" constant="20" id="oZN-Gi-aYm"/>
+                                                    <constraint firstItem="ZiG-uG-BjT" firstAttribute="top" secondItem="xsD-f6-Kg7" secondAttribute="bottom" constant="10" id="pAp-Or-4tW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LtI-Xb-KEr" secondAttribute="bottom" constant="20" id="sBc-JG-4HS"/>
                                                     <constraint firstAttribute="trailing" secondItem="Cz0-CH-S0W" secondAttribute="trailing" constant="20" id="sLP-RV-34E"/>
                                                     <constraint firstItem="LtI-Xb-KEr" firstAttribute="leading" secondItem="FAO-wD-wRE" secondAttribute="leading" id="t50-8M-szv"/>
+                                                    <constraint firstItem="FAO-wD-wRE" firstAttribute="top" secondItem="ZiG-uG-BjT" secondAttribute="bottom" constant="18" id="wbG-Ps-iF8"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14P-vB-xXe">
-                                                <rect key="frame" x="17" y="104" width="22" height="22"/>
+                                                <rect key="frame" x="17" y="397" width="22" height="22"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="Drh-Od-eDR">

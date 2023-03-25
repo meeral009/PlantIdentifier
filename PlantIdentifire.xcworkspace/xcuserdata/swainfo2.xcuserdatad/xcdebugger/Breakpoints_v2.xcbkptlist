@@ -71,48 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C42637E2-05A6-4E86-942F-4F6B006B232B"
+            uuid = "E5B84D02-8F4C-4E25-B141-BC98DDC48709"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PlantIdentifire/ViewControllers/WelcomeVC.swift"
+            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "btngetStartedAction(_:)"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "presentCameraScreen()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5AF5929E-BBE7-47D7-9D28-DB1604B0701A"
+            uuid = "30D61FF0-56C6-4D3E-8BA7-E7E17595F0E9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PlantIdentifire/ViewControllers/WelcomeVC.swift"
+            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "btngetStartedAction(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8902CCDC-0DDB-4D69-BCA1-A922D424E0B9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlantIdentifire/ViewControllers/WelcomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "btngetStartedAction(_:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "setUPUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
