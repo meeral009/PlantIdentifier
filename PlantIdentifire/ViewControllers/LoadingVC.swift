@@ -31,7 +31,7 @@ class LoadingVC: UIViewController {
     
     func initView(){
         lblLoading.text = "Loading Ads..."
-        
+        UserDefaults.standard.set(false, forKey: "isPresentCamera")
         delay(0.7) {
             if interstitialAd != nil {
                 

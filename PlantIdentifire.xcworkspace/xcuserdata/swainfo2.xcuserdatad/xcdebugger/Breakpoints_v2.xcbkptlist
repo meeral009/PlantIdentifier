@@ -14,8 +14,8 @@
             filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
             landmarkName = "setDataFromList(plantModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "setDataFromList(plantModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "setDataFromList(plantModel:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "setUpUi()"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,32 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E5B84D02-8F4C-4E25-B141-BC98DDC48709"
+            uuid = "F4B12D39-CA4A-42EB-A17A-3D9F9CB5FF5F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+            filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "presentCameraScreen()"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "gatePlantDetailAPI(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30D61FF0-56C6-4D3E-8BA7-E7E17595F0E9"
+            uuid = "0C7AB4EC-ECC8-4036-9E70-6C516D815BFA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+            filePath = "PlantIdentifire/ViewControllers/PlantDetailsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "setUPUI()"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "gatePlantDetailAPI(id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -33,7 +33,7 @@ class AdsManager: NSObject {
     
     var appOpenAd :GADAppOpenAd?
     var loadTime = Date()
-    
+   
     //MARK:- TOP VIEW CONTROLLER
     
     var topMostViewController: UIViewController? {
@@ -223,7 +223,11 @@ extension AdsManager: GADFullScreenContentDelegate {
     }
     
     func adWillDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        self.delegate?.DidDismissFullScreenContent()
+        if let isDelegateCalled = UserDefaults.standard.value(forKey: "isPresentCamera") as? Bool {
+            if isDelegateCalled {
+                self.delegate?.DidDismissFullScreenContent()
+            }
+        }
     }
     
     

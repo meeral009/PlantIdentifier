@@ -75,17 +75,6 @@ class PlantDetailsVC: UIViewController {
     
     @IBAction func btnisFavAction(_ sender: UIButton) {
         self.showToast(message: "Plant Saved")
-        //        isChecked = !isChecked
-        //     if isChecked {
-        //
-        //            sender.setImage(UIImage(named:"heart"), for: .normal)
-        //            self.updateData()
-        //
-        //        } else {
-        //
-        //            self.updateData()
-        //            sender.setImage(UIImage(named:"blankheart"), for: .normal)
-        //        }
     }
 }
 
@@ -118,18 +107,30 @@ extension PlantDetailsVC {
     }
     
     @objc func changeImage() {
-        if self.counter < self.arrImages.count {
-            let index = IndexPath(item: counter, section: 0)
-            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-            self.pageView.currentPage = self.counter
-            self.counter += 1
-            
+        if self.arrImages.count != 0 {
+            self.pageView.isHidden = false
+            if self.counter < self.arrImages.count {
+                let index = IndexPath(item: counter, section: 0)
+                self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+                self.pageView.currentPage = self.counter
+                self.counter += 1
+                
+            } else {
+                self.counter = 0
+                let index = IndexPath(item: counter, section: 0)
+                self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+                self.pageView.currentPage = self.counter
+                self.counter = 1
+            }
         } else {
-            self.counter = 0
-            let index = IndexPath(item: counter, section: 0)
-            self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-            self.pageView.currentPage = self.counter
-            self.counter = 1
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.sliderCollectionView.frame.width, height: self.sliderCollectionView.frame.height))
+            label.backgroundColor = UIColor(red: 81/255, green: 173/255, blue: 153/255, alpha: 1)
+            label.textAlignment = .center
+            label.textColor = .white
+            label.text = "No Images Found"
+            label.font = UIFont(name: "Montserrat-Medium", size: 22)
+            sliderCollectionView.backgroundView = label
+            self.pageView.isHidden = true
         }
     }
     
@@ -276,10 +277,14 @@ extension PlantDetailsVC {
                 
             } else {
                 self.showAlert(with: "Choose another image that have plant.")
+                self.showToast(message: "Choose another image that have plant.")
+                self.dismiss(animated: true)
             }
             
         } failure: { _, error, _ in
-            self.showAlert(with: error)
+            self.showToast(message: error )
+            self.dismiss(animated: true)
+           // self.showAlert(with: error)
         }
     }
 }
