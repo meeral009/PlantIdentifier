@@ -674,10 +674,10 @@ click this Button</string>
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kea-Dc-M9q" colorLabel="IBBuiltInLabel-Blue">
-                                        <rect key="frame" x="0.0" y="-60" width="320" height="918"/>
+                                        <rect key="frame" x="0.0" y="-60" width="320" height="1000"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="I9g-fl-O9f">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="255"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="278"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H7m-Rg-XaE">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -692,7 +692,7 @@ click this Button</string>
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CuF-NW-YWH">
-                                                <rect key="frame" x="102" y="205" width="116.5" height="15"/>
+                                                <rect key="frame" x="102" y="228" width="116.5" height="15"/>
                                                 <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="2UU-vV-gMU"/>
@@ -705,7 +705,7 @@ click this Button</string>
                                                 </userDefinedRuntimeAttributes>
                                             </pageControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rza-5s-kdG">
-                                                <rect key="frame" x="0.0" y="230" width="320" height="688"/>
+                                                <rect key="frame" x="0.0" y="253" width="320" height="747"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-bW-6sf">
                                                         <rect key="frame" x="20" y="30" width="77" height="20"/>
@@ -873,11 +873,8 @@ click this Button</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-uG-BjT">
-                                                        <rect key="frame" x="20" y="190" width="280" height="320"/>
+                                                        <rect key="frame" x="20" y="190" width="280" height="379"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="320" id="afE-IG-ZPv"/>
-                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                 <real key="value" value="0.29999999999999999"/>
@@ -894,7 +891,7 @@ click this Button</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-wD-wRE">
-                                                        <rect key="frame" x="20" y="528" width="69" height="20"/>
+                                                        <rect key="frame" x="20" y="587" width="69" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="LhR-cz-Zb6"/>
                                                         </constraints>
@@ -906,7 +903,7 @@ click this Button</string>
                                                         </variation>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-Xb-KEr">
-                                                        <rect key="frame" x="20" y="568" width="280" height="100"/>
+                                                        <rect key="frame" x="20" y="627" width="280" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="PrY-Bx-Y2y">
@@ -962,7 +959,7 @@ click this Button</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14P-vB-xXe">
-                                                <rect key="frame" x="17" y="104" width="22" height="22"/>
+                                                <rect key="frame" x="17" y="286" width="22" height="22"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="Drh-Od-eDR">

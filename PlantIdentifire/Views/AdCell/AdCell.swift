@@ -9,7 +9,7 @@ import UIKit
 import GoogleMobileAds
 class AdCell: UITableViewCell {
 
-    @IBOutlet var adView: GADBannerView!
+    @IBOutlet var adView: UIView!
     
     
     override func awakeFromNib() {

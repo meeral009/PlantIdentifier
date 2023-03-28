@@ -43,13 +43,11 @@ class GoogleNativeAdsCustomeView3: UIView {
         (adView?.iconView as? UIImageView)?.image = nativeAd.icon?.image
         (adView?.callToActionView as? UIButton)?.isUserInteractionEnabled = false
         (adView?.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
-        (adView?.callToActionView as? UIButton)?.layer.cornerRadius = 4
+        (adView?.callToActionView as? UIButton)?.layer.cornerRadius = 17
         
         let data = (adView?.iconView as? UIImageView)?.image?.pngData()
         if data == nil {
             nativeAdsWidth.constant = 0
         }
-        
-        
     }
 }

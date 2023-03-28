@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-Y4-rn1">
                         <rect key="frame" x="8" y="8" width="348" height="87"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-KP-VBs" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-KP-VBs">
                                 <rect key="frame" x="0.0" y="0.0" width="348" height="87"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>

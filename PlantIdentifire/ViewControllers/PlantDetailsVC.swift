@@ -46,15 +46,9 @@ class PlantDetailsVC: UIViewController {
     var updateId: String?
     var imageString: String?
     var isFromHome = false
-    
-    /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
-    /// process.
-    var adLoader: GADAdLoader!
-    /// The height constraint applied to the ad view, where necessary.
-    var heightConstraint: NSLayoutConstraint?
-    /// The native ad view that is being presented.
-    var nativeAdView: GADNativeAdView!
-    
+
+    var isShowNativeAds = false
+    var googleNativeAds = GoogleNativeAds()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
@@ -82,11 +76,25 @@ class PlantDetailsVC: UIViewController {
 extension PlantDetailsVC {
     func setUpUi() {
         
+        
+        if let nativeAds = NATIVE_ADS {
+            self.nativeAdPlaceholder.isHidden = false
+            self.isShowNativeAds = true
+            self.googleNativeAds.showAdsView1(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
+        }
+        
+        googleNativeAds.loadAds(self) { nativeAdsTemp in
+            NATIVE_ADS = nativeAdsTemp
+            if !self.isShowNativeAds {
+                self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
+            }
+        }
+        
         if !self.isFromHome {
             ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
             self.gatePlantDetailAPI(id: self.id)
         }
-        self.nativeAdPlaceholder.isHidden = true
+       
         self.pageView.currentPage = 0
         
         DispatchQueue.main.async {
@@ -96,14 +104,7 @@ extension PlantDetailsVC {
         self.sliderCollectionView.register(UINib(nibName: "SliderImageCell", bundle: nil), forCellWithReuseIdentifier: "SliderImageCell")
         self.plantImageCollectionView.register(UINib(nibName: "SliderImageCell", bundle: nil), forCellWithReuseIdentifier: "SliderImageCell")
         
-        self.loadXIB()
-        
-        // load native ad
-        if self.isConnectedToNetwork() {
-            self.loadAd()
-        } else {
-            self.nativeAdPlaceholder.isHidden = true
-        }
+    
         
         if self.isFromHome {
             self.setDataFromList(plantModel: self.resultsModelFromList)
@@ -138,47 +139,7 @@ extension PlantDetailsVC {
             self.pageView.isHidden = true
         }
     }
-    
-    func loadXIB() {
-        guard let nibObjects = Bundle.main.loadNibNamed("NativeAdView", owner: nil, options: nil),
-              let adView = nibObjects.first as? GADNativeAdView
-        else {
-            return
-        }
-        
-        // set up AdView
-        self.setAdView(adView)
-    }
-    
-    func setAdView(_ view: GADNativeAdView) {
-        // Remove the previous ad view.
-        self.nativeAdView = view
-        self.nativeAdPlaceholder.addSubview(self.nativeAdView)
-        self.nativeAdView.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Layout constraints for positioning the native ad view to stretch the entire width and height
-        // of the nativeAdPlaceholder.
-        let viewDictionary = ["_nativeAdView": nativeAdView!]
-        self.view.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "H:|[_nativeAdView]|",
-                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        )
-        self.view.addConstraints(
-            NSLayoutConstraint.constraints(
-                withVisualFormat: "V:|[_nativeAdView]|",
-                options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: viewDictionary)
-        )
-    }
-    
-    func loadAd() {
-        self.adLoader = GADAdLoader(
-            adUnitID: adMob.nativeAdID.rawValue, rootViewController: self,
-            adTypes: [.native], options: nil)
-        self.adLoader.delegate = self
-        self.adLoader.load(GADRequest())
-        // self.nativeAdPlaceholder.isHidden = false
-    }
+
     
     // show current date
     func getCurrentShortDate() -> String {
@@ -409,114 +370,5 @@ extension PlantDetailsVC {
     }
 }
 
-// MARK: - GADAdLoaderDelegate implementation
 
-extension PlantDetailsVC: GADAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        print("\(adLoader) failed with error: \(error.localizedDescription)")
-        
-        self.nativeAdPlaceholder.isHidden = true
-    }
-}
 
-// MARK: - GADNativeAdLoaderDelegate implementation
-
-extension PlantDetailsVC: GADNativeAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        // Set ourselves as the native ad delegate to be notified of native ad events.
-        nativeAd.delegate = self
-        // Deactivate the height constraint that was set when the previous video ad loaded.
-        self.heightConstraint?.isActive = false
-        self.nativeAdPlaceholder.isHidden = false
-        // Populate the native ad view with the native ad assets.
-        // The headline and mediaContent are guaranteed to be present in every native ad.
-        (self.nativeAdView.headlineView as? UILabel)?.text = nativeAd.headline
-        self.nativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
-        
-        // Some native ads will include a video asset, while others do not. Apps can use the
-        // GADVideoController's hasVideoContent property to determine if one is present, and adjust their
-        // UI accordingly.
-        let mediaContent = nativeAd.mediaContent
-        if mediaContent.hasVideoContent {
-            // By acting as the delegate to the GADVideoController, this ViewController receives messages
-            // about events in the video lifecycle.
-            mediaContent.videoController.delegate = self
-        }
-        
-        // This app uses a fixed width for the GADMediaView and changes its height to match the aspect
-        // ratio of the media it displays.
-        if let mediaView = nativeAdView.mediaView, nativeAd.mediaContent.aspectRatio > 0 {
-            self.heightConstraint = NSLayoutConstraint(
-                item: mediaView,
-                attribute: .height,
-                relatedBy: .equal,
-                toItem: mediaView,
-                attribute: .width,
-                multiplier: CGFloat(1 / nativeAd.mediaContent.aspectRatio),
-                constant: 0)
-            self.heightConstraint?.isActive = true
-        }
-        
-        // These assets are not guaranteed to be present. Check that they are before
-        // showing or hiding them.
-        (self.nativeAdView.bodyView as? UILabel)?.text = nativeAd.body
-        self.nativeAdView.bodyView?.isHidden = nativeAd.body == nil
-        
-        (self.nativeAdView.callToActionView as? UIButton)?.setTitle(nativeAd.callToAction, for: .normal)
-        self.nativeAdView.callToActionView?.isHidden = nativeAd.callToAction == nil
-        
-        (self.nativeAdView.iconView as? UIImageView)?.image = nativeAd.icon?.image
-        self.nativeAdView.iconView?.isHidden = nativeAd.icon == nil
-        
-        (self.nativeAdView.storeView as? UILabel)?.text = nativeAd.store
-        self.nativeAdView.storeView?.isHidden = nativeAd.store == nil
-        
-        (self.nativeAdView.priceView as? UILabel)?.text = nativeAd.price
-        self.nativeAdView.priceView?.isHidden = nativeAd.price == nil
-        
-        (self.nativeAdView.advertiserView as? UILabel)?.text = nativeAd.advertiser
-        self.nativeAdView.advertiserView?.isHidden = nativeAd.advertiser == nil
-        
-        // In order for the SDK to process touch events properly, user interaction should be disabled.
-        self.nativeAdView.callToActionView?.isUserInteractionEnabled = false
-        
-        // Associate the native ad view with the native ad object. This is
-        // required to make the ad clickable.
-        // Note: this should always be done after populating the ad views.
-        self.nativeAdView.nativeAd = nativeAd
-    }
-}
-
-// MARK: - GADNativeAdDelegate implementation
-
-extension PlantDetailsVC: GADNativeAdDelegate {
-    func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillPresentScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillDismissScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdDidDismissScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillLeaveApplication(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-}
-
-// MARK: - GADVideoControllerDelegate implementation
-
-extension PlantDetailsVC: GADVideoControllerDelegate {
-    func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {}
-}

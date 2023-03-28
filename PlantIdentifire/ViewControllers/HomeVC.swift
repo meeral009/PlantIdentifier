@@ -6,12 +6,12 @@
 //
 
 import CoreData
-import UIKit
 import GoogleMobileAds
+import UIKit
 
 class HomeVC: UIViewController {
     // MARK: - Varibles
-
+    
     var arrPlantModel = [Plants]()
     // getDate vise objects in single array
     var arrAfterFiltered: [Plants] = []
@@ -32,29 +32,31 @@ class HomeVC: UIViewController {
     @IBOutlet var btnEdit: UIButton!
     
     // MARK: - IBOutlates
-
+    
     @IBOutlet var vwTable: UITableView!
     
     @IBOutlet var noDataView: UIView!
     @IBOutlet var lblMycollection: UILabel!
     @IBOutlet var viewNativeAds: UIView! {
         didSet {
-            viewNativeAds.isHidden = true
+            self.viewNativeAds.isHidden = true
         }
     }
     
     // MARK: - Variables
-
+    
     var isChecked = false
     var isAdLoded = false
     var isfav = false
     var adBannerView = GADBannerView()
     var isShowNativeAds = false
+    var nativeAds: GADNativeAd?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
@@ -63,7 +65,7 @@ class HomeVC: UIViewController {
             self.isShowNativeAds = true
             self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
         }
-        googleNativeAds.loadAds(self) { nativeAdsTemp in
+        self.googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
             if !self.isShowNativeAds {
                 self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
@@ -74,13 +76,13 @@ class HomeVC: UIViewController {
     }
     
     @objc func onEditClick(_ sender: UIButton) {
-        print(isChecked)
-        isChecked = !isChecked
+        print(self.isChecked)
+        self.isChecked = !self.isChecked
         
-        if isChecked {
+        if self.isChecked {
             self.vwTable.setEditing(true, animated: true)
             self.btnEdit.setTitle("Done", for: .normal)
-           
+            
         } else {
             self.vwTable.setEditing(false, animated: true)
             self.btnEdit.setTitle("Edit", for: .normal)
@@ -103,12 +105,12 @@ extension HomeVC {
         
         self.vwTable.separatorColor = UIColor.clear
         
-//        if self.tableViewItems.count != 0 {
-//            self.fetchData()
-//        }
+        //        if self.tableViewItems.count != 0 {
+        //            self.fetchData()
+        //        }
         
         //  self.loadBannerAd()
-        self.btnEdit.addTarget(self, action: #selector(onEditClick(_:)), for: .touchUpInside)
+        self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
     }
     
     // Decode image from base64 String
@@ -130,22 +132,24 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AdCell", for: indexPath) as? AdCell
-            googleBannerAds.loadAds(vc: self, view: cell?.adView ?? GADBannerView())
+            
+            self.googleNativeAds.loadAds(self) { nativeAdsTemp in
+                
+                self.googleNativeAds.showAdsView3(nativeAd: nativeAdsTemp, view: cell?.adView ?? UIView())
+            }
+            
             return cell ?? UITableViewCell()
         } else {
-
             let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
             cell.lblDate.text = self.tableViewItems[indexPath.row].date
             cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
             cell.familyLabel.text = self.tableViewItems[indexPath.row].family
-                
+            
             // cell.btnIsFav.isEnabled = false
-                
+            
             cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
             return cell
         }
-        
-       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -157,7 +161,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
         vc?.hidesBottomBarWhenPushed = true
@@ -177,7 +180,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             self.showAlert(with: error)
         }
     }
-  
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // below code will delete one row - you can mange another kind of deletion here like delete from database also
         if editingStyle == .delete {
@@ -185,13 +188,12 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-    
+
 // MARK: - CoreData Methods
 
 extension HomeVC {
     // Fetch data
     func fetchData() {
-        
         self.tableViewItems.removeAll()
         
         let context: NSManagedObjectContext
@@ -211,36 +213,34 @@ extension HomeVC {
                 self.tableViewItems.append(data)
             }
         }
-       
+        
         if self.tableViewItems.count == 0 {
             self.noDataView.isHidden = false
         } else {
             self.noDataView.isHidden = true
         }
-        if tableViewItems.count > 0 {
+        if self.tableViewItems.count > 0 {
             self.tableViewItems.insert(Plants(), at: 1)
         }
-       
-        self.vwTable.reloadData()
         
-      
+        self.vwTable.reloadData()
     }
     
     func deleteData(id: String, index: Int) {
         let context: NSManagedObjectContext
         if #available(iOS 10.0, *) {
             context = appDelegate.persistentContainer.viewContext
-
+            
         } else {
             // Fallback on earlier versions
             context = appDelegate.managedObjectContext
         }
-    
+        
         let fetchRequest: NSFetchRequest<Plants> = Plants.fetchRequest()
         if let id = id as? String {
             fetchRequest.predicate = NSPredicate(format: "id = %@", id as String)
         }
-
+        
         let objects = try! context.fetch(fetchRequest)
         for obj in objects {
             context.delete(obj)
@@ -252,11 +252,11 @@ extension HomeVC {
         } else {
             self.noDataView.isHidden = true
         }
-
+        
         do {
             try context.save() // <- remember to put this :)
         } catch {}
-       
+        
         self.vwTable.reloadData()
     }
 }
