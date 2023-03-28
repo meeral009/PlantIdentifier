@@ -217,8 +217,10 @@ extension HomeVC {
         } else {
             self.noDataView.isHidden = true
         }
-        
-        self.tableViewItems.insert(Plants(), at: 1)
+        if tableViewItems.count > 0 {
+            self.tableViewItems.insert(Plants(), at: 1)
+        }
+       
         self.vwTable.reloadData()
         
       

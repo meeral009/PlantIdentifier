@@ -37,7 +37,7 @@ class GoogleNativeAdsCustomeView3: UIView {
         adView?.mediaView?.mediaContent = nativeAd.mediaContent
         adView?.mediaView?.contentMode = .scaleAspectFill
         (adView?.headlineView as? UILabel)?.text = nativeAd.headline
-        (adView?.bodyView as? UILabel)?.text = "\t\(nativeAd.body ?? "")"
+        (adView?.bodyView as? UILabel)?.text = "\(nativeAd.body ?? "")"
         (adView?.iconView as? UIImageView)?.clipsToBounds = true
         (adView?.iconView as? UIImageView)?.layer.cornerRadius = 5
         (adView?.iconView as? UIImageView)?.image = nativeAd.icon?.image

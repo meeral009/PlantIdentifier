@@ -10,14 +10,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="RobotoSlab-Medium.ttf">
-            <string>RobotoSlab-Medium</string>
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
         </array>
         <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
-        </array>
-        <array key="Rubik-Medium.ttf">
-            <string>Rubik-Medium</string>
         </array>
     </customFonts>
     <objects>
@@ -30,122 +33,139 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-UJ-Yq2" customClass="GADNativeAdView">
                     <rect key="frame" x="0.0" y="0.0" width="509" height="154"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-V0-XDP">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Ad " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-cb-5d0">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="13"/>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="5bn-Y8-bE2"/>
+                                <constraint firstItem="CF3-cb-5d0" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="VJw-CH-pfp"/>
+                                <constraint firstAttribute="bottom" secondItem="CF3-cb-5d0" secondAttribute="bottom" id="aij-8S-kLZ"/>
+                                <constraint firstAttribute="height" constant="20" id="odn-tz-xcj"/>
+                                <constraint firstItem="CF3-cb-5d0" firstAttribute="leading" secondItem="vrz-V0-XDP" secondAttribute="leading" id="oul-M9-hmm"/>
+                                <constraint firstAttribute="trailing" secondItem="CF3-cb-5d0" secondAttribute="trailing" id="zeq-X6-6PN"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-LE-hDQ">
-                            <rect key="frame" x="12" y="8" width="485" height="80"/>
+                            <rect key="frame" x="16" y="21" width="481" height="57"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTQ-ji-SZ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="LTQ-ji-SZ8" secondAttribute="height" multiplier="1:1" id="PTy-3J-0A5"/>
                                     </constraints>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qRB-Xn-cwn">
-                                    <rect key="frame" x="88" y="0.0" width="397" height="80"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qRB-Xn-cwn">
+                                    <rect key="frame" x="65" y="0.0" width="416" height="57"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Tt-NCe">
-                                            <rect key="frame" x="0.0" y="0.0" width="397" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="416" height="57"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Headline" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqT-mo-NGj">
-                                                    <rect key="frame" x="10" y="8" width="379" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="60V-RF-TOA"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="17"/>
+                                                    <rect key="frame" x="10" y="0.0" width="398" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                     <color key="textColor" name="AppBlack"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                     </variation>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-V0-XDP" customClass="View" customModule="PlantIdentifire" customModuleProvider="target">
-                                                    <rect key="frame" x="10" y="33" width="23.5" height="20"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Ad " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-cb-5d0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="23.5" height="20"/>
-                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="heightClass=regular-widthClass=compact">
-                                                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="13"/>
-                                                            </variation>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="Snj-9W-2Hn"/>
-                                                        <constraint firstAttribute="bottom" secondItem="CF3-cb-5d0" secondAttribute="bottom" id="Ypo-2S-Bfz"/>
-                                                        <constraint firstItem="CF3-cb-5d0" firstAttribute="leading" secondItem="vrz-V0-XDP" secondAttribute="leading" id="sWQ-yW-Oo1"/>
-                                                        <constraint firstItem="CF3-cb-5d0" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="v9n-Gh-meF"/>
-                                                        <constraint firstAttribute="trailing" secondItem="CF3-cb-5d0" secondAttribute="trailing" id="zV2-po-TWN"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" systemColor="systemGray4Color"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="       Body that is really really long and can take up to two lines or sometimes even more." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-57-y0g">
-                                                    <rect key="frame" x="10" y="33" width="379" height="33"/>
-                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Body that is really really long and can take up to two lines or sometimes even more." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-57-y0g">
+                                                    <rect key="frame" x="10" y="22.5" width="398" height="31.5"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="kqT-mo-NGj" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="2S0-KB-dXH"/>
-                                                <constraint firstItem="HWd-57-y0g" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="EWz-Kq-6J5"/>
+                                                <constraint firstAttribute="bottom" secondItem="HWd-57-y0g" secondAttribute="bottom" constant="3" id="4Gp-Gh-rzB"/>
                                                 <constraint firstAttribute="trailing" secondItem="kqT-mo-NGj" secondAttribute="trailing" constant="8" id="FXp-MQ-1fN"/>
                                                 <constraint firstAttribute="trailing" secondItem="HWd-57-y0g" secondAttribute="trailing" constant="8" id="Lgg-bM-TP4"/>
-                                                <constraint firstItem="vrz-V0-XDP" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="buy-23-Nbr"/>
+                                                <constraint firstItem="HWd-57-y0g" firstAttribute="top" secondItem="kqT-mo-NGj" secondAttribute="bottom" constant="5" id="WHV-yd-z0G"/>
                                                 <constraint firstItem="HWd-57-y0g" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="dzh-iN-bAQ"/>
-                                                <constraint firstItem="vrz-V0-XDP" firstAttribute="top" secondItem="kqT-mo-NGj" secondAttribute="bottom" constant="5" id="ibC-xK-nQY"/>
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MC1-Tt-NCe" firstAttribute="top" secondItem="qRB-Xn-cwn" secondAttribute="top" id="Ci7-s0-jd2"/>
+                                    </constraints>
                                 </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="kqT-mo-NGj" firstAttribute="top" secondItem="LTQ-ji-SZ8" secondAttribute="top" constant="8" id="umY-gs-zWa"/>
+                                <constraint firstItem="kqT-mo-NGj" firstAttribute="top" secondItem="LTQ-ji-SZ8" secondAttribute="top" id="umY-gs-zWa"/>
                             </constraints>
                         </stackView>
-                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDk-hQ-iAP" customClass="Button" customModule="PlantIdentifire" customModuleProvider="target">
-                            <rect key="frame" x="16" y="96" width="477" height="50"/>
-                            <color key="backgroundColor" name="App_Color"/>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDk-hQ-iAP">
+                            <rect key="frame" x="16" y="86" width="477" height="60"/>
+                            <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="74a-Qk-FRT">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                    <variation key="heightClass=regular-widthClass=compact" constant="60"/>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Install">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <integer key="value" value="12"/>
+                                    <real key="value" value="12"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sP-X2-F87">
+                            <rect key="frame" x="485" y="0.0" width="24" height="20"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IrQ-6G-wvB">
+                                    <rect key="frame" x="0.0" y="0.5" width="24" height="19"/>
+                                    <color key="tintColor" systemColor="systemBlueColor"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="IrQ-6G-wvB" secondAttribute="trailing" id="1pc-II-TEY"/>
+                                <constraint firstAttribute="width" constant="24" id="3ke-sp-dhV"/>
+                                <constraint firstAttribute="bottom" secondItem="IrQ-6G-wvB" secondAttribute="bottom" id="6dn-Me-SXv"/>
+                                <constraint firstItem="IrQ-6G-wvB" firstAttribute="leading" secondItem="1sP-X2-F87" secondAttribute="leading" id="8NS-5Z-GbV"/>
+                                <constraint firstItem="IrQ-6G-wvB" firstAttribute="top" secondItem="1sP-X2-F87" secondAttribute="top" id="d9h-LA-U6y"/>
+                                <constraint firstAttribute="height" constant="20" id="lHs-5a-5IN"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="vrz-V0-XDP" firstAttribute="top" secondItem="1UO-UJ-Yq2" secondAttribute="top" id="07u-hN-Pp3"/>
                         <constraint firstAttribute="trailing" secondItem="lDk-hQ-iAP" secondAttribute="trailing" constant="16" id="4Fj-ld-fLg"/>
+                        <constraint firstAttribute="trailing" secondItem="1sP-X2-F87" secondAttribute="trailing" id="AFh-uv-oZk"/>
                         <constraint firstAttribute="trailing" secondItem="GAK-LE-hDQ" secondAttribute="trailing" constant="12" id="IIF-O6-Ide"/>
                         <constraint firstAttribute="bottom" secondItem="lDk-hQ-iAP" secondAttribute="bottom" constant="8" id="QYk-VE-JW1"/>
-                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" constant="12" id="mru-Uo-0Oq"/>
-                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="top" secondItem="1UO-UJ-Yq2" secondAttribute="top" constant="8" id="pbf-rk-hvv"/>
+                        <constraint firstItem="1sP-X2-F87" firstAttribute="top" secondItem="1UO-UJ-Yq2" secondAttribute="top" id="ebe-4S-5dJ"/>
+                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" constant="16" id="mru-Uo-0Oq"/>
+                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="top" secondItem="1UO-UJ-Yq2" secondAttribute="top" constant="21" id="pbf-rk-hvv"/>
+                        <constraint firstItem="vrz-V0-XDP" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" id="q4P-76-3Hk"/>
                         <constraint firstItem="lDk-hQ-iAP" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" constant="16" id="sY7-w0-3Os"/>
                         <constraint firstItem="lDk-hQ-iAP" firstAttribute="top" secondItem="GAK-LE-hDQ" secondAttribute="bottom" constant="8" id="sbk-9D-5Rw"/>
                     </constraints>
@@ -184,19 +204,17 @@
         </view>
     </objects>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AppBlack">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="App_Color">
-            <color red="0.25099998712539673" green="0.47299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray6Color">
+        <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>

@@ -44,7 +44,7 @@ class GoogleNativeAdsCustomeView4: UIView {
         (adView.iconView as? UIImageView)?.image = nativeAd.icon?.image
         (adView.headlineView as! UILabel).text = nativeAd.headline
         adView.mediaView?.mediaContent = nativeAd.mediaContent
-        (adView.bodyView as! UILabel).text = "\t" + (nativeAd.body ?? "")
+        (adView.bodyView as! UILabel).text = (nativeAd.body ?? "")
         
         // The SDK automatically turns off user interaction for assets that are part of the ad, but
         // it is still good to be explicit.

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoogleNativeAdsCustomeView3" customModule="NotesApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GoogleNativeAdsCustomeView3" customModule="PlantIdentifire" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="386" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -75,18 +75,13 @@
                             </state>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="8"/>
+                                    <real key="value" value="15"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqx-iZ-O51">
-                            <rect key="frame" x="76" y="38" width="22" height="14.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="16" height="14.5"/>
                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="or6-H7-Y7i">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="22"/>
-                                </constraint>
-                            </constraints>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -104,12 +99,12 @@
                     <color key="backgroundColor" name="AppWhite"/>
                     <constraints>
                         <constraint firstItem="8bx-Qb-nQB" firstAttribute="leading" secondItem="iGw-Tk-7pD" secondAttribute="leading" constant="12" id="Hzc-Q9-Fyz"/>
-                        <constraint firstItem="Rqx-iZ-O51" firstAttribute="leading" secondItem="8bx-Qb-nQB" secondAttribute="trailing" constant="14" id="KRb-0P-Mqh"/>
-                        <constraint firstItem="Rqx-iZ-O51" firstAttribute="top" secondItem="0IM-mx-Qxs" secondAttribute="bottom" id="MJS-MA-drt"/>
                         <constraint firstAttribute="trailing" secondItem="hht-E1-DLU" secondAttribute="trailing" constant="8" id="X5N-cC-89b"/>
                         <constraint firstItem="hht-E1-DLU" firstAttribute="leading" secondItem="0IM-mx-Qxs" secondAttribute="trailing" constant="5" id="ZZG-y6-lIK"/>
                         <constraint firstItem="8bx-Qb-nQB" firstAttribute="top" secondItem="iGw-Tk-7pD" secondAttribute="top" constant="10" id="bUQ-ol-Hwx"/>
                         <constraint firstItem="hht-E1-DLU" firstAttribute="centerY" secondItem="iGw-Tk-7pD" secondAttribute="centerY" id="caw-3a-X0P"/>
+                        <constraint firstItem="Rqx-iZ-O51" firstAttribute="leading" secondItem="MNr-PO-dvK" secondAttribute="leading" id="ebD-LQ-vUy"/>
+                        <constraint firstItem="Rqx-iZ-O51" firstAttribute="top" secondItem="iGw-Tk-7pD" secondAttribute="top" id="ep1-F8-TLg"/>
                         <constraint firstItem="IuW-yj-rqp" firstAttribute="top" secondItem="0IM-mx-Qxs" secondAttribute="bottom" id="fak-ro-VuY"/>
                         <constraint firstItem="IuW-yj-rqp" firstAttribute="leading" secondItem="8bx-Qb-nQB" secondAttribute="trailing" constant="14" id="kyn-Hz-HsG"/>
                         <constraint firstItem="0IM-mx-Qxs" firstAttribute="leading" secondItem="8bx-Qb-nQB" secondAttribute="trailing" constant="14" id="mHB-YW-k7T"/>

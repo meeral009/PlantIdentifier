@@ -727,13 +727,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera to capture plant image and identifying plant from image.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo gallery to upload plant image to identify plant.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,13 +763,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) would like to use your camera to capture plant image and identifying plant from image.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "$(PRODUCT_NAME) would like access to your photo gallery to upload plant image to identify plant.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

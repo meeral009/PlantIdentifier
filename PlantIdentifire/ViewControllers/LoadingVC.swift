@@ -6,21 +6,19 @@
 //
 
 import Foundation
-import UIKit
 import GoogleMobileAds
+import UIKit
 
 func delay(_ delay: Double, closure: @escaping () -> ()) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay, execute: closure)
 }
 
 class LoadingVC: UIViewController {
+    // MARK: Outlates
     
-    //MARK: Outlates
+    @IBOutlet var lblLoading: UILabel!
     
-    @IBOutlet weak var lblLoading: UILabel!
-    
-
-    //MARK: Life Cycles
+    // MARK: Life Cycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +27,16 @@ class LoadingVC: UIViewController {
     
     // MARK: - Methods
     
-    func initView(){
+    func initView() {
         lblLoading.text = "Loading Ads..."
         UserDefaults.standard.set(false, forKey: "isPresentCamera")
         delay(0.7) {
             if interstitialAd != nil {
-                
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    AdsManager.shared.presentInterstitialAd()
-                }
-                
+                AdsManager.shared.presentInterstitialAd()
+
                 if UserDefaults.isCheckOnBording {
                     // Load Interstitial Ad
-                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
                         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
                         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -49,34 +44,11 @@ class LoadingVC: UIViewController {
                     }
                 
                 } else {
-                    DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
                         self.navigationController?.pushViewController(vc!, animated: true)
                     }
-                   
                 }
-                
-//                if !isShowLanguage(){
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                        self.languageVC()
-//                    }
-//
-//                } else if !isShowFristTime() {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                        self.navigateToHome()
-//                       // self.introSliderVC()
-//                    }
-//
-//                }else if !isShowParmission(){
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                        self.navigateToHome()
-//                      //  self.permissionVC()
-//                    }
-//                } else {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                        self.navigateToHome()
-//                    }
-//                }
             }
         }
     }
