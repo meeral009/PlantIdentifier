@@ -60,7 +60,7 @@ extension WelcomeVC {
     
     func setUpNavigation() {
         if interstitialAd != nil{
-           DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+           DispatchQueue.main.asyncAfter(deadline: .now()) {
                UserDefaults.standard.set(false, forKey: "isPresentCamera")
                self.loadingVC()
            }

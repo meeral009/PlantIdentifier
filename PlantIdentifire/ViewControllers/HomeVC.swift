@@ -7,7 +7,6 @@
 
 import CoreData
 import UIKit
-
 import GoogleMobileAds
 
 class HomeVC: UIViewController {
@@ -28,6 +27,8 @@ class HomeVC: UIViewController {
     var heightConstraint: NSLayoutConstraint?
     /// The native ad view that is being presented.
     var googleNativeAds = GoogleNativeAds()
+    let googleBannerAds = GoogleBannerAds()
+    
     @IBOutlet var btnEdit: UIButton!
     
     // MARK: - IBOutlates
@@ -98,13 +99,13 @@ class HomeVC: UIViewController {
 extension HomeVC {
     func setUpUi() {
         self.vwTable.register(UINib(nibName: "PlantDetiailCell", bundle: nil), forCellReuseIdentifier: "PlantDetiailCell")
-        self.vwTable.register(UINib(nibName: "BannerAdCell", bundle: nil), forCellReuseIdentifier: "BannerAdCell")
+        self.vwTable.register(UINib(nibName: "AdCell", bundle: nil), forCellReuseIdentifier: "AdCell")
         
         self.vwTable.separatorColor = UIColor.clear
         
-        if self.tableViewItems.count != 0 {
-            self.fetchData()
-        }
+//        if self.tableViewItems.count != 0 {
+//            self.fetchData()
+//        }
         
         //  self.loadBannerAd()
         self.btnEdit.addTarget(self, action: #selector(onEditClick(_:)), for: .touchUpInside)
@@ -127,16 +128,24 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
-        cell.lblDate.text = self.tableViewItems[indexPath.row].date
-        cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
-        cell.familyLabel.text = self.tableViewItems[indexPath.row].family
-            
-        // cell.btnIsFav.isEnabled = false
-            
-        cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-            
-        return cell
+        if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AdCell", for: indexPath) as? AdCell
+            googleBannerAds.loadAds(vc: self, view: cell?.adView ?? GADBannerView())
+            return cell ?? UITableViewCell()
+        } else {
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
+            cell.lblDate.text = self.tableViewItems[indexPath.row].date
+            cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
+            cell.familyLabel.text = self.tableViewItems[indexPath.row].family
+                
+            // cell.btnIsFav.isEnabled = false
+                
+            cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+            return cell
+        }
+        
+       
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -182,7 +191,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
 extension HomeVC {
     // Fetch data
     func fetchData() {
+        
         self.tableViewItems.removeAll()
+        
         let context: NSManagedObjectContext
         let fetchRequest: NSFetchRequest<Plants> = Plants.fetchRequest()
         // Get the context object
@@ -206,7 +217,11 @@ extension HomeVC {
         } else {
             self.noDataView.isHidden = true
         }
+        
+        self.tableViewItems.insert(Plants(), at: 1)
         self.vwTable.reloadData()
+        
+      
     }
     
     func deleteData(id: String, index: Int) {

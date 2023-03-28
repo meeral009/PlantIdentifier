@@ -58,13 +58,12 @@ class PlantDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
-        
-        if !self.isFromHome {
-            self.gatePlantDetailAPI(id: self.id)
-        }
-        // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       
+    }
     @IBAction func btnBackAction(_ sender: Any) {
         if self.isFromHome {
             self.navigationController?.popViewController(animated: true)
@@ -82,6 +81,11 @@ class PlantDetailsVC: UIViewController {
 
 extension PlantDetailsVC {
     func setUpUi() {
+        
+        if !self.isFromHome {
+            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+            self.gatePlantDetailAPI(id: self.id)
+        }
         self.nativeAdPlaceholder.isHidden = true
         self.pageView.currentPage = 0
         
@@ -104,6 +108,7 @@ extension PlantDetailsVC {
         if self.isFromHome {
             self.setDataFromList(plantModel: self.resultsModelFromList)
         }
+    
     }
     
     @objc func changeImage() {
@@ -237,13 +242,17 @@ extension PlantDetailsVC {
     
     // api calling for plat details
     func gatePlantDetailAPI(id: String) {
-        Results.getPlantDetailsAPI(isShowLoader: true, id: id) { plantModel, message in
+      
+        Results.getPlantDetailsAPI(isShowLoader: false, id: id) { plantModel, message in
             print(plantModel)
             if message != "Not a plant." {
                 // Set data from first element of Images array from response
+                ERProgressHud.sharedInstance.hide()
+                
                 if let arrImages = plantModel.first?.images {
                     self.arrImages.append(contentsOf: arrImages)
                     
+                  
                     DispatchQueue.main.async {
                         self.pageView.numberOfPages = self.arrImages.count
                     }
@@ -259,7 +268,7 @@ extension PlantDetailsVC {
                     // Use image name from bundle to create NSData
                     let image: UIImage = self.image
                     // Now use image to create into NSData format
-                    let imageData: NSData = image.pngData()! as NSData
+                     let imageData: NSData = image.pngData()! as NSData
                     
                     let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
                     self.imageString = strBase64
@@ -273,18 +282,33 @@ extension PlantDetailsVC {
                 // Set data from second element of Images array from response
                 if let plantImages = plantModel[1].images {
                     self.plantListImages.append(contentsOf: plantImages)
+                 
+                }
+                
+                if self.plantListImages.count == 0 {
+                    let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.plantImageCollectionView.frame.width, height: self.plantImageCollectionView.frame.height))
+                   // label.backgroundColor = UIColor(red: 81/255, green: 173/255, blue: 153/255, alpha: 1)
+                    label.textAlignment = .center
+                    label.textColor = .black
+                    label.text = "No Images Found"
+                    label.font = UIFont(name: "Montserrat-Medium", size: 22)
+                    self.plantImageCollectionView.backgroundView = label
+                    self.plantImageCollectionView.reloadData()
                 }
                 
             } else {
-                self.showAlert(with: "Choose another image that have plant.")
-                self.showToast(message: "Choose another image that have plant.")
-                self.dismiss(animated: true)
+                ERProgressHud.sharedInstance.hide()
+                DispatchQueue.main.async {
+                    self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
+                        self.dismiss(animated: true)
+                    })
+                }
             }
-            
         } failure: { _, error, _ in
-            self.showToast(message: error )
-            self.dismiss(animated: true)
-           // self.showAlert(with: error)
+            ERProgressHud.sharedInstance.hide()
+            DispatchQueue.main.async {
+                self.showToast(message: error)
+            }
         }
     }
 }
