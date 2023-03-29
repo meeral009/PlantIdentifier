@@ -61,18 +61,16 @@ class PlantModel: Codable {
        
        if isShowLoader {
            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying Plant...")
-
        }
         
         ServiceManager.callsendImageAPI(url: URL(string: "https://bs.plantnet.org/v1/image")!, param: [:], image: plantImage, imageKey: "file") {
             response in
-            
-            if isShowLoader {
-                ERProgressHud.sharedInstance.hide()
-            }
             let dict = response as? [String:Any] ?? [:]
             let id = dict["id"] as? String ?? ""
             withResponse(id)
+            if isShowLoader {
+                ERProgressHud.sharedInstance.hide()
+            }
             
         } failure : { (error) in
             if isShowLoader {

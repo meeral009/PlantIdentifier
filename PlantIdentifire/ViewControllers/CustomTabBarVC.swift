@@ -56,15 +56,18 @@ extension CustomTabBarVC {
 
 // Upload Image api call
 func uploadPlantImage(image : UIImage){
-    
+
     self.plantModel.uploadPlantImage(plantImage: image, isShowLoader: true) { id in
         print("id of plant \(id)")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-        vc?.image = image
-        vc?.id = id
-      //  vc?.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(vc!, animated: false)
-       // self.present(vc ?? UIViewController(), animated: true)
+      //  DispatchQueue.main.async {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+            vc?.image = image
+            vc?.id = id
+          //  vc?.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(vc!, animated: false)
+           // self.present(vc ?? UIViewController(), animated: true)
+      //  }
+      
         
     } failure: { statuscode, error, customError in
         print(error)
@@ -172,7 +175,7 @@ func presentCameraScreen() {
                     }
                     print("here api call")
                     self?.uploadPlantImage(image: photo.image)
-                    
+                
                 })
                 
             case .video(v: let v):

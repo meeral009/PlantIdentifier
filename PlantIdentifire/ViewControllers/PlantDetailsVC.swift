@@ -56,6 +56,11 @@ class PlantDetailsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if !self.isFromHome {
+            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+            self.gatePlantDetailAPI(id: self.id)
+        }
+
        
     }
     @IBAction func btnBackAction(_ sender: Any) {
@@ -242,10 +247,13 @@ extension PlantDetailsVC {
                 }
                 
                 // Set data from second element of Images array from response
-                if let plantImages = plantModel[1].images {
-                    self.plantListImages.append(contentsOf: plantImages)
-                 
+                if plantModel.count > 1 {
+                    if let plantImages = plantModel[1].images {
+                        self.plantListImages.append(contentsOf: plantImages)
+                     
+                    }
                 }
+               
                 
                 if self.plantListImages.count == 0 {
                     let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.plantImageCollectionView.frame.width, height: self.plantImageCollectionView.frame.height))
