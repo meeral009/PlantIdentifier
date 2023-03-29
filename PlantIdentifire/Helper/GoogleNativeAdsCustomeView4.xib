@@ -34,25 +34,25 @@
                     <rect key="frame" x="0.0" y="0.0" width="509" height="154"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-V0-XDP">
-                            <rect key="frame" x="0.0" y="0.0" width="24" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Ad " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-cb-5d0">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="heightClass=regular-widthClass=compact">
-                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="11"/>
                                     </variation>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="5bn-Y8-bE2"/>
+                                <constraint firstAttribute="width" constant="20" id="5bn-Y8-bE2"/>
                                 <constraint firstItem="CF3-cb-5d0" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="VJw-CH-pfp"/>
                                 <constraint firstAttribute="bottom" secondItem="CF3-cb-5d0" secondAttribute="bottom" id="aij-8S-kLZ"/>
-                                <constraint firstAttribute="height" constant="20" id="odn-tz-xcj"/>
+                                <constraint firstAttribute="height" constant="18" id="odn-tz-xcj"/>
                                 <constraint firstItem="CF3-cb-5d0" firstAttribute="leading" secondItem="vrz-V0-XDP" secondAttribute="leading" id="oul-M9-hmm"/>
                                 <constraint firstAttribute="trailing" secondItem="CF3-cb-5d0" secondAttribute="trailing" id="zeq-X6-6PN"/>
                             </constraints>

@@ -89,25 +89,25 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enm-5s-ZaT" customClass="View" customModule="PlantIdentifire" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Ad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kG-TX-Rds">
-                                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <variation key="heightClass=regular-widthClass=compact">
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="11"/>
                                     </variation>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="UpY-h8-7qX"/>
+                                <constraint firstAttribute="height" constant="18" id="UpY-h8-7qX"/>
                                 <constraint firstAttribute="bottom" secondItem="0kG-TX-Rds" secondAttribute="bottom" id="YKl-Rh-92a"/>
                                 <constraint firstAttribute="trailing" secondItem="0kG-TX-Rds" secondAttribute="trailing" id="fcT-oQ-73o"/>
-                                <constraint firstAttribute="width" constant="25" id="rza-5h-qJU"/>
+                                <constraint firstAttribute="width" constant="20" id="rza-5h-qJU"/>
                                 <constraint firstItem="0kG-TX-Rds" firstAttribute="top" secondItem="enm-5s-ZaT" secondAttribute="top" id="w3R-a4-LSB"/>
                                 <constraint firstItem="0kG-TX-Rds" firstAttribute="leading" secondItem="enm-5s-ZaT" secondAttribute="leading" id="xmt-m4-A53"/>
                             </constraints>

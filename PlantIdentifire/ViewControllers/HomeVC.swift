@@ -65,14 +65,6 @@ class HomeVC: UIViewController {
             self.isShowNativeAds = true
             self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
         }
-        self.googleNativeAds.loadAds(self) { nativeAdsTemp in
-            NATIVE_ADS = nativeAdsTemp
-            if !self.isShowNativeAds {
-                self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
-            }
-        }
-        
-        // Do any additional setup after loading the view.
     }
     
     @objc func onEditClick(_ sender: UIButton) {
@@ -101,20 +93,13 @@ class HomeVC: UIViewController {
 extension HomeVC {
     func setUpUi() {
         self.vwTable.register(UINib(nibName: "PlantDetiailCell", bundle: nil), forCellReuseIdentifier: "PlantDetiailCell")
-        self.vwTable.register(UINib(nibName: "AdCell", bundle: nil), forCellReuseIdentifier: "AdCell")
-        
+
         self.vwTable.separatorColor = UIColor.clear
-        
-        //        if self.tableViewItems.count != 0 {
-        //            self.fetchData()
-        //        }
-        
-        //  self.loadBannerAd()
+
         self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
     }
     
     // Decode image from base64 String
-    
     func decodeImage(base64String: String) -> UIImage {
         let dataDecoded = Data(base64Encoded: base64String, options: .ignoreUnknownCharacters)!
         let decodedimage = UIImage(data: dataDecoded) ?? UIImage()
@@ -130,26 +115,17 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AdCell", for: indexPath) as? AdCell
-            
-            self.googleNativeAds.loadAds(self) { nativeAdsTemp in
-                
-                self.googleNativeAds.showAdsView3(nativeAd: nativeAdsTemp, view: cell?.adView ?? UIView())
-            }
-            
-            return cell ?? UITableViewCell()
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
-            cell.lblDate.text = self.tableViewItems[indexPath.row].date
-            cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
-            cell.familyLabel.text = self.tableViewItems[indexPath.row].family
-            
-            // cell.btnIsFav.isEnabled = false
-            
-            cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-            return cell
-        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
+        cell.lblDate.text = self.tableViewItems[indexPath.row].date
+        cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
+        cell.familyLabel.text = self.tableViewItems[indexPath.row].family
+        
+        // cell.btnIsFav.isEnabled = false
+        
+        cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+        return cell
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -219,10 +195,7 @@ extension HomeVC {
         } else {
             self.noDataView.isHidden = true
         }
-        if self.tableViewItems.count > 0 {
-            self.tableViewItems.insert(Plants(), at: 1)
-        }
-        
+       
         self.vwTable.reloadData()
     }
     

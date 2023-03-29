@@ -62,8 +62,9 @@ func uploadPlantImage(image : UIImage){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
         vc?.image = image
         vc?.id = id
-        vc?.modalPresentationStyle = .fullScreen
-        self.present(vc ?? UIViewController(), animated: true)
+      //  vc?.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc!, animated: false)
+       // self.present(vc ?? UIViewController(), animated: true)
         
     } failure: { statuscode, error, customError in
         print(error)
@@ -95,7 +96,7 @@ func manamgeRecentSeraches(id : String) {
 
 
 // Present camera and gallery on screen.
-func presentCameraScreen(controller: UIViewController) {
+func presentCameraScreen() {
     
     var config = YPImagePickerConfiguration()
     
@@ -167,7 +168,7 @@ func presentCameraScreen(controller: UIViewController) {
                 picker?.dismiss(animated: true, completion: {
                     [weak self] in
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
-                        AdsManager.shared.presentInterstitialAd()
+                        AdsManager.shared.presentInterstitialAd1(vc: self ?? UIViewController())
                     }
                     print("here api call")
                     self?.uploadPlantImage(image: photo.image)
@@ -179,7 +180,7 @@ func presentCameraScreen(controller: UIViewController) {
             }
         }
     }
-    controller.present(picker, animated: true, completion: {
+    self.present(picker, animated: false, completion: {
         
     })
 }
@@ -214,8 +215,8 @@ extension CustomTabBarVC: AdsManagerDelegate {
     func NativeAdLoad() { }
     
     func DidDismissFullScreenContent() {
-        DispatchQueue.main.async {
-            self.presentCameraScreen(controller: self)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.presentCameraScreen()
             UserDefaults.standard.set(false, forKey: "isPresentCamera")
         }
     }

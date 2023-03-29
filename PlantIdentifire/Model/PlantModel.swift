@@ -60,7 +60,6 @@ class PlantModel: Codable {
  func uploadPlantImage( plantImage: UIImage?, isShowLoader : Bool, success withResponse: @escaping (_ id : String) -> Void, failure: @escaping FailureBlock) {
        
        if isShowLoader {
-        
            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying Plant...")
 
        }

@@ -7,7 +7,6 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
-
 import AppTrackingTransparency
 import AdSupport
 
@@ -144,8 +143,7 @@ class AdsManager: NSObject {
         
         if interstitialAd != nil {
             if isLoader {
-                ERProgressHud.sharedInstance.show(withTitle: "Loading Ads...")
-               
+                ERProgressHud.sharedInstance.show()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.checkRandomAndPresentInterstitial(isRandom: isRandom, ratio: ratio, shouldMatchRandom: shouldMatchRandom)
                 }
@@ -223,19 +221,19 @@ extension AdsManager: GADFullScreenContentDelegate {
     }
     
     func adWillDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        if let isDelegateCalled = UserDefaults.standard.value(forKey: "isPresentCamera") as? Bool {
-            if isDelegateCalled {
-                self.delegate?.DidDismissFullScreenContent()
-            }
-        }
+      
     }
     
     
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Ad did dismiss full screen content.")
+        if let isDelegateCalled = UserDefaults.standard.value(forKey: "isPresentCamera") as? Bool {
+            if isDelegateCalled {
+                self.delegate?.DidDismissFullScreenContent()
+            }
+        }
         loadInterstitialAd()
     }
-    
 }
 
 // MARK: - NativeAd Loader Delegate

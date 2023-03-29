@@ -62,7 +62,8 @@ class PlantDetailsVC: UIViewController {
         if self.isFromHome {
             self.navigationController?.popViewController(animated: true)
         } else {
-            self.dismiss(animated: true)
+            self.navigationController?.popViewController(animated: true)
+           // self.dismiss(animated: true)
         }
     }
     
@@ -261,7 +262,9 @@ extension PlantDetailsVC {
                 ERProgressHud.sharedInstance.hide()
                 DispatchQueue.main.async {
                     self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
-                        self.dismiss(animated: true)
+                        
+                        self.navigationController?.popViewController(animated: true)
+                    //    self.dismiss(animated: true)
                     })
                 }
             }
@@ -336,7 +339,8 @@ extension PlantDetailsVC {
         self.setPlantdata(plant: Plants, name: name, description: desc, family: family, image: image, isfav: isfav, id: self.id)
         
         try? context.save()
-        self.dismiss(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        //self.dismiss(animated: true)
     }
     
     // update data for only isfavoutite key

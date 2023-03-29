@@ -7,6 +7,7 @@
 
 import GoogleMobileAds
 import UIKit
+import NVActivityIndicatorView
 
 class WelcomeVC: UIViewController {
     // MARK: - IBOutlates
@@ -14,9 +15,9 @@ class WelcomeVC: UIViewController {
     @IBOutlet var vwGetStarted: UIView!
     
     @IBOutlet var lblAds: UILabel!
-    @IBOutlet var activityIndicatorView: UIView!
+    @IBOutlet var activityIndicatorView: NVActivityIndicatorView!
     let googleNativeAds = GoogleNativeAds()
-    
+   
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
@@ -26,6 +27,9 @@ class WelcomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     // MARK: - IBActionMethods
     
     @IBAction func btngetStartedAction(_ sender: Any) {}
@@ -36,14 +40,13 @@ class WelcomeVC: UIViewController {
 extension WelcomeVC {
     func setUpUI() {
         self.vwGetStarted.layer.cornerRadius = 15
-        
+        self.activityIndicatorView.type = .circleStrokeSpin
+        self.activityIndicatorView.startAnimating()
         self.googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
         }
         self.lblAds.text = "This action can contain ads"
-        
-        ERProgressHud.sharedInstance.show(view: self.activityIndicatorView)
-        
+       
         var i = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             i += 0.5
@@ -61,8 +64,9 @@ extension WelcomeVC {
     
     func setUpNavigation() {
         if interstitialAd != nil {
-            ERProgressHud.sharedInstance.hide()
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                self.activityIndicatorView.stopAnimating()
                 UserDefaults.standard.set(false, forKey: "isPresentCamera")
                 self.loadingVC()
             }
