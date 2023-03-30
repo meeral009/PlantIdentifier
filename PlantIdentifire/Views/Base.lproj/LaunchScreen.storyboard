@@ -22,22 +22,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="vwq-z0-ccn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="vwq-z0-ccn">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ehv-Na-kd7">
-                                <rect key="frame" x="136.66666666666666" y="366" width="119.99999999999997" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="SMU-fb-LRO">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="120" id="upB-CB-4G3">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                                    </constraint>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identifire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-o4-qUk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plant Identifire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIy-o4-qUk">
                                 <rect key="frame" x="109.66666666666667" y="507" width="173.66666666666663" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -45,31 +35,37 @@
                                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="37"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fi-RP-4EP">
+                                <rect key="frame" x="136.66666666666666" y="366" width="119.99999999999997" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="doO-wo-n2Z"/>
+                                    <constraint firstAttribute="height" constant="120" id="zFw-Qz-j4c"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="Appicon.png"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ehv-Na-kd7" firstAttribute="centerX" secondItem="vwq-z0-ccn" secondAttribute="centerX" id="0Id-id-YWO"/>
                             <constraint firstItem="vwq-z0-ccn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1GA-Eg-qbR"/>
-                            <constraint firstItem="ehv-Na-kd7" firstAttribute="centerY" secondItem="vwq-z0-ccn" secondAttribute="centerY" id="8j7-dy-5RG"/>
+                            <constraint firstItem="0Fi-RP-4EP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5lt-XW-sxD"/>
                             <constraint firstItem="vwq-z0-ccn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CLS-fS-a1i"/>
-                            <constraint firstItem="CIy-o4-qUk" firstAttribute="centerX" secondItem="ehv-Na-kd7" secondAttribute="centerX" id="Dn4-Ca-tbH"/>
-                            <constraint firstItem="CIy-o4-qUk" firstAttribute="top" secondItem="ehv-Na-kd7" secondAttribute="bottom" constant="21" id="JpI-lK-rqr">
-                                <variation key="heightClass=regular-widthClass=regular" constant="40"/>
-                            </constraint>
                             <constraint firstItem="vwq-z0-ccn" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="fe6-tC-8DF"/>
+                            <constraint firstItem="0Fi-RP-4EP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jzn-5X-JaW"/>
                             <constraint firstAttribute="bottom" secondItem="vwq-z0-ccn" secondAttribute="bottom" id="rEj-XS-pZA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F4f-lW-4CA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="631" y="268"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="595" height="1290"/>
-        <image name="logo" width="512" height="512"/>
+        <image name="Appicon.png" width="1024" height="1024"/>
+        <image name="bg.png" width="595" height="1290"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

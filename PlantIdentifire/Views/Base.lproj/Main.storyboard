@@ -1544,7 +1544,7 @@ kinds of plants living in nature. </string>
         <image name="bg 1" width="595" height="1290"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="home" width="25" height="25"/>
-        <image name="logo" width="512" height="512"/>
+        <image name="logo" width="32" height="32"/>
         <image name="privacypolicy" width="61" height="61"/>
         <image name="right-arrow" width="112" height="112"/>
         <image name="right-arrowToNext" width="50" height="50"/>

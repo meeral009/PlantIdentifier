@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CDDF3513595CF790FCA5232 /* Pods_PlantIdentifire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2653E6134152F179C3780A /* Pods_PlantIdentifire.framework */; };
+		6D15F0A229D55C7500FF18B2 /* Appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D15F0A129D55C7500FF18B2 /* Appicon.png */; };
+		6D15F0A429D55E9500FF18B2 /* bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D15F0A329D55E9500FF18B2 /* bg@3x.png */; };
 		6D20D2EF29CDBEE300BFE7F2 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D2EE29CDBEE300BFE7F2 /* ProgressHud.swift */; };
 		6D20D2FB29CDC90700BFE7F2 /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D2F129CDC90700BFE7F2 /* AdsManager.swift */; };
 		6D20D2FC29CDC90700BFE7F2 /* GoogleNativeAdsCustomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D2F229CDC90700BFE7F2 /* GoogleNativeAdsCustomeView3.swift */; };
@@ -77,6 +79,8 @@
 
 /* Begin PBXFileReference section */
 		4F2653E6134152F179C3780A /* Pods_PlantIdentifire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantIdentifire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D15F0A129D55C7500FF18B2 /* Appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Appicon.png; sourceTree = "<group>"; };
+		6D15F0A329D55E9500FF18B2 /* bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@3x.png"; path = "PlantIdentifire/Assets.xcassets/bg.imageset/bg@3x.png"; sourceTree = SOURCE_ROOT; };
 		6D20D2EE29CDBEE300BFE7F2 /* ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
 		6D20D2F129CDC90700BFE7F2 /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
 		6D20D2F229CDC90700BFE7F2 /* GoogleNativeAdsCustomeView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNativeAdsCustomeView3.swift; sourceTree = "<group>"; };
@@ -328,6 +332,8 @@
 		845718262926388B00289959 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6D15F0A329D55E9500FF18B2 /* bg@3x.png */,
+				6D15F0A129D55C7500FF18B2 /* Appicon.png */,
 				845718272926389300289959 /* Fonts */,
 			);
 			path = Resources;
@@ -455,6 +461,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D15F0A229D55C7500FF18B2 /* Appicon.png in Resources */,
 				6D20D2FD29CDC90700BFE7F2 /* GoogleNativeAdsCustomeView3.xib in Resources */,
 				8457184A292638C700289959 /* Montserrat-Light.ttf in Resources */,
 				8457183F292638C700289959 /* Montserrat-Regular.ttf in Resources */,
@@ -479,6 +486,7 @@
 				84571847292638C700289959 /* Montserrat-SemiBold.ttf in Resources */,
 				6D20D2FF29CDC90700BFE7F2 /* GoogleNativeAdsCustomeView1.xib in Resources */,
 				84571848292638C700289959 /* Montserrat-Bold.ttf in Resources */,
+				6D15F0A429D55E9500FF18B2 /* bg@3x.png in Resources */,
 				8457185829264F7B00289959 /* OnbordingCell.xib in Resources */,
 				8457183B292638C700289959 /* Montserrat-LightItalic.ttf in Resources */,
 				8419F2CB29238DAE0000E597 /* Main.storyboard in Resources */,
@@ -715,6 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
@@ -725,7 +734,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -751,6 +760,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
@@ -761,7 +771,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
