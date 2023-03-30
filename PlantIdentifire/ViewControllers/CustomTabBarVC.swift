@@ -59,16 +59,14 @@ func uploadPlantImage(image : UIImage){
 
     self.plantModel.uploadPlantImage(plantImage: image, isShowLoader: true) { id in
         print("id of plant \(id)")
-      //  DispatchQueue.main.async {
+     
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
             vc?.image = image
             vc?.id = id
-          //  vc?.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(vc!, animated: false)
-           // self.present(vc ?? UIViewController(), animated: true)
-      //  }
-      
-        
+            vc?.modalPresentationStyle = .fullScreen
+           // self.navigationController?.pushViewController(vc!, animated: false)
+            self.present(vc ?? UIViewController(), animated: true)
+     
     } failure: { statuscode, error, customError in
         print(error)
         self.showAlert(with: error)
@@ -167,12 +165,12 @@ func presentCameraScreen() {
             switch firstItem {
             case .photo(let photo):
                 self.selectedImageV.image = photo.image
-                
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    AdsManager.shared.presentInterstitialAd1(vc: self ?? UIViewController())
+                   
+                }
                 picker?.dismiss(animated: true, completion: {
                     [weak self] in
-                    DispatchQueue.main.asyncAfter(deadline: .now()) {
-                        AdsManager.shared.presentInterstitialAd1(vc: self ?? UIViewController())
-                    }
                     print("here api call")
                     self?.uploadPlantImage(image: photo.image)
                 
@@ -183,9 +181,7 @@ func presentCameraScreen() {
             }
         }
     }
-    self.present(picker, animated: false, completion: {
-        
-    })
+    self.present(picker, animated: false, completion: {})
 }
 
 

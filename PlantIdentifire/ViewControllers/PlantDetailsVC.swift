@@ -56,19 +56,13 @@ class PlantDetailsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !self.isFromHome {
-            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
-            self.gatePlantDetailAPI(id: self.id)
-        }
-
-       
     }
+    
     @IBAction func btnBackAction(_ sender: Any) {
         if self.isFromHome {
             self.navigationController?.popViewController(animated: true)
         } else {
-            self.navigationController?.popViewController(animated: true)
-           // self.dismiss(animated: true)
+            self.dismiss(animated: true)
         }
     }
     
@@ -81,7 +75,10 @@ class PlantDetailsVC: UIViewController {
 
 extension PlantDetailsVC {
     func setUpUi() {
-        
+        if !self.isFromHome {
+            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+            self.gatePlantDetailAPI(id: self.id)
+        }
         
         if let nativeAds = NATIVE_ADS {
             self.nativeAdPlaceholder.isHidden = false
@@ -214,21 +211,22 @@ extension PlantDetailsVC {
             print(plantModel)
             if message != "Not a plant." {
                 // Set data from first element of Images array from response
-                ERProgressHud.sharedInstance.hide()
+               
                 
                 if let arrImages = plantModel.first?.images {
                     self.arrImages.append(contentsOf: arrImages)
                     
                   
                     DispatchQueue.main.async {
+                        ERProgressHud.sharedInstance.hide()
                         self.pageView.numberOfPages = self.arrImages.count
+                        self.lblPlantName.text = plantModel.first?.species?.name
+                        self.lblFamily.text = plantModel.first?.species?.family
+                        self.lblauthor.text = plantModel.first?.species?.author
+                        self.lblGenus.text = plantModel.first?.species?.genus
                     }
                     
-                    self.lblPlantName.text = plantModel.first?.species?.name
-                    self.lblFamily.text = plantModel.first?.species?.family
-                    self.lblauthor.text = plantModel.first?.species?.author
-                    self.lblGenus.text = plantModel.first?.species?.genus
-                    
+                  
                     // Set Core data to insert recent serach details
                     
                     // convert image into base64 string
@@ -270,9 +268,7 @@ extension PlantDetailsVC {
                 ERProgressHud.sharedInstance.hide()
                 DispatchQueue.main.async {
                     self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
-                        
-                        self.navigationController?.popViewController(animated: true)
-                    //    self.dismiss(animated: true)
+                        self.dismiss(animated: true)
                     })
                 }
             }
@@ -347,8 +343,7 @@ extension PlantDetailsVC {
         self.setPlantdata(plant: Plants, name: name, description: desc, family: family, image: image, isfav: isfav, id: self.id)
         
         try? context.save()
-//        self.navigationController?.popViewController(animated: true)
-        //self.dismiss(animated: true)
+
     }
     
     // update data for only isfavoutite key
