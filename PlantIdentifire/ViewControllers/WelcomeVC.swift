@@ -63,14 +63,13 @@ extension WelcomeVC {
     }
     
     func setUpNavigation() {
-        if interstitialAd != nil {
-            
+//        if interstitialAd != nil {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.activityIndicatorView.stopAnimating()
                 UserDefaults.standard.set(false, forKey: "isPresentCamera")
                 self.loadingVC()
             }
-        }
+//        }
     }
     
     func loadingVC() {

@@ -872,24 +872,32 @@ click this Button</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-uG-BjT">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-K6-vJD">
                                                         <rect key="frame" x="20" y="190" width="280" height="379"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                                <real key="value" value="0.29999999999999999"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                <real key="value" value="2"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                <size key="value" width="1" height="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-uG-BjT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="379"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                        <real key="value" value="0.29999999999999999"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                        <size key="value" width="1" height="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" priority="749" constant="379" id="yhs-uO-VPf"/>
+                                                        </constraints>
+                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-wD-wRE">
                                                         <rect key="frame" x="20" y="587" width="69" height="20"/>
                                                         <constraints>
@@ -938,28 +946,27 @@ click this Button</string>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="FAO-wD-wRE" firstAttribute="top" secondItem="KjM-K6-vJD" secondAttribute="bottom" constant="18" id="6Y0-og-nJM"/>
                                                     <constraint firstItem="Cz0-CH-S0W" firstAttribute="centerY" secondItem="xhw-bW-6sf" secondAttribute="centerY" id="7Of-Ei-wGB"/>
                                                     <constraint firstItem="xsD-f6-Kg7" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" id="F2H-EO-YL3"/>
+                                                    <constraint firstItem="KjM-K6-vJD" firstAttribute="top" secondItem="xsD-f6-Kg7" secondAttribute="bottom" constant="10" id="GbQ-d7-Scf"/>
                                                     <constraint firstAttribute="trailing" secondItem="LtI-Xb-KEr" secondAttribute="trailing" constant="20" id="OYT-ID-ObT"/>
                                                     <constraint firstItem="FAO-wD-wRE" firstAttribute="leading" secondItem="xsD-f6-Kg7" secondAttribute="leading" id="PEN-zw-SFw"/>
                                                     <constraint firstItem="xhw-bW-6sf" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" id="cAn-h9-ZM1"/>
+                                                    <constraint firstItem="KjM-K6-vJD" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" symbolic="YES" id="cHg-93-RN6"/>
                                                     <constraint firstAttribute="trailing" secondItem="xsD-f6-Kg7" secondAttribute="trailing" constant="20" id="cWU-aQ-HSl"/>
-                                                    <constraint firstItem="ZiG-uG-BjT" firstAttribute="leading" secondItem="Rza-5s-kdG" secondAttribute="leading" constant="20" id="hCr-BI-tpE"/>
                                                     <constraint firstItem="xsD-f6-Kg7" firstAttribute="top" secondItem="xhw-bW-6sf" secondAttribute="bottom" constant="50" id="hiz-XF-ass">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="70"/>
                                                     </constraint>
                                                     <constraint firstItem="LtI-Xb-KEr" firstAttribute="top" secondItem="FAO-wD-wRE" secondAttribute="bottom" constant="20" id="k7D-cG-jVn"/>
                                                     <constraint firstItem="xhw-bW-6sf" firstAttribute="top" secondItem="Rza-5s-kdG" secondAttribute="top" constant="30" id="loe-fW-Wgf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ZiG-uG-BjT" secondAttribute="trailing" constant="20" id="oZN-Gi-aYm"/>
-                                                    <constraint firstItem="ZiG-uG-BjT" firstAttribute="top" secondItem="xsD-f6-Kg7" secondAttribute="bottom" constant="10" id="pAp-Or-4tW"/>
-                                                    <constraint firstAttribute="bottom" secondItem="LtI-Xb-KEr" secondAttribute="bottom" constant="20" id="sBc-JG-4HS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KjM-K6-vJD" secondAttribute="trailing" constant="20" symbolic="YES" id="oaF-WA-mfB"/>
                                                     <constraint firstAttribute="trailing" secondItem="Cz0-CH-S0W" secondAttribute="trailing" constant="20" id="sLP-RV-34E"/>
                                                     <constraint firstItem="LtI-Xb-KEr" firstAttribute="leading" secondItem="FAO-wD-wRE" secondAttribute="leading" id="t50-8M-szv"/>
-                                                    <constraint firstItem="FAO-wD-wRE" firstAttribute="top" secondItem="ZiG-uG-BjT" secondAttribute="bottom" constant="18" id="wbG-Ps-iF8"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14P-vB-xXe">
-                                                <rect key="frame" x="17" y="104" width="22" height="22"/>
+                                                <rect key="frame" x="17" y="476" width="22" height="22"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="Drh-Od-eDR">
@@ -1024,6 +1031,7 @@ click this Button</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adsHeightConstraint" destination="yhs-uO-VPf" id="SAA-q9-bkT"/>
                         <outlet property="detailView" destination="Rza-5s-kdG" id="ZOO-OI-iIe"/>
                         <outlet property="horizonataltackView" destination="jMU-Ae-fqi" id="hUP-6w-ngZ"/>
                         <outlet property="lblFamily" destination="11D-mH-5OB" id="JZ6-kH-Ldn"/>

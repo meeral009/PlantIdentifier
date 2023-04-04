@@ -49,6 +49,10 @@ extension CustomTabBarVC {
                     UserDefaults.standard.set(true, forKey: "isPresentCamera")
                     AdsManager.shared.presentInterstitialAd1(vc: self)
                 }
+                
+                if interstitialAd == nil {
+                    self.presentCameraScreen()
+                }
             }
         }
     }
@@ -86,7 +90,7 @@ func manamgeRecentSeraches(id : String) {
         
         if arrId.contains(id){
             print("Already exits.")
-        }else {
+        } else {
             arrId.append(id)
             userDefaults.set(arrId, forKey: "arrId")
         }
@@ -167,8 +171,8 @@ func presentCameraScreen() {
                 self.selectedImageV.image = photo.image
                 DispatchQueue.main.asyncAfter(deadline: .now()) {
                     AdsManager.shared.presentInterstitialAd1(vc: self ?? UIViewController())
-                   
                 }
+            
                 picker?.dismiss(animated: true, completion: {
                     [weak self] in
                     print("here api call")

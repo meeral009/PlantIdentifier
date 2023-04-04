@@ -31,7 +31,7 @@ class LoadingVC: UIViewController {
         lblLoading.text = "Loading Ads..."
         UserDefaults.standard.set(false, forKey: "isPresentCamera")
         delay(0.7) {
-            if interstitialAd != nil {
+         //   if interstitialAd != nil {
                 AdsManager.shared.presentInterstitialAd1(vc: self)
 
                 if UserDefaults.isCheckOnBording {
@@ -49,7 +49,7 @@ class LoadingVC: UIViewController {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
                         self.navigationController?.pushViewController(vc!, animated: true)
                     }
-                }
+//                }
             }
         }
     }

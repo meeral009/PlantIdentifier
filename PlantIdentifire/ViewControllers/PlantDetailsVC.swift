@@ -29,7 +29,8 @@ class PlantDetailsVC: UIViewController {
     @IBOutlet var lblFamily: UILabel!
     @IBOutlet var lblauthor: UILabel!
     @IBOutlet var lblGenus: UILabel!
-    
+
+    @IBOutlet var adsHeightConstraint: NSLayoutConstraint!
     // MARK: - variables
 
     var id = ""
@@ -75,6 +76,8 @@ class PlantDetailsVC: UIViewController {
 
 extension PlantDetailsVC {
     func setUpUi() {
+        self.adsHeightConstraint.constant = 0
+        self.nativeAdPlaceholder.isHidden = true
         if !self.isFromHome {
             ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
             self.gatePlantDetailAPI(id: self.id)
@@ -82,12 +85,14 @@ extension PlantDetailsVC {
         
         if let nativeAds = NATIVE_ADS {
             self.nativeAdPlaceholder.isHidden = false
+            self.adsHeightConstraint.constant = 379
             self.isShowNativeAds = true
             self.googleNativeAds.showAdsView1(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
         }
         
         googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
+            self.nativeAdPlaceholder.isHidden = false
             if !self.isShowNativeAds {
                 self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
             }
