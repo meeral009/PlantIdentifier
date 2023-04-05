@@ -50,9 +50,17 @@ class PlantDetailsVC: UIViewController {
 
     var isShowNativeAds = false
     var googleNativeAds = GoogleNativeAds()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isUserSubscribe() {
+            self.nativeAdPlaceholder.isHidden = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,12 +105,7 @@ extension PlantDetailsVC {
                 self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
             }
         }
-        
-        if !self.isFromHome {
-            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
-            self.gatePlantDetailAPI(id: self.id)
-        }
-       
+    
         self.pageView.currentPage = 0
         
         DispatchQueue.main.async {

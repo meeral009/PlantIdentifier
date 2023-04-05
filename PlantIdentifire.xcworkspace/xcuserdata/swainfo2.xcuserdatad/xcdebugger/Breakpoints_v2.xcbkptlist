@@ -3,4 +3,70 @@
    uuid = "0C8AA5F3-35EA-4799-B006-A0A2117113D3"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "556F31FF-FA99-4703-98D1-16E123C51AFF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "presentCameraScreen()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66B8D969-F2B8-46A1-B03A-C3252EC6E1A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "presentCameraScreen()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66B8D969-F2B8-46A1-B03A-C3252EC6E1A6 - 9fa2ff46489acfc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PlantIdentifire.CustomTabBarVC.presentCameraScreen() -&gt; ()"
+                  moduleName = "PlantIdentifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swainfo2/Desktop/Miral/Running/PlantIdentifierApp/PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "12168">
+               </Location>
+               <Location
+                  uuid = "66B8D969-F2B8-46A1-B03A-C3252EC6E1A6 - 3bd85eb07806a1d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in PlantIdentifire.CustomTabBarVC.presentCameraScreen() -&gt; ()"
+                  moduleName = "PlantIdentifire"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swainfo2/Desktop/Miral/Running/PlantIdentifierApp/PlantIdentifire/ViewControllers/CustomTabBarVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

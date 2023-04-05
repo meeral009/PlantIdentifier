@@ -34,6 +34,13 @@ class SettingsVC: UIViewController {
     }
     
 
+    @IBAction func onClickPremium(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+        vc.modalPresentationStyle = .fullScreen
+        vc.isFromHome = false
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     @IBAction func btnAboutUs(_ sender: Any) {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsVC") as? AboutUsVC

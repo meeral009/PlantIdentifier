@@ -55,16 +55,33 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
+        
+        if isUserSubscribe() {
+            NATIVE_ADS = nil
+            self.viewNativeAds.isHidden = true
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
-        if let nativeAds = NATIVE_ADS {
-            self.viewNativeAds.isHidden = false
-            self.isShowNativeAds = true
-            self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            if !isUserSubscribe() {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+                vc.modalPresentationStyle = .fullScreen
+                vc.isFromHome = true
+                self.present(vc, animated: true, completion: nil)
+            }
         }
+        
+        if !isUserSubscribe() {
+            if let nativeAds = NATIVE_ADS {
+                self.viewNativeAds.isHidden = false
+                self.isShowNativeAds = true
+                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
+            }
+        }
+       
     }
     
     @objc func onEditClick(_ sender: UIButton) {

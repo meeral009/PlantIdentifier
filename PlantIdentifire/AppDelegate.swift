@@ -24,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AdsManager.shared.loadInterstitialAd()
             AdsManager.shared.requestAppOpenAd()
         }
+        
+        InAppManager.shared.completeTransition()
+        InAppManager.shared.verifyReciept()
         return true
     }
     

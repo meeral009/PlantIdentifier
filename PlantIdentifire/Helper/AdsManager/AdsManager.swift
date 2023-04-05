@@ -64,9 +64,10 @@ class AdsManager: NSObject {
     //MARK: - LOAD INTERSTITIAL ADS
     func loadInterstitialAd(){
         
-        if !APIManager.isConnectedToNetwork() {
+        if !APIManager.isConnectedToNetwork() && isUserSubscribe() {
             return
         }
+        
         
         let request = GADRequest()
         GADInterstitialAd.load(withAdUnitID: adMob.interstitialAdID.rawValue, request: request) { [self] (ad, error) in
@@ -85,9 +86,10 @@ class AdsManager: NSObject {
     
     func createAndLoadNativeAds(numberOfAds: Int) {
         
-        if !APIManager.isConnectedToNetwork() {
+        if !APIManager.isConnectedToNetwork() && isUserSubscribe() {
             return
         }
+        
         arrNativeAds.removeAll()
         let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()
         multipleAdsOptions.numberOfAds = numberOfAds
@@ -102,9 +104,9 @@ class AdsManager: NSObject {
     //MARK:- LOAD APP OPEN ADS
     
     func tryToPresentAppOpenAd() {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         let ad = appOpenAd
         appOpenAd = nil
 
@@ -118,9 +120,9 @@ class AdsManager: NSObject {
     }
     
     func requestAppOpenAd() {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         appOpenAd = nil
         GADAppOpenAd.load(
             withAdUnitID: adMob.openAdID.rawValue,
@@ -185,9 +187,9 @@ class AdsManager: NSObject {
     }
     
     func presentInterstitialAd() {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         DispatchQueue.main.async {
             let rootController = appDelegate.window?.rootViewController
             interstitialAd?.present(fromRootViewController: rootController!)
@@ -196,9 +198,9 @@ class AdsManager: NSObject {
     }
     
     func presentInterstitialAd1(vc:UIViewController) {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         DispatchQueue.main.async {
             if interstitialAd != nil {
                 interstitialAd!.present(fromRootViewController: vc)
@@ -265,9 +267,9 @@ class GoogleBannerAds: NSObject, GADBannerViewDelegate {
     var view: GADBannerView!
     
     func loadAds(vc: UIViewController, view : GADBannerView) {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         view.isHidden = true
         let viewWidth = view.frame.size.width
         
@@ -298,9 +300,9 @@ class GoogleNativeAds: NSObject, GADNativeAdLoaderDelegate {
     var adLoader: GADAdLoader!
     
     func loadAds(_ vc: UIViewController, _ completion: @escaping (GADNativeAd) -> Void) {
-//        if isUserSubscribe(){
-//            return
-//        }
+        if isUserSubscribe(){
+            return
+        }
         self.completion = completion
         
         let multipleAdsOptions = GADMultipleAdsAdLoaderOptions()

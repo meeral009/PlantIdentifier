@@ -53,6 +53,9 @@ PODS:
   - SDWebImage/Core (5.14.2)
   - SteviaLayout (4.7.3)
   - STTabbar (0.1.0)
+  - SVProgressHUD (2.2.5)
+  - SwiftyStoreKit (0.16.1)
+  - Toaster (2.3.0)
   - YPImagePicker (5.2.1):
     - PryntTrimmerView (= 4.0.2)
     - SteviaLayout (= 4.7.3)
@@ -62,6 +65,9 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - SDWebImage (~> 5.0)
   - STTabbar
+  - SVProgressHUD
+  - SwiftyStoreKit
+  - Toaster
   - YPImagePicker
 
 SPEC REPOS:
@@ -77,6 +83,9 @@ SPEC REPOS:
     - SDWebImage
     - SteviaLayout
     - STTabbar
+    - SVProgressHUD
+    - SwiftyStoreKit
+    - Toaster
     - YPImagePicker
 
 SPEC CHECKSUMS:
@@ -91,8 +100,11 @@ SPEC CHECKSUMS:
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   STTabbar: fe93da755010233b348b2d0147c43bb1bef290fa
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: b3b6f9319f2323bd34ce6923fa6c2fa0632a3266
+PODFILE CHECKSUM: 68809c7d8b8c08a41ed0ce42b8b651f07bc2c82f
 
 COCOAPODS: 1.11.3

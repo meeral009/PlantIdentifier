@@ -11,5 +11,7 @@ target 'PlantIdentifire' do
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'
   pod 'Google-Mobile-Ads-SDK'
-
+  pod 'SwiftyStoreKit'
+  pod 'SVProgressHUD'
+  pod 'Toaster'
 end
