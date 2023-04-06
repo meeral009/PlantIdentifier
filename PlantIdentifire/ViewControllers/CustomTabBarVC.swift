@@ -50,10 +50,8 @@ extension CustomTabBarVC {
                     AdsManager.shared.presentInterstitialAd1(vc: self)
                 }
                 
-                if interstitialAd == nil {
-                    
+                if isUserSubscribe() {
                     self.presentCameraScreen()
-                    
                 }
             }
         }

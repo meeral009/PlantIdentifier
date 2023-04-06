@@ -17,7 +17,7 @@ class WelcomeVC: UIViewController {
     @IBOutlet var lblAds: UILabel!
     @IBOutlet var activityIndicatorView: NVActivityIndicatorView!
     let googleNativeAds = GoogleNativeAds()
-   
+    
     // MARK: - Lifecycle methods
     
     override func viewDidLoad() {
@@ -46,7 +46,7 @@ extension WelcomeVC {
             NATIVE_ADS = nativeAdsTemp
         }
         self.lblAds.text = "This action can contain ads"
-       
+        
         var i = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             i += 0.5
@@ -63,13 +63,30 @@ extension WelcomeVC {
     }
     
     func setUpNavigation() {
-//        if interstitialAd != nil {
+        if isUserSubscribe() {
+            if UserDefaults.isCheckOnBording {
+                // Load Interstitial Ad
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+                    self.navigationController?.viewControllers = [redViewController]
+                    self.navigationController?.pushViewController(redViewController, animated: true)
+                    
+                }
+                
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
+                    self.navigationController?.pushViewController(vc!, animated: true)
+                }
+            }
+        }else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.activityIndicatorView.stopAnimating()
                 UserDefaults.standard.set(false, forKey: "isPresentCamera")
                 self.loadingVC()
             }
-//        }
+        }
     }
     
     func loadingVC() {

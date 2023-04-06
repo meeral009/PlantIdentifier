@@ -502,7 +502,7 @@ Features:
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ad-xJ-acv">
                                         <rect key="frame" x="16" y="16" width="22" height="22"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="8NB-PN-YnS">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="35"/>
@@ -980,7 +980,7 @@ click this Button</string>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14P-vB-xXe">
                                                 <rect key="frame" x="17" y="104" width="22" height="22"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="22" id="Drh-Od-eDR">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="35"/>
@@ -1648,7 +1648,7 @@ kinds of plants living in nature. </string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGp-2i-MHB">
                                                         <rect key="frame" x="0.0" y="0.0" width="200" height="26.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-yJ-1NL" customClass="ImageView" customModule="Simple_Demo" customModuleProvider="target">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-yJ-1NL" customClass="ImageView" customModule="PlantIdentifire" customModuleProvider="target">
                                                                 <rect key="frame" x="4" y="2" width="22.5" height="22.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1681,7 +1681,7 @@ kinds of plants living in nature. </string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djW-rY-jNz">
                                                         <rect key="frame" x="0.0" y="36.5" width="200" height="27"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globle" translatesAutoresizingMaskIntoConstraints="NO" id="AdW-cO-jaN" customClass="ImageView" customModule="Simple_Demo" customModuleProvider="target">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globle" translatesAutoresizingMaskIntoConstraints="NO" id="AdW-cO-jaN" customClass="ImageView" customModule="PlantIdentifire" customModuleProvider="target">
                                                                 <rect key="frame" x="4" y="2" width="22.5" height="23"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1714,7 +1714,7 @@ kinds of plants living in nature. </string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5tA-Xe-UN9">
                                                         <rect key="frame" x="0.0" y="73.5" width="200" height="26.5"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="if7-ZG-OFT" customClass="ImageView" customModule="Simple_Demo" customModuleProvider="target">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="if7-ZG-OFT" customClass="ImageView" customModule="PlantIdentifire" customModuleProvider="target">
                                                                 <rect key="frame" x="4" y="2" width="22.5" height="22.5"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1759,7 +1759,7 @@ kinds of plants living in nature. </string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fpY-xH-7YQ">
                                                 <rect key="frame" x="30" y="488" width="260" height="132"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U38-gf-5IR" customClass="View" customModule="Simple_Demo" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U38-gf-5IR" customClass="View" customModule="PlantIdentifire" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7V-Jm-Omf">
@@ -1800,7 +1800,7 @@ kinds of plants living in nature. </string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-y1-B9I" customClass="View" customModule="Simple_Demo" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7s-y1-B9I" customClass="View" customModule="PlantIdentifire" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="72" width="260" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-gO-SSQ">
