@@ -32,8 +32,10 @@ class LoadingVC: UIViewController {
         UserDefaults.standard.set(false, forKey: "isPresentCamera")
         delay(0.7) {
          //   if interstitialAd != nil {
-                AdsManager.shared.presentInterstitialAd1(vc: self)
-
+                if !isUserSubscribe(){
+                    AdsManager.shared.presentInterstitialAd1(vc: self)
+                }
+        
                 if UserDefaults.isCheckOnBording {
                     // Load Interstitial Ad
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -41,7 +43,6 @@ class LoadingVC: UIViewController {
                         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
                         self.navigationController?.viewControllers = [redViewController]
                         self.navigationController?.pushViewController(redViewController, animated: true)
-
                     }
                 
                 } else {

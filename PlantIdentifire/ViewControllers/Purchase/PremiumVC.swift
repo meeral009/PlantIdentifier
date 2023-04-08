@@ -44,6 +44,7 @@ extension PremiumVC {
 
 // MARK: - Actions
 extension PremiumVC {
+    
     @IBAction func onClickPrivacyPolicy(_ sender: UIButton) {
         if let url = URL.init(string: PRIVACY_POLICY){
             UIApplication.shared.open(url, options: [:]) { status in
@@ -52,7 +53,6 @@ extension PremiumVC {
     }
     
     @IBAction func onClickPrivacyTNC(_ sender: UIButton) {
-        
         if let url = URL.init(string: TERM_AND_CONDITION){
             UIApplication.shared.open(url, options: [:]) { status in
             }
@@ -68,15 +68,15 @@ extension PremiumVC {
     }
     
     @IBAction func onClickPrivacyCancel(_ sender: UIButton) {
-        if isFromHome{
-            self.dismiss(animated: false) {
-                DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    AdsManager.shared.presentInterstitialAd()
-                }
-            }
-        }else{
+//        if isFromHome{
+//            self.dismiss(animated: false) {
+//                DispatchQueue.main.asyncAfter(deadline: .now()) {
+//                    AdsManager.shared.presentInterstitialAd()
+//                }
+//            }
+//        }else{
             self.dismiss(animated: true, completion: nil)
-        }
+//        }
     }
     
     @IBAction func onToggleFreeSwitch(_ sender: UISwitch) {
