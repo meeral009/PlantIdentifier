@@ -84,7 +84,7 @@ class PlantDetailsVC: UIViewController {
 
 extension PlantDetailsVC {
     func setUpUi() {
-        self.adsHeightConstraint.constant = 0
+   
         self.nativeAdPlaceholder.isHidden = true
         if !self.isFromHome {
             ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
@@ -93,17 +93,21 @@ extension PlantDetailsVC {
         
         if let nativeAds = NATIVE_ADS {
             self.nativeAdPlaceholder.isHidden = false
-            self.adsHeightConstraint.constant = 379
             self.isShowNativeAds = true
-            self.googleNativeAds.showAdsView1(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
+            self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
         }
         
         googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
             self.nativeAdPlaceholder.isHidden = false
             if !self.isShowNativeAds {
-                self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
+                self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
             }
+        }
+        
+        if isUserSubscribe() {
+            self.adsHeightConstraint.priority = UILayoutPriority(rawValue: 749)
+            self.adsHeightConstraint.constant = 0
         }
     
         self.pageView.currentPage = 0

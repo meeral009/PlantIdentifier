@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import GoogleMobileAds
 
-@main
+  @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
