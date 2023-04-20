@@ -85,7 +85,7 @@ class InAppManager: NSObject {
     }
     
     // MARK: - Purchas Product
-    func purchaseProduct(productId: String) {
+    func purchaseProduct(productId: String, completion: @escaping() -> () ) {
         showLoader()
         
         SwiftyStoreKit.purchaseProduct(productId, quantity: 1, atomically: true) { result in
@@ -98,6 +98,7 @@ class InAppManager: NSObject {
                 interstitialAd = nil
                 NATIVE_ADS = nil
                 setIsUserSubscribe(isSubscribe: true)
+                completion()
                     
             case .error(let error):
                 displayToast(error.localizedDescription)
@@ -119,7 +120,7 @@ class InAppManager: NSObject {
     }
     
     // MARK: - Restore In App Purchas
-    func restoreProduct() {
+    func restoreProduct(completion: @escaping () -> ()) {
         showLoader()
         SwiftyStoreKit.restorePurchases(atomically: true) { results in
                 removeLoader()
@@ -129,6 +130,7 @@ class InAppManager: NSObject {
                 displayToast(results.restoreFailedPurchases.debugDescription)
             } else if results.restoredPurchases.count > 0 {
                 debugPrint("Restore Success: \(results.restoredPurchases)")
+                completion()
                 setIsUserSubscribe(isSubscribe: true)
             } else {
                 displayToast("Nothing to Restore")

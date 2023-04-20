@@ -80,7 +80,7 @@ extension WelcomeVC {
                     self.navigationController?.pushViewController(vc!, animated: true)
                 }
             }
-        }else {
+        } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.activityIndicatorView.stopAnimating()
                 UserDefaults.standard.set(false, forKey: "isPresentCamera")

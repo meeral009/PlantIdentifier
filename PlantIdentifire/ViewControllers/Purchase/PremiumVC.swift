@@ -26,6 +26,7 @@ class PremiumVC: UIViewController {
     @IBOutlet var btnContinue: UIButton!
     @IBOutlet var btnPrivacyPolicy: UIButton!
     @IBOutlet var btnTNC: UIButton!
+    
     var isFromHome = Bool()
 }
 
@@ -60,11 +61,16 @@ extension PremiumVC {
     }
     
     @IBAction func onClickContinue(_ sender: UIButton) {
-        InAppManager.shared.purchaseProduct(productId: IN_APP_PURCHASE_IDS[0])
+        InAppManager.shared.purchaseProduct(productId: IN_APP_PURCHASE_IDS[0], completion: {
+            self.dismiss(animated: true)
+            
+        })
     }
     
     @IBAction func onClickRestore(_ sender: UIButton) {
-        InAppManager.shared.restoreProduct()
+        InAppManager.shared.restoreProduct(completion: {
+            self.dismiss(animated: true)
+        })
     }
     
     @IBAction func onClickPrivacyCancel(_ sender: UIButton) {

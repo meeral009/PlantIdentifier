@@ -9,16 +9,23 @@ import UIKit
 
 class SettingsVC: UIViewController {
     
-    @IBOutlet weak var vwPrivacy: UIView!
-    @IBOutlet weak var vwShareApp: UIView!
-    @IBOutlet weak var vwAboutUs: UIView!
-
+    @IBOutlet var imgGif: UIView!
+    @IBOutlet var lblVersion: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       
+    
+        
+    }
     //MARK: - IBActionMethods
     
     @IBAction func btnPrivacyPolicy(_ sender: Any) {
@@ -47,16 +54,39 @@ class SettingsVC: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
+    
+    @IBAction func btnRateUs(_ sender: Any) {
+        let REVIEW_LINK         = "https://itunes.apple.com/app/id\("1660916701")?mt=8&action=write-review"
+        if let url = URL.init(string: REVIEW_LINK){
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+        
+    }
+    
 }
 
 // MARK: - User defined functions
 extension SettingsVC {
     
     func setUpUI() {
+        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] {
+                self.lblVersion.text = "\("Version") \(appVersion)"
+        }
         
-        self.vwPrivacy.customView()
-        self.vwAboutUs.customView()
-        self.vwShareApp.customView()
+        
+      
+        if let imageview = UIImageView.fromGif(frame: self.imgGif.frame, resourceName: "gift") {
+            self.imgGif.addSubview(imageview)
+            imageview.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                imageview.topAnchor.constraint(equalTo:   self.imgGif.topAnchor, constant: 0.0),
+                imageview.leadingAnchor.constraint(equalTo:   self.imgGif.leadingAnchor, constant: 0.0),
+                imageview.trailingAnchor.constraint(equalTo:   self.imgGif.trailingAnchor, constant: 0.0),
+                imageview.bottomAnchor.constraint(equalTo:   self.imgGif.bottomAnchor, constant: 0.0),
+            ])
+            imageview.startAnimating()
+        }
+       
         
     }
 
