@@ -8,6 +8,7 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import Firebase
 
   @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var interstitialAd: GADInterstitialAd?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Firebase configuration
+        FirebaseApp.configure()
+        
         // Initialize the Google Mobile Ads SDK.
-       
         GADMobileAds.sharedInstance().start { status in
             AdsManager.shared.loadInterstitialAd()
             AdsManager.shared.requestAppOpenAd()

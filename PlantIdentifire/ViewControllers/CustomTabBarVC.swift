@@ -102,6 +102,7 @@ extension CustomTabBarVC {
     
     // Present camera and gallery on screen.
     func presentCameraScreen() {
+                   
         var config = YPImagePickerConfiguration()
         
         /* Choose what media types are available in the library. Defaults to `.photo` */

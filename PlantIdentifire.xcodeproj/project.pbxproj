@@ -24,6 +24,8 @@
 		6D20D30629CDCD6700BFE7F2 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D30529CDCD6700BFE7F2 /* LoadingVC.swift */; };
 		6D8F66D429E3F5D200EDD77C /* LoadGIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F66D329E3F5D200EDD77C /* LoadGIF.swift */; };
 		6D8F66DE29E410D100EDD77C /* gift.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6D8F66DD29E410D100EDD77C /* gift.gif */; };
+		6D93897929FA2A9E00074246 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6D93897829FA2A9E00074246 /* FirebaseCrashlytics */; };
+		6D93897D29FA2E6200074246 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D93897C29FA2E4800074246 /* GoogleService-Info.plist */; };
 		6DB9094D29D427FB004A073C /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB9094C29D427FB004A073C /* NVActivityIndicatorView */; };
 		6DB9094F29D427FB004A073C /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB9094E29D427FB004A073C /* NVActivityIndicatorViewExtended */; };
 		6DBF879F29D1558200AFDD9C /* ExitAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF879E29D1558200AFDD9C /* ExitAdVC.swift */; };
@@ -99,6 +101,7 @@
 		6D20D30529CDCD6700BFE7F2 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
 		6D8F66D329E3F5D200EDD77C /* LoadGIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGIF.swift; sourceTree = "<group>"; };
 		6D8F66DD29E410D100EDD77C /* gift.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gift.gif; sourceTree = "<group>"; };
+		6D93897C29FA2E4800074246 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6DBF879E29D1558200AFDD9C /* ExitAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitAdVC.swift; sourceTree = "<group>"; };
 		6DD8A8E529DC5476006B3B5C /* InAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppManager.swift; sourceTree = "<group>"; };
 		6DD8A8E929DC598D006B3B5C /* PremiumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumVC.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB9094F29D427FB004A073C /* NVActivityIndicatorViewExtended in Frameworks */,
+				6D93897929FA2A9E00074246 /* FirebaseCrashlytics in Frameworks */,
 				6DB9094D29D427FB004A073C /* NVActivityIndicatorView in Frameworks */,
 				1CDDF3513595CF790FCA5232 /* Pods_PlantIdentifire.framework in Frameworks */,
 			);
@@ -261,6 +265,7 @@
 				8419F2DA29238E890000E597 /* ViewControllers */,
 				8419F2C329238DAE0000E597 /* AppDelegate.swift */,
 				8419F2CF29238DB00000E597 /* Assets.xcassets */,
+				6D93897C29FA2E4800074246 /* GoogleService-Info.plist */,
 				8419F2D429238DB00000E597 /* Info.plist */,
 				8419F2CC29238DAF0000E597 /* PlantIdentifire.xcdatamodeld */,
 			);
@@ -450,6 +455,7 @@
 				8419F2BD29238DAE0000E597 /* Frameworks */,
 				8419F2BE29238DAE0000E597 /* Resources */,
 				F78496979C86308EF238C697 /* [CP] Embed Pods Frameworks */,
+				6D93897A29FA2BF500074246 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -459,6 +465,7 @@
 			packageProductDependencies = (
 				6DB9094C29D427FB004A073C /* NVActivityIndicatorView */,
 				6DB9094E29D427FB004A073C /* NVActivityIndicatorViewExtended */,
+				6D93897829FA2A9E00074246 /* FirebaseCrashlytics */,
 			);
 			productName = PlantIdentifire;
 			productReference = 8419F2C029238DAE0000E597 /* PlantIdentifire.app */;
@@ -490,6 +497,7 @@
 			mainGroup = 8419F2B729238DAE0000E597;
 			packageReferences = (
 				6DB9094B29D427FB004A073C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				6D93897729FA2A9E00074246 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 8419F2C129238DAE0000E597 /* Products */;
 			projectDirPath = "";
@@ -513,6 +521,7 @@
 				84571844292638C700289959 /* Montserrat-MediumItalic.ttf in Resources */,
 				84571846292638C700289959 /* Montserrat-Italic.ttf in Resources */,
 				84571843292638C700289959 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				6D93897D29FA2E6200074246 /* GoogleService-Info.plist in Resources */,
 				84571840292638C700289959 /* Montserrat-Black.ttf in Resources */,
 				8457183C292638C700289959 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				844E6AD22943095000576715 /* NativeAdView.xib in Resources */,
@@ -543,6 +552,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6D93897A29FA2BF500074246 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		A45709C3ABA13F96F7680372 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -774,7 +801,8 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
@@ -791,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swainfo.PlantIdentifire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -810,7 +838,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
@@ -827,7 +855,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swainfo.PlantIdentifire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -861,6 +889,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6D93897729FA2A9E00074246 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		6DB9094B29D427FB004A073C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
@@ -872,6 +908,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6D93897829FA2A9E00074246 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D93897729FA2A9E00074246 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		6DB9094C29D427FB004A073C /* NVActivityIndicatorView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6DB9094B29D427FB004A073C /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
