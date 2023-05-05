@@ -23,6 +23,15 @@
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
@@ -43,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="47" width="375" height="765"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOo-pA-9wx">
-                                        <rect key="frame" x="15" y="15.000000000000002" width="85.666666666666671" height="24.666666666666671"/>
+                                        <rect key="frame" x="15" y="14.999999999999998" width="73.666666666666671" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -52,13 +61,13 @@
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="rvt-ZF-yyM">
-                                        <rect key="frame" x="15" y="64.666666666666686" width="340" height="200"/>
+                                        <rect key="frame" x="15" y="63.333333333333314" width="340" height="200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80X-Cv-Nyn">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="59.333333333333336"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacypolicy" translatesAutoresizingMaskIntoConstraints="NO" id="9BQ-eg-7DA">
-                                                        <rect key="frame" x="8" y="17.333333333333329" width="25" height="25"/>
+                                                        <rect key="frame" x="8" y="17.333333333333343" width="25" height="25"/>
                                                         <color key="tintColor" name="ThemeLightPurple"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="9fW-MT-2VF">
@@ -70,7 +79,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWE-1P-CdC">
-                                                        <rect key="frame" x="49" y="18.666666666666671" width="255" height="22"/>
+                                                        <rect key="frame" x="49" y="19.333333333333329" width="255" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -127,7 +136,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAv-bL-eCg">
-                                                        <rect key="frame" x="49" y="18.666666666666657" width="250" height="22"/>
+                                                        <rect key="frame" x="49" y="19.333333333333343" width="250" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -141,7 +150,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QIB-9I-iqZ">
-                                                        <rect key="frame" x="307" y="21.666666666666657" width="25" height="16.333333333333329"/>
+                                                        <rect key="frame" x="307" y="21.666666666666686" width="25" height="16.333333333333329"/>
                                                         <color key="tintColor" systemColor="separatorColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="25" id="Mad-lv-pvM">
@@ -172,7 +181,7 @@
                                                 <rect key="frame" x="0.0" y="140.66666666666669" width="340" height="59.333333333333343"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-aa-zQ8">
-                                                        <rect key="frame" x="8" y="17.333333333333343" width="25" height="25"/>
+                                                        <rect key="frame" x="8" y="17.333333333333314" width="25" height="25"/>
                                                         <color key="tintColor" name="ThemeLightPurple"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="4W2-F7-808">
@@ -184,7 +193,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LrH-Pr-sXu">
-                                                        <rect key="frame" x="49" y="18.666666666666657" width="255" height="22"/>
+                                                        <rect key="frame" x="49" y="19.333333333333314" width="255" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -199,7 +208,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qwc-kB-qHR">
-                                                        <rect key="frame" x="312" y="21.666666666666657" width="20" height="16.333333333333329"/>
+                                                        <rect key="frame" x="312" y="21.666666666666686" width="20" height="16.333333333333329"/>
                                                         <color key="tintColor" systemColor="separatorColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="L17-V0-coG">
@@ -248,7 +257,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LO-GO-H6g">
-                                        <rect key="frame" x="329" y="12.333333333333336" width="30" height="30"/>
+                                        <rect key="frame" x="329" y="11.666666666666664" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Z0t-AU-yy5"/>
                                             <constraint firstAttribute="width" constant="30" id="fiQ-nl-sfu"/>
@@ -300,7 +309,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-nF-1t1">
-                                        <rect key="frame" x="58.999999999999993" y="60.666666666666664" width="95.333333333333314" height="24.666666666666664"/>
+                                        <rect key="frame" x="59" y="61.333333333333336" width="84" height="23.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -328,7 +337,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Oiv-Kj-wNV">
-                                        <rect key="frame" x="17" y="106" width="90" height="90"/>
+                                        <rect key="frame" x="17" y="105.33333333333331" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="I3z-te-FiD">
                                                 <variation key="heightClass=regular-widthClass=regular" constant="180"/>
@@ -339,7 +348,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identifire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-PT-cKW">
-                                        <rect key="frame" x="17" y="233.33333333333334" width="131.66666666666666" height="21"/>
+                                        <rect key="frame" x="17" y="232.66666666666666" width="109" height="20"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -348,7 +357,7 @@
                                         </variation>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d45-e3-AlK">
-                                        <rect key="frame" x="17" y="274.33333333333331" width="341" height="537.66666666666674"/>
+                                        <rect key="frame" x="17" y="272.66666666666669" width="341" height="539.33333333333326"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -422,7 +431,7 @@ Features:
                                         </variation>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1p-Mf-dRw">
-                                        <rect key="frame" x="17" y="208" width="79" height="16.666666666666657"/>
+                                        <rect key="frame" x="17" y="207.33333333333334" width="69.333333333333329" height="16.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -513,132 +522,218 @@ Features:
                                             <action selector="onClickExitApp:" destination="UIt-gM-LM6" eventType="touchUpInside" id="vnx-WL-5pO"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2r-vI-64M">
+                                        <rect key="frame" x="16" y="53" width="343" height="50"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="aC5-F4-7l6">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="0.0" height="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" name="AppColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="UIt-gM-LM6" id="ORf-Bu-NCN"/>
+                                                </connections>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aC5-F4-7l6" secondAttribute="trailing" id="GGn-iA-YtY"/>
+                                            <constraint firstItem="aC5-F4-7l6" firstAttribute="top" secondItem="e2r-vI-64M" secondAttribute="top" id="SGp-u0-12c"/>
+                                            <constraint firstItem="aC5-F4-7l6" firstAttribute="leading" secondItem="e2r-vI-64M" secondAttribute="leading" id="io2-ti-oF4"/>
+                                            <constraint firstAttribute="bottom" secondItem="aC5-F4-7l6" secondAttribute="bottom" id="nEF-u9-y1f"/>
+                                            <constraint firstAttribute="height" constant="50" id="uZr-Fc-sYa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.77254901960784317" green="0.91764705882352937" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-Jd-6Mz">
-                                        <rect key="frame" x="75.333333333333329" y="60.000000000000007" width="224.33333333333337" height="28.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="23"/>
+                                        <rect key="frame" x="81.666666666666671" y="153" width="211.66666666666663" height="28.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="36"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="36"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify Plants , flowers and trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9En-ki-Htv">
-                                        <rect key="frame" x="63.666666666666671" y="96" width="247.66666666666663" height="18"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="40.333333333333343" y="193.33333333333334" width="294.66666666666663" height="23.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" name="AppColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="29"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="29"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Collections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-9L-MV1">
-                                        <rect key="frame" x="28.000000000000007" y="151.33333333333334" width="123.66666666666669" height="21"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zla-dq-J2J">
-                                        <rect key="frame" x="249" y="144.33333333333334" width="90" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="111-eM-5rI"/>
-                                            <constraint firstAttribute="height" constant="35" id="av7-PX-76L"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Edit">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
-                                        </variation>
-                                    </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2P3-2Y-mIP">
-                                        <rect key="frame" x="15" y="196.33333333333334" width="345" height="485.66666666666663"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <view key="tableFooterView" contentMode="scaleToFill" id="Mq6-BL-WiD">
-                                            <rect key="frame" x="0.0" y="0.0" width="345" height="150"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="150" id="3cR-uU-fbi"/>
-                                            </constraints>
-                                        </view>
-                                        <connections>
-                                            <outlet property="dataSource" destination="UIt-gM-LM6" id="Aeo-3Q-ogO"/>
-                                            <outlet property="delegate" destination="UIt-gM-LM6" id="e8K-Dw-IvI"/>
-                                        </connections>
-                                    </tableView>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-2x-lAP">
-                                        <rect key="frame" x="15" y="154" width="345" height="375"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqE-xA-GiA">
+                                        <rect key="frame" x="0.0" y="247" width="375" height="40"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SuggestPlant" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-0X-hsU">
-                                                <rect key="frame" x="82.666666666666686" y="8" width="180" height="183.33333333333334"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Collections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhv-9L-MV1">
+                                                <rect key="frame" x="10" y="10" width="113" height="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="30"/>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zla-dq-J2J">
+                                                <rect key="frame" x="275" y="2.6666666666666856" width="90" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="180" id="QXC-lX-k4W"/>
+                                                    <constraint firstAttribute="width" constant="90" id="111-eM-5rI"/>
+                                                    <constraint firstAttribute="height" constant="35" id="av7-PX-76L"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Edit">
+                                                    <color key="titleColor" name="AppColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="30"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.9137254901960784" green="0.95686274509803915" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="zla-dq-J2J" firstAttribute="centerY" secondItem="UqE-xA-GiA" secondAttribute="centerY" id="RKs-09-7MT"/>
+                                            <constraint firstAttribute="height" constant="40" id="Rgt-a2-8rF"/>
+                                            <constraint firstItem="hhv-9L-MV1" firstAttribute="leading" secondItem="UqE-xA-GiA" secondAttribute="leading" constant="10" id="VFc-8O-f1b"/>
+                                            <constraint firstAttribute="trailing" secondItem="zla-dq-J2J" secondAttribute="trailing" constant="10" id="Xhh-OZ-8os"/>
+                                            <constraint firstItem="hhv-9L-MV1" firstAttribute="centerY" secondItem="UqE-xA-GiA" secondAttribute="centerY" id="vsc-FG-gST"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wsy-H8-DSn">
+                                        <rect key="frame" x="10" y="302" width="355" height="195"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="195" id="t6Y-vH-rf9"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dhM-NF-Xap">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="UIt-gM-LM6" id="zn0-tZ-Nau"/>
+                                            <outlet property="delegate" destination="UIt-gM-LM6" id="l92-iv-tjJ"/>
+                                        </connections>
+                                    </collectionView>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-2x-lAP">
+                                        <rect key="frame" x="0.0" y="53" width="375" height="629"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-fI-Vdu">
+                                                <rect key="frame" x="81.666666666666671" y="20" width="211.66666666666663" height="29.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="36"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identify Plants , flowers and trees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pze-Cv-GdL">
+                                                <rect key="frame" x="40.333333333333343" y="57.333333333333336" width="294.66666666666663" height="23.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                                <color key="textColor" name="AppColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="29"/>
+                                                </variation>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="IKw-0X-hsU">
+                                                <rect key="frame" x="47.666666666666657" y="97" width="280" height="280"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="DE0-hU-3S0"/>
+                                                    <constraint firstAttribute="height" constant="280" id="Ott-V6-fRn"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-d7-0EN">
-                                                <rect key="frame" x="82.666666666666686" y="211.33333333333331" width="180" height="50"/>
+                                                <rect key="frame" x="107.66666666666667" y="397" width="159.66666666666663" height="60"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="180" id="BOW-Ag-a3P"/>
-                                                    <constraint firstAttribute="height" constant="50" id="TIK-aO-a5U"/>
+                                                    <constraint firstAttribute="height" constant="60" id="TIK-aO-a5U"/>
                                                 </constraints>
                                                 <string key="text">Identify Your Plant to
 click this Button</string>
-                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-Nx-Yp7">
-                                                <rect key="frame" x="141.66666666666666" y="269.33333333333331" width="62" height="98.333333333333314"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="62" id="cNR-hk-ghl"/>
-                                                </constraints>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-Nx-Yp7">
+                                                <rect key="frame" x="137.66666666666666" y="465" width="100" height="100"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.98039215690000003" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="IKw-0X-hsU" firstAttribute="centerX" secondItem="NQD-2x-lAP" secondAttribute="centerX" id="BCk-Aw-gPy"/>
-                                            <constraint firstItem="IKw-0X-hsU" firstAttribute="top" secondItem="NQD-2x-lAP" secondAttribute="top" constant="8" id="FiM-Z3-59i"/>
+                                            <constraint firstItem="lCy-fI-Vdu" firstAttribute="centerX" secondItem="NQD-2x-lAP" secondAttribute="centerX" id="8mD-AM-7zo"/>
                                             <constraint firstItem="I0Q-Nx-Yp7" firstAttribute="top" secondItem="Phh-d7-0EN" secondAttribute="bottom" constant="8" symbolic="YES" id="Gbb-5f-RQj"/>
-                                            <constraint firstItem="IKw-0X-hsU" firstAttribute="height" secondItem="NQD-2x-lAP" secondAttribute="height" multiplier="0.488556" id="Om6-Yg-dxW"/>
+                                            <constraint firstItem="IKw-0X-hsU" firstAttribute="centerX" secondItem="pze-Cv-GdL" secondAttribute="centerX" id="KDV-TC-T8s"/>
                                             <constraint firstItem="Phh-d7-0EN" firstAttribute="centerX" secondItem="IKw-0X-hsU" secondAttribute="centerX" id="Tey-1n-1mM"/>
+                                            <constraint firstItem="lCy-fI-Vdu" firstAttribute="top" secondItem="NQD-2x-lAP" secondAttribute="top" constant="20" id="UOf-ig-uZs"/>
                                             <constraint firstItem="I0Q-Nx-Yp7" firstAttribute="centerX" secondItem="Phh-d7-0EN" secondAttribute="centerX" id="UQ4-s4-w4I"/>
-                                            <constraint firstItem="I0Q-Nx-Yp7" firstAttribute="height" secondItem="NQD-2x-lAP" secondAttribute="height" multiplier="0.2624" id="ixK-7x-283"/>
+                                            <constraint firstItem="pze-Cv-GdL" firstAttribute="centerX" secondItem="NQD-2x-lAP" secondAttribute="centerX" id="dl0-Qe-8zo"/>
+                                            <constraint firstItem="IKw-0X-hsU" firstAttribute="top" secondItem="pze-Cv-GdL" secondAttribute="bottom" constant="16" id="u0e-7s-IPc"/>
+                                            <constraint firstItem="pze-Cv-GdL" firstAttribute="top" secondItem="lCy-fI-Vdu" secondAttribute="bottom" constant="8" id="xAG-np-rbL"/>
                                             <constraint firstItem="Phh-d7-0EN" firstAttribute="top" secondItem="IKw-0X-hsU" secondAttribute="bottom" constant="20" id="zo3-H3-lG4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="hhv-9L-MV1" firstAttribute="top" secondItem="9En-ki-Htv" secondAttribute="bottom" constant="37.333333333333329" id="1G3-wV-gDW"/>
+                                    <constraint firstItem="e2r-vI-64M" firstAttribute="top" secondItem="3ad-xJ-acv" secondAttribute="bottom" constant="15" id="3e3-tn-9Ol"/>
                                     <constraint firstItem="9En-ki-Htv" firstAttribute="centerX" secondItem="nvy-Jd-6Mz" secondAttribute="centerX" id="4QL-wc-Bnr"/>
-                                    <constraint firstAttribute="trailing" secondItem="zla-dq-J2J" secondAttribute="trailing" constant="36" id="8KF-Fa-3hq"/>
-                                    <constraint firstItem="2P3-2Y-mIP" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="15" id="8Mb-2c-Ead"/>
+                                    <constraint firstItem="wsy-H8-DSn" firstAttribute="top" secondItem="UqE-xA-GiA" secondAttribute="bottom" constant="15" id="A5K-ad-uQY"/>
                                     <constraint firstItem="3ad-xJ-acv" firstAttribute="top" secondItem="oMG-nr-Wed" secondAttribute="top" constant="16" id="Aga-5U-c60"/>
+                                    <constraint firstAttribute="bottom" secondItem="NQD-2x-lAP" secondAttribute="bottom" id="DBf-v5-n1j"/>
                                     <constraint firstItem="3ad-xJ-acv" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="16" id="DYf-19-L8P"/>
-                                    <constraint firstAttribute="trailing" secondItem="2P3-2Y-mIP" secondAttribute="trailing" constant="15" id="DyZ-X4-m0B"/>
+                                    <constraint firstAttribute="trailing" secondItem="wsy-H8-DSn" secondAttribute="trailing" constant="10" id="FNj-1z-Woy"/>
+                                    <constraint firstItem="UqE-xA-GiA" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" id="HAh-AF-ihm"/>
+                                    <constraint firstItem="NQD-2x-lAP" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" id="IYt-Wv-1WI"/>
+                                    <constraint firstAttribute="trailing" secondItem="UqE-xA-GiA" secondAttribute="trailing" id="M3v-j2-6EM"/>
                                     <constraint firstItem="nvy-Jd-6Mz" firstAttribute="centerX" secondItem="oMG-nr-Wed" secondAttribute="centerX" id="NFz-6n-RSE"/>
-                                    <constraint firstItem="zla-dq-J2J" firstAttribute="centerY" secondItem="hhv-9L-MV1" secondAttribute="centerY" id="SrI-vd-Sbk"/>
-                                    <constraint firstAttribute="trailing" secondItem="NQD-2x-lAP" secondAttribute="trailing" constant="15" id="YWh-h6-5KH"/>
-                                    <constraint firstItem="9En-ki-Htv" firstAttribute="top" secondItem="nvy-Jd-6Mz" secondAttribute="bottom" constant="7.5" id="c2N-2H-29v"/>
-                                    <constraint firstItem="nvy-Jd-6Mz" firstAttribute="top" secondItem="oMG-nr-Wed" secondAttribute="top" constant="60" id="e8q-xM-YZ0"/>
-                                    <constraint firstItem="NQD-2x-lAP" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="15" id="ftb-dg-YE0"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hhv-9L-MV1" secondAttribute="trailing" constant="28" id="hiH-Em-J74"/>
-                                    <constraint firstItem="2P3-2Y-mIP" firstAttribute="top" secondItem="hhv-9L-MV1" secondAttribute="bottom" constant="24" id="kOF-HT-vWj">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="48"/>
-                                    </constraint>
-                                    <constraint firstItem="NQD-2x-lAP" firstAttribute="height" secondItem="oMG-nr-Wed" secondAttribute="height" multiplier="0.550225" id="orZ-hN-x7E"/>
-                                    <constraint firstItem="NQD-2x-lAP" firstAttribute="top" secondItem="9En-ki-Htv" secondAttribute="bottom" constant="40" id="pxp-Y3-aRb"/>
-                                    <constraint firstItem="hhv-9L-MV1" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="28" id="xVA-qw-GzX"/>
-                                    <constraint firstAttribute="bottom" secondItem="2P3-2Y-mIP" secondAttribute="bottom" id="xaE-4u-9tN"/>
+                                    <constraint firstItem="e2r-vI-64M" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="16" id="S44-R3-wts"/>
+                                    <constraint firstItem="9En-ki-Htv" firstAttribute="top" secondItem="nvy-Jd-6Mz" secondAttribute="bottom" constant="12" id="c2N-2H-29v"/>
+                                    <constraint firstItem="NQD-2x-lAP" firstAttribute="top" secondItem="3ad-xJ-acv" secondAttribute="bottom" constant="15" id="gYr-h5-vML"/>
+                                    <constraint firstItem="nvy-Jd-6Mz" firstAttribute="top" secondItem="e2r-vI-64M" secondAttribute="bottom" constant="50" id="pCC-rh-PwD"/>
+                                    <constraint firstItem="UqE-xA-GiA" firstAttribute="top" secondItem="9En-ki-Htv" secondAttribute="bottom" constant="30" id="vWT-A2-PV0"/>
+                                    <constraint firstAttribute="trailing" secondItem="e2r-vI-64M" secondAttribute="trailing" constant="16" id="vop-dU-6MY"/>
+                                    <constraint firstItem="wsy-H8-DSn" firstAttribute="leading" secondItem="oMG-nr-Wed" secondAttribute="leading" constant="10" id="xhi-V8-09N"/>
+                                    <constraint firstAttribute="trailing" secondItem="NQD-2x-lAP" secondAttribute="trailing" id="yhE-9p-fTk"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UID-Pg-KhQ"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.98039215686274506" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="oMG-nr-Wed" firstAttribute="leading" secondItem="UID-Pg-KhQ" secondAttribute="leading" id="46i-y0-OaG"/>
                             <constraint firstItem="UID-Pg-KhQ" firstAttribute="trailing" secondItem="oMG-nr-Wed" secondAttribute="trailing" id="Bsh-xG-RXo"/>
@@ -651,13 +746,14 @@ click this Button</string>
                         <outlet property="btnEdit" destination="zla-dq-J2J" id="jzD-hc-Nbi"/>
                         <outlet property="lblMycollection" destination="hhv-9L-MV1" id="hft-62-Jph"/>
                         <outlet property="noDataView" destination="NQD-2x-lAP" id="6sJ-mG-dsY"/>
-                        <outlet property="viewNativeAds" destination="Mq6-BL-WiD" id="I34-LG-JVu"/>
-                        <outlet property="vwTable" destination="2P3-2Y-mIP" id="jLN-jv-cJf"/>
+                        <outlet property="plantCollectionView" destination="wsy-H8-DSn" id="de4-hc-vCK"/>
+                        <outlet property="searchBar" destination="aC5-F4-7l6" id="tVB-iu-h1k"/>
+                        <outlet property="searchBarView" destination="e2r-vI-64M" id="JZH-an-jh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHH-Zw-LN0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2090.625" y="-1224.2957746478874"/>
+            <point key="canvasLocation" x="2090.4000000000001" y="-1224.384236453202"/>
         </scene>
         <!--Plant DetailsVC-->
         <scene sceneID="DSc-t0-VKn">
@@ -708,7 +804,7 @@ click this Button</string>
                                                 <rect key="frame" x="0.0" y="220" width="375" height="602"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhw-bW-6sf">
-                                                        <rect key="frame" x="16" y="30" width="77" height="19.666666666666671"/>
+                                                        <rect key="frame" x="16" y="30" width="67.666666666666671" height="18.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -888,7 +984,7 @@ click this Button</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAO-wD-wRE">
-                                                        <rect key="frame" x="16" y="379.66666666666663" width="69" height="23.333333333333314"/>
+                                                        <rect key="frame" x="16.000000000000004" y="379.66666666666663" width="60.333333333333343" height="22.333333333333314"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="19"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.2666666667" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -897,7 +993,7 @@ click this Button</string>
                                                         </variation>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LtI-Xb-KEr">
-                                                        <rect key="frame" x="20" y="411" width="335" height="100"/>
+                                                        <rect key="frame" x="20" y="410" width="335" height="100"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="rT8-Nh-STg"/>
@@ -1032,106 +1128,39 @@ click this Button</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9A-QK-yfd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="dg2-tU-FCO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME TO PLANTOLOGY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH6-XM-Soa">
-                                        <rect key="frame" x="60" y="250.00000000000003" width="255" height="85.333333333333343"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="35"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="57"/>
-                                        </variation>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke3-Jq-739">
-                                        <rect key="frame" x="20" y="345.33333333333331" width="335" height="29.333333333333314"/>
+                                        <rect key="frame" x="20" y="685" width="335" height="47"/>
                                         <string key="text">Identify and Better understand all
 kinds of plants living in nature. </string>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="24"/>
-                                        </variation>
-                                    </label>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJb-3U-sEp">
-                                        <rect key="frame" x="50" y="679" width="275" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-Cn-V7s">
-                                                <rect key="frame" x="88" y="14.666666666666629" width="99" height="21"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="33"/>
-                                                </variation>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4K-yW-ZUi">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="50"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="btngetStartedAction:" destination="Sy8-b8-9QF" eventType="touchUpInside" id="boq-8I-udc"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="jaL-Cn-V7s" firstAttribute="centerY" secondItem="sJb-3U-sEp" secondAttribute="centerY" id="4TY-Mt-66x"/>
-                                            <constraint firstItem="N4K-yW-ZUi" firstAttribute="top" secondItem="sJb-3U-sEp" secondAttribute="top" id="4mE-Vm-kvD"/>
-                                            <constraint firstAttribute="bottom" secondItem="N4K-yW-ZUi" secondAttribute="bottom" id="OcL-sh-W3S"/>
-                                            <constraint firstItem="jaL-Cn-V7s" firstAttribute="centerX" secondItem="sJb-3U-sEp" secondAttribute="centerX" id="gJR-mv-TqZ"/>
-                                            <constraint firstAttribute="height" constant="50" id="lTP-Ht-aQn">
-                                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                                            </constraint>
-                                            <constraint firstAttribute="trailing" secondItem="N4K-yW-ZUi" secondAttribute="trailing" id="qp1-uX-0dB"/>
-                                            <constraint firstItem="N4K-yW-ZUi" firstAttribute="leading" secondItem="sJb-3U-sEp" secondAttribute="leading" id="uQa-0w-cL7"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-gZ-yNT" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                        <rect key="frame" x="167.66666666666666" y="742" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="1aP-NX-SHN"/>
-                                            <constraint firstAttribute="height" constant="40" id="omX-1m-nbn"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-Me-hr1">
-                                        <rect key="frame" x="16" y="722" width="343" height="0.0"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                        </variation>
                                     </label>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ep-H8-pdM" customClass="LottieAnimationView" customModule="Lottie">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="685"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="splash white"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AppColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="sJb-3U-sEp" secondAttribute="bottom" constant="83" id="09n-pg-qfY"/>
-                                    <constraint firstAttribute="bottom" secondItem="gSK-gZ-yNT" secondAttribute="bottom" constant="30" id="1OY-O5-3wB"/>
-                                    <constraint firstAttribute="trailing" secondItem="bH6-XM-Soa" secondAttribute="trailing" constant="60" id="F7x-Ld-P8t"/>
-                                    <constraint firstAttribute="trailing" secondItem="sJb-3U-sEp" secondAttribute="trailing" constant="50" id="I3p-BJ-2Y7"/>
-                                    <constraint firstItem="dg2-tU-FCO" firstAttribute="top" secondItem="X9A-QK-yfd" secondAttribute="top" id="MVS-jZ-h63"/>
-                                    <constraint firstAttribute="trailing" secondItem="dg2-tU-FCO" secondAttribute="trailing" id="UTt-kB-8ye"/>
-                                    <constraint firstItem="sJb-3U-sEp" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" constant="50" id="WIP-ir-PsI"/>
-                                    <constraint firstItem="dg2-tU-FCO" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" id="e0H-m4-D4c"/>
-                                    <constraint firstItem="gSK-gZ-yNT" firstAttribute="centerX" secondItem="X9A-QK-yfd" secondAttribute="centerX" id="gO4-Ok-bAC"/>
-                                    <constraint firstItem="bH6-XM-Soa" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" constant="60" id="gbo-yR-k6s"/>
-                                    <constraint firstItem="gSK-gZ-yNT" firstAttribute="top" secondItem="kbM-Me-hr1" secondAttribute="bottom" constant="20" id="hzt-Eg-wf9"/>
+                                    <constraint firstItem="ke3-Jq-739" firstAttribute="top" secondItem="6ep-H8-pdM" secondAttribute="bottom" id="0kl-hK-bNf"/>
+                                    <constraint firstItem="6ep-H8-pdM" firstAttribute="top" secondItem="X9A-QK-yfd" secondAttribute="top" id="OOw-wm-80l"/>
+                                    <constraint firstItem="6ep-H8-pdM" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" id="foV-o9-76R"/>
                                     <constraint firstAttribute="trailing" secondItem="ke3-Jq-739" secondAttribute="trailing" constant="20" id="iBk-re-hnj"/>
-                                    <constraint firstItem="bH6-XM-Soa" firstAttribute="top" secondItem="X9A-QK-yfd" secondAttribute="top" constant="250" id="lcH-Kv-WNz">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="450"/>
-                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="6ep-H8-pdM" secondAttribute="trailing" id="mdu-IU-1S7"/>
                                     <constraint firstItem="ke3-Jq-739" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" constant="20" id="nWq-TB-qlZ"/>
-                                    <constraint firstItem="ke3-Jq-739" firstAttribute="top" secondItem="bH6-XM-Soa" secondAttribute="bottom" constant="10" id="pAL-EH-iYy">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
-                                    </constraint>
-                                    <constraint firstItem="kbM-Me-hr1" firstAttribute="leading" secondItem="X9A-QK-yfd" secondAttribute="leading" constant="16" id="rKd-tD-SgW"/>
-                                    <constraint firstAttribute="trailing" secondItem="kbM-Me-hr1" secondAttribute="trailing" constant="16" id="uUQ-1t-CrG"/>
-                                    <constraint firstAttribute="bottom" secondItem="dg2-tU-FCO" secondAttribute="bottom" id="vBP-H9-bhv"/>
+                                    <constraint firstAttribute="bottom" secondItem="ke3-Jq-739" secondAttribute="bottom" constant="80" id="sJI-nH-uHb"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hD6-mU-6u9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AppColor"/>
                         <constraints>
                             <constraint firstItem="X9A-QK-yfd" firstAttribute="top" secondItem="BP8-On-V0d" secondAttribute="top" id="353-qm-jkk"/>
                             <constraint firstItem="X9A-QK-yfd" firstAttribute="trailing" secondItem="hD6-mU-6u9" secondAttribute="trailing" id="BiK-ep-ugQ"/>
@@ -1141,14 +1170,12 @@ kinds of plants living in nature. </string>
                     </view>
                     <navigationItem key="navigationItem" id="6Xo-KT-aIb"/>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="gSK-gZ-yNT" id="wvV-KB-MJe"/>
-                        <outlet property="lblAds" destination="kbM-Me-hr1" id="q5m-2E-8pK"/>
-                        <outlet property="vwGetStarted" destination="sJb-3U-sEp" id="61e-TW-sKe"/>
+                        <outlet property="animationView" destination="6ep-H8-pdM" id="b74-do-EMe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DG5-NP-obO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1644.375" y="-888.38028169014081"/>
+            <point key="canvasLocation" x="-1645.5999999999999" y="-888.91625615763553"/>
         </scene>
         <!--On BordingVC-->
         <scene sceneID="Vcq-Qs-X3N">
@@ -1165,7 +1192,7 @@ kinds of plants living in nature. </string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     </imageView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EEG-UE-jPr">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="578"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="580"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gdY-Qe-szC">
                                             <size key="itemSize" width="128" height="128"/>
@@ -1179,63 +1206,59 @@ kinds of plants living in nature. </string>
                                             <outlet property="delegate" destination="DOu-fw-gGh" id="9E4-ZT-y2P"/>
                                         </connections>
                                     </collectionView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-7x-yZ2">
-                                        <rect key="frame" x="157.66666666666666" y="710" width="60" height="60"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrowToNext" translatesAutoresizingMaskIntoConstraints="NO" id="Cib-Gh-4ti">
-                                                <rect key="frame" x="4.3333333333333428" y="20" width="51" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="51" id="Kb3-Cz-WGW"/>
-                                                    <constraint firstAttribute="height" constant="20" id="kAz-65-zla"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="let-Pn-3fa">
-                                                <rect key="frame" x="4.3333333333333428" y="20" width="51" height="20"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <connections>
-                                                    <action selector="btnGoAction:" destination="DOu-fw-gGh" eventType="touchUpInside" id="VgU-vT-Zzm"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="let-Pn-3fa">
+                                        <rect key="frame" x="326" y="695" width="34" height="26"/>
                                         <constraints>
-                                            <constraint firstItem="let-Pn-3fa" firstAttribute="bottom" secondItem="Cib-Gh-4ti" secondAttribute="bottom" id="Gdg-zf-7fX"/>
-                                            <constraint firstItem="Cib-Gh-4ti" firstAttribute="centerX" secondItem="qtf-7x-yZ2" secondAttribute="centerX" id="NJg-D0-MHo"/>
-                                            <constraint firstItem="Cib-Gh-4ti" firstAttribute="centerY" secondItem="qtf-7x-yZ2" secondAttribute="centerY" id="SeM-ye-JrK"/>
-                                            <constraint firstItem="let-Pn-3fa" firstAttribute="leading" secondItem="Cib-Gh-4ti" secondAttribute="leading" id="XHo-ZM-ydx"/>
-                                            <constraint firstAttribute="height" constant="60" id="YjY-j1-09C"/>
-                                            <constraint firstItem="let-Pn-3fa" firstAttribute="trailing" secondItem="Cib-Gh-4ti" secondAttribute="trailing" id="chC-SQ-GoL"/>
-                                            <constraint firstItem="let-Pn-3fa" firstAttribute="top" secondItem="Cib-Gh-4ti" secondAttribute="top" id="crT-QA-xVU"/>
-                                            <constraint firstAttribute="width" constant="60" id="tQd-GE-BWe"/>
+                                            <constraint firstAttribute="width" priority="749" constant="34" id="L2g-cU-7aH"/>
                                         </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" name="AppColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGoAction:" destination="DOu-fw-gGh" eventType="touchUpInside" id="gUn-yU-1ah"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-c2-6zf">
-                                        <rect key="frame" x="260" y="46" width="100" height="34"/>
+                                        <rect key="frame" x="260" y="47" width="100" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="JQy-d7-swh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Skip">
-                                            <color key="titleColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" name="AppColor"/>
                                         </state>
                                         <connections>
                                             <action selector="btnSkipAction:" destination="DOu-fw-gGh" eventType="touchUpInside" id="Qdi-ov-srq"/>
                                         </connections>
                                     </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1yL-sJ-wVO">
+                                        <rect key="frame" x="129.66666666666666" y="695" width="115.66666666666666" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="TqD-NJ-9Qb"/>
+                                        </constraints>
+                                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="currentPageIndicatorTintColor" name="AppColor"/>
+                                    </pageControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="DH1-b5-mCl" firstAttribute="leading" secondItem="Jgc-EG-eLh" secondAttribute="leading" id="5Bg-qB-Qai"/>
                                     <constraint firstItem="EEG-UE-jPr" firstAttribute="top" secondItem="Xmf-c2-6zf" secondAttribute="bottom" constant="20" id="BbH-YV-gCH"/>
                                     <constraint firstAttribute="trailing" secondItem="DH1-b5-mCl" secondAttribute="trailing" id="FRC-XM-T9k"/>
-                                    <constraint firstItem="qtf-7x-yZ2" firstAttribute="top" secondItem="EEG-UE-jPr" secondAttribute="bottom" constant="32" id="PUD-JA-f7N"/>
+                                    <constraint firstItem="1yL-sJ-wVO" firstAttribute="bottom" secondItem="let-Pn-3fa" secondAttribute="bottom" id="Fhp-HT-B5s"/>
+                                    <constraint firstItem="let-Pn-3fa" firstAttribute="centerY" secondItem="1yL-sJ-wVO" secondAttribute="centerY" id="FpU-Yg-mEz"/>
+                                    <constraint firstItem="Xmf-c2-6zf" firstAttribute="top" secondItem="Jgc-EG-eLh" secondAttribute="top" constant="47" id="If9-Py-pnz"/>
+                                    <constraint firstItem="1yL-sJ-wVO" firstAttribute="top" secondItem="EEG-UE-jPr" secondAttribute="bottom" constant="15" id="Nlt-IH-j18"/>
+                                    <constraint firstAttribute="trailing" secondItem="let-Pn-3fa" secondAttribute="trailing" constant="15" id="QVu-yC-jNd"/>
                                     <constraint firstItem="EEG-UE-jPr" firstAttribute="top" secondItem="Jgc-EG-eLh" secondAttribute="top" constant="100" id="ZDv-x1-e53"/>
                                     <constraint firstAttribute="trailing" secondItem="EEG-UE-jPr" secondAttribute="trailing" id="a4y-q4-XVK"/>
-                                    <constraint firstItem="qtf-7x-yZ2" firstAttribute="centerX" secondItem="EEG-UE-jPr" secondAttribute="centerX" id="abO-oj-INQ"/>
+                                    <constraint firstItem="1yL-sJ-wVO" firstAttribute="centerX" secondItem="Jgc-EG-eLh" secondAttribute="centerX" id="c1z-vM-wbm"/>
                                     <constraint firstAttribute="bottom" secondItem="DH1-b5-mCl" secondAttribute="bottom" id="fnu-iN-rgF"/>
+                                    <constraint firstAttribute="bottom" secondItem="1yL-sJ-wVO" secondAttribute="bottom" constant="91" id="qAz-5b-fXQ"/>
                                     <constraint firstItem="DH1-b5-mCl" firstAttribute="top" secondItem="Jgc-EG-eLh" secondAttribute="top" id="rai-qS-Z2B"/>
-                                    <constraint firstItem="qtf-7x-yZ2" firstAttribute="bottom" secondItem="Jgc-EG-eLh" secondAttribute="bottomMargin" id="tbw-VJ-7W6"/>
                                     <constraint firstItem="EEG-UE-jPr" firstAttribute="leading" secondItem="Jgc-EG-eLh" secondAttribute="leading" id="wIm-Ud-ES1"/>
                                     <constraint firstAttribute="trailing" secondItem="Xmf-c2-6zf" secondAttribute="trailing" constant="15" id="yfM-DU-HcA"/>
                                 </constraints>
@@ -1252,11 +1275,10 @@ kinds of plants living in nature. </string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnGoOutlet" destination="let-Pn-3fa" id="CHC-zA-SFv"/>
-                        <outlet property="btnImageview" destination="Cib-Gh-4ti" id="VPp-oL-iLz"/>
+                        <outlet property="btnGoOutlet" destination="let-Pn-3fa" id="dPv-Kk-cYC"/>
                         <outlet property="btnSkipOutlet" destination="Xmf-c2-6zf" id="Yom-Do-E3f"/>
+                        <outlet property="pageControl" destination="1yL-sJ-wVO" id="HrA-LK-6Do"/>
                         <outlet property="slidesCollectionView" destination="EEG-UE-jPr" id="ZHj-25-5zx"/>
-                        <outlet property="vwBtn" destination="qtf-7x-yZ2" id="V7p-rV-qgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRN-mc-oN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1273,7 +1295,7 @@ kinds of plants living in nature. </string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <tabBarAppearance key="standardAppearance">
                             <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="selectionIndicatorTintColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="selectionIndicatorTintColor" name="AppColor"/>
                         </tabBarAppearance>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="centerButtonColor">
@@ -1289,6 +1311,9 @@ kinds of plants living in nature. </string>
                                 <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="barcode-scanner"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
@@ -1531,7 +1556,7 @@ kinds of plants living in nature. </string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmm-KJ-CnK">
-                                                <rect key="frame" x="16" y="30" width="58" height="40"/>
+                                                <rect key="frame" x="16" y="30" width="52" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Q91-mq-ES4"/>
                                                 </constraints>
@@ -1544,7 +1569,7 @@ kinds of plants living in nature. </string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8z-0T-Bs0">
-                                                <rect key="frame" x="307" y="40" width="52" height="30"/>
+                                                <rect key="frame" x="312" y="40" width="47" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="b9e-ki-6f7"/>
                                                 </constraints>
@@ -1557,7 +1582,7 @@ kinds of plants living in nature. </string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app knows everything when it comes to plants and plant care. Love it!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="CIz-kw-4iN">
-                                                <rect key="frame" x="87.666666666666686" y="90" width="200" height="51.333333333333343"/>
+                                                <rect key="frame" x="87.666666666666686" y="90" width="200" height="49"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="bYk-YS-kmQ"/>
                                                 </constraints>
@@ -1566,7 +1591,7 @@ kinds of plants living in nature. </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-qT-hkk">
-                                                <rect key="frame" x="137.66666666666666" y="151.33333333333334" width="100" height="0.66666666666665719"/>
+                                                <rect key="frame" x="137.66666666666666" y="149" width="100" height="0.66666666666665719"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="Dci-8Z-0cL"/>
@@ -1577,27 +1602,27 @@ kinds of plants living in nature. </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Y3k-ds-eJV">
-                                                <rect key="frame" x="87.666666666666686" y="166.33333333333334" width="200" height="20"/>
+                                                <rect key="frame" x="87.666666666666686" y="164" width="200" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="OiF-Qq-IYI"/>
                                                     <constraint firstAttribute="height" constant="20" id="fav-AA-IRH"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o14-42-hZ3">
-                                                <rect key="frame" x="38" y="240" width="299" height="54"/>
+                                                <rect key="frame" x="47.666666666666657" y="240" width="280" height="56"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
                                                 <state key="normal" title="GET PREMIUM ACCESS">
                                                     <color key="titleColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP ALL YOUR PLANTS THRIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-TQ-CVu">
-                                                <rect key="frame" x="39.333333333333343" y="304" width="296.33333333333326" height="22"/>
+                                                <rect key="frame" x="48" y="306" width="279" height="21"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITH PLANT IDENTIFIER PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-ZR-BeH">
-                                                <rect key="frame" x="63.333333333333329" y="329" width="248.66666666666669" height="19.666666666666686"/>
+                                                <rect key="frame" x="77.000000000000014" y="330" width="221.33333333333337" height="18.666666666666686"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1622,7 +1647,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No advertisement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Y1m-h2-pje">
-                                                                <rect key="frame" x="34.666666666666657" y="4" width="144.66666666666666" height="18.666666666666668"/>
+                                                                <rect key="frame" x="34.666666666666664" y="4" width="126.66666666666669" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1655,7 +1680,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited snaps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-Hr-tX7">
-                                                                <rect key="frame" x="32.666666666666657" y="4" width="131" height="18.666666666666668"/>
+                                                                <rect key="frame" x="32.66666666666665" y="4" width="115.33333333333331" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1688,7 +1713,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World's largest database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-pc-BCj">
-                                                                <rect key="frame" x="34.666666666666671" y="4" width="196.66666666666663" height="18.666666666666668"/>
+                                                                <rect key="frame" x="34.666666666666657" y="4" width="177.33333333333334" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1729,7 +1754,7 @@ kinds of plants living in nature. </string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto renewable. Cancel anytime." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFi-fe-OlQ">
-                                                                <rect key="frame" x="59.000000000000014" y="27.333333333333318" width="197.33333333333337" height="14.666666666666668"/>
+                                                                <rect key="frame" x="69.333333333333329" y="27.333333333333314" width="176.66666666666669" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
                                                                 <color key="textColor" red="0.52156862749999999" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1764,7 +1789,7 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="71.999999999999943" width="315" height="60"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-gO-SSQ">
-                                                                <rect key="frame" x="16" y="20" width="130.66666666666666" height="19.666666666666671"/>
+                                                                <rect key="frame" x="15.999999999999993" y="20.666666666666742" width="115.33333333333331" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -1940,6 +1965,262 @@ kinds of plants living in nature. </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6b0-3F-G89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3596.25" y="-1224.2957746478874"/>
+        </scene>
+        <!--Identify OptionsVC-->
+        <scene sceneID="k2g-4a-67g">
+            <objects>
+                <viewController storyboardIdentifier="IdentifyOptionsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r0A-mc-uGP" customClass="IdentifyOptionsVC" customModule="PlantIdentifire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zuz-YM-btc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvt-Jv-XFc">
+                                <rect key="frame" x="0.0" y="47" width="375" height="466"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="onClickDismiss:" destination="r0A-mc-uGP" eventType="touchUpInside" id="NYM-20-3UL"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmS-u3-cso">
+                                <rect key="frame" x="16" y="513" width="343" height="185"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup" translatesAutoresizingMaskIntoConstraints="NO" id="kqk-94-yFF">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="185"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-7g-pZv">
+                                        <rect key="frame" x="91" y="15.999999999999998" width="161" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="19"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-j6-XfO">
+                                        <rect key="frame" x="16" y="53.333333333333371" width="311" height="84"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxi-Sf-8Ve">
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR Scan" translatesAutoresizingMaskIntoConstraints="NO" id="mlT-D8-NGX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cp-Cx-mqf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="onClickQRScan:" destination="r0A-mc-uGP" eventType="touchUpInside" id="VNK-lJ-7Gq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="mlT-D8-NGX" secondAttribute="trailing" id="1sg-Go-IGR"/>
+                                                    <constraint firstAttribute="width" constant="84" id="6nn-Fv-zJo"/>
+                                                    <constraint firstItem="mlT-D8-NGX" firstAttribute="leading" secondItem="Hxi-Sf-8Ve" secondAttribute="leading" id="E38-4o-cvI"/>
+                                                    <constraint firstAttribute="height" constant="84" id="OGg-jG-UdM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="mlT-D8-NGX" secondAttribute="bottom" id="RxT-sP-mZD"/>
+                                                    <constraint firstItem="1cp-Cx-mqf" firstAttribute="leading" secondItem="Hxi-Sf-8Ve" secondAttribute="leading" id="TUM-pU-QYb"/>
+                                                    <constraint firstItem="1cp-Cx-mqf" firstAttribute="top" secondItem="Hxi-Sf-8Ve" secondAttribute="top" id="idz-U3-rU8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1cp-Cx-mqf" secondAttribute="trailing" id="r56-cG-P6P"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1cp-Cx-mqf" secondAttribute="bottom" id="vPB-1x-Fby"/>
+                                                    <constraint firstItem="mlT-D8-NGX" firstAttribute="top" secondItem="Hxi-Sf-8Ve" secondAttribute="top" id="xCC-SH-d5o"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9U-Qy-2RP">
+                                                <rect key="frame" x="113.66666666666666" y="0.0" width="84" height="84"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="qA3-FU-TdN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duM-vd-mjO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="onClickCamera:" destination="r0A-mc-uGP" eventType="touchUpInside" id="Wa1-AC-QXb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="qA3-FU-TdN" firstAttribute="top" secondItem="z9U-Qy-2RP" secondAttribute="top" id="0wP-ST-Cs9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qA3-FU-TdN" secondAttribute="trailing" id="TDh-8e-JfT"/>
+                                                    <constraint firstItem="duM-vd-mjO" firstAttribute="leading" secondItem="z9U-Qy-2RP" secondAttribute="leading" id="VOn-RF-LWl"/>
+                                                    <constraint firstItem="duM-vd-mjO" firstAttribute="top" secondItem="z9U-Qy-2RP" secondAttribute="top" id="WeS-6n-gf3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="duM-vd-mjO" secondAttribute="trailing" id="b9a-Yv-vbf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="duM-vd-mjO" secondAttribute="bottom" id="djk-9K-Q6W"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qA3-FU-TdN" secondAttribute="bottom" id="tyg-Ed-nBy"/>
+                                                    <constraint firstItem="qA3-FU-TdN" firstAttribute="leading" secondItem="z9U-Qy-2RP" secondAttribute="leading" id="ytj-Nb-son"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aga-86-Oql">
+                                                <rect key="frame" x="227" y="0.0" width="84" height="84"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gallery" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-kE-6ae">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-Dz-r32">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="onClickGallery:" destination="r0A-mc-uGP" eventType="touchUpInside" id="5mH-M0-YcY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="PlG-kE-6ae" firstAttribute="top" secondItem="aga-86-Oql" secondAttribute="top" id="2xu-NL-n7o"/>
+                                                    <constraint firstItem="PlG-kE-6ae" firstAttribute="leading" secondItem="aga-86-Oql" secondAttribute="leading" id="6rd-6C-YTR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PlG-kE-6ae" secondAttribute="trailing" id="Dtj-mK-Krt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="aTF-Dz-r32" secondAttribute="trailing" id="HLU-Mz-lax"/>
+                                                    <constraint firstItem="aTF-Dz-r32" firstAttribute="top" secondItem="aga-86-Oql" secondAttribute="top" id="KRW-5G-5B9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="aTF-Dz-r32" secondAttribute="bottom" id="bmS-49-1dL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PlG-kE-6ae" secondAttribute="bottom" id="lQX-XC-Ikl"/>
+                                                    <constraint firstItem="aTF-Dz-r32" firstAttribute="leading" secondItem="aga-86-Oql" secondAttribute="leading" id="lya-9w-Z7l"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oWj-j6-XfO" firstAttribute="leading" secondItem="kmS-u3-cso" secondAttribute="leading" constant="16" id="47K-WQ-jUv"/>
+                                    <constraint firstAttribute="bottom" secondItem="kqk-94-yFF" secondAttribute="bottom" id="9Rs-dw-EUO"/>
+                                    <constraint firstItem="g2T-7g-pZv" firstAttribute="top" secondItem="kmS-u3-cso" secondAttribute="top" constant="16" id="LSW-2h-Bgl"/>
+                                    <constraint firstItem="kqk-94-yFF" firstAttribute="leading" secondItem="kmS-u3-cso" secondAttribute="leading" id="Yno-zp-u4K"/>
+                                    <constraint firstAttribute="trailing" secondItem="kqk-94-yFF" secondAttribute="trailing" id="Zyz-aZ-HEL"/>
+                                    <constraint firstItem="oWj-j6-XfO" firstAttribute="top" secondItem="g2T-7g-pZv" secondAttribute="bottom" constant="15" id="aGp-9c-vhu"/>
+                                    <constraint firstAttribute="trailing" secondItem="oWj-j6-XfO" secondAttribute="trailing" constant="16" id="diH-Ii-0b9"/>
+                                    <constraint firstItem="kqk-94-yFF" firstAttribute="top" secondItem="kmS-u3-cso" secondAttribute="top" id="j70-9v-xop"/>
+                                    <constraint firstAttribute="height" constant="185" id="whD-GL-bmi"/>
+                                    <constraint firstItem="g2T-7g-pZv" firstAttribute="centerX" secondItem="kmS-u3-cso" secondAttribute="centerX" id="zYS-t7-LKr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CE4-ce-5wA"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kmS-u3-cso" firstAttribute="leading" secondItem="CE4-ce-5wA" secondAttribute="leading" constant="16" id="3Ms-tf-pXZ"/>
+                            <constraint firstItem="kmS-u3-cso" firstAttribute="top" secondItem="tvt-Jv-XFc" secondAttribute="bottom" id="65N-E9-adh"/>
+                            <constraint firstItem="tvt-Jv-XFc" firstAttribute="leading" secondItem="CE4-ce-5wA" secondAttribute="leading" id="Djm-i1-BBo"/>
+                            <constraint firstItem="CE4-ce-5wA" firstAttribute="trailing" secondItem="kmS-u3-cso" secondAttribute="trailing" constant="16" id="Efj-PV-bxp"/>
+                            <constraint firstItem="CE4-ce-5wA" firstAttribute="trailing" secondItem="tvt-Jv-XFc" secondAttribute="trailing" id="Fzb-QD-phf"/>
+                            <constraint firstItem="tvt-Jv-XFc" firstAttribute="top" secondItem="CE4-ce-5wA" secondAttribute="top" id="Qoy-bi-Zsy"/>
+                            <constraint firstItem="CE4-ce-5wA" firstAttribute="bottom" secondItem="kmS-u3-cso" secondAttribute="bottom" constant="80" id="Tnb-VR-uMA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOf-0r-23F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4282" y="-1224"/>
+        </scene>
+        <!--Photo ScanVC-->
+        <scene sceneID="2KD-4i-A3M">
+            <objects>
+                <viewController storyboardIdentifier="PhotoScanVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sKq-qU-sXC" customClass="PhotoScanVC" customModule="PlantIdentifire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4X7-Q7-OCd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWr-x1-FDo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfa-dw-jmj">
+                                        <rect key="frame" x="16" y="58" width="22" height="22"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="UbS-JR-608"/>
+                                            <constraint firstAttribute="width" constant="22" id="wdQ-7K-zmB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBackAction:" destination="pk5-Lx-t19" eventType="touchUpInside" id="lnF-Fc-9l5"/>
+                                            <action selector="onClickDismiss:" destination="sKq-qU-sXC" eventType="touchUpInside" id="8Zx-l3-NW7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-QC-qQe">
+                                        <rect key="frame" x="54" y="59.666666666666657" width="50.666666666666657" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="AppColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="101-gT-65z"/>
+                                    <constraint firstItem="Rjh-QC-qQe" firstAttribute="centerY" secondItem="Rfa-dw-jmj" secondAttribute="centerY" id="ANb-Vl-iPz"/>
+                                    <constraint firstItem="Rjh-QC-qQe" firstAttribute="leading" secondItem="Rfa-dw-jmj" secondAttribute="trailing" constant="16" id="IWm-cc-K6h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rfa-dw-jmj" secondAttribute="bottom" constant="20" id="YiU-2C-SWk"/>
+                                    <constraint firstItem="Rfa-dw-jmj" firstAttribute="leading" secondItem="pWr-x1-FDo" secondAttribute="leading" constant="16" id="u8a-3R-4NU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUl-Zf-WnW">
+                                <rect key="frame" x="0.0" y="100" width="375" height="678"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n8G-lQ-tNx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="sTR-Vv-ZfM">
+                                        <rect key="frame" x="20" y="101.66666666666666" width="335" height="474.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CE2-lD-tU8" customClass="LottieAnimationView" customModule="Lottie">
+                                        <rect key="frame" x="30" y="121.66666666666666" width="315" height="434.66666666666674"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="scanAnimation"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="n8G-lQ-tNx" firstAttribute="top" secondItem="RUl-Zf-WnW" secondAttribute="top" id="59S-FW-fzI"/>
+                                    <constraint firstAttribute="trailing" secondItem="sTR-Vv-ZfM" secondAttribute="trailing" constant="20" id="8ag-zs-WYI"/>
+                                    <constraint firstAttribute="trailing" secondItem="n8G-lQ-tNx" secondAttribute="trailing" id="CCr-db-BBP"/>
+                                    <constraint firstItem="CE2-lD-tU8" firstAttribute="trailing" secondItem="sTR-Vv-ZfM" secondAttribute="trailing" constant="-10" id="GDI-4s-rvj"/>
+                                    <constraint firstItem="sTR-Vv-ZfM" firstAttribute="centerY" secondItem="RUl-Zf-WnW" secondAttribute="centerY" id="L9j-Sp-P0w"/>
+                                    <constraint firstItem="n8G-lQ-tNx" firstAttribute="leading" secondItem="RUl-Zf-WnW" secondAttribute="leading" id="OS9-TW-naM"/>
+                                    <constraint firstItem="CE2-lD-tU8" firstAttribute="bottom" secondItem="sTR-Vv-ZfM" secondAttribute="bottom" constant="-20" id="Qk0-pz-bMV"/>
+                                    <constraint firstItem="CE2-lD-tU8" firstAttribute="top" secondItem="sTR-Vv-ZfM" secondAttribute="top" constant="20" id="Siv-vs-QSw"/>
+                                    <constraint firstItem="CE2-lD-tU8" firstAttribute="leading" secondItem="sTR-Vv-ZfM" secondAttribute="leading" constant="10" id="h8H-Jc-cmK"/>
+                                    <constraint firstItem="sTR-Vv-ZfM" firstAttribute="leading" secondItem="RUl-Zf-WnW" secondAttribute="leading" constant="20" id="mRp-DE-NNB"/>
+                                    <constraint firstItem="sTR-Vv-ZfM" firstAttribute="height" secondItem="n8G-lQ-tNx" secondAttribute="height" multiplier="0.7" id="u5I-Ho-C5N"/>
+                                    <constraint firstAttribute="bottom" secondItem="n8G-lQ-tNx" secondAttribute="bottom" id="wh8-9y-X0p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vCh-r2-SJH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vCh-r2-SJH" firstAttribute="trailing" secondItem="pWr-x1-FDo" secondAttribute="trailing" id="1hp-r2-Y5f"/>
+                            <constraint firstItem="pWr-x1-FDo" firstAttribute="top" secondItem="4X7-Q7-OCd" secondAttribute="top" id="3kO-Ih-F74"/>
+                            <constraint firstItem="pWr-x1-FDo" firstAttribute="leading" secondItem="vCh-r2-SJH" secondAttribute="leading" id="7M0-7Z-ytL"/>
+                            <constraint firstItem="vCh-r2-SJH" firstAttribute="bottom" secondItem="RUl-Zf-WnW" secondAttribute="bottom" id="9g3-4e-eg7"/>
+                            <constraint firstItem="vCh-r2-SJH" firstAttribute="trailing" secondItem="RUl-Zf-WnW" secondAttribute="trailing" id="G2s-Jb-sLf"/>
+                            <constraint firstItem="RUl-Zf-WnW" firstAttribute="top" secondItem="pWr-x1-FDo" secondAttribute="bottom" id="QFJ-LY-2HT"/>
+                            <constraint firstItem="RUl-Zf-WnW" firstAttribute="leading" secondItem="vCh-r2-SJH" secondAttribute="leading" id="ZSm-30-wkk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="CE2-lD-tU8" id="xAw-Th-VDY"/>
+                        <outlet property="mainImage" destination="n8G-lQ-tNx" id="6On-Pj-VlE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7E-qc-hkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4976.8000000000002" y="-1224.384236453202"/>
         </scene>
         <!--Item-->
         <scene sceneID="233-Ou-EJW">
@@ -2912,7 +3193,7 @@ kinds of plants living in nature. </string>
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="682"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHL-Vj-FsJ">
-                                                <rect key="frame" x="16" y="10.000000000000002" width="85.666666666666671" height="24.666666666666671"/>
+                                                <rect key="frame" x="16" y="9.9999999999999982" width="73.666666666666671" height="23.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2921,7 +3202,7 @@ kinds of plants living in nature. </string>
                                                 </variation>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtX-fb-cOb">
-                                                <rect key="frame" x="20" y="59.666666666666671" width="335" height="80.000000000000014"/>
+                                                <rect key="frame" x="20" y="58.333333333333329" width="335" height="79.999999999999986"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-BG-eCm">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
@@ -2936,13 +3217,13 @@ kinds of plants living in nature. </string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade to Premuim" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fib-ZB-fjk">
-                                                        <rect key="frame" x="76" y="28.999999999999986" width="223" height="22"/>
+                                                        <rect key="frame" x="76" y="29.666666666666671" width="223" height="21"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHq-zT-tMl">
-                                                        <rect key="frame" x="307" y="29.999999999999986" width="20" height="20"/>
+                                                        <rect key="frame" x="307" y="30.000000000000014" width="20" height="20"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToU-Uc-3zJ">
                                                                 <rect key="frame" x="0.0" y="2" width="20" height="16.333333333333332"/>
@@ -3018,13 +3299,13 @@ kinds of plants living in nature. </string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FCp-eQ-VLm">
-                                                <rect key="frame" x="20" y="159.66666666666666" width="335" height="119.99999999999997"/>
+                                                <rect key="frame" x="20" y="158.33333333333334" width="335" height="120.00000000000003"/>
                                                 <subviews>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Z4-Dt-hqf">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="0.0"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feedback" translatesAutoresizingMaskIntoConstraints="NO" id="4C1-P3-Nae">
-                                                                <rect key="frame" x="8" y="-12.333333333333314" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="-12.333333333333343" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="hn2-Cr-MG0"/>
@@ -3083,7 +3364,7 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="0.0"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reportbug" translatesAutoresizingMaskIntoConstraints="NO" id="knE-le-31Z">
-                                                                <rect key="frame" x="8" y="-12.333333333333314" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="-12.333333333333343" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="11c-5G-TkM"/>
@@ -3142,7 +3423,7 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="privacy policy" translatesAutoresizingMaskIntoConstraints="NO" id="YPZ-WT-PeE">
-                                                                <rect key="frame" x="8" y="17.666666666666686" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="17.666666666666657" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="jDo-h5-KzX"/>
@@ -3155,7 +3436,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQt-9l-cl5">
-                                                                <rect key="frame" x="49" y="20.333333333333343" width="250" height="19.666666666666671"/>
+                                                                <rect key="frame" x="49" y="20.666666666666657" width="250" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -3177,7 +3458,7 @@ kinds of plants living in nature. </string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMX-tn-36V">
-                                                                <rect key="frame" x="0.0" y="59.000000000000028" width="335" height="1"/>
+                                                                <rect key="frame" x="0.0" y="58.999999999999972" width="335" height="1"/>
                                                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="d4c-cu-jIN"/>
@@ -3206,10 +3487,10 @@ kinds of plants living in nature. </string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gw0-aF-q3F">
-                                                        <rect key="frame" x="0.0" y="60.000000000000028" width="335" height="60"/>
+                                                        <rect key="frame" x="0.0" y="59.999999999999972" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-41-MYl">
-                                                                <rect key="frame" x="8" y="17.666666666666629" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="17.666666666666686" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="NG6-Oj-1Ki"/>
@@ -3222,7 +3503,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3G-pz-rKI">
-                                                                <rect key="frame" x="49" y="20.333333333333314" width="250" height="19.666666666666671"/>
+                                                                <rect key="frame" x="49" y="20.666666666666686" width="250" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -3283,13 +3564,13 @@ kinds of plants living in nature. </string>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yZF-99-V68">
-                                                <rect key="frame" x="20" y="304.66666666666669" width="335" height="120"/>
+                                                <rect key="frame" x="20" y="303.33333333333331" width="335" height="120"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCO-V3-1Ud">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Feedback" translatesAutoresizingMaskIntoConstraints="NO" id="JqD-z8-ZI2">
-                                                                <rect key="frame" x="8" y="17.666666666666629" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="17.666666666666686" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="5Tc-1U-huN"/>
@@ -3302,7 +3583,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thg-oW-3gC">
-                                                                <rect key="frame" x="49" y="20.333333333333314" width="250" height="19.666666666666671"/>
+                                                                <rect key="frame" x="49" y="20.666666666666686" width="250" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -3356,7 +3637,7 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="60" width="335" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Share app" translatesAutoresizingMaskIntoConstraints="NO" id="9w1-Sf-Hvx">
-                                                                <rect key="frame" x="8" y="17.666666666666629" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="17.666666666666686" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="nrg-Gh-7yV"/>
@@ -3369,7 +3650,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJy-GU-xqm">
-                                                                <rect key="frame" x="49" y="20.333333333333314" width="245" height="19.666666666666671"/>
+                                                                <rect key="frame" x="49" y="20.666666666666686" width="245" height="18.666666666666671"/>
                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -3410,7 +3691,7 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="120" width="335" height="0.0"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aboutus" translatesAutoresizingMaskIntoConstraints="NO" id="KTN-d7-WWO">
-                                                                <rect key="frame" x="8" y="-12.333333333333371" width="25" height="25"/>
+                                                                <rect key="frame" x="8" y="-12.333333333333314" width="25" height="25"/>
                                                                 <color key="tintColor" name="ThemeLightPurple"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="U4f-g2-pac"/>
@@ -3535,17 +3816,18 @@ kinds of plants living in nature. </string>
     </designables>
     <resources>
         <image name="About app" width="120" height="120"/>
+        <image name="Camera" width="84" height="84"/>
         <image name="Feedback" width="120" height="120"/>
+        <image name="Gallery" width="84" height="84"/>
         <image name="More-app" width="130" height="130"/>
+        <image name="QR Scan" width="84" height="84"/>
         <image name="Report bug" width="120" height="120"/>
         <image name="Save" width="26" height="26"/>
         <image name="Share app" width="120" height="120"/>
-        <image name="SuggestPlant" width="426" height="479"/>
         <image name="aboutus" width="61" height="61"/>
         <image name="back" width="128" height="128"/>
         <image name="back (1)" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="barcode-scanner" width="25" height="25"/>
-        <image name="bg" width="595" height="1290"/>
+        <image name="barcode-scanner" width="65" height="65"/>
         <image name="bg 1" width="595" height="1290"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="crown-1" width="128" height="128"/>
@@ -3554,22 +3836,25 @@ kinds of plants living in nature. </string>
         <image name="flower" width="43.333332061767578" height="43.333332061767578"/>
         <image name="globle" width="43.333332061767578" height="43.333332061767578"/>
         <image name="history" width="120" height="120"/>
-        <image name="home" width="25" height="25"/>
+        <image name="home" width="33" height="33"/>
         <image name="img" width="1242" height="921"/>
         <image name="languages" width="120" height="120"/>
         <image name="logo" width="32" height="32"/>
         <image name="next" width="128" height="128"/>
         <image name="off-button" width="128" height="128"/>
         <image name="on-button" width="128" height="128"/>
+        <image name="plant" width="245" height="314.66665649414062"/>
+        <image name="popup" width="370" height="211.66667175292969"/>
         <image name="privacy policy" width="120" height="120"/>
         <image name="privacypolicy" width="61" height="61"/>
         <image name="reportbug" width="61" height="61"/>
-        <image name="right-arrow" width="112" height="112"/>
-        <image name="right-arrowToNext" width="50" height="50"/>
+        <image name="right-arrow" width="100" height="100"/>
+        <image name="scan" width="370" height="424"/>
         <image name="search" width="43.333332061767578" height="43.333332061767578"/>
         <image name="setting" width="25" height="25"/>
         <image name="share" width="61" height="61"/>
         <image name="star" width="441" height="76"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="#313030">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3578,7 +3863,7 @@ kinds of plants living in nature. </string>
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AppColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.027000000700354576" green="0.62000000476837158" blue="0.40799999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Gray">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>

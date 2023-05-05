@@ -11,18 +11,12 @@ import GoogleMobileAds
 class OnBordingVC: UIViewController {
     
 //MARK: - IBOutlates
-    
     @IBOutlet weak var slidesCollectionView: UICollectionView!
-    
-    @IBOutlet weak var vwBtn: UIView!
-    
     @IBOutlet weak var btnGoOutlet: UIButton!
     @IBOutlet weak var btnSkipOutlet: UIButton!
-    
-    @IBOutlet weak var btnImageview: UIImageView!
-    
-//MARK: - Variables
-    var slides : [OnboardingModel] = []
+   
+    @IBOutlet var pageControl: UIPageControl!
+    //MARK: - Variables
     var currentPage = 0
     // Interstitial Ad
     var interstitialAd: GADInterstitialAd?
@@ -58,8 +52,9 @@ class OnBordingVC: UIViewController {
     
     @IBAction func btnGoAction(_ sender: Any) {
         
-        if currentPage == slides.count - 1 {
-           // set true for avoid inbording scren.  
+        if currentPage == 2 {
+           // set true for avoid inbording scren.
+            pageControl.currentPage = currentPage
             UserDefaults.isCheckOnBording = true
             // Load Interstitial Ad
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -74,17 +69,22 @@ class OnBordingVC: UIViewController {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = redViewController
             
-        }
-        else {
-            
+        } else {
+           
             currentPage += 1
-         
-            self.btnGoOutlet.setTitle("Go", for: .normal)
-            self.btnGoOutlet.setTitleColor(.white, for: .normal)
-            self.btnImageview.isHidden = true
-            let indexPath = IndexPath(item : currentPage, section: 0)
-            self.slidesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            pageControl.currentPage = currentPage
+            if currentPage == 1 {
+                self.btnGoOutlet.setTitle("Next", for: .normal)
+               // self.btnGoOutlet.setTitleColor(.white, for: .normal)
+            } else {
+                self.btnGoOutlet.setTitle("Get Started", for: .normal)
+               // self.btnGoOutlet.setTitleColor(.white, for: .normal)
+            }
             
+
+            let indexPath = IndexPath(item : currentPage, section: 0)
+         //   self.slidesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            self.slidesCollectionView.reloadData()
             self.btnSkipOutlet.isHidden = false
             
         }
@@ -99,22 +99,6 @@ extension OnBordingVC {
         
         self.slidesCollectionView.register(UINib(nibName: "OnbordingCell", bundle: .main), forCellWithReuseIdentifier: "OnbordingCell")
         
-        self.vwBtn.backgroundColor = UIColor.MyTheme.vwColor
-        self.vwBtn.layer.cornerRadius = self.vwBtn.frame.size.width/2
-        self.vwBtn.clipsToBounds = true
-        
-//        if currentPage ==  1 {
-//
-//        }
-        
-        slides = [
-             
-            OnboardingModel(image: UIImage(named: "plantWithScanner")!, description: "Take a photo of plant..", subDescription: "Just take a photo of the plant you want to ID, Make sure the photo is clear.") ,
-            
-            OnboardingModel(image: UIImage(named: "plant")!, description: "..and voila,\n there is it!", subDescription: "Your plant will be instantly recognized!") ,
-        
-         ]
-        
     }
 }
 
@@ -123,13 +107,25 @@ extension OnBordingVC {
 extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slides.count
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnbordingCell", for: indexPath) as! OnbordingCell
-        cell.setUp(slides[indexPath.row])
+        if currentPage == 0 {
+            cell.view1.isHidden = false
+            cell.view2.isHidden = true
+            cell.view3.isHidden = true
+        } else if currentPage == 1 {
+            cell.view1.isHidden = true
+            cell.view2.isHidden = false
+            cell.view3.isHidden = true
+        } else {
+            cell.view1.isHidden = true
+            cell.view2.isHidden = true
+            cell.view3.isHidden = false
+        }
         return cell
 
     }
@@ -138,12 +134,12 @@ extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,U
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let width = scrollView.frame.width
-        currentPage = Int(scrollView.contentOffset.x  / width)
-       
-    }
-    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let width = scrollView.frame.width
+//        currentPage = Int(scrollView.contentOffset.x  / width)
+//
+//    }
+//
 }
 // MARK: - Load Interstitial ad
 extension OnBordingVC: GADFullScreenContentDelegate {

@@ -10,18 +10,10 @@ import UIKit
 class OnbordingCell: UICollectionViewCell {
 
 //MARK: - IBOutlates
-    @IBOutlet weak var vwImage: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblSubTitle: UILabel!
-    
-    
-    func setUp(_ slide : OnboardingModel){
-        
-        lblTitle.text = slide.description
-        vwImage.image = slide.image
-        lblSubTitle.text = slide.subDescription
-        
-    }
+
+    @IBOutlet var view1: UIView!
+    @IBOutlet var view2: UIView!
+    @IBOutlet var view3: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

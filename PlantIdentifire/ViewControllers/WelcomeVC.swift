@@ -8,14 +8,13 @@
 import GoogleMobileAds
 import UIKit
 import NVActivityIndicatorView
-
+import Lottie
 class WelcomeVC: UIViewController {
+    
     // MARK: - IBOutlates
-    
-    @IBOutlet var vwGetStarted: UIView!
-    
-    @IBOutlet var lblAds: UILabel!
-    @IBOutlet var activityIndicatorView: NVActivityIndicatorView!
+  
+    @IBOutlet var animationView: LottieAnimationView!
+  
     let googleNativeAds = GoogleNativeAds()
     
     // MARK: - Lifecycle methods
@@ -23,30 +22,26 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    // MARK: - IBActionMethods
-    
-    @IBAction func btngetStartedAction(_ sender: Any) {}
 }
 
 // MARK: - UserDEfined Function
 
 extension WelcomeVC {
     func setUpUI() {
-        self.vwGetStarted.layer.cornerRadius = 15
-        self.activityIndicatorView.type = .circleStrokeSpin
-        self.activityIndicatorView.startAnimating()
+        self.animationView.contentMode = .scaleAspectFill
+        self.animationView.loopMode = .loop
+        self.animationView.animationSpeed = 0.5
+        self.animationView.play()
+        
         self.googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
         }
-        self.lblAds.text = "This action can contain ads"
-        
+      
         var i = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             i += 0.5
@@ -82,7 +77,6 @@ extension WelcomeVC {
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                self.activityIndicatorView.stopAnimating()
                 UserDefaults.standard.set(false, forKey: "isPresentCamera")
                 self.loadingVC()
             }

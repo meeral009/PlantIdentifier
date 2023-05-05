@@ -32,16 +32,17 @@ class HomeVC: UIViewController {
     @IBOutlet var btnEdit: UIButton!
     
     // MARK: - IBOutlates
-    
-    @IBOutlet var vwTable: UITableView!
-    
+
+    @IBOutlet var searchBarView: UIView!
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var plantCollectionView: UICollectionView!
     @IBOutlet var noDataView: UIView!
     @IBOutlet var lblMycollection: UILabel!
-    @IBOutlet var viewNativeAds: UIView! {
-        didSet {
-            self.viewNativeAds.isHidden = true
-        }
-    }
+//    @IBOutlet var viewNativeAds: UIView! {
+//        didSet {
+//            self.viewNativeAds.isHidden = true
+//        }
+//    }
     
     // MARK: - Variables
     
@@ -56,10 +57,10 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         self.fetchData()
         
-        if isUserSubscribe() {
-            NATIVE_ADS = nil
-            self.viewNativeAds.isHidden = true
-        }
+//        if isUserSubscribe() {
+//            NATIVE_ADS = nil
+//            self.viewNativeAds.isHidden = true
+//        }
     }
     
     override func viewDidLoad() {
@@ -74,13 +75,13 @@ class HomeVC: UIViewController {
             }
         }
         
-        if !isUserSubscribe() {
-            if let nativeAds = NATIVE_ADS {
-                self.viewNativeAds.isHidden = false
-                self.isShowNativeAds = true
-                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
-            }
-        }
+//        if !isUserSubscribe() {
+//            if let nativeAds = NATIVE_ADS {
+//                self.viewNativeAds.isHidden = false
+//                self.isShowNativeAds = true
+//                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
+//            }
+//        }
        
     }
     
@@ -88,14 +89,14 @@ class HomeVC: UIViewController {
         print(self.isChecked)
         self.isChecked = !self.isChecked
         
-        if self.isChecked {
-            self.vwTable.setEditing(true, animated: true)
-            self.btnEdit.setTitle("Done", for: .normal)
-            
-        } else {
-            self.vwTable.setEditing(false, animated: true)
-            self.btnEdit.setTitle("Edit", for: .normal)
-        }
+//        if self.isChecked {
+//            self.vwTable.setEditing(true, animated: true)
+//            self.btnEdit.setTitle("Done", for: .normal)
+//
+//        } else {
+//            self.vwTable.setEditing(false, animated: true)
+//            self.btnEdit.setTitle("Edit", for: .normal)
+//        }
     }
     
     @IBAction func onClickExitApp(_ sender: UIButton) {
@@ -109,9 +110,9 @@ class HomeVC: UIViewController {
 
 extension HomeVC {
     func setUpUi() {
-        self.vwTable.register(UINib(nibName: "PlantDetiailCell", bundle: nil), forCellReuseIdentifier: "PlantDetiailCell")
-
-        self.vwTable.separatorColor = UIColor.clear
+        self.customizeSearchField()
+        
+        self.plantCollectionView.register(UINib(nibName: "PlantCell", bundle: nil), forCellWithReuseIdentifier: "PlantCell")
 
         self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
     }
@@ -122,38 +123,44 @@ extension HomeVC {
         let decodedimage = UIImage(data: dataDecoded) ?? UIImage()
         return decodedimage
     }
+    
+    fileprivate func customizeSearchField(){
+        UISearchBar.appearance().setSearchFieldBackgroundImage(UIImage(), for: .normal)
+        self.searchBar.backgroundColor = .white
+        if let searchTextField = self.searchBar.value(forKey: "searchField") as? UITextField {
+            searchTextField.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                searchTextField.heightAnchor.constraint(equalToConstant: 50),
+                searchTextField.leadingAnchor.constraint(equalTo: self.searchBar.leadingAnchor, constant: 10),
+                searchTextField.trailingAnchor.constraint(equalTo: self.searchBar.trailingAnchor, constant: -10),
+                searchTextField.centerYAnchor.constraint(equalTo: self.searchBar.centerYAnchor, constant: 0)
+            ])
+        }
+    }
 }
 
-// MARK: - UITableview delegate methods
 
-extension HomeVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.tableViewItems.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlantDetiailCell") as! PlantDetiailCell
-        cell.lblDate.text = self.tableViewItems[indexPath.row].date
-        cell.namePlantlabel.text = self.tableViewItems[indexPath.row].name
-        cell.familyLabel.text = self.tableViewItems[indexPath.row].family
-        
-        // cell.btnIsFav.isEnabled = false
-        
-        cell.vwImage.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-        return cell
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return 100.0
-        } else {
-            return 200.0
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantCell", for: indexPath) as? PlantCell
+        cell?.lblPlantName.text = self.tableViewItems[indexPath.row].name
+        if let family = self.tableViewItems[indexPath.row].family {
+            cell?.lblfamilyName.text = "Family: \(family)"
         }
+    
+        cell?.imgPlant.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+        return cell ?? UICollectionViewCell()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 150, height: collectionView.bounds.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
         vc?.hidesBottomBarWhenPushed = true
@@ -174,12 +181,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // below code will delete one row - you can mange another kind of deletion here like delete from database also
-        if editingStyle == .delete {
-            self.deleteData(id: self.tableViewItems[indexPath.row].id ?? "", index: indexPath.row)
-        }
-    }
 }
 
 // MARK: - CoreData Methods
@@ -208,12 +209,14 @@ extension HomeVC {
         }
         
         if self.tableViewItems.count == 0 {
+            self.searchBarView.isHidden = true
             self.noDataView.isHidden = false
         } else {
+            self.searchBarView.isHidden = false
             self.noDataView.isHidden = true
         }
        
-        self.vwTable.reloadData()
+        self.plantCollectionView.reloadData()
     }
     
     func deleteData(id: String, index: Int) {
@@ -238,8 +241,10 @@ extension HomeVC {
         self.tableViewItems.remove(at: index)
         
         if self.tableViewItems.count == 0 {
+            self.searchBarView.isHidden = true
             self.noDataView.isHidden = false
         } else {
+            self.searchBarView.isHidden = false
             self.noDataView.isHidden = true
         }
         
@@ -247,6 +252,6 @@ extension HomeVC {
             try context.save() // <- remember to put this :)
         } catch {}
         
-        self.vwTable.reloadData()
+        self.plantCollectionView.reloadData()
     }
 }
