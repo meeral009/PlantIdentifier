@@ -50,6 +50,7 @@
 		6DBF879F29D1558200AFDD9C /* ExitAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF879E29D1558200AFDD9C /* ExitAdVC.swift */; };
 		6DD8A8E629DC5476006B3B5C /* InAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD8A8E529DC5476006B3B5C /* InAppManager.swift */; };
 		6DD8A8EA29DC598D006B3B5C /* PremiumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD8A8E929DC598D006B3B5C /* PremiumVC.swift */; };
+		71CD617D2A04EAE300630F80 /* PlantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CD617C2A04EAE300630F80 /* PlantDetailsViewController.swift */; };
 		8419F2C429238DAE0000E597 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419F2C329238DAE0000E597 /* AppDelegate.swift */; };
 		8419F2CB29238DAE0000E597 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8419F2C929238DAE0000E597 /* Main.storyboard */; };
 		8419F2CE29238DAF0000E597 /* PlantIdentifire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8419F2CC29238DAF0000E597 /* PlantIdentifire.xcdatamodeld */; };
@@ -124,6 +125,7 @@
 		6DBF879E29D1558200AFDD9C /* ExitAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitAdVC.swift; sourceTree = "<group>"; };
 		6DD8A8E529DC5476006B3B5C /* InAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppManager.swift; sourceTree = "<group>"; };
 		6DD8A8E929DC598D006B3B5C /* PremiumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumVC.swift; sourceTree = "<group>"; };
+		71CD617C2A04EAE300630F80 /* PlantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailsViewController.swift; sourceTree = "<group>"; };
 		8419F2C029238DAE0000E597 /* PlantIdentifire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantIdentifire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8419F2C329238DAE0000E597 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8419F2CA29238DAE0000E597 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				8448D7A62930A5650085756B /* PlantDetailsVC.swift */,
 				8448B25E293711BA000BA0A8 /* SettingsVC.swift */,
 				84FDB1422940615700C67BEA /* AboutUsVC.swift */,
+				71CD617C2A04EAE300630F80 /* PlantDetailsViewController.swift */,
 				6D20D30529CDCD6700BFE7F2 /* LoadingVC.swift */,
 				6DBF879E29D1558200AFDD9C /* ExitAdVC.swift */,
 				6D56802229FCD45D00DE0063 /* IdentifyOptionsVC.swift */,
@@ -652,6 +655,7 @@
 				6DBF879F29D1558200AFDD9C /* ExitAdVC.swift in Sources */,
 				8457185B2926535B00289959 /* UIColor+Extension.swift in Sources */,
 				844AD3A2293491A300E2DEBF /* Commons.swift in Sources */,
+				71CD617D2A04EAE300630F80 /* PlantDetailsViewController.swift in Sources */,
 				84FDB1432940615700C67BEA /* AboutUsVC.swift in Sources */,
 				6D20D30429CDC90700BFE7F2 /* Reachability.swift in Sources */,
 				6D56802729FCF96A00DE0063 /* PhotoScanVC.swift in Sources */,
@@ -808,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 3UBZ624Z32;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
@@ -844,7 +848,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3UBZ624Z32;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
