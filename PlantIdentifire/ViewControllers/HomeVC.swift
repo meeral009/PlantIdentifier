@@ -10,29 +10,9 @@ import GoogleMobileAds
 import UIKit
 
 class HomeVC: UIViewController {
-    // MARK: - Varibles
-    
-    var arrPlantModel = [Plants]()
-    // getDate vise objects in single array
-    var arrAfterFiltered: [Plants] = []
-    // getDate vise objects in single array
-    var arrAfterPlantModel: [Plants] = []
-    // The table view items.
-    var tableViewItems: [Plants] = []
-    
-    /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
-    /// process.
-    var adLoader: GADAdLoader!
-    /// The height constraint applied to the ad view, where necessary.
-    var heightConstraint: NSLayoutConstraint?
-    /// The native ad view that is being presented.
-    var googleNativeAds = GoogleNativeAds()
-    let googleBannerAds = GoogleBannerAds()
-    
-    @IBOutlet var btnEdit: UIButton!
-    
-    // MARK: - IBOutlates
 
+    // MARK: - IBOutlates
+    @IBOutlet var btnEdit: UIButton!
     @IBOutlet var searchBarView: UIView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var plantCollectionView: UICollectionView!
@@ -44,9 +24,21 @@ class HomeVC: UIViewController {
 //        }
 //    }
     
-    // MARK: - Variables
-    
-    var isChecked = false
+    // MARK: - Varibles
+    var arrAfterPlantModel: [Plants] = []
+    var tableViewItems: [Plants] = []
+    var searchActive = false
+    /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
+    /// process.
+    var adLoader: GADAdLoader!
+    /// The height constraint applied to the ad view, where necessary.
+    var heightConstraint: NSLayoutConstraint?
+    /// The native ad view that is being presented.
+    var googleNativeAds = GoogleNativeAds()
+    let googleBannerAds = GoogleBannerAds()
+   
+    var isEditOn = false
+  
     var isAdLoded = false
     var isfav = false
     var adBannerView = GADBannerView()
@@ -66,6 +58,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
+    
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             if !isUserSubscribe() {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
@@ -86,17 +79,22 @@ class HomeVC: UIViewController {
     }
     
     @objc func onEditClick(_ sender: UIButton) {
-        print(self.isChecked)
-        self.isChecked = !self.isChecked
-        
-//        if self.isChecked {
-//            self.vwTable.setEditing(true, animated: true)
-//            self.btnEdit.setTitle("Done", for: .normal)
-//
-//        } else {
-//            self.vwTable.setEditing(false, animated: true)
-//            self.btnEdit.setTitle("Edit", for: .normal)
-//        }
+        self.isEditOn.toggle()
+        if isEditOn {
+            self.btnEdit.setTitle("Done", for: .normal)
+        } else {
+            self.btnEdit.setTitle("Edit", for: .normal)
+        }
+        self.plantCollectionView.reloadData()
+    }
+    
+    @objc func onDeleteClick(_ sender: UIButton) {
+        if searchActive {
+            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
+        } else {
+            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
+        }
+        self.plantCollectionView.reloadData()
     }
     
     @IBAction func onClickExitApp(_ sender: UIButton) {
@@ -110,10 +108,9 @@ class HomeVC: UIViewController {
 
 extension HomeVC {
     func setUpUi() {
+        self.hideKeyboardWhenTappedAround()
         self.customizeSearchField()
-        
         self.plantCollectionView.register(UINib(nibName: "PlantCell", bundle: nil), forCellWithReuseIdentifier: "PlantCell")
-
         self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
     }
     
@@ -142,17 +139,34 @@ extension HomeVC {
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.tableViewItems.count
+        if searchActive {
+            return self.arrAfterPlantModel.count
+        } else {
+            return self.tableViewItems.count
+        }
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantCell", for: indexPath) as? PlantCell
-        cell?.lblPlantName.text = self.tableViewItems[indexPath.row].name
-        if let family = self.tableViewItems[indexPath.row].family {
+        var data = Plants()
+        if searchActive {
+            data = self.arrAfterPlantModel[indexPath.row]
+        } else {
+            data = self.tableViewItems[indexPath.row]
+        }
+        cell?.lblPlantName.text = data.name
+        cell?.btnDelete.tag = indexPath.row
+        if let family = data.family {
             cell?.lblfamilyName.text = "Family: \(family)"
         }
-    
-        cell?.imgPlant.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+        if isEditOn {
+            cell?.btnDelete.isHidden = false
+        } else {
+            cell?.btnDelete.isHidden = true
+        }
+        cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
+        cell?.imgPlant.image = self.decodeImage(base64String: data.image ?? "")
         return cell ?? UICollectionViewCell()
     }
     
@@ -163,7 +177,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-        vc?.hidesBottomBarWhenPushed = true
+         vc?.hidesBottomBarWhenPushed = true
         vc?.isFromHome = true
         Results.getPlantDetailsAPI(isShowLoader: true, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
             
@@ -188,6 +202,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 extension HomeVC {
     // Fetch data
     func fetchData() {
+        self.presentedViewController?.dismiss(animated: true)
         self.tableViewItems.removeAll()
         
         let context: NSManagedObjectContext
@@ -253,5 +268,70 @@ extension HomeVC {
         } catch {}
         
         self.plantCollectionView.reloadData()
+    }
+}
+
+// MARK: - Delagte Functions
+
+extension HomeVC: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true
+     //   self.searchBar.showsCancelButton = true
+        self.plantCollectionView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.text = ""
+        self.arrAfterPlantModel = []
+        searchActive = false
+        self.searchBar.showsCancelButton = false
+        self.searchBar.endEditing(true)
+        self.dismiss(animated: true, completion: nil)
+        self.plantCollectionView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text! == "jj"  {
+            self.arrAfterPlantModel = self.tableViewItems
+            self.plantCollectionView.reloadData()
+        } else {
+            let lowerSearchText = searchText.lowercased()
+            
+//            self.arrAfterPlantModel = self.tableViewItems.filter { employee -> Bool in
+//
+//                return (employee.name?.lowercased().contains(lowerSearchText))! || ((employee.family?.lowercased().contains(lowerSearchText)) != nil)
+//            }
+            let trimmed = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+            self.arrAfterPlantModel = self.tableViewItems.filter { $0.name?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() || $0.family?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() }
+//            self.arrAfterPlantModel = self.tableViewItems.filter({ (item) -> (Bool?) in
+//
+//                return ((item.family?.localizedCaseInsensitiveContains(String(searchBar.text!)))!)
+//
+//            })
+//
+            self.plantCollectionView.reloadData()
+        }
+        
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+        self.searchBar.endEditing(true)
+        self.plantCollectionView.reloadData()
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissKeyboard() {
+        searchActive = false
+        self.plantCollectionView.reloadData()
+        view.endEditing(true)
     }
 }

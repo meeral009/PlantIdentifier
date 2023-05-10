@@ -36,12 +36,12 @@
                                 <rect key="frame" x="0.0" y="153" width="225" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Feddle leaf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52g-SO-Yf5">
-                                        <rect key="frame" x="5" y="3" width="200" height="16.666666666666668"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                        <rect key="frame" x="5" y="4.9999999999999991" width="200" height="14.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="28"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGa-ms-KfW">
@@ -49,11 +49,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" priority="749" constant="34.329999999999998" id="EUv-cX-Rla"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rth-6B-0eK">
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="60" id="Utf-pM-Yei"/>
                                     <constraint firstItem="rth-6B-0eK" firstAttribute="top" secondItem="CEg-QQ-oEe" secondAttribute="top" constant="5" id="YBy-0S-4k9"/>
                                     <constraint firstItem="gGa-ms-KfW" firstAttribute="top" secondItem="52g-SO-Yf5" secondAttribute="bottom" constant="3" id="ZdP-hz-bnv"/>
-                                    <constraint firstItem="52g-SO-Yf5" firstAttribute="top" secondItem="CEg-QQ-oEe" secondAttribute="top" constant="3" id="fzc-Oz-7gS"/>
+                                    <constraint firstItem="52g-SO-Yf5" firstAttribute="top" secondItem="CEg-QQ-oEe" secondAttribute="top" constant="5" id="fzc-Oz-7gS"/>
                                     <constraint firstItem="rth-6B-0eK" firstAttribute="leading" secondItem="52g-SO-Yf5" secondAttribute="trailing" constant="2" id="msz-4G-UCk"/>
                                     <constraint firstAttribute="trailing" secondItem="rth-6B-0eK" secondAttribute="trailing" constant="3" id="pkJ-od-8nX"/>
                                     <constraint firstItem="gGa-ms-KfW" firstAttribute="leading" secondItem="CEg-QQ-oEe" secondAttribute="leading" constant="5" id="pkU-vu-4PM"/>
@@ -98,21 +98,47 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="0.0"/>
+                                <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-Zq-jQQ">
+                        <rect key="frame" x="214" y="-3" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="CIj-HA-jz0"/>
+                            <constraint firstAttribute="width" constant="30" id="UaV-Sq-cYS"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                        <state key="normal" image="minus-button"/>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="4MH-Zq-jQQ" secondAttribute="trailing" constant="-3" id="BLm-Gc-56v"/>
+                <constraint firstItem="4MH-Zq-jQQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-3" id="QKc-qx-LGA"/>
                 <constraint firstItem="ylu-zz-fyE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="bV1-aB-G5L"/>
                 <constraint firstItem="ylu-zz-fyE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="dAW-Ul-doE"/>
                 <constraint firstAttribute="bottom" secondItem="ylu-zz-fyE" secondAttribute="bottom" constant="8" id="hPr-vp-nzz"/>
                 <constraint firstAttribute="trailing" secondItem="ylu-zz-fyE" secondAttribute="trailing" constant="8" id="qci-Lt-uwx"/>
             </constraints>
             <size key="customSize" width="241" height="229"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.20000000000000001"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="1" height="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="btnDelete" destination="4MH-Zq-jQQ" id="PHv-MA-W1E"/>
                 <outlet property="imgPlant" destination="nZe-mJ-X5V" id="YVH-m3-qGc"/>
                 <outlet property="lblPlantName" destination="52g-SO-Yf5" id="eS7-yM-8my"/>
                 <outlet property="lblfamilyName" destination="gGa-ms-KfW" id="OUD-Zp-uLt"/>
@@ -122,6 +148,7 @@
     </objects>
     <resources>
         <image name="dummy" width="143" height="145"/>
+        <image name="minus-button" width="512" height="512"/>
         <image name="more" width="11" height="11"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

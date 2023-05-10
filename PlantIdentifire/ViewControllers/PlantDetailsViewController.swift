@@ -10,7 +10,7 @@ import UIKit
 class PlantDetailsViewController: UIViewController {
     
 
-    
+    @IBOutlet var sliderCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

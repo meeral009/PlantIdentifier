@@ -8,11 +8,9 @@
 import UIKit
 
 class SettingsVC: UIViewController {
-    
-    @IBOutlet var imgGif: UIView!
+
     @IBOutlet var lblVersion: UILabel!
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -29,15 +27,12 @@ class SettingsVC: UIViewController {
     //MARK: - IBActionMethods
     
     @IBAction func btnPrivacyPolicy(_ sender: Any) {
-        
         self.openURL(type: .privacyPolicy)
     }
     
     
     @IBAction func btnShareApp(_ sender: Any) {
-        
         self.openURL(type: .shareApp)
-        
     }
     
 
@@ -49,10 +44,8 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func btnAboutUs(_ sender: Any) {
-        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsVC") as? AboutUsVC
         self.navigationController?.pushViewController(vc!, animated: true)
-        
     }
     
     @IBAction func btnRateUs(_ sender: Any) {
@@ -72,22 +65,6 @@ extension SettingsVC {
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] {
                 self.lblVersion.text = "\("Version") \(appVersion)"
         }
-        
-        
-      
-        if let imageview = UIImageView.fromGif(frame: self.imgGif.frame, resourceName: "gift") {
-            self.imgGif.addSubview(imageview)
-            imageview.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageview.topAnchor.constraint(equalTo:   self.imgGif.topAnchor, constant: 0.0),
-                imageview.leadingAnchor.constraint(equalTo:   self.imgGif.leadingAnchor, constant: 0.0),
-                imageview.trailingAnchor.constraint(equalTo:   self.imgGif.trailingAnchor, constant: 0.0),
-                imageview.bottomAnchor.constraint(equalTo:   self.imgGif.bottomAnchor, constant: 0.0),
-            ])
-            imageview.startAnimating()
-        }
-       
-        
     }
 
     // Open url in web

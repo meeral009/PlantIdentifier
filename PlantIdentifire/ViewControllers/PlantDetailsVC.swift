@@ -14,22 +14,14 @@ class PlantDetailsVC: UIViewController {
     // MARK: - IBOutlates
     
     @IBOutlet var sliderCollectionView: UICollectionView!
-    
     @IBOutlet var plantImageCollectionView: UICollectionView!
-    
-    @IBOutlet var pageView: UIPageControl!
-    
-    @IBOutlet var detailView: UIView!
-    
-    @IBOutlet var nativeAdPlaceholder: UIView!
-    @IBOutlet var horizonataltackView: UIStackView!
-    
-    @IBOutlet var btnFav: UIButton!
+  
     @IBOutlet var lblPlantName: UILabel!
     @IBOutlet var lblFamily: UILabel!
     @IBOutlet var lblauthor: UILabel!
     @IBOutlet var lblGenus: UILabel!
-
+    
+    @IBOutlet var nativeAdPlaceholder: UIView!
     @IBOutlet var adsHeightConstraint: NSLayoutConstraint!
     // MARK: - variables
 
@@ -59,7 +51,7 @@ class PlantDetailsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isUserSubscribe() {
-            self.nativeAdPlaceholder.isHidden = true
+          self.nativeAdPlaceholder.isHidden = true
         }
     }
     
@@ -96,7 +88,7 @@ extension PlantDetailsVC {
             self.isShowNativeAds = true
             self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
         }
-        
+
         googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
             self.nativeAdPlaceholder.isHidden = false
@@ -104,22 +96,19 @@ extension PlantDetailsVC {
                 self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
             }
         }
-        
+
         if isUserSubscribe() {
             self.adsHeightConstraint.priority = UILayoutPriority(rawValue: 749)
             self.adsHeightConstraint.constant = 0
         }
     
-        self.pageView.currentPage = 0
-        
+    
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)
         }
         
         self.sliderCollectionView.register(UINib(nibName: "SliderImageCell", bundle: nil), forCellWithReuseIdentifier: "SliderImageCell")
         self.plantImageCollectionView.register(UINib(nibName: "SliderImageCell", bundle: nil), forCellWithReuseIdentifier: "SliderImageCell")
-        
-    
         
         if self.isFromHome {
             self.setDataFromList(plantModel: self.resultsModelFromList)
@@ -129,18 +118,16 @@ extension PlantDetailsVC {
     
     @objc func changeImage() {
         if self.arrImages.count != 0 {
-            self.pageView.isHidden = false
+          
             if self.counter < self.arrImages.count {
                 let index = IndexPath(item: counter, section: 0)
                 self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
-                self.pageView.currentPage = self.counter
                 self.counter += 1
                 
             } else {
                 self.counter = 0
                 let index = IndexPath(item: counter, section: 0)
                 self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
-                self.pageView.currentPage = self.counter
                 self.counter = 1
             }
         } else {
@@ -151,7 +138,6 @@ extension PlantDetailsVC {
             label.text = "No Images Found"
             label.font = UIFont(name: "Montserrat-Medium", size: 22)
             sliderCollectionView.backgroundView = label
-            self.pageView.isHidden = true
         }
     }
 
@@ -195,11 +181,6 @@ extension PlantDetailsVC {
             // Set data from first element of Images array from response
             if let arrImages = plantModel.first?.images {
                 self.arrImages.append(contentsOf: arrImages)
-                
-                DispatchQueue.main.async {
-                    self.pageView.numberOfPages = self.arrImages.count
-                }
-                
                 self.lblPlantName.text = plantModel.first?.species?.name
                 self.lblFamily.text = plantModel.first?.species?.family
                 self.lblauthor.text = plantModel.first?.species?.author
@@ -231,11 +212,11 @@ extension PlantDetailsVC {
                   
                     DispatchQueue.main.async {
                         ERProgressHud.sharedInstance.hide()
-                        self.pageView.numberOfPages = self.arrImages.count
                         self.lblPlantName.text = plantModel.first?.species?.name
                         self.lblFamily.text = plantModel.first?.species?.family
                         self.lblauthor.text = plantModel.first?.species?.author
                         self.lblGenus.text = plantModel.first?.species?.genus
+                    
                     }
                     
                   

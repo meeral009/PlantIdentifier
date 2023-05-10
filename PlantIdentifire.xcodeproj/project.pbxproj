@@ -812,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
@@ -848,7 +848,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";

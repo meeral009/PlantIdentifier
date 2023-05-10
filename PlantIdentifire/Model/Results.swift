@@ -90,9 +90,4 @@ class Results: Codable {
         
 
       }
-    
-   
-    
-    
-
 }

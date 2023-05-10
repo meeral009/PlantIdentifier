@@ -9,6 +9,7 @@ import UIKit
 
 class PlantCell: UICollectionViewCell {
 
+    @IBOutlet var btnDelete: UIButton!
     @IBOutlet var lblfamilyName: UILabel!
     @IBOutlet var lblPlantName: UILabel!
     @IBOutlet var imgPlant: UIImageView!
