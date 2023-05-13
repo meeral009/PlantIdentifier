@@ -1368,6 +1368,7 @@ kinds of plants living in nature. </string>
         <scene sceneID="XzY-Tr-gXY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mcC-yP-hts" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="Settings" image="setting" id="NBJ-2x-fxl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XhZ-SQ-Ind">

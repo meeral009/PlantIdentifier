@@ -10,7 +10,7 @@ import UIKit
 class SettingsVC: UIViewController {
 
     @IBOutlet var lblVersion: UILabel!
-        
+         
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
@@ -20,10 +20,8 @@ class SettingsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       
-    
-        
     }
+    
     //MARK: - IBActionMethods
     
     @IBAction func btnPrivacyPolicy(_ sender: Any) {
