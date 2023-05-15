@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import GoogleMobileAds
 import Firebase
-
+import YandexMobileMetrica
   @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AdsManager.shared.loadInterstitialAd()
             AdsManager.shared.requestAppOpenAd()
         }
+        
+        // App matrica configuration
+        let configuration = YMMYandexMetricaConfiguration.init(apiKey: "49e5c8ac-49cd-457f-903c-54890decd43f")
+        YMMYandexMetrica.activate(with: configuration!)
         
         InAppManager.shared.completeTransition()
         InAppManager.shared.verifyReciept()

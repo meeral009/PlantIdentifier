@@ -14,4 +14,5 @@ target 'PlantIdentifire' do
   pod 'SwiftyStoreKit'
   pod 'SVProgressHUD'
   pod 'Toaster'
+  pod 'YandexMobileMetrica'
 end

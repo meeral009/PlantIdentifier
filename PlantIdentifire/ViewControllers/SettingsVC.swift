@@ -47,7 +47,7 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func btnRateUs(_ sender: Any) {
-        let REVIEW_LINK         = "https://itunes.apple.com/app/id\("1660916701")?mt=8&action=write-review"
+        let REVIEW_LINK = "https://itunes.apple.com/app/id\("1660916701")?mt=8&action=write-review"
         if let url = URL.init(string: REVIEW_LINK){
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }

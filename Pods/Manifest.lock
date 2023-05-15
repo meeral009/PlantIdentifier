@@ -56,6 +56,14 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SwiftyStoreKit (0.16.1)
   - Toaster (2.3.0)
+  - YandexMobileMetrica (4.5.0):
+    - YandexMobileMetrica/Static (= 4.5.0)
+  - YandexMobileMetrica/Static (4.5.0):
+    - YandexMobileMetrica/Static/Core (= 4.5.0)
+    - YandexMobileMetrica/Static/Crashes (= 4.5.0)
+  - YandexMobileMetrica/Static/Core (4.5.0)
+  - YandexMobileMetrica/Static/Crashes (4.5.0):
+    - YandexMobileMetrica/Static/Core
   - YPImagePicker (5.2.1):
     - PryntTrimmerView (= 4.0.2)
     - SteviaLayout (= 4.7.3)
@@ -68,6 +76,7 @@ DEPENDENCIES:
   - SVProgressHUD
   - SwiftyStoreKit
   - Toaster
+  - YandexMobileMetrica
   - YPImagePicker
 
 SPEC REPOS:
@@ -86,6 +95,7 @@ SPEC REPOS:
     - SVProgressHUD
     - SwiftyStoreKit
     - Toaster
+    - YandexMobileMetrica
     - YPImagePicker
 
 SPEC CHECKSUMS:
@@ -103,8 +113,9 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  YandexMobileMetrica: 7dafc7d224077d4443ab3a587b82b24e9b6cc9c7
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 68809c7d8b8c08a41ed0ce42b8b651f07bc2c82f
+PODFILE CHECKSUM: 0b36ebcc43d03945b063766d299d15fe212f2d54
 
 COCOAPODS: 1.11.3
