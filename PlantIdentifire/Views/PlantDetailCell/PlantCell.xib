@@ -103,7 +103,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4MH-Zq-jQQ" secondAttribute="trailing" constant="-3" id="BLm-Gc-56v"/>
                 <constraint firstItem="4MH-Zq-jQQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-3" id="QKc-qx-LGA"/>
@@ -141,9 +141,6 @@
         <image name="minus-button" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

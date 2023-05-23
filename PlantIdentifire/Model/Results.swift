@@ -37,8 +37,8 @@ class Results: Codable {
     {
 
         if isShowLoader {
-            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
-        
+            ERProgressHud.sharedInstance.show()
+            //ERProgressHud.sharedInstance.show(withTitle: "Loading...")
         }
         
         let obj = ["url":"https://bs.floristic.org/image/o/e9d801196734f91b9c860308f052fd91f6f25868",

@@ -224,7 +224,7 @@ extension PlantDetailsVC {
                     
                     // convert image into base64 string
                     // Use image name from bundle to create NSData
-                    let image: UIImage = self.image
+                    let image: UIImage = self.image.fixedOrientation() ?? UIImage()
                     // Now use image to create into NSData format
                      let imageData: NSData = image.pngData()! as NSData
                     
@@ -289,10 +289,10 @@ extension PlantDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderImageCell", for: indexPath) as! SliderImageCell
         if collectionView == self.sliderCollectionView {
-            cell.vwImage.sd_setImage(with: URL(string: self.arrImages[indexPath.row].s ?? ""))
+            cell.vwImage.sd_setImage(with: URL(string: self.arrImages[indexPath.row].o ?? ""))
         } else {
             cell.layer.cornerRadius = 15
-            cell.vwImage.sd_setImage(with: URL(string: self.plantListImages[indexPath.row].s ?? ""))
+            cell.vwImage.sd_setImage(with: URL(string: self.plantListImages[indexPath.row].o ?? ""))
         }
         return cell
     }

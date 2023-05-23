@@ -44,6 +44,8 @@ class HomeVC: UIViewController {
     var adBannerView = GADBannerView()
     var isShowNativeAds = false
     var nativeAds: GADNativeAd?
+   
+    var plantModel = PlantModel()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -80,7 +82,7 @@ class HomeVC: UIViewController {
     }
     
     @objc func onEditClick(_ sender: UIButton) {
-        self.isEditOn.toggle()
+                            self.isEditOn.toggle()
         if isEditOn {
             self.btnEdit.setTitle("Done", for: .normal)
         } else {
@@ -89,31 +91,39 @@ class HomeVC: UIViewController {
         self.plantCollectionView.reloadData()
     }
     
-    @objc func onDeleteClick(_ sender: UIButton) {
-//        if searchActive {
-//            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
-//        } else {
-//            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
-//        }
+    
+    @objc func onLongTouch(_ sender: UIGestureRecognizer) {
         self.isEditOn.toggle()
         self.plantCollectionView.reloadData()
     }
+    
+    @objc func onDeleteClick(_ sender: UIButton) {
+        if searchActive {
+            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
+        } else {
+            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
+        }
+    }
  
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-
+        DispatchQueue.main.async {
+            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+        }
         if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
             //Do your stuff here
+            
             AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
              vc?.hidesBottomBarWhenPushed = true
             vc?.isFromHome = true
-            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
+           
             Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
-                ERProgressHud.sharedInstance.hide()
+                DispatchQueue.main.async {
+                    ERProgressHud.sharedInstance.hide()
+                }
                 vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
                 vc?.isChecked = self.tableViewItems[indexPath.row].isFav
-                vc?.updateId = self.tableViewItems[indexPath.row
-                ].id
+                vc?.updateId = self.tableViewItems[indexPath.row].id
                 vc?.resultsModelFromList = arrResultsModel
                 vc?.message = message
                 DispatchQueue.main.async {
@@ -121,6 +131,7 @@ class HomeVC: UIViewController {
                 }
                 
             } failure: { _, error, _ in
+                ERProgressHud.sharedInstance.hide()
                 self.showAlert(with: error)
             }
         }
@@ -195,15 +206,16 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if let family = data.family {
             cell?.lblfamilyName.text = "Family: \(family)"
         }
-        if isEditOn {
+//        if isEditOn {
             cell?.btnDelete.isHidden = false
-        } else {
-            cell?.btnDelete.isHidden = true
-        }
+//        } else {
+//            cell?.btnDelete.isHidden = true
+//        }
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(onDeleteClick(_:)))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(onLongTouch(_:)))
+        longPressGesture.minimumPressDuration = 2
         cell?.addGestureRecognizer(longPressGesture)
-       // cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
+        cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
         cell?.imgPlant.image = self.decodeImage(base64String: data.image ?? "")
         return cell ?? UICollectionViewCell()
     }
@@ -290,6 +302,8 @@ extension HomeVC {
         
         self.plantCollectionView.reloadData()
     }
+    
+
 }
 
 // MARK: - Delagte Functions
@@ -298,7 +312,6 @@ extension HomeVC: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true
-     //   self.searchBar.showsCancelButton = true
         self.plantCollectionView.reloadData()
     }
     
@@ -319,19 +332,9 @@ extension HomeVC: UISearchBarDelegate {
             self.plantCollectionView.reloadData()
         } else {
             let lowerSearchText = searchText.lowercased()
-            
-//            self.arrAfterPlantModel = self.tableViewItems.filter { employee -> Bool in
-//
-//                return (employee.name?.lowercased().contains(lowerSearchText))! || ((employee.family?.lowercased().contains(lowerSearchText)) != nil)
-//            }
+
             let trimmed = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
             self.arrAfterPlantModel = self.tableViewItems.filter { $0.name?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() || $0.family?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() }
-//            self.arrAfterPlantModel = self.tableViewItems.filter({ (item) -> (Bool?) in
-//
-//                return ((item.family?.localizedCaseInsensitiveContains(String(searchBar.text!)))!)
-//
-//            })
-//
             self.plantCollectionView.reloadData()
         }
     }
@@ -346,6 +349,7 @@ extension HomeVC: UISearchBarDelegate {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
+     // self.isEditOn = false
         view.addGestureRecognizer(tap)
     }
 
@@ -355,3 +359,5 @@ extension HomeVC: UISearchBarDelegate {
         view.endEditing(true)
     }
 }
+
+
