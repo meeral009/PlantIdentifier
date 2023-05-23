@@ -608,7 +608,7 @@ Features:
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="30"/>
                                                 </variation>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zla-dq-J2J">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zla-dq-J2J">
                                                 <rect key="frame" x="275" y="2.6666666666666856" width="90" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="111-eM-5rI"/>
@@ -1615,19 +1615,19 @@ kinds of plants living in nature. </string>
                                                 <rect key="frame" x="54" y="240.00000000000003" width="267" height="55.333333333333343"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
                                                 <state key="normal" title="GET PREMIUM ACCESS">
-                                                    <color key="titleColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP ALL YOUR PLANTS THRIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-TQ-CVu">
                                                 <rect key="frame" x="54.333333333333343" y="305.33333333333331" width="266.66666666666663" height="21.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.34901960784313724" green="0.61176470588235299" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITH PLANT IDENTIFIER PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-ZR-BeH">
                                                 <rect key="frame" x="81" y="329.66666666666669" width="213" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.34901960780000002" green="0.61176470589999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xms-Mc-brS">
@@ -1639,7 +1639,6 @@ kinds of plants living in nature. </string>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-yJ-1NL" customClass="ImageView" customModule="PlantIdentifire" customModuleProvider="target">
                                                                 <rect key="frame" x="4" y="2" width="22.666666666666668" height="22.666666666666668"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="tintColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="vCf-yJ-1NL" secondAttribute="height" multiplier="1:1" id="Ydd-31-H2B"/>
                                                                 </constraints>
@@ -1652,7 +1651,7 @@ kinds of plants living in nature. </string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No advertisement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Y1m-h2-pje">
                                                                 <rect key="frame" x="34.666666666666664" y="4" width="126.66666666666669" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1685,7 +1684,7 @@ kinds of plants living in nature. </string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited snaps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-Hr-tX7">
                                                                 <rect key="frame" x="32.666666666666664" y="4" width="114.66666666666669" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1718,7 +1717,7 @@ kinds of plants living in nature. </string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World's largest database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.85000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-pc-BCj">
                                                                 <rect key="frame" x="34.666666666666657" y="4" width="174.66666666666666" height="18.666666666666668"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -1794,7 +1793,7 @@ kinds of plants living in nature. </string>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Free trial" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-gO-SSQ">
                                                                 <rect key="frame" x="16" y="20.333333333333371" width="114" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                                <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oov-7J-ec0">
@@ -1803,13 +1802,13 @@ kinds of plants living in nature. </string>
                                                             </button>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xYU-Wv-D2p">
                                                                 <rect key="frame" x="250" y="14.333333333333371" width="51" height="31"/>
-                                                                <color key="onTintColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="onTintColor" name="AppColor"/>
                                                                 <connections>
                                                                     <action selector="onToggleFreeSwitch:" destination="I9k-Ag-r31" eventType="valueChanged" id="747-nZ-h6C"/>
                                                                 </connections>
                                                             </switch>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.90980392156862744" green="0.94901960784313721" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="Oov-7J-ec0" firstAttribute="leading" secondItem="B7s-y1-B9I" secondAttribute="leading" id="47t-zX-8nS"/>
                                                             <constraint firstAttribute="bottom" secondItem="Oov-7J-ec0" secondAttribute="bottom" id="9pe-UX-23D"/>
@@ -1833,12 +1832,12 @@ kinds of plants living in nature. </string>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9l-Zn-xJU">
                                                 <rect key="frame" x="30" y="672.66666666666663" width="315" height="60"/>
-                                                <color key="backgroundColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="Fsc-kJ-HnR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                <state key="normal" title="Continue">
+                                                <state key="normal" title="Continue" backgroundImage="purchaseBG">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -2567,7 +2566,7 @@ kinds of plants living in nature. </string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1i-st-7Kn">
-                                        <rect key="frame" x="157" y="13.666666666666664" width="61.333333333333343" height="20"/>
+                                        <rect key="frame" x="160.66666666666666" y="13.666666666666664" width="54" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2793,7 +2792,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2d-iH-22y">
-                                                                <rect key="frame" x="64" y="26.666666666666657" width="65" height="17"/>
+                                                                <rect key="frame" x="64" y="26.666666666666657" width="62" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -2886,7 +2885,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C65-TR-x2M">
-                                                                <rect key="frame" x="64" y="21.666666666666686" width="63.333333333333343" height="17"/>
+                                                                <rect key="frame" x="64" y="21.666666666666686" width="62" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -2961,7 +2960,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Bug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhW-W8-Lof">
-                                                                <rect key="frame" x="63" y="21.666666666666686" width="74" height="17"/>
+                                                                <rect key="frame" x="63" y="21.666666666666686" width="72" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -3036,7 +3035,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVD-Yl-YSI">
-                                                                <rect key="frame" x="64" y="21.666666666666686" width="90.666666666666686" height="17"/>
+                                                                <rect key="frame" x="64" y="21.666666666666686" width="87.666666666666686" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -3102,7 +3101,7 @@ kinds of plants living in nature. </string>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBO-b5-QdX">
-                                                <rect key="frame" x="15" y="459" width="44" height="17"/>
+                                                <rect key="frame" x="15.000000000000004" y="459" width="42.333333333333343" height="17"/>
                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3202,7 +3201,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aod-nW-xUn">
-                                                                <rect key="frame" x="63.999999999999993" y="21.666666666666629" width="67.333333333333314" height="17"/>
+                                                                <rect key="frame" x="64" y="21.666666666666629" width="66" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -3344,7 +3343,7 @@ kinds of plants living in nature. </string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSE-Ir-raK">
-                                                                <rect key="frame" x="64" y="21.666666666666629" width="60" height="17"/>
+                                                                <rect key="frame" x="64" y="21.666666666666629" width="58.666666666666657" height="17"/>
                                                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                             </label>
@@ -4162,8 +4161,8 @@ kinds of plants living in nature. </string>
         <image name="crown-1" width="128" height="128"/>
         <image name="feedback" width="61" height="61"/>
         <image name="feedback1" width="120" height="120"/>
-        <image name="flower" width="43.333332061767578" height="43.333332061767578"/>
-        <image name="globle" width="43.333332061767578" height="43.333332061767578"/>
+        <image name="flower" width="45" height="45"/>
+        <image name="globle" width="45" height="45"/>
         <image name="history" width="120" height="120"/>
         <image name="home" width="33" height="33"/>
         <image name="img" width="1242" height="921"/>
@@ -4178,10 +4177,11 @@ kinds of plants living in nature. </string>
         <image name="premium 1" width="50" height="50"/>
         <image name="privacy policy" width="44.666667938232422" height="44.666667938232422"/>
         <image name="privacypolicy" width="61" height="61"/>
+        <image name="purchaseBG" width="374" height="57"/>
         <image name="reportbug" width="61" height="61"/>
         <image name="right-arrow" width="100" height="100"/>
         <image name="scan" width="370" height="424"/>
-        <image name="search" width="43.333332061767578" height="43.333332061767578"/>
+        <image name="search" width="45" height="45"/>
         <image name="setting" width="32" height="32"/>
         <image name="share" width="61" height="61"/>
         <image name="star" width="441" height="76"/>

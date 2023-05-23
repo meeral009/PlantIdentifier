@@ -68,6 +68,7 @@ class HomeVC: UIViewController {
             }
         }
         
+        
 //        if !isUserSubscribe() {
 //            if let nativeAds = NATIVE_ADS {
 //                self.viewNativeAds.isHidden = false
@@ -89,12 +90,40 @@ class HomeVC: UIViewController {
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
-        if searchActive {
-            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
-        } else {
-            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
-        }
+//        if searchActive {
+//            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
+//        } else {
+//            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
+//        }
+        self.isEditOn.toggle()
         self.plantCollectionView.reloadData()
+    }
+ 
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+
+        if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
+            //Do your stuff here
+            AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+             vc?.hidesBottomBarWhenPushed = true
+            vc?.isFromHome = true
+            ERProgressHud.sharedInstance.show(withTitle: "Loading...")
+            Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
+                ERProgressHud.sharedInstance.hide()
+                vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+                vc?.isChecked = self.tableViewItems[indexPath.row].isFav
+                vc?.updateId = self.tableViewItems[indexPath.row
+                ].id
+                vc?.resultsModelFromList = arrResultsModel
+                vc?.message = message
+                DispatchQueue.main.async {
+                    self.navigationController?.pushViewController(vc!, animated: true)
+                }
+                
+            } failure: { _, error, _ in
+                self.showAlert(with: error)
+            }
+        }
     }
     
     @IBAction func onClickExitApp(_ sender: UIButton) {
@@ -112,6 +141,12 @@ extension HomeVC {
         self.customizeSearchField()
         self.plantCollectionView.register(UINib(nibName: "PlantCell", bundle: nil), forCellWithReuseIdentifier: "PlantCell")
         self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
+        self.plantCollectionView.delegate = self
+        self.plantCollectionView.dataSource = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        self.plantCollectionView.addGestureRecognizer(tap)
+        self.plantCollectionView.isUserInteractionEnabled = true
     }
     
     // Decode image from base64 String
@@ -165,34 +200,20 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         } else {
             cell?.btnDelete.isHidden = true
         }
-        cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(onDeleteClick(_:)))
+        cell?.addGestureRecognizer(longPressGesture)
+       // cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
         cell?.imgPlant.image = self.decodeImage(base64String: data.image ?? "")
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: collectionView.bounds.height)
+        return CGSize(width: 150, height: 195)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-         vc?.hidesBottomBarWhenPushed = true
-        vc?.isFromHome = true
-        Results.getPlantDetailsAPI(isShowLoader: true, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
-            
-            vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-            vc?.isChecked = self.tableViewItems[indexPath.row].isFav
-            vc?.updateId = self.tableViewItems[indexPath.row].id
-            vc?.resultsModelFromList = arrResultsModel
-            vc?.message = message
-            DispatchQueue.main.async {
-                self.navigationController?.pushViewController(vc!, animated: true)
-            }
-            
-        } failure: { _, error, _ in
-            self.showAlert(with: error)
-        }
+
     }
     
 }
@@ -313,7 +334,6 @@ extension HomeVC: UISearchBarDelegate {
 //
             self.plantCollectionView.reloadData()
         }
-        
     }
     
     

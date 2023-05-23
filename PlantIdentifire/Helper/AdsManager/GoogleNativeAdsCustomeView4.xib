@@ -10,14 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
-        </array>
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
         </array>
         <array key="Montserrat-Regular.ttf">
             <string>Montserrat-Regular</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
         </array>
         <array key="RobotoSlab-Regular.ttf">
             <string>RobotoSlab-Regular</string>
@@ -63,22 +63,22 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-LE-hDQ">
-                            <rect key="frame" x="16" y="21" width="481" height="57"/>
+                            <rect key="frame" x="16" y="21" width="481" height="67"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTQ-ji-SZ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="LTQ-ji-SZ8" secondAttribute="height" multiplier="1:1" id="PTy-3J-0A5"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qRB-Xn-cwn">
-                                    <rect key="frame" x="65" y="0.0" width="416" height="57"/>
+                                    <rect key="frame" x="75" y="0.0" width="406" height="67"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Tt-NCe">
-                                            <rect key="frame" x="0.0" y="0.0" width="416" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="406" height="67"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Headline" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqT-mo-NGj">
-                                                    <rect key="frame" x="10" y="0.0" width="398" height="16.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="388" height="16.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16.5" id="YVC-2B-FQY"/>
                                                     </constraints>
@@ -90,7 +90,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Body that is really really long and can take up to two lines or sometimes even more." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-57-y0g">
-                                                    <rect key="frame" x="10" y="21.5" width="398" height="32.5"/>
+                                                    <rect key="frame" x="10" y="21.5" width="388" height="42.5"/>
                                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -120,14 +120,14 @@
                             </constraints>
                         </stackView>
                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDk-hQ-iAP">
-                            <rect key="frame" x="16" y="86" width="477" height="60"/>
+                            <rect key="frame" x="16" y="96" width="477" height="50"/>
                             <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="74a-Qk-FRT">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="19"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Install">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

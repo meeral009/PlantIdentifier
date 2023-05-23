@@ -19,24 +19,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlantCell" id="gTV-IL-0wX" customClass="PlantCell" customModule="PlantIdentifire" customModuleProvider="target">
+        <collectionViewCell clipsSubviews="YES" contentMode="center" reuseIdentifier="PlantCell" id="gTV-IL-0wX" customClass="PlantCell" customModule="PlantIdentifire" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="241" height="229"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="241" height="229"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylu-zz-fyE">
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylu-zz-fyE">
                         <rect key="frame" x="8" y="8" width="225" height="213"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-mJ-X5V">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="nZe-mJ-X5V">
                                 <rect key="frame" x="0.0" y="0.0" width="225" height="153"/>
                             </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-QQ-oEe">
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-QQ-oEe">
                                 <rect key="frame" x="0.0" y="153" width="225" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Feddle leaf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52g-SO-Yf5">
-                                        <rect key="frame" x="5" y="4.9999999999999991" width="200" height="14.666666666666664"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Feddle leaf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52g-SO-Yf5">
+                                        <rect key="frame" x="5" y="4.9999999999999991" width="212" height="14.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,27 +56,16 @@
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rth-6B-0eK">
-                                        <rect key="frame" x="207" y="5" width="15" height="14"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="15" id="21l-fr-q7y"/>
-                                            <constraint firstAttribute="height" constant="14" id="6kP-8Z-PT4"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="more"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="52g-SO-Yf5" firstAttribute="leading" secondItem="CEg-QQ-oEe" secondAttribute="leading" constant="5" id="6rY-Wv-bDE"/>
                                     <constraint firstAttribute="trailing" secondItem="gGa-ms-KfW" secondAttribute="trailing" constant="5" id="Hgz-un-ju3"/>
                                     <constraint firstAttribute="height" constant="60" id="Utf-pM-Yei"/>
-                                    <constraint firstItem="rth-6B-0eK" firstAttribute="top" secondItem="CEg-QQ-oEe" secondAttribute="top" constant="5" id="YBy-0S-4k9"/>
                                     <constraint firstItem="gGa-ms-KfW" firstAttribute="top" secondItem="52g-SO-Yf5" secondAttribute="bottom" constant="3" id="ZdP-hz-bnv"/>
                                     <constraint firstItem="52g-SO-Yf5" firstAttribute="top" secondItem="CEg-QQ-oEe" secondAttribute="top" constant="5" id="fzc-Oz-7gS"/>
-                                    <constraint firstItem="rth-6B-0eK" firstAttribute="leading" secondItem="52g-SO-Yf5" secondAttribute="trailing" constant="2" id="msz-4G-UCk"/>
-                                    <constraint firstAttribute="trailing" secondItem="rth-6B-0eK" secondAttribute="trailing" constant="3" id="pkJ-od-8nX"/>
                                     <constraint firstItem="gGa-ms-KfW" firstAttribute="leading" secondItem="CEg-QQ-oEe" secondAttribute="leading" constant="5" id="pkU-vu-4PM"/>
+                                    <constraint firstAttribute="trailing" secondItem="52g-SO-Yf5" secondAttribute="trailing" constant="8" id="q1I-Mh-mZz"/>
                                     <constraint firstAttribute="bottom" secondItem="gGa-ms-KfW" secondAttribute="bottom" constant="3" id="yxW-Jo-dn4"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -114,6 +103,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="4MH-Zq-jQQ" secondAttribute="trailing" constant="-3" id="BLm-Gc-56v"/>
                 <constraint firstItem="4MH-Zq-jQQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-3" id="QKc-qx-LGA"/>
@@ -149,9 +139,11 @@
     <resources>
         <image name="dummy" width="143" height="145"/>
         <image name="minus-button" width="512" height="512"/>
-        <image name="more" width="11" height="11"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
