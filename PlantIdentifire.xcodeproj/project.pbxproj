@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CDDF3513595CF790FCA5232 /* Pods_PlantIdentifire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2653E6134152F179C3780A /* Pods_PlantIdentifire.framework */; };
+		6D02B4E02A248D58000CF750 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02B4DE2A248D58000CF750 /* ReviewCell.swift */; };
+		6D02B4E12A248D58000CF750 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D02B4DF2A248D58000CF750 /* ReviewCell.xib */; };
 		6D069B0D29FB8B1400C4FE20 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6D069B0C29FB8B1400C4FE20 /* Lottie */; };
 		6D069B0F29FB905B00C4FE20 /* splash white.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D069B0E29FB905B00C4FE20 /* splash white.json */; };
 		6D069B1C29FB915C00C4FE20 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D069B1029FB915B00C4FE20 /* Roboto-MediumItalic.ttf */; };
@@ -90,6 +92,8 @@
 
 /* Begin PBXFileReference section */
 		4F2653E6134152F179C3780A /* Pods_PlantIdentifire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlantIdentifire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D02B4DE2A248D58000CF750 /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		6D02B4DF2A248D58000CF750 /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		6D069B0E29FB905B00C4FE20 /* splash white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash white.json"; sourceTree = "<group>"; };
 		6D069B1029FB915B00C4FE20 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		6D069B1129FB915B00C4FE20 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 				E31D4CF58C0F6BB93688379F /* Pods-PlantIdentifire.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6D02B4DD2A248D4E000CF750 /* ReviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6D02B4DE2A248D58000CF750 /* ReviewCell.swift */,
+				6D02B4DF2A248D58000CF750 /* ReviewCell.xib */,
+			);
+			path = ReviewCell;
 			sourceTree = "<group>";
 		};
 		6D20D2ED29CDBECA00BFE7F2 /* ProgressHud */ = {
@@ -307,6 +320,7 @@
 		8419F2DB29238EA50000E597 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6D02B4DD2A248D4E000CF750 /* ReviewCell */,
 				844AD3A32934D4B000E2DEBF /* PlantDetailCell */,
 				8448D7A82930ACC20085756B /* SliderImageCell */,
 				8457185C292653AC00289959 /* OnbordingCell */,
@@ -544,6 +558,7 @@
 				6D069B2529FB915C00C4FE20 /* Roboto-Regular.ttf in Resources */,
 				6D20D30329CDC90700BFE7F2 /* GoogleNativeAdsCustomeView2.xib in Resources */,
 				6D069B2229FB915C00C4FE20 /* Roboto-BlackItalic.ttf in Resources */,
+				6D02B4E12A248D58000CF750 /* ReviewCell.xib in Resources */,
 				8419F2D029238DB00000E597 /* Assets.xcassets in Resources */,
 				8448D7AC2930B7AB0085756B /* SliderImageCell.xib in Resources */,
 				6D20D2FF29CDC90700BFE7F2 /* GoogleNativeAdsCustomeView1.xib in Resources */,
@@ -643,6 +658,7 @@
 				6D20D2EF29CDBEE300BFE7F2 /* ProgressHud.swift in Sources */,
 				8457185729264F7B00289959 /* OnbordingCell.swift in Sources */,
 				8419F2CE29238DAF0000E597 /* PlantIdentifire.xcdatamodeld in Sources */,
+				6D02B4E02A248D58000CF750 /* ReviewCell.swift in Sources */,
 				843E6A5B292CC80C009E286E /* Results.swift in Sources */,
 				8448B25F293711BA000BA0A8 /* SettingsVC.swift in Sources */,
 				6D20D2FE29CDC90700BFE7F2 /* GoogleNativeAdsCustomeView1.swift in Sources */,
@@ -816,22 +832,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 3UBZ624Z32;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -842,6 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swainfo.PlantIdentifire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Devlopement Profile for Plant identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -854,21 +873,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3UBZ624Z32;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3UBZ624Z32;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlantIdentifire/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Plant Identifire";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSCameraUsageDescription = "PlantIdentifire would like to use your camera to capture plant image and identifying plant from image.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "PlantIdentifire would like access to your photo gallery to upload plant image to identify plant.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -879,6 +900,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.swainfo.PlantIdentifire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Devlopement Profile for Plant identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

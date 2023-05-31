@@ -74,6 +74,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajN-kq-dox">
+                                <rect key="frame" x="197" y="8" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6Un-z4-woT"/>
+                                    <constraint firstAttribute="width" constant="20" id="jhr-Yg-sYV"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="uncheck"/>
+                                <state key="selected" image="check"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -82,7 +93,9 @@
                             <constraint firstItem="CEg-QQ-oEe" firstAttribute="top" secondItem="nZe-mJ-X5V" secondAttribute="bottom" id="Tsb-eG-VMJ"/>
                             <constraint firstAttribute="bottom" secondItem="CEg-QQ-oEe" secondAttribute="bottom" id="VAa-Nq-2VY"/>
                             <constraint firstItem="CEg-QQ-oEe" firstAttribute="leading" secondItem="ylu-zz-fyE" secondAttribute="leading" id="aY2-Le-393"/>
+                            <constraint firstAttribute="trailing" secondItem="ajN-kq-dox" secondAttribute="trailing" constant="8" id="n1R-S5-Xhl"/>
                             <constraint firstItem="nZe-mJ-X5V" firstAttribute="leading" secondItem="ylu-zz-fyE" secondAttribute="leading" id="nnf-TZ-pwP"/>
+                            <constraint firstItem="ajN-kq-dox" firstAttribute="top" secondItem="ylu-zz-fyE" secondAttribute="top" constant="8" id="tVP-WL-0Jn"/>
                             <constraint firstAttribute="trailing" secondItem="CEg-QQ-oEe" secondAttribute="trailing" id="wq8-Bt-Ilk"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -129,6 +142,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="btnDelete" destination="4MH-Zq-jQQ" id="PHv-MA-W1E"/>
+                <outlet property="btnSelect" destination="ajN-kq-dox" id="WV6-hD-3DB"/>
                 <outlet property="imgPlant" destination="nZe-mJ-X5V" id="YVH-m3-qGc"/>
                 <outlet property="lblPlantName" destination="52g-SO-Yf5" id="eS7-yM-8my"/>
                 <outlet property="lblfamilyName" destination="gGa-ms-KfW" id="OUD-Zp-uLt"/>
@@ -137,8 +151,10 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="check" width="512" height="512"/>
         <image name="dummy" width="143" height="145"/>
         <image name="minus-button" width="512" height="512"/>
+        <image name="uncheck" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

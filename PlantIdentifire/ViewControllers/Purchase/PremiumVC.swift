@@ -26,8 +26,12 @@ class PremiumVC: UIViewController {
     @IBOutlet var btnContinue: UIButton!
     @IBOutlet var btnPrivacyPolicy: UIButton!
     @IBOutlet var btnTNC: UIButton!
+    @IBOutlet var sliderCollectionView: UICollectionView!
     
     var isFromHome = Bool()
+    let arrReview = ["This app knows everything \n when it comes to plants and plant care. \n Love it!", "The app has correctly identified \n every plant leaf and flower I've inquired about so far. \n Awesome app, just what I was looking for.", "Very accurate and versatile.Probably as close to perfect as it is possible to be."]
+    var timer = Timer()
+    var counter = 0
 }
 
 // MARK: - View life cycle
@@ -88,6 +92,23 @@ extension PremiumVC {
     @IBAction func onToggleFreeSwitch(_ sender: UISwitch) {
         
     }
+    
+    @objc func changeReview() {
+        if self.arrReview.count != 0 {
+          
+            if self.counter < self.arrReview.count {
+                let index = IndexPath(item: counter, section: 0)
+                self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+                self.counter += 1
+                
+            } else {
+                self.counter = 0
+                let index = IndexPath(item: counter, section: 0)
+                self.sliderCollectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: false)
+                self.counter = 1
+            }
+        }
+    }
 }
 
 // MARK: - User defined functions
@@ -95,6 +116,11 @@ extension PremiumVC {
     
     func initView(){
         self.getLocalPrice()
+        DispatchQueue.main.async {
+            self.timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.changeReview), userInfo: nil, repeats: true)
+        }
+        
+        self.sliderCollectionView.register(UINib(nibName: "ReviewCell", bundle: nil), forCellWithReuseIdentifier: "ReviewCell")
     }
     
     
@@ -109,5 +135,21 @@ extension PremiumVC {
                 }
             }
         }
+    }
+}
+extension PremiumVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+      return self.arrReview.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReviewCell", for: indexPath) as! ReviewCell
+        cell.lblReview.text = self.arrReview[indexPath.row]
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+      return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 }

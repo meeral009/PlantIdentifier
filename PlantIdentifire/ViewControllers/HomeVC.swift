@@ -17,13 +17,11 @@ class HomeVC: UIViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var plantCollectionView: UICollectionView!
     @IBOutlet var noDataView: UIView!
+    @IBOutlet var editStackView: UIStackView!
     @IBOutlet var lblMycollection: UILabel!
-//    @IBOutlet var viewNativeAds: UIView! {
-//        didSet {
-//            self.viewNativeAds.isHidden = true
-//        }
-//    }
     
+    @IBOutlet var btnCancel: UIButton!
+
     // MARK: - Varibles
     var arrAfterPlantModel: [Plants] = []
     var tableViewItems: [Plants] = []
@@ -46,21 +44,19 @@ class HomeVC: UIViewController {
     var nativeAds: GADNativeAd?
    
     var plantModel = PlantModel()
+
+    var arrSelectedPlants = [Int]()
+    var arrSelectedPlantIds = [String]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
-        
-//        if isUserSubscribe() {
-//            NATIVE_ADS = nil
-//            self.viewNativeAds.isHidden = true
-//        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
-    
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             if !isUserSubscribe() {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
@@ -69,72 +65,99 @@ class HomeVC: UIViewController {
                 self.present(vc, animated: true, completion: nil)
             }
         }
-        
-        
-//        if !isUserSubscribe() {
-//            if let nativeAds = NATIVE_ADS {
-//                self.viewNativeAds.isHidden = false
-//                self.isShowNativeAds = true
-//                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.viewNativeAds)
-//            }
-//        }
-       
     }
     
-    @objc func onEditClick(_ sender: UIButton) {
-                            self.isEditOn.toggle()
-        if isEditOn {
-            self.btnEdit.setTitle("Done", for: .normal)
-        } else {
-            self.btnEdit.setTitle("Edit", for: .normal)
-        }
+
+    @objc func onClickCancel(_ sender: UIButton) {
+        self.isEditOn = false
+        self.editStackView.isHidden = true
+        self.arrSelectedPlants.removeAll()
+        self.arrSelectedPlantIds.removeAll()
         self.plantCollectionView.reloadData()
     }
     
     
     @objc func onLongTouch(_ sender: UIGestureRecognizer) {
-        self.isEditOn.toggle()
+        self.isEditOn = true
+        self.arrSelectedPlants.removeAll()
+        self.arrSelectedPlantIds.removeAll ()
+        self.editStackView.isHidden = false
         self.plantCollectionView.reloadData()
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
         if searchActive {
-            self.deleteData(id: self.arrAfterPlantModel[sender.tag].id ?? "", index: sender.tag)
+            for i in 0..<self.arrSelectedPlants.count {
+                if let index = self.arrAfterPlantModel.firstIndex(where: { $0.id == self.arrSelectedPlantIds[i] }) {
+                    self.deleteData(id: self.arrAfterPlantModel[index].id ?? "", index: sender.tag)
+//                    self.arrSelectedPlants.removeFirst()
+//                    self.arrSelectedPlantIds.removeFirst()
+                }
+            }
         } else {
-            self.deleteData(id: self.tableViewItems[sender.tag].id ?? "", index: sender.tag)
+            for i in 0..<self.arrSelectedPlants.count {
+                if let index = self.tableViewItems.firstIndex(where: { $0.id == self.arrSelectedPlantIds[i] }) {
+                    self.deleteData(id: self.tableViewItems[index].id ?? "", index: sender.tag)
+//                    self.arrSelectedPlants.removeFirst()
+//                    self.arrSelectedPlantIds.removeFirst()
+                }
+             
+            }
         }
+        self.isEditOn = false
+        self.editStackView.isHidden = true
+        self.plantCollectionView.reloadData()
     }
  
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        DispatchQueue.main.async {
-            ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
-        }
-        if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
-            //Do your stuff here
-            
-            AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-             vc?.hidesBottomBarWhenPushed = true
-            vc?.isFromHome = true
-           
-            Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
-                DispatchQueue.main.async {
-                    ERProgressHud.sharedInstance.hide()
-                }
-                vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-                vc?.isChecked = self.tableViewItems[indexPath.row].isFav
-                vc?.updateId = self.tableViewItems[indexPath.row].id
-                vc?.resultsModelFromList = arrResultsModel
-                vc?.message = message
-                DispatchQueue.main.async {
-                    self.navigationController?.pushViewController(vc!, animated: true)
-                }
+        if !self.isEditOn {
+            DispatchQueue.main.async {
+                ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+            }
+            if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
+                //Do your stuff here
                 
-            } failure: { _, error, _ in
-                ERProgressHud.sharedInstance.hide()
-                self.showAlert(with: error)
+                AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+                 vc?.hidesBottomBarWhenPushed = true
+                vc?.isFromHome = true
+               
+                Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
+                    DispatchQueue.main.async {
+                        ERProgressHud.sharedInstance.hide()
+                    }
+                    vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+                    vc?.isChecked = self.tableViewItems[indexPath.row].isFav
+                    vc?.updateId = self.tableViewItems[indexPath.row].id
+                    vc?.resultsModelFromList = arrResultsModel
+                    vc?.message = message
+                    DispatchQueue.main.async {
+                        self.navigationController?.pushViewController(vc!, animated: true)
+                    }
+                    
+                } failure: { _, error, _ in
+                    ERProgressHud.sharedInstance.hide()
+                    self.showAlert(with: error)
+                }
             }
         }
+    }
+    
+    @objc func onClickSelectPlant(_ sender: UIButton) {
+        if sender.isSelected == true {
+            self.arrSelectedPlants.remove(at: sender.tag)
+            self.arrSelectedPlantIds.remove(at: sender.tag)
+            sender.isSelected = false
+        } else {
+            self.arrSelectedPlants.append(sender.tag)
+            if searchActive {
+                self.arrSelectedPlantIds.append(self.arrAfterPlantModel[sender.tag].id ?? "")
+            } else {
+                self.arrSelectedPlantIds.append(self.tableViewItems[sender.tag].id ?? "")
+            }
+            sender.isSelected = true
+        }
+        self.plantCollectionView.reloadData()
     }
     
     @IBAction func onClickExitApp(_ sender: UIButton) {
@@ -151,7 +174,8 @@ extension HomeVC {
         self.hideKeyboardWhenTappedAround()
         self.customizeSearchField()
         self.plantCollectionView.register(UINib(nibName: "PlantCell", bundle: nil), forCellWithReuseIdentifier: "PlantCell")
-        self.btnEdit.addTarget(self, action: #selector(self.onEditClick(_:)), for: .touchUpInside)
+        self.btnEdit.addTarget(self, action: #selector(self.onDeleteClick(_:)), for: .touchUpInside)
+        self.btnCancel.addTarget(self, action: #selector(onClickCancel(_:)), for: .touchUpInside)
         self.plantCollectionView.delegate = self
         self.plantCollectionView.dataSource = self
         
@@ -206,17 +230,26 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if let family = data.family {
             cell?.lblfamilyName.text = "Family: \(family)"
         }
-//        if isEditOn {
-            cell?.btnDelete.isHidden = false
-//        } else {
-//            cell?.btnDelete.isHidden = true
-//        }
-        
+        if isEditOn {
+            cell?.btnSelect.isHidden = false
+            if self.arrSelectedPlants.contains(indexPath.row) {
+                cell?.btnSelect.isSelected = true
+            } else {
+                cell?.btnSelect.isSelected = false
+            }
+        } else {
+            cell?.btnSelect.isHidden = true
+        }
+    
+        cell?.btnSelect.tag = indexPath.row
+    
+       
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(onLongTouch(_:)))
-        longPressGesture.minimumPressDuration = 2
+        longPressGesture.minimumPressDuration = 0.5
         cell?.addGestureRecognizer(longPressGesture)
         cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
-        cell?.imgPlant.image = self.decodeImage(base64String: data.image ?? "")
+        cell?.btnSelect.addTarget(self, action: #selector(onClickSelectPlant(_:)), for: .touchUpInside)
+        cell?.imgPlant.sd_setImage(with: URL(string: data.image ?? ""))
         return cell ?? UICollectionViewCell()
     }
     
@@ -300,7 +333,8 @@ extension HomeVC {
             try context.save() // <- remember to put this :)
         } catch {}
         
-        self.plantCollectionView.reloadData()
+        self.fetchData()
+       
     }
     
 

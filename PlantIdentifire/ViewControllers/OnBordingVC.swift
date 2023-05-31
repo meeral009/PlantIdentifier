@@ -20,6 +20,8 @@ class OnBordingVC: UIViewController {
     var currentPage = 0
     // Interstitial Ad
     var interstitialAd: GADInterstitialAd?
+    
+    var isScrolling: Bool = false
 
 //MARK: - view lifecycle Methods
     
@@ -34,7 +36,8 @@ class OnBordingVC: UIViewController {
     
     
     @IBAction func btnSkipAction(_ sender: Any) {
-        UserDefaults.isCheckOnBording = false
+      //  UserDefaults.isCheckOnBording = false
+        UserDefaults.isCheckOnBording = true
         // Load Interstitial Ad
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             if self.interstitialAd != nil {
@@ -51,12 +54,9 @@ class OnBordingVC: UIViewController {
     }
     
     @IBAction func btnGoAction(_ sender: Any) {
-        
+        isScrolling = false
         if currentPage == 2 {
-           // set true for avoid inbording scren.
-            pageControl.currentPage = currentPage
-            UserDefaults.isCheckOnBording = true
-            // Load Interstitial Ad
+            self.setScrollChanges()
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if self.interstitialAd != nil {
                     self.interstitialAd?.present(fromRootViewController: self)
@@ -71,16 +71,7 @@ class OnBordingVC: UIViewController {
             
         } else {
            
-            currentPage += 1
-            pageControl.currentPage = currentPage
-            if currentPage == 1 {
-                self.btnGoOutlet.setTitle("Next", for: .normal)
-               // self.btnGoOutlet.setTitleColor(.white, for: .normal)
-            } else {
-                self.btnGoOutlet.setTitle("Get Started", for: .normal)
-               // self.btnGoOutlet.setTitleColor(.white, for: .normal)
-            }
-            
+            self.setScrollChanges()
 
             let indexPath = IndexPath(item : currentPage, section: 0)
          //   self.slidesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
@@ -90,15 +81,41 @@ class OnBordingVC: UIViewController {
         }
     }
     
+    
+    func setScrollChanges() {
+        
+        print("Current Index: \(self.currentPage)")
+        
+        if !isScrolling {
+            if currentPage != 2 {
+                currentPage += 1
+                pageControl.currentPage = currentPage
+            } else {
+                self.currentPage = 2
+            }
+        }
+        
+        if currentPage == 2 {
+            // set true for avoid inbording scren.
+             self.currentPage = 2
+             pageControl.currentPage = currentPage
+             UserDefaults.isCheckOnBording = true
+             self.btnGoOutlet.setTitle("Get Started", for: .normal)
+  
+        } else {
+            self.btnGoOutlet.setTitle("Next", for: .normal)
+        }
+        
+        self.slidesCollectionView.reloadData()
+    }
+    
 }
 
 //MARK: - UserDefined Function
 extension OnBordingVC {
     
     func setUpUI() {
-        
         self.slidesCollectionView.register(UINib(nibName: "OnbordingCell", bundle: .main), forCellWithReuseIdentifier: "OnbordingCell")
-        
     }
 }
 
@@ -134,12 +151,16 @@ extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,U
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let width = scrollView.frame.width
-//        currentPage = Int(scrollView.contentOffset.x  / width)
-//
-//    }
-//
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.isScrolling = true
+        let width = scrollView.frame.width
+        if isScrolling {
+            currentPage = Int(scrollView.contentOffset.x  / width)
+            self.pageControl.currentPage = currentPage
+        }
+        self.setScrollChanges()
+    }
+
 }
 // MARK: - Load Interstitial ad
 extension OnBordingVC: GADFullScreenContentDelegate {

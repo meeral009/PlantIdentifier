@@ -227,13 +227,13 @@ extension PlantDetailsVC {
                     let image: UIImage = self.image.fixedOrientation() ?? UIImage()
                     // Now use image to create into NSData format
                      let imageData: NSData = image.pngData()! as NSData
-                    
+
                     let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-                    self.imageString = strBase64
-                    
+//                    self.imageString = strBase64
+//
                     // check navigate from then not insert.
                     if !self.isFromHome {
-                        self.savedata(name: plantModel.first?.species?.name ?? "", desc: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", family: plantModel.first?.species?.family ?? "", image: strBase64, isfav: self.isChecked)
+                        self.savedata(name: plantModel.first?.species?.name ?? "", desc: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", family: plantModel.first?.species?.family ?? "", image: plantModel.first?.images?.first?.o ?? strBase64, isfav: self.isChecked)
                     }
                 }
                 

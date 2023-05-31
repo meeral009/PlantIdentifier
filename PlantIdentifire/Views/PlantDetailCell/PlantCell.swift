@@ -13,9 +13,20 @@ class PlantCell: UICollectionViewCell {
     @IBOutlet var lblfamilyName: UILabel!
     @IBOutlet var lblPlantName: UILabel!
     @IBOutlet var imgPlant: UIImageView!
+    
+    @IBOutlet var btnSelect: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+   //     self.btnSelect.addTarget(self, action: #selector(onClickSelect(_:)), for: .touchUpInside)
     }
 
+    
+//    @objc func onClickSelect(_ sender: UIButton) {
+//        if self.btnSelect.isSelected {
+//            self.btnSelect.isSelected = false
+//        } else {
+//            self.btnSelect.isSelected = true
+//        }
+//    }
 }

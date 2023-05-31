@@ -37,14 +37,7 @@ extension CustomTabBarVC {
         // set action of center tabbar button for open camera.
         if let myTabbar = tabBar as? STTabbar {
             myTabbar.centerButtonActionHandler = {
-//                DispatchQueue.main.asyncAfter(deadline: .now()) {
-//                    AdsManager.shared.presentInterstitialAd1(vc: self)
-//                }
-//
-//                if isUserSubscribe() {
-                    //self.presentCameraScreen()
-                    self.presentOptionSheet()
-//                }
+                self.presentOptionSheet()
             }
         }
     }
