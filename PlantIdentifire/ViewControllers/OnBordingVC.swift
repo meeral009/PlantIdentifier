@@ -16,11 +16,14 @@ class OnBordingVC: UIViewController {
     @IBOutlet weak var btnSkipOutlet: UIButton!
    
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet weak var bottomConstant: NSLayoutConstraint!
+    
+    @IBOutlet weak var topConstant: NSLayoutConstraint!
+    
     //MARK: - Variables
     var currentPage = 0
     // Interstitial Ad
     var interstitialAd: GADInterstitialAd?
-    
     var isScrolling: Bool = false
 
 //MARK: - view lifecycle Methods
@@ -36,20 +39,24 @@ class OnBordingVC: UIViewController {
     
     
     @IBAction func btnSkipAction(_ sender: Any) {
-      //  UserDefaults.isCheckOnBording = false
+//        UserDefaults.isCheckOnBording = false
         UserDefaults.isCheckOnBording = true
         // Load Interstitial Ad
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            if self.interstitialAd != nil {
-                self.interstitialAd?.present(fromRootViewController: self)
-            } else {
-                print("Ad wasn't ready")
-            }
+//        if self.interstitialAd != nil {
+//            self.interstitialAd?.present(fromRootViewController: self)
+//        } else {
+//            print("Ad wasn't ready")
+//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+            let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //        appDelegate.window?.rootViewController = redViewController
+            isFormOnBoarding = true
+            self.navigationController?.viewControllers = [redViewController]
+            self.navigationController?.pushViewController(redViewController, animated: true)
         }
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = redViewController
+        
        
     }
     
@@ -57,26 +64,25 @@ class OnBordingVC: UIViewController {
         isScrolling = false
         if currentPage == 2 {
             self.setScrollChanges()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                if self.interstitialAd != nil {
-                    self.interstitialAd?.present(fromRootViewController: self)
-                } else {
-                    print("Ad wasn't ready")
-                }
+            UserDefaults.isCheckOnBording = true
+//            if self.interstitialAd != nil {
+//                self.interstitialAd?.present(fromRootViewController: self)
+//            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+                let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+    //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //            appDelegate.window?.rootViewController = redViewController
+                isFormOnBoarding = true
+                self.navigationController?.viewControllers = [redViewController]
+                self.navigationController?.pushViewController(redViewController, animated: true)
             }
-            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-            let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = redViewController
-            
         } else {
-           
             self.setScrollChanges()
-
-            let indexPath = IndexPath(item : currentPage, section: 0)
+//            let indexPath = IndexPath(item : currentPage, section: 0)
          //   self.slidesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            self.slidesCollectionView.reloadData()
-            self.btnSkipOutlet.isHidden = false
+//            self.slidesCollectionView.reloadData()
+//            self.btnSkipOutlet.isHidden = false
             
         }
     }
@@ -99,14 +105,14 @@ class OnBordingVC: UIViewController {
             // set true for avoid inbording scren.
              self.currentPage = 2
              pageControl.currentPage = currentPage
-             UserDefaults.isCheckOnBording = true
              self.btnGoOutlet.setTitle("Get Started", for: .normal)
-  
         } else {
             self.btnGoOutlet.setTitle("Next", for: .normal)
         }
-        
+        self.btnSkipOutlet.isHidden = false
         self.slidesCollectionView.reloadData()
+        self.slidesCollectionView.scrollToItem(at: IndexPath.init(row: currentPage, section: 0), at: .centeredVertically, animated:true)
+        self.view.layoutIfNeeded()
     }
     
 }
@@ -115,6 +121,10 @@ class OnBordingVC: UIViewController {
 extension OnBordingVC {
     
     func setUpUI() {
+        if !UIDevice.current.hasNotch && !UIDevice.current.isPad{
+            bottomConstant.constant = 16
+            topConstant.constant = 50
+        }
         self.slidesCollectionView.register(UINib(nibName: "OnbordingCell", bundle: .main), forCellWithReuseIdentifier: "OnbordingCell")
     }
 }
@@ -130,17 +140,14 @@ extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnbordingCell", for: indexPath) as! OnbordingCell
-        if currentPage == 0 {
+        cell.view1.isHidden = true
+        cell.view2.isHidden = true
+        cell.view3.isHidden = true
+        if indexPath.row == 0 {
             cell.view1.isHidden = false
-            cell.view2.isHidden = true
-            cell.view3.isHidden = true
-        } else if currentPage == 1 {
-            cell.view1.isHidden = true
+        } else if indexPath.row == 1 {
             cell.view2.isHidden = false
-            cell.view3.isHidden = true
         } else {
-            cell.view1.isHidden = true
-            cell.view2.isHidden = true
             cell.view3.isHidden = false
         }
         return cell

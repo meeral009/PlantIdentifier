@@ -12,6 +12,7 @@ import UIKit
 class HomeVC: UIViewController {
 
     // MARK: - IBOutlates
+    
     @IBOutlet var btnEdit: UIButton!
     @IBOutlet var searchBarView: UIView!
     @IBOutlet var searchBar: UISearchBar!
@@ -19,12 +20,11 @@ class HomeVC: UIViewController {
     @IBOutlet var noDataView: UIView!
     @IBOutlet var editStackView: UIStackView!
     @IBOutlet var lblMycollection: UILabel!
-    
     @IBOutlet var btnCancel: UIButton!
 
     // MARK: - Varibles
-    var arrAfterPlantModel: [Plants] = []
-    var tableViewItems: [Plants] = []
+    var arrAfterPlantModel = [Results]()
+    var tableViewItems = [Results]()
     var searchActive = false
     /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
     /// process.
@@ -47,24 +47,35 @@ class HomeVC: UIViewController {
 
     var arrSelectedPlants = [Int]()
     var arrSelectedPlantIds = [String]()
+    var isOpenInApp = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.fetchData()
+        if isFormOnBoarding && !isUserSubscribe() && isOpenInApp{
+            isOpenInApp = false
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+            vc.modalPresentationStyle = .fullScreen
+            vc.isFromHome = true
+            self.present(vc, animated: true, completion: nil)
+        }else{
+            if !isUserSubscribe() && isOpenInApp{
+                isOpenInApp = false
+                DispatchQueue.main.asyncAfter(deadline: .now()+2.0){
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+               
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUi()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-            if !isUserSubscribe() {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
-                vc.modalPresentationStyle = .fullScreen
-                vc.isFromHome = true
-                self.present(vc, animated: true, completion: nil)
-            }
-        }
+        isOpenInApp = true
+        
     }
     
 
@@ -86,60 +97,54 @@ class HomeVC: UIViewController {
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
-        if searchActive {
-            for i in 0..<self.arrSelectedPlants.count {
-                if let index = self.arrAfterPlantModel.firstIndex(where: { $0.id == self.arrSelectedPlantIds[i] }) {
-                    self.deleteData(id: self.arrAfterPlantModel[index].id ?? "", index: sender.tag)
-//                    self.arrSelectedPlants.removeFirst()
-//                    self.arrSelectedPlantIds.removeFirst()
-                }
-            }
-        } else {
-            for i in 0..<self.arrSelectedPlants.count {
-                if let index = self.tableViewItems.firstIndex(where: { $0.id == self.arrSelectedPlantIds[i] }) {
-                    self.deleteData(id: self.tableViewItems[index].id ?? "", index: sender.tag)
-//                    self.arrSelectedPlants.removeFirst()
-//                    self.arrSelectedPlantIds.removeFirst()
-                }
-             
-            }
-        }
+        searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.arrSelectedPlants.remove(at: self.arrSelectedPlants)
         self.isEditOn = false
         self.editStackView.isHidden = true
         self.plantCollectionView.reloadData()
     }
  
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        if !self.isEditOn {
-            DispatchQueue.main.async {
-                ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
-            }
-            if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
-                //Do your stuff here
-                
-                AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-                 vc?.hidesBottomBarWhenPushed = true
-                vc?.isFromHome = true
-               
-                Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
-                    DispatchQueue.main.async {
-                        ERProgressHud.sharedInstance.hide()
-                    }
-                    vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-                    vc?.isChecked = self.tableViewItems[indexPath.row].isFav
-                    vc?.updateId = self.tableViewItems[indexPath.row].id
-                    vc?.resultsModelFromList = arrResultsModel
-                    vc?.message = message
-                    DispatchQueue.main.async {
+        if !self.isEditOn && (self.arrAfterPlantModel.count > 0 || self.tableViewItems.count > 0){
+            AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
+                if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
+                    DispatchQueue.main.asyncAfter(wallDeadline: .now()+0.1){
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+                        vc?.hidesBottomBarWhenPushed = true
+                        vc?.isFromHome = true
+                        vc?.resultsModel = self.tableViewItems[indexPath.row]
                         self.navigationController?.pushViewController(vc!, animated: true)
                     }
-                    
-                } failure: { _, error, _ in
-                    ERProgressHud.sharedInstance.hide()
-                    self.showAlert(with: error)
                 }
-            }
+            
+//            DispatchQueue.main.async {
+//                ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
+//            }
+//            if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
+//                //Do your stuff here
+//
+//                AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
+//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+//                 vc?.hidesBottomBarWhenPushed = true
+//                vc?.isFromHome = true
+
+//                Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
+//                    DispatchQueue.main.async {
+//                        ERProgressHud.sharedInstance.hide()
+//                    }
+//                    vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
+//                    vc?.isChecked = self.tableViewItems[indexPath.row].isFav
+//                    vc?.updateId = self.tableViewItems[indexPath.row].id
+//                    vc?.resultsModelFromList = arrResultsModel
+//                    vc?.message = message
+//                    DispatchQueue.main.async {
+//                        self.navigationController?.pushViewController(vc!, animated: true)
+//                    }
+//
+//                } failure: { _, error, _ in
+//                    ERProgressHud.sharedInstance.hide()
+//                    self.showAlert(with: error)
+//                }
+//            }
         }
     }
     
@@ -219,15 +224,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantCell", for: indexPath) as? PlantCell
-        var data = Plants()
-        if searchActive {
-            data = self.arrAfterPlantModel[indexPath.row]
-        } else {
-            data = self.tableViewItems[indexPath.row]
-        }
-        cell?.lblPlantName.text = data.name
+        var data = searchActive ? self.arrAfterPlantModel[indexPath.row] :  self.tableViewItems[indexPath.row]
+        cell?.lblPlantName.text = data.species?.name
         cell?.btnDelete.tag = indexPath.row
-        if let family = data.family {
+        if let family = data.species?.family {
             cell?.lblfamilyName.text = "Family: \(family)"
         }
         if isEditOn {
@@ -245,11 +245,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
        
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(onLongTouch(_:)))
-        longPressGesture.minimumPressDuration = 0.5
+        longPressGesture.minimumPressDuration = 1.0
         cell?.addGestureRecognizer(longPressGesture)
         cell?.btnDelete.addTarget(self, action: #selector(onDeleteClick(_:)), for: .touchUpInside)
         cell?.btnSelect.addTarget(self, action: #selector(onClickSelectPlant(_:)), for: .touchUpInside)
-        cell?.imgPlant.sd_setImage(with: URL(string: data.image ?? ""))
+        cell?.imgPlant.sd_setImage(with: URL(string: data.images?.first?.o ?? ""))
         return cell ?? UICollectionViewCell()
     }
     
@@ -268,27 +268,8 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
 extension HomeVC {
     // Fetch data
     func fetchData() {
-        self.presentedViewController?.dismiss(animated: true)
-        self.tableViewItems.removeAll()
-        
-        let context: NSManagedObjectContext
-        let fetchRequest: NSFetchRequest<Plants> = Plants.fetchRequest()
-        // Get the context object
-        if #available(iOS 10.0, *) {
-            context = appDelegate.persistentContainer.viewContext
-            
-        } else {
-            // Fallback on earlier versions
-            context = appDelegate.managedObjectContext
-        }
-        // Fetch User list from CoreData
-        if let plants = try? context.fetch(fetchRequest) {
-            for data in plants as [Plants] {
-                print(data)
-                self.tableViewItems.append(data)
-            }
-        }
-        
+        tableViewItems = getPlantDetails()
+        arrAfterPlantModel = getPlantDetails()
         if self.tableViewItems.count == 0 {
             self.searchBarView.isHidden = true
             self.noDataView.isHidden = false
@@ -296,48 +277,8 @@ extension HomeVC {
             self.searchBarView.isHidden = false
             self.noDataView.isHidden = true
         }
-       
         self.plantCollectionView.reloadData()
     }
-    
-    func deleteData(id: String, index: Int) {
-        let context: NSManagedObjectContext
-        if #available(iOS 10.0, *) {
-            context = appDelegate.persistentContainer.viewContext
-            
-        } else {
-            // Fallback on earlier versions
-            context = appDelegate.managedObjectContext
-        }
-        
-        let fetchRequest: NSFetchRequest<Plants> = Plants.fetchRequest()
-        if let id = id as? String {
-            fetchRequest.predicate = NSPredicate(format: "id = %@", id as String)
-        }
-        
-        let objects = try! context.fetch(fetchRequest)
-        for obj in objects {
-            context.delete(obj)
-        }
-        self.tableViewItems.remove(at: index)
-        
-        if self.tableViewItems.count == 0 {
-            self.searchBarView.isHidden = true
-            self.noDataView.isHidden = false
-        } else {
-            self.searchBarView.isHidden = false
-            self.noDataView.isHidden = true
-        }
-        
-        do {
-            try context.save() // <- remember to put this :)
-        } catch {}
-        
-        self.fetchData()
-       
-    }
-    
-
 }
 
 // MARK: - Delagte Functions
@@ -368,7 +309,7 @@ extension HomeVC: UISearchBarDelegate {
             let lowerSearchText = searchText.lowercased()
 
             let trimmed = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-            self.arrAfterPlantModel = self.tableViewItems.filter { $0.name?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() || $0.family?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() }
+            self.arrAfterPlantModel = self.tableViewItems.filter { $0.species?.name?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() || $0.species?.family?.lowercased().prefix(trimmed.count) ?? "" == trimmed.lowercased() }
             self.plantCollectionView.reloadData()
         }
     }

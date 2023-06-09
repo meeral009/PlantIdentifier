@@ -33,6 +33,15 @@ class Species: Codable {
 //  self.iucn = iucn
     self.commonNames = commonNames
   }
+    
+    init(){
+        self.name = ""
+        self.family = ""
+        self.author = ""
+        self.genus = ""
+    //  self.iucn = iucn
+        self.commonNames = [""]
+    }
 
   required init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)

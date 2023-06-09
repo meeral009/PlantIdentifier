@@ -24,8 +24,9 @@ class CustomTabBarVC: UITabBarController {
         super.viewDidLoad()
         self.setUPUI()
         
-        // Do any additional setup after loading the view.
+        
     }
+   
 }
 
 // MARK: - User Define function
@@ -33,8 +34,8 @@ extension CustomTabBarVC {
     
     // Initial set up for UIView.
     func setUPUI() {
-       
         // set action of center tabbar button for open camera.
+        self.navigationController?.viewControllers = [self]
         if let myTabbar = tabBar as? STTabbar {
             myTabbar.centerButtonActionHandler = {
                 self.presentOptionSheet()
@@ -43,14 +44,23 @@ extension CustomTabBarVC {
     }
 
     func presentOptionSheet() {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "IdentifyOptionsVC") as! IdentifyOptionsVC
-        vc.modalPresentationStyle = .overFullScreen
-        vc.dismissDelegate = self
-        self.present(vc, animated: false, completion: nil)
+        if getFreeScan() == 2 && !isUserSubscribe() {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CameraVC") as! CameraVC
+            vc.modalPresentationStyle = .overFullScreen
+            vc.dismissDelegate = self
+            vc.topVC = self
+            self.navigationController?.pushViewController(vc, animated: true)
+//            self.present(vc, animated: true, completion: nil)
+        }
+        
     }
     
     // Present camera and gallery on screen.
-    func presentCameraScreen(screen: String) {
+    func presentCameraScreen(screen: String,img:UIImage) {
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.allowsEditing = true
         imagePickerVC.delegate = self
@@ -65,7 +75,6 @@ extension CustomTabBarVC {
             vc.modalPresentationStyle = .fullScreen
             vc.isFromHome = true
             self.present(vc, animated: true, completion: nil)
-
         } else {
             self.present(imagePickerVC, animated: true)
         }
@@ -76,17 +85,61 @@ extension CustomTabBarVC {
         self.plantModel.uploadPlantImage(plantImage: image, isShowLoader: true) { id in
             print("id of plant \(id)")
             setFreeScan()
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-            vc?.image = image
-            vc?.id = id
-            vc?.modalPresentationStyle = .fullScreen
-            self.present(vc ?? UIViewController(), animated: true)
+            
+            Results.getPlantDetailsAPI(isShowLoader: false, id: id) { plantModel, message in
+                print(plantModel)
+                if message != "Not a plant." {
+                    // Set data from first element of Images array from response
+                   
+                    if let result = plantModel.first{
+                        var similarImages = [Images]()
+                        if plantModel.count > 1 {
+                            if let plantImages = plantModel[1].images {
+                                similarImages.append(contentsOf: plantImages)
+                                
+                            }
+                        }
+                        result.similar_images = similarImages
+                        result.id = UUID().uuidString
+                        DispatchQueue.main.async {
+                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as! PlantDetailsVC
+                            vc.image = image
+                            vc.id = id
+                            vc.resultsModel = result
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                     
+                        
+                    }else{
+                        DispatchQueue.main.async {
+                            self.showToast(message: message)
+                        }
+                    }
+                    
+                } else {
+                    ERProgressHud.sharedInstance.hide()
+                    DispatchQueue.main.async {
+                        self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
+                            self.dismiss(animated: true)
+                        })
+                    }
+                }
+            } failure: { _, error, _ in
+                ERProgressHud.sharedInstance.hide()
+                DispatchQueue.main.async {
+                    self.showToast(message: error)
+                }
+            }
+            
+            
+           
             
         } failure: { statuscode, error, customError in
             print(error)
             self.showAlert(with: error)
         }
     }
+    
     
 }
 
@@ -102,13 +155,20 @@ extension CustomTabBarVC {
 
 
 extension CustomTabBarVC: DismissViewControllerDelegate {
-    func dismiss(mode: String) {
+    func dismiss(mode: String, img: UIImage) {
         self.presentingViewController?.dismiss(animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.presentCameraScreen(screen: mode)
-            UserDefaults.standard.set(false, forKey: "isPresentCamera")
+            self.uploadPlantImage(image: img)
         }
     }
+    
+//    func dismiss(mode: String) {
+//        self.presentingViewController?.dismiss(animated: true)
+//        DispatchQueue.main.asyncAfter(deadline: .now()) {
+//            self.presentCameraScreen(screen: mode)
+//            UserDefaults.standard.set(false, forKey: "isPresentCamera")
+//        }
+//    }
 }
 
 extension CustomTabBarVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {

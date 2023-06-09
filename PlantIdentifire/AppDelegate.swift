@@ -34,11 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         InAppManager.shared.completeTransition()
         InAppManager.shared.verifyReciept()
+        
+//        setIsUserSubscribe(isSubscribe: false)
+        
         return true
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        AdsManager.shared.tryToPresentAppOpenAd()
+        if isAppOpen{
+            isAppOpen = false
+            AdsManager.shared.tryToPresentAppOpenAd()
+        }
+        
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        isAppOpen = true
     }
 
     // MARK: - Core Data stack

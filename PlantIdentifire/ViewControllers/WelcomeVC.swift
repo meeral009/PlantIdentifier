@@ -58,33 +58,58 @@ extension WelcomeVC {
     }
     
     func setUpNavigation() {
-        if isUserSubscribe() {
-            if UserDefaults.isCheckOnBording {
-                // Load Interstitial Ad
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-                    self.navigationController?.viewControllers = [redViewController]
-                    self.navigationController?.pushViewController(redViewController, animated: true)
+        if isUserSubscribe() && UserDefaults.isCheckOnBording{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.homeScreenVC()
+            }
+            
+//            if UserDefaults.isCheckOnBording {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+//                    let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+//                    self.navigationController?.viewControllers = [redViewController]
+//                    self.navigationController?.pushViewController(redViewController, animated: true)
+//
+//                }
+//
+//            } else {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
+//                    self.navigationController?.pushViewController(vc!, animated: true)
+//                }
+//            }
+            
+        } else {
+            if UserDefaults.isCheckOnBording{
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    if interstitialAd != nil {
+                        UserDefaults.standard.set(false, forKey: "isPresentCamera")
+                        self.loadingVC()
+                    }else{
+                        self.homeScreenVC()
+                    }
                     
                 }
-                
-            } else {
+            }else{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
                     self.navigationController?.pushViewController(vc!, animated: true)
                 }
             }
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                UserDefaults.standard.set(false, forKey: "isPresentCamera")
-                self.loadingVC()
-            }
+            
+           
         }
     }
     
     func loadingVC() {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoadingVC") as! LoadingVC
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func homeScreenVC() {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+//        self.navigationController?.viewControllers = [redViewController]
+        self.navigationController?.pushViewController(redViewController, animated: true)
     }
 }

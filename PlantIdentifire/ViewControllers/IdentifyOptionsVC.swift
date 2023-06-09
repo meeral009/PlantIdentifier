@@ -9,7 +9,7 @@ import UIKit
 import YPImagePicker
 
 protocol DismissViewControllerDelegate {
-    func dismiss(mode: String)
+    func dismiss(mode: String,img:UIImage)
 }
 
 class IdentifyOptionsVC: UIViewController {
@@ -41,29 +41,36 @@ extension IdentifyOptionsVC {
     @IBAction func onClickQRScan(_ sender: UIButton) {
         self.isScanningModeOn = true
         self.mode = "photo"
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            UserDefaults.standard.set(true, forKey: "isPresentCamera")
-            AdsManager.shared.presentInterstitialAd1(vc: self)
-        }
-        
+
         if isUserSubscribe() {
-            self.dismissDelegate?.dismiss(mode: "photo")
+            self.dismissDelegate?.dismiss(mode: "photo", img: UIImage())
             self.dismiss(animated: true)
+        } else if getFreeScan() == 2 && !isUserSubscribe()  {
+            self.dismissDelegate?.dismiss(mode: "camera", img: UIImage())
+            self.dismiss(animated: true)
+        }  else {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                UserDefaults.standard.set(true, forKey: "isPresentCamera")
+                AdsManager.shared.presentInterstitialAd1(vc: self)
+            }
         }
     }
 
     @IBAction func onClickCamera(_ sender: UIButton) {
         self.isScanningModeOn = false
         self.mode = "camera"
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            UserDefaults.standard.set(true, forKey: "isPresentCamera")
-            AdsManager.shared.presentInterstitialAd1(vc: self)
-        }
-        
         if isUserSubscribe() {
             //self.presentCameraScreen()
-            self.dismissDelegate?.dismiss(mode: "camera")
+            self.dismissDelegate?.dismiss(mode: "camera", img: UIImage())
             self.dismiss(animated: true)
+        } else if getFreeScan() == 2 && !isUserSubscribe()  {
+            self.dismissDelegate?.dismiss(mode: "camera", img: UIImage())
+            self.dismiss(animated: true)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                UserDefaults.standard.set(true, forKey: "isPresentCamera")
+                AdsManager.shared.presentInterstitialAd1(vc: self)
+            }
         }
     }
     
@@ -71,14 +78,17 @@ extension IdentifyOptionsVC {
     @IBAction func onClickGallery(_ sender: UIButton) {
         self.isScanningModeOn = false
         self.mode = "photo"
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            UserDefaults.standard.set(true, forKey: "isPresentCamera")
-            AdsManager.shared.presentInterstitialAd1(vc: self)
-        }
-        
         if isUserSubscribe() {
-            self.dismissDelegate?.dismiss(mode: "photo")
+            self.dismissDelegate?.dismiss(mode: "photo", img: UIImage())
             self.dismiss(animated: true)
+        } else if getFreeScan() == 2 && !isUserSubscribe()  {
+            self.dismissDelegate?.dismiss(mode: "camera", img: UIImage())
+            self.dismiss(animated: true)
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                UserDefaults.standard.set(true, forKey: "isPresentCamera")
+                AdsManager.shared.presentInterstitialAd1(vc: self)
+            }
         }
     }
     
@@ -93,7 +103,7 @@ extension IdentifyOptionsVC: AdsManagerDelegate {
     func NativeAdLoad() { }
     
     func DidDismissFullScreenContent() {
-        self.dismissDelegate?.dismiss(mode: self.mode)
+        self.dismissDelegate?.dismiss(mode: self.mode, img: UIImage())
         self.dismiss(animated: true)
     }
     

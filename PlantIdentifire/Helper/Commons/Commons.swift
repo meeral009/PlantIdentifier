@@ -16,6 +16,8 @@ var arrId = [String]()
 var arrOfObjectsOfImage = [Images]()
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
+var isFormOnBoarding = Bool()
+var isAppOpen = Bool()
 
 let PRIVACY_POLICY      = "https://swainfosolution.wordpress.com/privacy-policy/"
 let TERM_AND_CONDITION  = "https://swainfosolution.wordpress.com/terms-condition/"
@@ -26,7 +28,7 @@ let SCAN_COUNT                        = "SCAN_COUNT"
 
 let SHARE_SECRET = "9269f8b14b7c4d5ebca0e0cf193e7e29"
 
-let IN_APP_PURCHASE_IDS = ["com.swainfo.PlantIdentifire.yearly"]
+let IN_APP_PURCHASE_IDS = ["com.swainfo.PlantIdentifire.yearly",""]
 enum URLTypes: String {
     
     case contactUs = "https://pipaliyasmit.wordpress.com/contactus/"
@@ -37,15 +39,16 @@ enum URLTypes: String {
 
 enum adMob: String {
     
-// //    Production
+ //    Production
     case bannerAdID = "ca-app-pub-8252529408738635/7601503906"
     case interstitialAdID = "ca-app-pub-8252529408738635/6436332717"
     case nativeAdID = "ca-app-pub-8252529408738635/5410454834"
     case openAdID = "ca-app-pub-8252529408738635/3810169376"
     
     
-//    // Development
-//   case bannerAdID = "ca-app-pub-3940256099942544/2934735716"
+    // Development
+    
+//    case bannerAdID = "ca-app-pub-3940256099942544/2934735716"
 //    case interstitialAdID = "ca-app-pub-3940256099942544/4411468910"
 //    case nativeAdID = "ca-app-pub-3940256099942544/3986624511"
 //    case openAdID = "ca-app-pub-3940256099942544/5662855259"

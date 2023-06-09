@@ -9,33 +9,48 @@ import Foundation
 
 
 class Results: Codable {
-
-  enum CodingKeys: String, CodingKey {
-    case images
-    case species
-    case score
-  }
-
-  var images: [Images]?
-  var species: Species?
-  var score: Float?
-
-  init (images: [Images]?, species: Species?, score: Float?) {
-    self.images = images
-    self.species = species
-    self.score = score
-  }
-
-  required init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    images = try container.decodeIfPresent([Images].self, forKey: .images)
-    species = try container.decodeIfPresent(Species.self, forKey: .species)
-    score = try container.decodeIfPresent(Float.self, forKey: .score)
-  }
     
-    class func getPlantDetailsAPI(isShowLoader : Bool, id : String, success withResponse: @escaping (_ arrResultsModel : [Results] , _ message : String) -> Void, failure: @escaping FailureBlock)
-    {
-
+    enum CodingKeys: String, CodingKey {
+        case images
+        case species
+        case score
+        case similar_images
+        case id
+    }
+    
+    var id:String?
+    var images: [Images]?
+    var species: Species?
+    var score: Float?
+    var similar_images: [Images]?
+    
+    init (images: [Images]?, species: Species?, score: Float?,similar_images: [Images]?) {
+        self.images = images
+        self.species = species
+        self.score = score
+        self.similar_images = similar_images
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(String.self, forKey: .id)
+        images = try container.decodeIfPresent([Images].self, forKey: .images)
+        species = try container.decodeIfPresent(Species.self, forKey: .species)
+        score = try container.decodeIfPresent(Float.self, forKey: .score)
+        similar_images = try container.decodeIfPresent([Images].self, forKey: .similar_images)
+        
+    }
+    
+    init(){
+        self.images = [Images]()
+        self.species = Species()
+        self.score = 0.0
+        self.similar_images = [Images]()
+        self.id = ""
+    }
+    
+    class func getPlantDetailsAPI(isShowLoader : Bool, id : String, success withResponse: @escaping (_ arrResultsModel : [Results] , _ message : String) -> Void, failure: @escaping FailureBlock){
+        
         if isShowLoader {
             ERProgressHud.sharedInstance.show()
             //ERProgressHud.sharedInstance.show(withTitle: "Loading...")
@@ -54,10 +69,10 @@ class Results: Codable {
             }
             print("response: \(data)")
             
-          //  let dict = data as [String:Any]
-          //  let message = dict["message"] as? String ?? ""
+            //  let dict = data as [String:Any]
+            //  let message = dict["message"] as? String ?? ""
             
-          //  print(message)
+            //  print(message)
             
             do {
                 let res = JSONDecoder()
@@ -65,14 +80,14 @@ class Results: Codable {
                     
                     let ss = try res.decode(PlantModel.self, from:dataa)
                     withResponse(ss.results!,ss.message ?? "")
-                   
+                    
                 }
             }
             catch {
                 print(error)
             }
             
-           
+            
         } failure : { (error) in
             if isShowLoader {
                 
@@ -88,6 +103,6 @@ class Results: Codable {
             failure(0, connectionError, .connection)
         }
         
-
-      }
+        
+    }
 }

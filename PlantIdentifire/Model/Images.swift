@@ -51,5 +51,16 @@ class Images: Codable {
     o = try container.decodeIfPresent(String.self, forKey: .o)
     organ = try container.decodeIfPresent(String.self, forKey: .organ)
   }
+    
+    init(){
+        self.s = ""
+        self.license = ""
+        self.author = ""
+        self.date = ""
+        self.m = ""
+        self.id = ""
+        self.o = ""
+        self.organ = ""
+    }
 
 }
