@@ -53,7 +53,7 @@ class GoogleNativeAdsCustomeView4: UIView {
 //        adView.backgroundColor = UIColor.clear
         let data = (adView.iconView as? UIImageView)?.image?.pngData()
         if data == nil {
-            imgIconWidthConstant.constant = 0
+//            imgIconWidthConstant.constant = 0
         }
     }
 

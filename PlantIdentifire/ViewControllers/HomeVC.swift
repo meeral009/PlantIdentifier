@@ -97,7 +97,7 @@ class HomeVC: UIViewController {
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
-        searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.arrSelectedPlants.remove(at: self.arrSelectedPlants)
+        searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.tableViewItems.remove(at: self.arrSelectedPlants)
         self.isEditOn = false
         self.editStackView.isHidden = true
         self.plantCollectionView.reloadData()
@@ -221,7 +221,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         }
       
     }
-    
+  //  hgghh
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantCell", for: indexPath) as? PlantCell
         var data = searchActive ? self.arrAfterPlantModel[indexPath.row] :  self.tableViewItems[indexPath.row]

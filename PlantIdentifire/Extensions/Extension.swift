@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+import UIKit
 
 extension UIDevice {
     /// Returns `true` if the device has a notch

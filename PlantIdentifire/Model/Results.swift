@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 class Results: Codable {
     
     enum CodingKeys: String, CodingKey {

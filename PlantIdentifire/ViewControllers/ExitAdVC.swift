@@ -31,6 +31,7 @@ extension ExitAdVC {
 // MARK: - Actions
 extension ExitAdVC {
     @IBAction func onClickExit(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
         exit(0)
     }
     

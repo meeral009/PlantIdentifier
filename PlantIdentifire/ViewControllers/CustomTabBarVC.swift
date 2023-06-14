@@ -101,13 +101,22 @@ extension CustomTabBarVC {
                         }
                         result.similar_images = similarImages
                         result.id = UUID().uuidString
-                        DispatchQueue.main.async {
-                            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as! PlantDetailsVC
-                            vc.image = image
-                            vc.id = id
-                            vc.resultsModel = result
-                            self.navigationController?.pushViewController(vc, animated: true)
+                        if result.images?.count ?? 0 > 0{
+                            DispatchQueue.main.async {
+                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as! PlantDetailsVC
+                                vc.image = image
+                                vc.id = id
+                                vc.resultsModel = result
+                                self.navigationController?.pushViewController(vc, animated: true)
+                            }
+                        }else{
+                            self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
+                                self.navigationController?.popViewController(animated: true)
+                            })
+                            
+                            
                         }
+                        
                      
                         
                     }else{

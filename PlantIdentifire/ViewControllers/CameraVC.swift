@@ -52,6 +52,10 @@ class CameraVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        DispatchQueue.main.async {
+            self.viewTop.round(corners: [.bottomLeft,.bottomRight], radius: 24)
+            self.viewBottom.round(corners: [.topLeft,.topRight], radius: 24)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,7 +75,11 @@ class CameraVC: UIViewController {
             self.bottomViewHeight.constant = 100
             self.topViewHeight.constant = 80
         }
-        
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .darkContent
     }
     
     override func viewDidDisappear(_ animated: Bool) {

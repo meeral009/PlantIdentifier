@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         InAppManager.shared.completeTransition()
         InAppManager.shared.verifyReciept()
         
-//        setIsUserSubscribe(isSubscribe: false)
+//        setIsUserSubscribe(isSubscribe: true)
         
         return true
     }

@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SVProgressHUD
 import Toaster
+import SDWebImage
 
 var arrId = [String]()
 
@@ -28,7 +29,7 @@ let SCAN_COUNT                        = "SCAN_COUNT"
 
 let SHARE_SECRET = "9269f8b14b7c4d5ebca0e0cf193e7e29"
 
-let IN_APP_PURCHASE_IDS = ["com.swainfo.PlantIdentifire.yearly",""]
+let IN_APP_PURCHASE_IDS = ["com.swainfo.PlantIdentifire.yearly","com.swainfo.PlantIdentifire.monthly"]
 enum URLTypes: String {
     
     case contactUs = "https://pipaliyasmit.wordpress.com/contactus/"
@@ -80,6 +81,23 @@ func showLoader() {
 func removeLoader() {
     appDelegate.window?.isUserInteractionEnabled = true
     ProgressHUD.dismiss()
+}
+
+// MARK: Get Image Form URL
+func setImageFromUrl(_ picPath: String, img: UIImageView, placeHolder: String) {
+    if picPath == "" {
+        img.image = UIImage.init(named: placeHolder)
+        return
+    }
+    
+    img.sd_imageIndicator = SDWebImageActivityIndicator.gray
+    img.sd_setImage(with: URL(string : picPath), placeholderImage: nil, options: []) { image, error, type, url in
+        if error == nil {
+            img.image = image
+        } else {
+            img.image = UIImage.init(named: placeHolder)
+        }
+    }
 }
 
 

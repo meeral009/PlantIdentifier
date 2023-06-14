@@ -56,7 +56,7 @@ class PlantModel: Codable {
     message = try container.decodeIfPresent(String.self, forKey: .message)
   }
     
- 
+    
  func uploadPlantImage( plantImage: UIImage?, isShowLoader : Bool, success withResponse: @escaping (_ id : String) -> Void, failure: @escaping FailureBlock) {
        
        if isShowLoader {
