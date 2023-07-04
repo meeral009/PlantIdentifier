@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 class OnBordingVC: UIViewController {
     
@@ -22,8 +21,6 @@ class OnBordingVC: UIViewController {
     
     //MARK: - Variables
     var currentPage = 0
-    // Interstitial Ad
-    var interstitialAd: GADInterstitialAd?
     var isScrolling: Bool = false
 
 //MARK: - view lifecycle Methods
@@ -31,7 +28,6 @@ class OnBordingVC: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.loadInterstitialAd()
         // Do any additional setup after loading the view.
     }
     
@@ -39,19 +35,11 @@ class OnBordingVC: UIViewController {
     
     
     @IBAction func btnSkipAction(_ sender: Any) {
-//        UserDefaults.isCheckOnBording = false
         UserDefaults.isCheckOnBording = true
-        // Load Interstitial Ad
-//        if self.interstitialAd != nil {
-//            self.interstitialAd?.present(fromRootViewController: self)
-//        } else {
-//            print("Ad wasn't ready")
-//        }
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
             let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-    //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //        appDelegate.window?.rootViewController = redViewController
             isFormOnBoarding = true
             self.navigationController?.viewControllers = [redViewController]
             self.navigationController?.pushViewController(redViewController, animated: true)
@@ -65,25 +53,15 @@ class OnBordingVC: UIViewController {
         if currentPage == 2 {
             self.setScrollChanges()
             UserDefaults.isCheckOnBording = true
-//            if self.interstitialAd != nil {
-//                self.interstitialAd?.present(fromRootViewController: self)
-//            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
                 let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-    //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    //            appDelegate.window?.rootViewController = redViewController
                 isFormOnBoarding = true
                 self.navigationController?.viewControllers = [redViewController]
                 self.navigationController?.pushViewController(redViewController, animated: true)
             }
         } else {
             self.setScrollChanges()
-//            let indexPath = IndexPath(item : currentPage, section: 0)
-         //   self.slidesCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//            self.slidesCollectionView.reloadData()
-//            self.btnSkipOutlet.isHidden = false
-            
         }
     }
     
@@ -168,22 +146,4 @@ extension OnBordingVC : UICollectionViewDelegate , UICollectionViewDataSource ,U
         self.setScrollChanges()
     }
 
-}
-// MARK: - Load Interstitial ad
-extension OnBordingVC: GADFullScreenContentDelegate {
-    func loadInterstitialAd() {
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: adMob.interstitialAdID.rawValue,
-                               request: request,
-                               completionHandler: { [self] ad, error in
-            if let error = error {
-                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                return
-            }
-            
-            if let ad = ad {
-                self.interstitialAd = ad
-            }
-        })
-    }
 }

@@ -17,6 +17,7 @@ class Results: Codable {
         case score
         case similar_images
         case id
+        case similar_result
     }
     
     var id:String?
@@ -24,12 +25,14 @@ class Results: Codable {
     var species: Species?
     var score: Float?
     var similar_images: [Images]?
+    var similar_result: [Results]?
     
-    init (images: [Images]?, species: Species?, score: Float?,similar_images: [Images]?) {
+    init (images: [Images]?, species: Species?, score: Float?,similar_images: [Images]?,similar_result:[Results]?) {
         self.images = images
         self.species = species
         self.score = score
         self.similar_images = similar_images
+        self.similar_result = similar_result
     }
     
     required init(from decoder: Decoder) throws {
@@ -39,6 +42,7 @@ class Results: Codable {
         species = try container.decodeIfPresent(Species.self, forKey: .species)
         score = try container.decodeIfPresent(Float.self, forKey: .score)
         similar_images = try container.decodeIfPresent([Images].self, forKey: .similar_images)
+        similar_result = try container.decodeIfPresent([Results].self, forKey: .similar_result)
         
     }
     
@@ -48,6 +52,7 @@ class Results: Codable {
         self.score = 0.0
         self.similar_images = [Images]()
         self.id = ""
+        self.similar_result = [Results]()
     }
     
     class func getPlantDetailsAPI(isShowLoader : Bool, id : String, success withResponse: @escaping (_ arrResultsModel : [Results] , _ message : String) -> Void, failure: @escaping FailureBlock){

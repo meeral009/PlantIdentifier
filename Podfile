@@ -15,5 +15,7 @@ target 'PlantIdentifire' do
   pod 'SVProgressHUD'
   pod 'Toaster'
   pod 'YandexMobileMetrica'
+  pod 'IGRPhotoTweaks'
+  pod 'HorizontalDial'
   
 end

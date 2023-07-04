@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 class PlantDetiailCell: UITableViewCell {
     
@@ -18,7 +17,7 @@ class PlantDetiailCell: UITableViewCell {
     @IBOutlet weak var familyLabel: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     
-    @IBOutlet weak var vwMain: GADBannerView!
+//    @IBOutlet weak var vwMain: GADBannerView!
     
   
     

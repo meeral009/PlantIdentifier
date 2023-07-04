@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Medium.ttf">
+            <string>RobotoSlab-Medium</string>
+        </array>
+        <array key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FzC-ez-HbS" customClass="GoogleNativeAdsCustomeView4" customModule="PDF_Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="154"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-UJ-Yq2" customClass="GADNativeAdView">
+                    <rect key="frame" x="0.0" y="0.0" width="509" height="154"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GAK-LE-hDQ">
+                            <rect key="frame" x="12" y="8" width="485" height="80"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTQ-ji-SZ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="LTQ-ji-SZ8" secondAttribute="height" multiplier="1:1" id="PTy-3J-0A5"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qRB-Xn-cwn">
+                                    <rect key="frame" x="88" y="0.0" width="397" height="80"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MC1-Tt-NCe">
+                                            <rect key="frame" x="0.0" y="0.0" width="397" height="80"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Headline" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqT-mo-NGj">
+                                                    <rect key="frame" x="10" y="8" width="379" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="60V-RF-TOA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="14"/>
+                                                    </variation>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrz-V0-XDP" customClass="View" customModule="PDF_Scanner" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="33" width="23.5" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" Ad " textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CF3-cb-5d0">
+                                                            <rect key="frame" x="0.0" y="0.0" width="23.5" height="20"/>
+                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                            <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="13"/>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Snj-9W-2Hn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CF3-cb-5d0" secondAttribute="bottom" id="Ypo-2S-Bfz"/>
+                                                        <constraint firstItem="CF3-cb-5d0" firstAttribute="leading" secondItem="vrz-V0-XDP" secondAttribute="leading" id="sWQ-yW-Oo1"/>
+                                                        <constraint firstItem="CF3-cb-5d0" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="v9n-Gh-meF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CF3-cb-5d0" secondAttribute="trailing" id="zV2-po-TWN"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray4Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="       Body that is really really long and can take up to two lines or sometimes even more." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWd-57-y0g">
+                                                    <rect key="frame" x="10" y="33" width="379" height="33"/>
+                                                    <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="14"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="kqT-mo-NGj" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="2S0-KB-dXH"/>
+                                                <constraint firstItem="HWd-57-y0g" firstAttribute="top" secondItem="vrz-V0-XDP" secondAttribute="top" id="EWz-Kq-6J5"/>
+                                                <constraint firstAttribute="trailing" secondItem="kqT-mo-NGj" secondAttribute="trailing" constant="8" id="FXp-MQ-1fN"/>
+                                                <constraint firstAttribute="trailing" secondItem="HWd-57-y0g" secondAttribute="trailing" constant="8" id="Lgg-bM-TP4"/>
+                                                <constraint firstItem="vrz-V0-XDP" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="buy-23-Nbr"/>
+                                                <constraint firstItem="HWd-57-y0g" firstAttribute="leading" secondItem="MC1-Tt-NCe" secondAttribute="leading" constant="10" id="dzh-iN-bAQ"/>
+                                                <constraint firstItem="vrz-V0-XDP" firstAttribute="top" secondItem="kqT-mo-NGj" secondAttribute="bottom" constant="5" id="ibC-xK-nQY"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="kqT-mo-NGj" firstAttribute="top" secondItem="LTQ-ji-SZ8" secondAttribute="top" constant="8" id="umY-gs-zWa"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDk-hQ-iAP" customClass="Button" customModule="PDF_Scanner" customModuleProvider="target">
+                            <rect key="frame" x="12" y="96" width="485" height="50"/>
+                            <color key="backgroundColor" name="App_Color"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="74a-Qk-FRT">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                </constraint>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="17"/>
+                            <state key="normal" title="Install">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lDk-hQ-iAP" secondAttribute="trailing" constant="12" id="4Fj-ld-fLg"/>
+                        <constraint firstAttribute="trailing" secondItem="GAK-LE-hDQ" secondAttribute="trailing" constant="12" id="IIF-O6-Ide"/>
+                        <constraint firstAttribute="bottom" secondItem="lDk-hQ-iAP" secondAttribute="bottom" constant="8" id="QYk-VE-JW1"/>
+                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" constant="12" id="mru-Uo-0Oq"/>
+                        <constraint firstItem="GAK-LE-hDQ" firstAttribute="top" secondItem="1UO-UJ-Yq2" secondAttribute="top" constant="8" id="pbf-rk-hvv"/>
+                        <constraint firstItem="lDk-hQ-iAP" firstAttribute="leading" secondItem="1UO-UJ-Yq2" secondAttribute="leading" constant="12" id="sY7-w0-3Os"/>
+                        <constraint firstItem="lDk-hQ-iAP" firstAttribute="top" secondItem="GAK-LE-hDQ" secondAttribute="bottom" constant="8" id="sbk-9D-5Rw"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="bodyView" destination="HWd-57-y0g" id="89I-v9-czm"/>
+                        <outlet property="callToActionView" destination="lDk-hQ-iAP" id="mxQ-ca-0GG"/>
+                        <outlet property="headlineView" destination="kqT-mo-NGj" id="p3s-nv-cJ7"/>
+                        <outlet property="iconView" destination="LTQ-ji-SZ8" id="0dt-Cx-gT6"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="PNV-v4-jn4"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1UO-UJ-Yq2" firstAttribute="top" secondItem="FzC-ez-HbS" secondAttribute="top" id="3n9-aj-FYE"/>
+                <constraint firstAttribute="bottom" secondItem="1UO-UJ-Yq2" secondAttribute="bottom" id="Oj4-Ii-sf3"/>
+                <constraint firstItem="1UO-UJ-Yq2" firstAttribute="leading" secondItem="PNV-v4-jn4" secondAttribute="leading" id="Xug-w8-FYB"/>
+                <constraint firstAttribute="trailing" secondItem="1UO-UJ-Yq2" secondAttribute="trailing" id="exx-5d-pr6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adUIView" destination="1UO-UJ-Yq2" id="To4-Ad-T8h"/>
+            </connections>
+            <point key="canvasLocation" x="494.92753623188412" y="305.35714285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="App_Color">
+            <color red="0.25099998712539673" green="0.47299998998641968" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

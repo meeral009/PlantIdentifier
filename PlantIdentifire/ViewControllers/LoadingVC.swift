@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GoogleMobileAds
+//import GoogleMobileAds
 import UIKit
 
 func delay(_ delay: Double, closure: @escaping () -> ()) {
@@ -32,10 +32,10 @@ class LoadingVC: UIViewController {
         UserDefaults.standard.set(false, forKey: "isPresentCamera")
         delay(0.7) {
          //   if interstitialAd != nil {
-                if !isUserSubscribe(){
-                    AdsManager.shared.presentInterstitialAd1(vc: self)
-                }
-        
+//                if !isUserSubscribe(){
+//                    AdsManager.shared.presentInterstitialAd1(vc: self)
+//                }
+//
                 if UserDefaults.isCheckOnBording {
                     // Load Interstitial Ad
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

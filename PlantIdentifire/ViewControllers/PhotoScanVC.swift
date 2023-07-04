@@ -56,7 +56,7 @@ extension PhotoScanVC {
             print("id of plant \(id)")
             setFreeScan()
           
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsNewVC") as? PlantDetailsNewVC
             vc?.image = image
             vc?.id = id
             vc?.modalPresentationStyle = .fullScreen

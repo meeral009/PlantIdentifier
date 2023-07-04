@@ -32,7 +32,7 @@ class IdentifyOptionsVC: UIViewController {
 extension IdentifyOptionsVC {
     override func viewDidLoad() {
         super.viewDidLoad()
-        AdsManager.shared.delegate = self
+//        AdsManager.shared.delegate = self
     }
 }
 
@@ -51,7 +51,7 @@ extension IdentifyOptionsVC {
         }  else {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 UserDefaults.standard.set(true, forKey: "isPresentCamera")
-                AdsManager.shared.presentInterstitialAd1(vc: self)
+//                AdsManager.shared.presentInterstitialAd1(vc: self)
             }
         }
     }
@@ -69,7 +69,7 @@ extension IdentifyOptionsVC {
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 UserDefaults.standard.set(true, forKey: "isPresentCamera")
-                AdsManager.shared.presentInterstitialAd1(vc: self)
+//                AdsManager.shared.presentInterstitialAd1(vc: self)
             }
         }
     }
@@ -87,7 +87,7 @@ extension IdentifyOptionsVC {
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 UserDefaults.standard.set(true, forKey: "isPresentCamera")
-                AdsManager.shared.presentInterstitialAd1(vc: self)
+//                AdsManager.shared.presentInterstitialAd1(vc: self)
             }
         }
     }
@@ -95,17 +95,4 @@ extension IdentifyOptionsVC {
     @IBAction func onClickDismiss(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-}
-
-// MARK: - Delagte Functions
-
-extension IdentifyOptionsVC: AdsManagerDelegate {
-    func NativeAdLoad() { }
-    
-    func DidDismissFullScreenContent() {
-        self.dismissDelegate?.dismiss(mode: self.mode, img: UIImage())
-        self.dismiss(animated: true)
-    }
-    
-    func NativeAdsDidFailedToLoad() { }
 }

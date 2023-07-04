@@ -47,13 +47,15 @@ extension ExitAdVC {
             self.nativeAdView.isHidden = false
             self.isShowNativeAds = true
             self.googleNativeAds.showAdsView1(nativeAd: nativeAds, view: self.nativeAdView)
-        }
-        googleNativeAds.loadAds(self) { nativeAdsTemp in
-            NATIVE_ADS = nativeAdsTemp
-            if !self.isShowNativeAds{
-                self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdView)
+        }else{
+            googleNativeAds.loadAds(self) { nativeAdsTemp in
+                NATIVE_ADS = nativeAdsTemp
+                if !self.isShowNativeAds{
+                    self.googleNativeAds.showAdsView1(nativeAd: nativeAdsTemp, view: self.nativeAdView)
+                }
             }
         }
+       
     }
 }
 

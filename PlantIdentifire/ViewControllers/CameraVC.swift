@@ -70,7 +70,6 @@ class CameraVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
-//        AppDelegate().setLightStatusBarStyle()
         if !UIDevice.current.hasNotch && UIDevice.current.userInterfaceIdiom != .pad{
             self.bottomViewHeight.constant = 100
             self.topViewHeight.constant = 80
@@ -244,8 +243,6 @@ class CameraVC: UIViewController {
     // MARK: - Button Click
     @IBAction func btnBackClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-//        self.dismiss(animated: true)
-
     }
     
     @IBAction func btnFlipCameraClicked(_ sender: Any) {
@@ -262,19 +259,13 @@ class CameraVC: UIViewController {
     }
     
     @IBAction func actionGallery(_ sender: UIButton) {
-//        self.dismiss(animated: true)
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.allowsEditing = true
         imagePickerVC.delegate = self
         imagePickerVC.sourceType = .photoLibrary
         self.present(imagePickerVC, animated: true)
     }
-    
-    @IBAction func actionTips(_ sender: Any) {
-       
-    }
-    
-    
+   
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate -
@@ -291,12 +282,13 @@ extension CameraVC: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         let ciImage = CIImage(cvImageBuffer: cvBuffer)
         let uiImage = UIImage(ciImage: ciImage)
-        
+        takePicture = false
         DispatchQueue.main.async {
             self.captureSession.stopRunning()
-            self.imgCaptureImage.image = uiImage
-            self.takePicture = false
-            self.searchStone(img: self.imgCaptureImage.image!)
+
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CropImageVC") as! CropImageVC
+            vc.image = uiImage
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -305,18 +297,11 @@ extension CameraVC: UIImagePickerControllerDelegate, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         if let image = info[.originalImage] as? UIImage {
-            self.plantModel.uploadPlantImage(plantImage: image, isShowLoader: true) { id in
-                print("id of plant \(id)")
-                setFreeScan()
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as! PlantDetailsVC
-                vc.image = image
-                vc.id = id
-                self.navigationController?.pushViewController(vc, animated: true)
-                
-            } failure: { statuscode, error, customError in
-                print(error)
-                self.showAlert(with: error)
-            }
+
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CropImageVC") as! CropImageVC
+            vc.image = image
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
        
     }

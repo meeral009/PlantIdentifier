@@ -6,7 +6,6 @@
 //
 
 import CoreData
-import GoogleMobileAds
 import SDWebImage
 import UIKit
 
@@ -41,7 +40,6 @@ class PlantDetailsVC: UIViewController {
     var isFromHome = false
 
     var isShowNativeAds = false
-    var googleNativeAds = GoogleNativeAds()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,23 +81,23 @@ extension PlantDetailsVC {
    
         self.nativeAdPlaceholder.isHidden = true
         self.adsHeightConstraint.constant = 0
-        if !isUserSubscribe() {
-            if let nativeAds = NATIVE_ADS {
-                self.nativeAdPlaceholder.isHidden = false
-                self.isShowNativeAds = true
-                self.adsHeightConstraint.constant = 150
-                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
-            }
-            
-            googleNativeAds.loadAds(self) { nativeAdsTemp in
-                NATIVE_ADS = nativeAdsTemp
-                self.nativeAdPlaceholder.isHidden = false
-                self.adsHeightConstraint.constant = 150
-                if !self.isShowNativeAds {
-                    self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
-                }
-            }
-        }
+//        if !isUserSubscribe() {
+//            if let nativeAds = NATIVE_ADS {
+//                self.nativeAdPlaceholder.isHidden = false
+//                self.isShowNativeAds = true
+//                self.adsHeightConstraint.constant = 150
+//                self.googleNativeAds.showAdsView4(nativeAd: nativeAds, view: self.nativeAdPlaceholder)
+//            }
+//
+//            googleNativeAds.loadAds(self) { nativeAdsTemp in
+//                NATIVE_ADS = nativeAdsTemp
+//                self.nativeAdPlaceholder.isHidden = false
+//                self.adsHeightConstraint.constant = 150
+//                if !self.isShowNativeAds {
+//                    self.googleNativeAds.showAdsView4(nativeAd: nativeAdsTemp, view: self.nativeAdPlaceholder)
+//                }
+//            }
+//        }
         
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)

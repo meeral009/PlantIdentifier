@@ -90,7 +90,7 @@ class PremiumVC: UIViewController {
         if isFromHome{
             self.dismiss(animated: false) {
                 if !isUserSubscribe() {
-                    AdsManager.shared.presentInterstitialAd()
+//                    AdsManager.shared.presentInterstitialAd()
                 }
             }
         }else{
@@ -99,7 +99,7 @@ class PremiumVC: UIViewController {
     }
     
     @IBAction func actionSelection(_ sender: UIButton) {
-        InAppManager.shared.purchaseProduct(productId: IN_APP_PURCHASE_IDS[self.selectedIndex]) {
+        InAppManager.shared.purchaseProduct(productId: IN_APP_PURCHASE_IDS[sender.tag]) {
             
         }
     }

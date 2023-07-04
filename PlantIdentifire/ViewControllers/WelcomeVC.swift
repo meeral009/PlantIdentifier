@@ -5,7 +5,6 @@
 //  Created by admin on 17/11/22.
 //
 
-import GoogleMobileAds
 import UIKit
 import NVActivityIndicatorView
 import Lottie
@@ -41,7 +40,7 @@ extension WelcomeVC {
         self.googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
         }
-      
+
         var i = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
             i += 0.5
@@ -62,22 +61,6 @@ extension WelcomeVC {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.homeScreenVC()
             }
-            
-//            if UserDefaults.isCheckOnBording {
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-//                    let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-//                    self.navigationController?.viewControllers = [redViewController]
-//                    self.navigationController?.pushViewController(redViewController, animated: true)
-//
-//                }
-//
-//            } else {
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "OnBordingVC") as? OnBordingVC
-//                    self.navigationController?.pushViewController(vc!, animated: true)
-//                }
-//            }
             
         } else {
             if UserDefaults.isCheckOnBording{
@@ -109,7 +92,6 @@ extension WelcomeVC {
     func homeScreenVC() {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
-//        self.navigationController?.viewControllers = [redViewController]
         self.navigationController?.pushViewController(redViewController, animated: true)
     }
 }

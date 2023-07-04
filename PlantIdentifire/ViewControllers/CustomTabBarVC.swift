@@ -11,20 +11,18 @@ import YPImagePicker
 import AVFoundation
 import AVKit
 import Photos
-import GoogleMobileAds
 
 class CustomTabBarVC: UITabBarController {
     
     // MARK: - Varibles
      var plantModel = PlantModel()
+     var isFirstTime = Bool()
      
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUPUI()
-        
-        
     }
    
 }
@@ -34,7 +32,6 @@ extension CustomTabBarVC {
     
     // Initial set up for UIView.
     func setUPUI() {
-        // set action of center tabbar button for open camera.
         self.navigationController?.viewControllers = [self]
         if let myTabbar = tabBar as? STTabbar {
             myTabbar.centerButtonActionHandler = {
@@ -49,12 +46,19 @@ extension CustomTabBarVC {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         } else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CameraVC") as! CameraVC
-            vc.modalPresentationStyle = .overFullScreen
-            vc.dismissDelegate = self
-            vc.topVC = self
-            self.navigationController?.pushViewController(vc, animated: true)
-//            self.present(vc, animated: true, completion: nil)
+            if !isFirstTime{
+                isFirstTime = true
+                AdsManager.shared.presentInterstitialAd()
+            }else{
+                AdsManager.shared.showInterstitialAd(false,isRandom: true,ratio: 3,shouldMatchRandom: 1)
+            }
+            DispatchQueue.main.asyncAfter(wallDeadline: .now(), execute: {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "CameraVC") as! CameraVC
+                vc.modalPresentationStyle = .overFullScreen
+                vc.dismissDelegate = self
+                vc.topVC = self
+                self.navigationController?.pushViewController(vc, animated: true)
+            })
         }
         
     }
@@ -90,20 +94,18 @@ extension CustomTabBarVC {
                 print(plantModel)
                 if message != "Not a plant." {
                     // Set data from first element of Images array from response
-                   
                     if let result = plantModel.first{
                         var similarImages = [Images]()
                         if plantModel.count > 1 {
                             if let plantImages = plantModel[1].images {
                                 similarImages.append(contentsOf: plantImages)
-                                
                             }
                         }
                         result.similar_images = similarImages
                         result.id = UUID().uuidString
                         if result.images?.count ?? 0 > 0{
                             DispatchQueue.main.async {
-                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as! PlantDetailsVC
+                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsNewVC") as! PlantDetailsNewVC
                                 vc.image = image
                                 vc.id = id
                                 vc.resultsModel = result
@@ -113,12 +115,7 @@ extension CustomTabBarVC {
                             self.showAlert(with: "Choose another image that have plant.",firstHandler: { action in
                                 self.navigationController?.popViewController(animated: true)
                             })
-                            
-                            
                         }
-                        
-                     
-                        
                     }else{
                         DispatchQueue.main.async {
                             self.showToast(message: message)
@@ -140,15 +137,11 @@ extension CustomTabBarVC {
                 }
             }
             
-            
-           
-            
         } failure: { statuscode, error, customError in
             print(error)
             self.showAlert(with: error)
         }
     }
-    
     
 }
 
@@ -170,22 +163,12 @@ extension CustomTabBarVC: DismissViewControllerDelegate {
             self.uploadPlantImage(image: img)
         }
     }
-    
-//    func dismiss(mode: String) {
-//        self.presentingViewController?.dismiss(animated: true)
-//        DispatchQueue.main.asyncAfter(deadline: .now()) {
-//            self.presentCameraScreen(screen: mode)
-//            UserDefaults.standard.set(false, forKey: "isPresentCamera")
-//        }
-//    }
 }
 
 extension CustomTabBarVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            AdsManager.shared.presentInterstitialAd1(vc: self ?? UIViewController())
-        }
+        
         if let image = info[.originalImage] as? UIImage {
             self.uploadPlantImage(image: image)
         }

@@ -6,7 +6,6 @@
 //
 
 import CoreData
-import GoogleMobileAds
 import UIKit
 
 class HomeVC: UIViewController {
@@ -21,33 +20,27 @@ class HomeVC: UIViewController {
     @IBOutlet var editStackView: UIStackView!
     @IBOutlet var lblMycollection: UILabel!
     @IBOutlet var btnCancel: UIButton!
+    @IBOutlet var viewNativeAds: UIView! {
+        didSet {
+            viewNativeAds.isHidden = true
+        }
+    }
 
     // MARK: - Varibles
     var arrAfterPlantModel = [Results]()
     var tableViewItems = [Results]()
     var searchActive = false
-    /// The ad loader. You must keep a strong reference to the GADAdLoader during the ad loading
-    /// process.
-    var adLoader: GADAdLoader!
-    /// The height constraint applied to the ad view, where necessary.
-    var heightConstraint: NSLayoutConstraint?
-    /// The native ad view that is being presented.
-    var googleNativeAds = GoogleNativeAds()
-    let googleBannerAds = GoogleBannerAds()
-   
     var isEditOn = false
-  
     var isAdLoded = false
     var isfav = false
-    var adBannerView = GADBannerView()
-    var isShowNativeAds = false
-    var nativeAds: GADNativeAd?
-   
     var plantModel = PlantModel()
 
     var arrSelectedPlants = [Int]()
     var arrSelectedPlantIds = [String]()
     var isOpenInApp = false
+    
+    var googleNativeAds = GoogleNativeAds()
+    var isShowNativeAds = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -75,7 +68,19 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.setUpUi()
         isOpenInApp = true
-        
+        if let nativeAds = NATIVE_ADS {
+            self.viewNativeAds.isHidden = false
+            self.isShowNativeAds = true
+            self.googleNativeAds.showAdsView3(nativeAd: nativeAds, view: self.viewNativeAds)
+        }else{
+            googleNativeAds.loadAds(self) { nativeAdsTemp in
+                NATIVE_ADS = nativeAdsTemp
+                if !self.isShowNativeAds{
+                    self.googleNativeAds.showAdsView3(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
+                }
+            }
+        }
+       
     }
     
 
@@ -97,54 +102,33 @@ class HomeVC: UIViewController {
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
-        searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.tableViewItems.remove(at: self.arrSelectedPlants)
-        self.isEditOn = false
-        self.editStackView.isHidden = true
-        self.plantCollectionView.reloadData()
+        let alert = UIAlertController(title: "Delete!", message: "Are you sure to delete records?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
+           
+        }))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            
+            self.searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.tableViewItems.remove(at: self.arrSelectedPlants)
+            self.isEditOn = false
+            self.editStackView.isHidden = true
+            self.plantCollectionView.reloadData()
+            savePlantsList(plantResult: self.searchActive ? self.arrAfterPlantModel : self.tableViewItems)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
  
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if !self.isEditOn && (self.arrAfterPlantModel.count > 0 || self.tableViewItems.count > 0){
-            AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
                 if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
+                    AdsManager.shared.showInterstitialAd(false,isRandom: true,ratio: 3,shouldMatchRandom: 1)
                     DispatchQueue.main.asyncAfter(wallDeadline: .now()+0.1){
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsNewVC") as? PlantDetailsNewVC
                         vc?.hidesBottomBarWhenPushed = true
                         vc?.isFromHome = true
                         vc?.resultsModel = self.tableViewItems[indexPath.row]
                         self.navigationController?.pushViewController(vc!, animated: true)
                     }
                 }
-            
-//            DispatchQueue.main.async {
-//                ERProgressHud.sharedInstance.showBlurView(withTitle: "Identifying plant...")
-//            }
-//            if let indexPath = self.plantCollectionView?.indexPathForItem(at: sender.location(in: self.plantCollectionView)) {
-//                //Do your stuff here
-//
-//                AdsManager.shared.checkRandomAndPresentInterstitial(isRandom: true, ratio: 3, shouldMatchRandom: 1)
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlantDetailsVC") as? PlantDetailsVC
-//                 vc?.hidesBottomBarWhenPushed = true
-//                vc?.isFromHome = true
-
-//                Results.getPlantDetailsAPI(isShowLoader: false, id: self.tableViewItems[indexPath.row].plantId ?? "") { arrResultsModel, message in
-//                    DispatchQueue.main.async {
-//                        ERProgressHud.sharedInstance.hide()
-//                    }
-//                    vc?.image = self.decodeImage(base64String: self.tableViewItems[indexPath.row].image ?? "")
-//                    vc?.isChecked = self.tableViewItems[indexPath.row].isFav
-//                    vc?.updateId = self.tableViewItems[indexPath.row].id
-//                    vc?.resultsModelFromList = arrResultsModel
-//                    vc?.message = message
-//                    DispatchQueue.main.async {
-//                        self.navigationController?.pushViewController(vc!, animated: true)
-//                    }
-//
-//                } failure: { _, error, _ in
-//                    ERProgressHud.sharedInstance.hide()
-//                    self.showAlert(with: error)
-//                }
-//            }
         }
     }
     
