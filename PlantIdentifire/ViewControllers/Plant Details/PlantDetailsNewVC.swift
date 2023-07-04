@@ -25,6 +25,7 @@ class PlantDetailsNewVC: UIViewController {
     }
     
     @IBOutlet weak var viewTop: UIView!
+    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     
     @IBOutlet var lblPlantName: UILabel!
     @IBOutlet var lblFamily: UILabel!
@@ -71,6 +72,9 @@ class PlantDetailsNewVC: UIViewController {
         }
         if !self.isFromHome {
             setPlantDetails(plantResult:resultsModel )
+        }
+        if !UIDevice.current.hasNotch && !UIDevice.current.isPad{
+            topViewHeight.constant = 475
         }
         setUpData()
         self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.changeImage), userInfo: nil, repeats: true)

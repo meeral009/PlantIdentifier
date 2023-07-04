@@ -312,7 +312,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-nF-1t1">
-                                        <rect key="frame" x="59" y="73.666666666666671" width="84" height="23"/>
+                                        <rect key="frame" x="59" y="73.333333333333329" width="84" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -351,7 +351,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identifire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHQ-PT-cKW">
-                                        <rect key="frame" x="17" y="243.66666666666666" width="109" height="19.999999999999972"/>
+                                        <rect key="frame" x="17" y="244.33333333333334" width="109" height="20.000000000000028"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -360,7 +360,7 @@
                                         </variation>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d45-e3-AlK">
-                                        <rect key="frame" x="17" y="283.66666666666669" width="396" height="648.33333333333326"/>
+                                        <rect key="frame" x="17" y="284.33333333333331" width="396" height="647.66666666666674"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <attributedString key="attributedText">
                                             <fragment>
@@ -434,7 +434,7 @@ Features:
                                         </variation>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 2.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1p-Mf-dRw">
-                                        <rect key="frame" x="17" y="219.33333333333334" width="69.666666666666671" height="16"/>
+                                        <rect key="frame" x="17" y="219.33333333333334" width="69.333333333333329" height="16.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -581,7 +581,7 @@ Features:
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-Jd-6Mz">
-                                        <rect key="frame" x="109.33333333333333" y="153" width="211.66666666666669" height="29.333333333333343"/>
+                                        <rect key="frame" x="109.33333333333331" y="153" width="211.66666666666669" height="29.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -654,7 +654,7 @@ Features:
                                         <rect key="frame" x="0.0" y="53" width="430" height="647"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCy-fI-Vdu">
-                                                <rect key="frame" x="109.33333333333333" y="20" width="211.66666666666669" height="29.333333333333329"/>
+                                                <rect key="frame" x="109.33333333333331" y="20" width="211.66666666666669" height="29.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -986,7 +986,7 @@ click this Button</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2de-BY-4NL">
-                                                <rect key="frame" x="151.33333333333334" y="729" width="126.00000000000003" height="31"/>
+                                                <rect key="frame" x="151.33333333333337" y="729" width="126" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="SvB-cN-eas"/>
                                                 </constraints>
@@ -1155,7 +1155,7 @@ click this Button</string>
                                                 </connections>
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="CuF-NW-YWH">
-                                                <rect key="frame" x="156.66666666666666" y="175" width="116.66666666666666" height="15"/>
+                                                <rect key="frame" x="156.66666666666663" y="175" width="116.66666666666669" height="15"/>
                                                 <color key="backgroundColor" red="0.31764705879999999" green="0.67843137249999996" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="nKt-pd-zSn"/>
@@ -1763,10 +1763,10 @@ kinds of plants living in nature. </string>
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Bya-Dr-aRQ">
-                                        <rect key="frame" x="196.66666666666666" y="428.66666666666669" width="37" height="37"/>
+                                        <rect key="frame" x="196.66666666666663" y="428.66666666666669" width="37" height="37"/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Ads..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STi-HT-PU3">
-                                        <rect key="frame" x="166.66666666666666" y="485.66666666666669" width="96.999999999999972" height="18"/>
+                                        <rect key="frame" x="166.66666666666663" y="485.66666666666669" width="97" height="18"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1983,7 +1983,7 @@ kinds of plants living in nature. </string>
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HELP ALL YOUR PLANTS THRIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-TQ-CVu">
-                                                <rect key="frame" x="81.666666666666657" y="342" width="266.66666666666674" height="21.5"/>
+                                                <rect key="frame" x="81.666666666666629" y="342" width="266.66666666666674" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                                 <color key="textColor" red="0.34901960784313724" green="0.61176470588235299" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2114,13 +2114,13 @@ kinds of plants living in nature. </string>
                                                         <rect key="frame" x="0.0" y="0.0" width="370" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 29.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7V-Jm-Omf">
-                                                                <rect key="frame" x="158.33333333333334" y="9.3333333333332575" width="53.666666666666657" height="19"/>
+                                                                <rect key="frame" x="158.33333333333337" y="9.3333333333332575" width="53.666666666666629" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="16"/>
                                                                 <color key="textColor" red="0.098039215690000001" green="0.2470588235" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto renewable. Cancel anytime." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFi-fe-OlQ">
-                                                                <rect key="frame" x="98.000000000000014" y="33.333333333333258" width="174.33333333333337" height="14.333333333333336"/>
+                                                                <rect key="frame" x="98" y="33.333333333333258" width="174.33333333333337" height="14.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                                 <color key="textColor" red="0.52156862749999999" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2353,7 +2353,7 @@ kinds of plants living in nature. </string>
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="185"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-7g-pZv">
-                                        <rect key="frame" x="118.66666666666666" y="15.999999999999998" width="160.99999999999997" height="22.333333333333329"/>
+                                        <rect key="frame" x="118.66666666666663" y="15.999999999999998" width="161" height="22.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="19"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2513,7 +2513,7 @@ kinds of plants living in nature. </string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-QC-qQe">
-                                        <rect key="frame" x="54" y="59.666666666666657" width="51" height="19"/>
+                                        <rect key="frame" x="54" y="59.666666666666657" width="50.666666666666657" height="19"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -4128,7 +4128,7 @@ kinds of plants living in nature. </string>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-6Z-eCK">
-                                                <rect key="frame" x="191.33333333333334" y="738.33333333333337" width="47.333333333333343" height="16.666666666666629"/>
+                                                <rect key="frame" x="191.33333333333337" y="738.33333333333337" width="47.333333333333314" height="16.666666666666629"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -4836,7 +4836,7 @@ kinds of plants living in nature. </string>
                                                         <cells/>
                                                     </collectionView>
                                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-qb-Aa2">
-                                                        <rect key="frame" x="157.33333333333334" y="512" width="115.66666666666666" height="26"/>
+                                                        <rect key="frame" x="157.33333333333337" y="512" width="115.66666666666663" height="26"/>
                                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="currentPageIndicatorTintColor" name="AppColor"/>
                                                     </pageControl>
@@ -4855,7 +4855,7 @@ kinds of plants living in nature. </string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYq-Jm-X47">
-                                                <rect key="frame" x="0.0" y="550" width="430" height="80"/>
+                                                <rect key="frame" x="8" y="550" width="414" height="80"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifL-WS-gJS">
                                                         <rect key="frame" x="16" y="16" width="50" height="50"/>
@@ -4879,7 +4879,7 @@ kinds of plants living in nature. </string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJf-bk-okK">
-                                                        <rect key="frame" x="80" y="19" width="336" height="20"/>
+                                                        <rect key="frame" x="80" y="19" width="320" height="20"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -4888,7 +4888,7 @@ kinds of plants living in nature. </string>
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shrub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcQ-Uh-BBB">
-                                                        <rect key="frame" x="80" y="44" width="336" height="15.333333333333336"/>
+                                                        <rect key="frame" x="80" y="44" width="320" height="15.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemGrayColor"/>
                                                         <nil key="highlightedColor"/>
@@ -4914,7 +4914,7 @@ kinds of plants living in nature. </string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fqn-V3-eaG">
-                                                <rect key="frame" x="0.0" y="630" width="430" height="60"/>
+                                                <rect key="frame" x="8" y="630" width="414" height="60"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant_info" translatesAutoresizingMaskIntoConstraints="NO" id="Yp0-7N-p3m">
                                                         <rect key="frame" x="16" y="14" width="32" height="32"/>
@@ -4923,8 +4923,8 @@ kinds of plants living in nature. </string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-dV-UnC">
-                                                        <rect key="frame" x="68" y="19.333333333333371" width="342" height="21.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                                        <rect key="frame" x="68" y="19.333333333333371" width="326" height="21.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=compact">
@@ -4946,25 +4946,33 @@ kinds of plants living in nature. </string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="OoV-wY-d61">
-                                                <rect key="frame" x="25" y="694" width="380" height="100"/>
+                                                <rect key="frame" x="35" y="694" width="370" height="100"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq0-2P-Utp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="380" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="370" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kalanchoe blossfeldiana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8F3-iX-buu">
-                                                                <rect key="frame" x="108" y="0.0" width="267" height="32"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                <rect key="frame" x="108" y="0.0" width="257" height="32"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family           :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6S-7H-27M">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="SUU-TR-9Vh"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="SUU-TR-9Vh">
+                                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                                    </constraint>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4979,22 +4987,30 @@ kinds of plants living in nature. </string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubh-Ug-I7A">
-                                                        <rect key="frame" x="0.0" y="34" width="380" height="32"/>
+                                                        <rect key="frame" x="0.0" y="34" width="370" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="flaming Katy," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlL-Ul-vVu">
-                                                                <rect key="frame" x="108" y="0.0" width="267" height="32"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                <rect key="frame" x="108" y="0.0" width="257" height="32"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genus           :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA7-XC-xAy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="3vd-uf-jIv"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="3vd-uf-jIv">
+                                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                                    </constraint>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5009,22 +5025,30 @@ kinds of plants living in nature. </string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-yV-SqV">
-                                                        <rect key="frame" x="0.0" y="68" width="380" height="32"/>
+                                                        <rect key="frame" x="0.0" y="68" width="370" height="32"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Kalanchoe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-DH-z8w">
-                                                                <rect key="frame" x="108" y="0.0" width="267" height="32"/>
-                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                <rect key="frame" x="108" y="0.0" width="257" height="32"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" red="0.34509803919999998" green="0.34509803919999998" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author           :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-4c-ThN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="fXU-dF-v4F"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="fXU-dF-v4F">
+                                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                                    </constraint>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                                 <color key="textColor" name="AppColor"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=regular-widthClass=compact">
+                                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                                                </variation>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5040,11 +5064,13 @@ kinds of plants living in nature. </string>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="YWM-UL-KXJ"/>
+                                                    <constraint firstAttribute="height" constant="200" id="YWM-UL-KXJ">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                                    </constraint>
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WDT-ng-sd5">
-                                                <rect key="frame" x="0.0" y="802" width="430" height="60"/>
+                                                <rect key="frame" x="8" y="802" width="414" height="60"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photos" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-FS-c4o">
                                                         <rect key="frame" x="16" y="14" width="32" height="32"/>
@@ -5053,10 +5079,13 @@ kinds of plants living in nature. </string>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXc-RJ-6GW">
-                                                        <rect key="frame" x="68" y="19.333333333333371" width="342" height="21.333333333333329"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                        <rect key="frame" x="68" y="19.333333333333371" width="326" height="21.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="25"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5064,7 +5093,9 @@ kinds of plants living in nature. </string>
                                                     <constraint firstAttribute="bottom" secondItem="kuP-FS-c4o" secondAttribute="bottom" constant="14" id="5Cv-5M-53N"/>
                                                     <constraint firstItem="lXc-RJ-6GW" firstAttribute="leading" secondItem="kuP-FS-c4o" secondAttribute="trailing" constant="20" id="Bfe-RW-45q"/>
                                                     <constraint firstItem="kuP-FS-c4o" firstAttribute="leading" secondItem="WDT-ng-sd5" secondAttribute="leading" constant="16" id="buc-LL-eQ7"/>
-                                                    <constraint firstAttribute="height" constant="60" id="gQb-ow-dLV"/>
+                                                    <constraint firstAttribute="height" constant="90" id="gQb-ow-dLV">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                                    </constraint>
                                                     <constraint firstItem="kuP-FS-c4o" firstAttribute="top" secondItem="WDT-ng-sd5" secondAttribute="top" constant="14" id="gdu-6F-OW4"/>
                                                     <constraint firstAttribute="trailing" secondItem="lXc-RJ-6GW" secondAttribute="trailing" constant="20" id="iNP-Uy-ZQN"/>
                                                     <constraint firstItem="lXc-RJ-6GW" firstAttribute="centerY" secondItem="kuP-FS-c4o" secondAttribute="centerY" id="osf-rF-edJ"/>
@@ -5074,7 +5105,9 @@ kinds of plants living in nature. </string>
                                                 <rect key="frame" x="16" y="866" width="398" height="150"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="0em-xw-bXv"/>
+                                                    <constraint firstAttribute="height" constant="250" id="0em-xw-bXv">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                                                    </constraint>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="hID-xH-LcH">
                                                     <size key="itemSize" width="101" height="82"/>
@@ -5105,24 +5138,24 @@ kinds of plants living in nature. </string>
                                             <constraint firstAttribute="trailing" secondItem="sC0-0q-pVN" secondAttribute="trailing" id="3F6-gB-i1j"/>
                                             <constraint firstItem="0MI-eh-jig" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="16" id="7Ct-Qu-yf8"/>
                                             <constraint firstAttribute="trailing" secondItem="892-Xf-9nE" secondAttribute="trailing" id="86N-bo-4Bb"/>
-                                            <constraint firstItem="Fqn-V3-eaG" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" id="BaM-AW-HhV"/>
-                                            <constraint firstItem="OoV-wY-d61" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="25" id="Ctt-Es-Shn"/>
+                                            <constraint firstItem="Fqn-V3-eaG" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="8" id="BaM-AW-HhV"/>
+                                            <constraint firstItem="OoV-wY-d61" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="35" id="Ctt-Es-Shn"/>
                                             <constraint firstItem="Fqn-V3-eaG" firstAttribute="top" secondItem="892-Xf-9nE" secondAttribute="bottom" id="DZN-RU-Uqx"/>
                                             <constraint firstItem="sC0-0q-pVN" firstAttribute="top" secondItem="QtQ-06-V8y" secondAttribute="top" id="DpI-zB-VJh"/>
                                             <constraint firstItem="sC0-0q-pVN" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" id="H5A-3e-hkp"/>
                                             <constraint firstItem="892-Xf-9nE" firstAttribute="top" secondItem="qYq-Jm-X47" secondAttribute="bottom" id="Ht5-Ji-0BU"/>
-                                            <constraint firstAttribute="trailing" secondItem="Fqn-V3-eaG" secondAttribute="trailing" id="LI4-wa-cvb"/>
-                                            <constraint firstAttribute="trailing" secondItem="qYq-Jm-X47" secondAttribute="trailing" id="NrO-Oc-9rH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fqn-V3-eaG" secondAttribute="trailing" constant="8" id="LI4-wa-cvb"/>
+                                            <constraint firstAttribute="trailing" secondItem="qYq-Jm-X47" secondAttribute="trailing" constant="8" id="NrO-Oc-9rH"/>
                                             <constraint firstItem="WDT-ng-sd5" firstAttribute="top" secondItem="OoV-wY-d61" secondAttribute="bottom" constant="8" id="PTX-em-FgF"/>
                                             <constraint firstItem="OoV-wY-d61" firstAttribute="top" secondItem="Fqn-V3-eaG" secondAttribute="bottom" constant="4" id="QA9-kI-0j5"/>
                                             <constraint firstAttribute="bottom" secondItem="0MI-eh-jig" secondAttribute="bottom" constant="20" id="SSv-HF-IzX"/>
                                             <constraint firstAttribute="trailing" secondItem="OoV-wY-d61" secondAttribute="trailing" constant="25" id="TD9-XX-e3Q"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="TOZ-pr-cDJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="WDT-ng-sd5" secondAttribute="trailing" id="UPY-Ph-4sI"/>
+                                            <constraint firstAttribute="trailing" secondItem="WDT-ng-sd5" secondAttribute="trailing" constant="8" id="UPY-Ph-4sI"/>
                                             <constraint firstItem="892-Xf-9nE" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" id="dts-Hx-Sj1"/>
                                             <constraint firstAttribute="trailing" secondItem="0MI-eh-jig" secondAttribute="trailing" constant="16" id="fFZ-MO-rpa"/>
-                                            <constraint firstItem="qYq-Jm-X47" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" id="g5J-ND-FmO"/>
-                                            <constraint firstItem="WDT-ng-sd5" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" id="hKd-gk-SuQ"/>
+                                            <constraint firstItem="qYq-Jm-X47" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="8" id="g5J-ND-FmO"/>
+                                            <constraint firstItem="WDT-ng-sd5" firstAttribute="leading" secondItem="QtQ-06-V8y" secondAttribute="leading" constant="8" id="hKd-gk-SuQ"/>
                                             <constraint firstItem="qYq-Jm-X47" firstAttribute="top" secondItem="sC0-0q-pVN" secondAttribute="bottom" id="oGw-ur-fB2"/>
                                         </constraints>
                                     </view>
@@ -5175,13 +5208,14 @@ kinds of plants living in nature. </string>
                         <outlet property="pageControl" destination="8iM-qb-Aa2" id="aHr-yR-LNP"/>
                         <outlet property="plantImageCV" destination="0MI-eh-jig" id="z1S-Vh-7V4"/>
                         <outlet property="sliderCV" destination="5D1-ut-1De" id="jW2-D4-JjV"/>
+                        <outlet property="topViewHeight" destination="Id1-Pl-jcM" id="PJS-hZ-AHc"/>
                         <outlet property="viewNativeAds" destination="9aZ-eG-uCx" id="ihm-rv-Fpx"/>
                         <outlet property="viewTop" destination="sC0-0q-pVN" id="HOt-D4-9P9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaK-xE-XsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6546.9767441860467" y="-1221.244635193133"/>
+            <point key="canvasLocation" x="6501" y="-1220"/>
         </scene>
         <!--Crop ImageVC-->
         <scene sceneID="T8w-K1-mru">
@@ -5311,7 +5345,7 @@ kinds of plants living in nature. </string>
                                 <rect key="frame" x="0.0" y="748" width="430" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6k-Zf-iXR">
-                                        <rect key="frame" x="205.33333333333334" y="0.0" width="19.666666666666657" height="25"/>
+                                        <rect key="frame" x="205.33333333333337" y="0.0" width="19.666666666666629" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="MSO-WM-yec"/>
                                         </constraints>
@@ -5539,17 +5573,23 @@ kinds of plants living in nature. </string>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Scan For You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw3-Re-j3f">
                                                 <rect key="frame" x="0.0" y="0.0" width="370" height="23.666666666666668"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-SC-DVQ">
                                                 <rect key="frame" x="0.0" y="43.666666666666686" width="370" height="42.333333333333343"/>
                                                 <string key="text">We try to identify the plant based on
 the photo you took</string>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
                                                 <color key="textColor" systemColor="systemGray6Color"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -5628,9 +5668,12 @@ the photo you took</string>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyzing image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55J-5y-iH6">
                                                         <rect key="frame" x="36.999999999999986" y="0.0" width="138" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5675,9 +5718,12 @@ the photo you took</string>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detecting leaves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2V-Ua-2Tz">
                                                         <rect key="frame" x="36.999999999999986" y="0.0" width="138" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5685,7 +5731,9 @@ the photo you took</string>
                                                     <constraint firstAttribute="trailing" secondItem="J2V-Ua-2Tz" secondAttribute="trailing" id="89K-6Y-cAr"/>
                                                     <constraint firstItem="J2V-Ua-2Tz" firstAttribute="leading" secondItem="VHL-0h-EWP" secondAttribute="trailing" constant="15" id="8qL-dP-IiJ"/>
                                                     <constraint firstItem="J2V-Ua-2Tz" firstAttribute="top" secondItem="fg0-RE-85i" secondAttribute="top" id="Kx6-3q-A73"/>
-                                                    <constraint firstAttribute="height" constant="22" id="TGQ-Zx-fzd"/>
+                                                    <constraint firstAttribute="height" constant="35" id="TGQ-Zx-fzd">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="22"/>
+                                                    </constraint>
                                                     <constraint firstItem="VHL-0h-EWP" firstAttribute="leading" secondItem="fg0-RE-85i" secondAttribute="leading" id="enI-eS-sQ9"/>
                                                     <constraint firstAttribute="bottom" secondItem="J2V-Ua-2Tz" secondAttribute="bottom" id="kXX-qT-hq0"/>
                                                     <constraint firstAttribute="bottom" secondItem="VHL-0h-EWP" secondAttribute="bottom" id="mmX-81-knI"/>
@@ -5722,15 +5770,20 @@ the photo you took</string>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifying plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZz-SI-IKs">
                                                         <rect key="frame" x="36.999999999999986" y="0.0" width="138" height="22"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                                        </variation>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="XZz-SI-IKs" firstAttribute="leading" secondItem="00r-io-Qp9" secondAttribute="trailing" constant="15" id="1GK-bI-npO"/>
-                                                    <constraint firstAttribute="height" constant="22" id="Ehd-w2-w9g"/>
+                                                    <constraint firstAttribute="height" constant="35" id="Ehd-w2-w9g">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="22"/>
+                                                    </constraint>
                                                     <constraint firstItem="XZz-SI-IKs" firstAttribute="top" secondItem="vLt-pC-xvd" secondAttribute="top" id="FF9-pX-8aU"/>
                                                     <constraint firstItem="00r-io-Qp9" firstAttribute="leading" secondItem="vLt-pC-xvd" secondAttribute="leading" id="IfX-aI-c3O"/>
                                                     <constraint firstAttribute="bottom" secondItem="XZz-SI-IKs" secondAttribute="bottom" id="IlU-Aw-haS"/>
@@ -5761,13 +5814,17 @@ the photo you took</string>
                                 <constraints>
                                     <constraint firstItem="CSh-ZE-hVz" firstAttribute="centerY" secondItem="DeV-Ui-gEv" secondAttribute="centerY" constant="-20" id="Dog-Ey-gbr"/>
                                     <constraint firstItem="Hmf-qY-mdj" firstAttribute="leading" secondItem="DeV-Ui-gEv" secondAttribute="leading" constant="20" id="IG7-S1-qIb"/>
-                                    <constraint firstItem="CSh-ZE-hVz" firstAttribute="leading" secondItem="DeV-Ui-gEv" secondAttribute="leading" constant="80" id="LFZ-kO-QCO"/>
+                                    <constraint firstItem="CSh-ZE-hVz" firstAttribute="leading" secondItem="DeV-Ui-gEv" secondAttribute="leading" constant="120" id="LFZ-kO-QCO">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="0Tt-ae-LkT" firstAttribute="top" secondItem="CSh-ZE-hVz" secondAttribute="bottom" constant="40" id="O1S-AK-5bJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Hmf-qY-mdj" secondAttribute="trailing" constant="40" id="WrI-qU-7NO"/>
                                     <constraint firstItem="pds-Mj-JIO" firstAttribute="leading" secondItem="DeV-Ui-gEv" secondAttribute="leading" id="WyU-qE-Vke"/>
                                     <constraint firstAttribute="bottom" secondItem="pds-Mj-JIO" secondAttribute="bottom" id="cBF-Jh-h9p"/>
                                     <constraint firstItem="CSh-ZE-hVz" firstAttribute="top" secondItem="Hmf-qY-mdj" secondAttribute="bottom" constant="40" id="flc-a5-4rQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="CSh-ZE-hVz" secondAttribute="trailing" constant="80" id="j99-W3-rDB"/>
+                                    <constraint firstAttribute="trailing" secondItem="CSh-ZE-hVz" secondAttribute="trailing" constant="120" id="j99-W3-rDB">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                     <constraint firstItem="0Tt-ae-LkT" firstAttribute="centerX" secondItem="DeV-Ui-gEv" secondAttribute="centerX" id="w5X-jq-zIb"/>
                                     <constraint firstAttribute="trailing" secondItem="pds-Mj-JIO" secondAttribute="trailing" id="yad-KN-QqH"/>
                                 </constraints>
@@ -5857,21 +5914,29 @@ the photo you took</string>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hmm... This Doesn't  Look Like a Plant" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NP-Tu-yBE">
                                 <rect key="frame" x="40" y="453" width="350" height="23.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please tap the button below to try again.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKk-Ml-2Z6">
                                 <rect key="frame" x="40" y="496.66666666666669" width="350" height="20.000000000000057"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9U-lm-vFJ">
                                 <rect key="frame" x="25" y="832" width="380" height="50"/>
                                 <color key="backgroundColor" name="AppColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0CQ-kL-dDt"/>
+                                    <constraint firstAttribute="height" constant="60" id="0CQ-kL-dDt">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -5898,8 +5963,12 @@ the photo you took</string>
                             <constraint firstItem="ZMo-hy-zNp" firstAttribute="top" secondItem="clY-iB-Oki" secondAttribute="top" id="LWX-E0-jsx"/>
                             <constraint firstItem="ZMo-hy-zNp" firstAttribute="leading" secondItem="clY-iB-Oki" secondAttribute="leading" id="O0X-gF-O4Y"/>
                             <constraint firstItem="OKk-Ml-2Z6" firstAttribute="leading" secondItem="clY-iB-Oki" secondAttribute="leading" constant="40" id="QOb-2a-50m"/>
-                            <constraint firstItem="clY-iB-Oki" firstAttribute="trailing" secondItem="nQY-wl-ptt" secondAttribute="trailing" constant="20" id="ThA-Fr-Ljd"/>
-                            <constraint firstItem="nQY-wl-ptt" firstAttribute="leading" secondItem="clY-iB-Oki" secondAttribute="leading" constant="20" id="VIR-kI-Wf1"/>
+                            <constraint firstItem="clY-iB-Oki" firstAttribute="trailing" secondItem="nQY-wl-ptt" secondAttribute="trailing" constant="60" id="ThA-Fr-Ljd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="nQY-wl-ptt" firstAttribute="leading" secondItem="clY-iB-Oki" secondAttribute="leading" constant="60" id="VIR-kI-Wf1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="4NP-Tu-yBE" firstAttribute="top" secondItem="nQY-wl-ptt" secondAttribute="bottom" constant="30" id="aW0-qS-xKN"/>
                             <constraint firstItem="clY-iB-Oki" firstAttribute="trailing" secondItem="4NP-Tu-yBE" secondAttribute="trailing" constant="40" id="dgq-zO-1n0"/>
                             <constraint firstItem="4NP-Tu-yBE" firstAttribute="leading" secondItem="clY-iB-Oki" secondAttribute="leading" constant="40" id="fCa-My-FQe"/>
