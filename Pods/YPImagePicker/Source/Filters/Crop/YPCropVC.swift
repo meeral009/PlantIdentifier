@@ -99,9 +99,6 @@ class YPCropVC: UIViewController {
             let imageRef = cgImage.cropping(to: scaledCropRect) {
             let croppedImage = UIImage(cgImage: imageRef)
             didFinishCropping?(croppedImage)
-            
-            print("Cropping done")
-            
         }
     }
 }
@@ -219,9 +216,7 @@ extension YPCropVC: UIGestureRecognizerDelegate {
     
     /// Allow both Pinching and Panning at the same time.
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-        shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
-        
     }
 }

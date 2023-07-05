@@ -90,7 +90,7 @@ class PremiumVC: UIViewController {
         if isFromHome{
             self.dismiss(animated: false) {
                 if !isUserSubscribe() {
-//                    AdsManager.shared.presentInterstitialAd()
+                   AdsManager.shared.presentInterstitialAd()
                 }
             }
         }else{
