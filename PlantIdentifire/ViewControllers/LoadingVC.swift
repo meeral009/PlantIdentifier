@@ -39,7 +39,7 @@ class LoadingVC: UIViewController {
                     // Load Interstitial Ad
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-                        let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+                        let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabbarVC") as! CustomTabbarVC
                         self.navigationController?.viewControllers = [redViewController]
                         self.navigationController?.pushViewController(redViewController, animated: true)
                     }

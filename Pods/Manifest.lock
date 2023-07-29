@@ -54,7 +54,6 @@ PODS:
     - SDWebImage/Core (= 5.16.0)
   - SDWebImage/Core (5.16.0)
   - SteviaLayout (4.7.3)
-  - STTabbar (0.1.0)
   - SVProgressHUD (2.2.5)
   - SwiftyStoreKit (0.16.1)
   - Toaster (2.3.0)
@@ -76,7 +75,6 @@ DEPENDENCIES:
   - HorizontalDial
   - IGRPhotoTweaks
   - SDWebImage (~> 5.0)
-  - STTabbar
   - SVProgressHUD
   - SwiftyStoreKit
   - Toaster
@@ -97,7 +95,6 @@ SPEC REPOS:
     - PryntTrimmerView
     - SDWebImage
     - SteviaLayout
-    - STTabbar
     - SVProgressHUD
     - SwiftyStoreKit
     - Toaster
@@ -117,13 +114,12 @@ SPEC CHECKSUMS:
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
-  STTabbar: fe93da755010233b348b2d0147c43bb1bef290fa
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
   YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 6cb447339b7a980c8f8791c08a63355a71c3855b
+PODFILE CHECKSUM: 73b525b9521f13dfd7ca5e557e3240037608fb0e
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

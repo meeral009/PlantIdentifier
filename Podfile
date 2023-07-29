@@ -6,7 +6,6 @@ target 'PlantIdentifire' do
   use_frameworks!
 
   # Pods for PlantIdentifire
-  pod 'STTabbar'
   pod 'YPImagePicker'
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.0'

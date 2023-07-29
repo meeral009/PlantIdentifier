@@ -46,7 +46,7 @@ class CameraVC: UIViewController {
     var backCameraOn = true
     
     var dismissDelegate: DismissViewControllerDelegate?
-    var topVC = UITabBarController()
+    var topVC = UIViewController()
     var plantModel = PlantModel()
 
     override func viewDidLoad() {

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import STTabbar
 import YPImagePicker
 import AVFoundation
 import AVKit

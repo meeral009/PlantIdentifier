@@ -37,6 +37,15 @@ enum URLTypes: String {
     
 }
 
+#if DEBUG
+struct GOOGLE_ADS { // Google Testing Ads
+    static var AppId            = "ca-app-pub-3940256099942544~1458002511"
+    static var OpenAds          = "ca-app-pub-3940256099942544/5662855259"
+    static var BannerAds        = "ca-app-pub-3940256099942544/2934735716"
+    static var NativeAds        = "ca-app-pub-3940256099942544/3986624511"
+    static var InterstitialAds  = "ca-app-pub-3940256099942544/4411468910"
+}
+#else
 struct GOOGLE_ADS { // Google Live
     static var AppId            = ""
     static var OpenAds          = "ca-app-pub-8252529408738635/3810169376"
@@ -44,14 +53,7 @@ struct GOOGLE_ADS { // Google Live
     static var NativeAds        = "ca-app-pub-8252529408738635/5410454834"
     static var InterstitialAds  = "ca-app-pub-8252529408738635/6436332717"
 }
-
-//struct GOOGLE_ADS { // Google Testing Ads
-//    static var AppId            = "ca-app-pub-3940256099942544~1458002511"
-//    static var OpenAds          = "ca-app-pub-3940256099942544/5662855259"
-//    static var BannerAds        = "ca-app-pub-3940256099942544/2934735716"
-//    static var NativeAds        = "ca-app-pub-3940256099942544/3986624511"
-//    static var InterstitialAds  = "ca-app-pub-3940256099942544/4411468910"
-//}
+#endif
 
 // MARK: - Toast
 func displayToast(_ message: String) {

@@ -39,8 +39,8 @@ class HomeVC: UIViewController {
     var arrSelectedPlantIds = [String]()
     var isOpenInApp = false
     
-    var googleNativeAds = GoogleNativeAds()
-    var isShowNativeAds = false
+//    var googleNativeAds = GoogleNativeAds()
+//    var isShowNativeAds = false
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -68,18 +68,18 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.setUpUi()
         isOpenInApp = true
-        if let nativeAds = NATIVE_ADS {
-            self.viewNativeAds.isHidden = false
-            self.isShowNativeAds = true
-            self.googleNativeAds.showAdsView3(nativeAd: nativeAds, view: self.viewNativeAds)
-        }else{
-            googleNativeAds.loadAds(self) { nativeAdsTemp in
-                NATIVE_ADS = nativeAdsTemp
-                if !self.isShowNativeAds{
-                    self.googleNativeAds.showAdsView3(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
-                }
-            }
-        }
+//        if let nativeAds = NATIVE_ADS {
+//            self.viewNativeAds.isHidden = false
+//            self.isShowNativeAds = true
+//            self.googleNativeAds.showAdsView3(nativeAd: nativeAds, view: self.viewNativeAds)
+//        }else{
+//            googleNativeAds.loadAds(self) { nativeAdsTemp in
+//                NATIVE_ADS = nativeAdsTemp
+//                if !self.isShowNativeAds{
+//                    self.googleNativeAds.showAdsView3(nativeAd: nativeAdsTemp, view: self.viewNativeAds)
+//                }
+//            }
+//        }
        
     }
     
@@ -102,19 +102,25 @@ class HomeVC: UIViewController {
     }
     
     @objc func onDeleteClick(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Delete!", message: "Are you sure to delete records?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
-           
-        }))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            
-            self.searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.tableViewItems.remove(at: self.arrSelectedPlants)
-            self.isEditOn = false
-            self.editStackView.isHidden = true
-            self.plantCollectionView.reloadData()
-            savePlantsList(plantResult: self.searchActive ? self.arrAfterPlantModel : self.tableViewItems)
-        }))
-        self.present(alert, animated: true, completion: nil)
+        if self.arrSelectedPlants.count > 0{
+            let alert = UIAlertController(title: "Delete!", message: "Are you sure to delete records?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { action in
+               
+            }))
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                
+                self.searchActive ? self.arrAfterPlantModel.remove(at: self.arrSelectedPlants) : self.tableViewItems.remove(at: self.arrSelectedPlants)
+                self.isEditOn = false
+                self.editStackView.isHidden = true
+                self.plantCollectionView.reloadData()
+                savePlantsList(plantResult: self.searchActive ? self.arrAfterPlantModel : self.tableViewItems)
+                self.fetchData()
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            displayToast("Please select at list one record.")
+        }
+       
     }
  
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -208,7 +214,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
   //  hgghh
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlantCell", for: indexPath) as? PlantCell
-        var data = searchActive ? self.arrAfterPlantModel[indexPath.row] :  self.tableViewItems[indexPath.row]
+        let data = searchActive ? self.arrAfterPlantModel[indexPath.row] :  self.tableViewItems[indexPath.row]
         cell?.lblPlantName.text = data.species?.name
         cell?.btnDelete.tag = indexPath.row
         if let family = data.species?.family {

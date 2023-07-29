@@ -39,7 +39,7 @@ class OnBordingVC: UIViewController {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-            let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+            let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabbarVC") as! CustomTabbarVC
             isFormOnBoarding = true
             self.navigationController?.viewControllers = [redViewController]
             self.navigationController?.pushViewController(redViewController, animated: true)
@@ -55,7 +55,7 @@ class OnBordingVC: UIViewController {
             UserDefaults.isCheckOnBording = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-                let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabBarVC") as! CustomTabBarVC
+                let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabbarVC") as! CustomTabbarVC
                 isFormOnBoarding = true
                 self.navigationController?.viewControllers = [redViewController]
                 self.navigationController?.pushViewController(redViewController, animated: true)

@@ -20,14 +20,14 @@ variant_for_slice()
   "YandexMobileMetrica.xcframework/ios-arm64_armv7")
     echo ""
     ;;
-  "YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator")
-    echo "simulator"
-    ;;
   "YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator")
     echo "simulator"
     ;;
   "YandexMobileMetrica.xcframework/tvos-arm64")
     echo ""
+    ;;
+  "YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator")
+    echo "simulator"
     ;;
   "YandexMobileMetricaCrashes.xcframework/ios-arm64_armv7")
     echo ""
@@ -35,11 +35,11 @@ variant_for_slice()
   "YandexMobileMetricaCrashes.xcframework/ios-arm64_i386_x86_64-simulator")
     echo "simulator"
     ;;
-  "YandexMobileMetricaCrashes.xcframework/tvos-arm64_x86_64-simulator")
-    echo "simulator"
-    ;;
   "YandexMobileMetricaCrashes.xcframework/tvos-arm64")
     echo ""
+    ;;
+  "YandexMobileMetricaCrashes.xcframework/tvos-arm64_x86_64-simulator")
+    echo "simulator"
     ;;
   esac
 }
@@ -50,14 +50,14 @@ archs_for_slice()
   "YandexMobileMetrica.xcframework/ios-arm64_armv7")
     echo "arm64 armv7"
     ;;
-  "YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator")
-    echo "arm64 x86_64"
-    ;;
   "YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator")
     echo "arm64 i386 x86_64"
     ;;
   "YandexMobileMetrica.xcframework/tvos-arm64")
     echo "arm64"
+    ;;
+  "YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   "YandexMobileMetricaCrashes.xcframework/ios-arm64_armv7")
     echo "arm64 armv7"
@@ -65,11 +65,11 @@ archs_for_slice()
   "YandexMobileMetricaCrashes.xcframework/ios-arm64_i386_x86_64-simulator")
     echo "arm64 i386 x86_64"
     ;;
-  "YandexMobileMetricaCrashes.xcframework/tvos-arm64_x86_64-simulator")
-    echo "arm64 x86_64"
-    ;;
   "YandexMobileMetricaCrashes.xcframework/tvos-arm64")
     echo "arm64"
+    ;;
+  "YandexMobileMetricaCrashes.xcframework/tvos-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
     ;;
   esac
 }

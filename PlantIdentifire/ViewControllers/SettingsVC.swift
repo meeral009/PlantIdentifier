@@ -30,7 +30,7 @@ class SettingsVC: UIViewController {
     
     
     @IBAction func btnShareApp(_ sender: Any) {
-        self.openURL(type: .shareApp)
+        self.shareApp(type: .shareApp)
     }
     
 
