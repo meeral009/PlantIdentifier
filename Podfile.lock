@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (5.7.1)
+  - collection-view-layouts/Core (0.2.2)
+  - collection-view-layouts/PinterestLayout (0.2.2):
+    - collection-view-layouts/Core
   - Google-Mobile-Ads-SDK (10.6.0):
     - GoogleAppMeasurement (< 11.0, >= 7.0)
     - GoogleUserMessagingPlatform (>= 1.1)
@@ -71,6 +74,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - collection-view-layouts/PinterestLayout
   - Google-Mobile-Ads-SDK
   - HorizontalDial
   - IGRPhotoTweaks
@@ -84,6 +88,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - collection-view-layouts
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
@@ -103,6 +108,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  collection-view-layouts: 474ec4cce601a26247737227a97fa6a4eb30213f
   Google-Mobile-Ads-SDK: 07599a44221fb3f00d111d5c2f4e27549f8dbf21
   GoogleAppMeasurement: bbbfd4bcb2b40ae9b772c3b0823a58c1e3d618f9
   GoogleUserMessagingPlatform: 5f8b30daf181805317b6b985bb51c1ff3beca054
@@ -120,6 +126,6 @@ SPEC CHECKSUMS:
   YandexMobileMetrica: f5368ee93f286c793d73b58da00929babfc897c1
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 73b525b9521f13dfd7ca5e557e3240037608fb0e
+PODFILE CHECKSUM: d669ad4237df1a4ed7074d9285699715b2a4e40e
 
 COCOAPODS: 1.12.0

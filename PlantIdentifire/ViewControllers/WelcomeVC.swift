@@ -13,7 +13,8 @@ class WelcomeVC: UIViewController {
     // MARK: - IBOutlates
   
     @IBOutlet var animationView: LottieAnimationView!
-  
+    @IBOutlet weak var imgBack: UIImageView!
+    
     let googleNativeAds = GoogleNativeAds()
     
     // MARK: - Lifecycle methods
@@ -39,6 +40,13 @@ extension WelcomeVC {
         
         self.googleNativeAds.loadAds(self) { nativeAdsTemp in
             NATIVE_ADS = nativeAdsTemp
+        }
+        if UIDevice.current.isPad{
+            self.imgBack.image = UIImage.init(named: "splash_ipad")
+        }else{
+            if !UIDevice.current.hasNotch{
+                self.imgBack.image = UIImage.init(named: "splash_iphone")
+            }
         }
 
         var i = 0.0
@@ -92,6 +100,7 @@ extension WelcomeVC {
     func homeScreenVC() {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let redViewController = mainStoryBoard.instantiateViewController(withIdentifier: "CustomTabbarVC") as! CustomTabbarVC
+        self.navigationController?.viewControllers = [redViewController]
         self.navigationController?.pushViewController(redViewController, animated: true)
     }
 }

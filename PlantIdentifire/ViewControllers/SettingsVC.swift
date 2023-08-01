@@ -10,6 +10,7 @@ import UIKit
 class SettingsVC: UIViewController {
 
     @IBOutlet var lblVersion: UILabel!
+    @IBOutlet weak var imgBack: UIImageView!
          
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,13 @@ class SettingsVC: UIViewController {
 extension SettingsVC {
     
     func setUpUI() {
+        if UIDevice.current.isPad{
+            self.imgBack.image = UIImage.init(named: "home_ipad")
+        }else{
+            if !UIDevice.current.hasNotch{
+                self.imgBack.image = UIImage.init(named: "home_iphone")
+            }
+        }
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] {
                 self.lblVersion.text = "\("Version") \(appVersion)"
         }

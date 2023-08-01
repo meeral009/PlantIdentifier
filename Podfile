@@ -16,5 +16,5 @@ target 'PlantIdentifire' do
   pod 'YandexMobileMetrica'
   pod 'IGRPhotoTweaks'
   pod 'HorizontalDial'
-  
+  pod 'collection-view-layouts/PinterestLayout'
 end

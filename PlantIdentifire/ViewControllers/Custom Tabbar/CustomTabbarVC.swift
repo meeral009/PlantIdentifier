@@ -21,6 +21,10 @@ class CustomTabbarVC: UIViewController {
             viewNativeAds.isHidden = true
         }
     }
+    
+    @IBOutlet weak var imgHome: UIImageView!
+    @IBOutlet weak var imgSettings: UIImageView!
+    
 
     //MARK: Veribles
     
@@ -28,6 +32,7 @@ class CustomTabbarVC: UIViewController {
     var googleNativeAds = GoogleNativeAds()
     var isShowNativeAds = false
     var isFirstTime = Bool()
+    var isOpenInApp = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +40,22 @@ class CustomTabbarVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-      
+        if !isUserSubscribe() && isOpenInApp{
+            isOpenInApp = false
+            DispatchQueue.main.asyncAfter(deadline: .now()+2.0){
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "PremiumVC") as! PremiumVC
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+           
+        }
     }
     
 
     //MARK: Methods
     
     func initView(){
-        DispatchQueue.main.async {
-            self.addShape()
-        }
+        isOpenInApp = true
         addViews(index: 0)
         resetTabsAndSelect(index: 0)
         if !UIDevice.current.hasNotch{
@@ -112,12 +123,16 @@ class CustomTabbarVC: UIViewController {
     }
     
     func resetTabsAndSelect(index: Int) {
-        lblHome.textColor = UIColor.lightGray
-        lblSettings.textColor = UIColor.lightGray
+        lblHome.textColor = UIColor.gray
+        lblSettings.textColor = UIColor.gray
+        self.imgHome.tintColor = UIColor.gray
+        self.imgSettings.tintColor = UIColor.gray
         if index == 0 {
             lblHome.textColor = UIColor.init(named: "AppColor")
+            self.imgHome.tintColor = UIColor.init(named: "AppColor")
         } else if index == 1 {
             lblSettings.textColor = UIColor.init(named: "AppColor")
+            self.imgSettings.tintColor = UIColor.init(named: "AppColor")
         }
     }
     
@@ -137,7 +152,7 @@ class CustomTabbarVC: UIViewController {
             self.resetTabsAndSelect(index: index)
             if index == 0 {
                 self.view.backgroundColor = UIColor.black
-                let tabView = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                let tabView = self.storyboard?.instantiateViewController(withIdentifier: "HomeNewVC") as! HomeNewVC
                 tabView.view.frame = self.viewContainer.bounds
                 self.viewContainer.addSubview(tabView.view)
                 addChild(tabView)

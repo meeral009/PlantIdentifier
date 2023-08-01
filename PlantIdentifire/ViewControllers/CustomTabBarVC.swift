@@ -13,6 +13,9 @@ import Photos
 
 class CustomTabBarVC: UITabBarController {
     
+    //MARK: Outlates
+    
+    
     // MARK: - Varibles
      var plantModel = PlantModel()
      var isFirstTime = Bool()
