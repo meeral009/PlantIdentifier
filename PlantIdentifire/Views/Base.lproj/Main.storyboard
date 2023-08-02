@@ -4725,7 +4725,7 @@ Add the first one.</string>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-lL-VHf">
                                                 <rect key="frame" x="7.3333333333333357" y="7.6666666666666288" width="55" height="55"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-AE-6rw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gallery" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-AE-6rw">
                                                         <rect key="frame" x="14.666666666666671" y="13.333333333333371" width="26" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="26" id="B2y-JV-szc"/>
@@ -6420,7 +6420,7 @@ the photo you took</string>
         <image name="About app" width="44.666667938232422" height="44.666667938232422"/>
         <image name="Camera" width="257" height="257"/>
         <image name="Feedback" width="44.666667938232422" height="45"/>
-        <image name="Gallery" width="162" height="162"/>
+        <image name="Gallery" width="163" height="162"/>
         <image name="More-app" width="130" height="130"/>
         <image name="Premium Text" width="784" height="114"/>
         <image name="QR Scan" width="84" height="84"/>
@@ -6447,7 +6447,6 @@ the photo you took</string>
         <image name="feedback" width="61" height="61"/>
         <image name="feedback1" width="120" height="120"/>
         <image name="flower" width="45" height="45"/>
-        <image name="gallery" width="163" height="162"/>
         <image name="globle" width="45" height="45"/>
         <image name="history" width="120" height="120"/>
         <image name="home" width="33" height="33"/>
