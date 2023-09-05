@@ -100,7 +100,6 @@ class HomeNewVC: UIViewController {
 }
 extension HomeNewVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,LayoutDelegate{
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return plantsList.count
     }
