@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = GoogleUserMessagingPlatform;
+			productName = GoogleUserMessagingPlatform;
 		};
 		899318C1CEDE586664EC232A68069570 /* YandexMobileMetrica */ = {
 			isa = PBXAggregateTarget;
@@ -26,6 +27,7 @@
 			dependencies = (
 			);
 			name = YandexMobileMetrica;
+			productName = YandexMobileMetrica;
 		};
 		B53D977A951AFC38B21751B706C1DF83 /* GoogleAppMeasurement */ = {
 			isa = PBXAggregateTarget;
@@ -38,6 +40,7 @@
 				CC116B42F0479D49A7174EF337C53E8E /* PBXTargetDependency */,
 			);
 			name = GoogleAppMeasurement;
+			productName = GoogleAppMeasurement;
 		};
 		FEA3B3A570634836C0457F3D7CEF1699 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXAggregateTarget;
@@ -50,6 +53,7 @@
 				17EAF70F4DC9F21A20EBB71553CB6CFC /* PBXTargetDependency */,
 			);
 			name = "Google-Mobile-Ads-SDK";
+			productName = "Google-Mobile-Ads-SDK";
 		};
 /* End PBXAggregateTarget section */
 
@@ -812,7 +816,7 @@
 		08CE3F16C0248B5A90AD2F30436ADF55 /* SDImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCodersManager.h; path = SDWebImage/Core/SDImageCodersManager.h; sourceTree = "<group>"; };
 		08FE7BF972C5E4DA3DABE748DAB35FFC /* SwiftyStoreKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.debug.xcconfig; sourceTree = "<group>"; };
 		0900C2251F2438F6F3D80A6E7F7CF826 /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/Core/SDImageTransformer.m; sourceTree = "<group>"; };
-		093CA8DD5B2877113F8A3D96EA7A9D6D /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Source/Resources/cs.lproj; sourceTree = "<group>"; };
+		093CA8DD5B2877113F8A3D96EA7A9D6D /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = cs.lproj; path = Source/Resources/cs.lproj; sourceTree = "<group>"; };
 		0A9FF1F82C14C6D4D9188D10BB8FFF67 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		0AD6FB4C190574E0E534618B1DE7B24F /* FBLPromise+Then.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Then.h"; path = "Sources/FBLPromises/include/FBLPromise+Then.h"; sourceTree = "<group>"; };
 		0BE4B7A0F71A3AC3CB070FB660A873A4 /* SDImageIOAnimatedCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOAnimatedCoderInternal.h; path = SDWebImage/Private/SDImageIOAnimatedCoderInternal.h; sourceTree = "<group>"; };
@@ -841,17 +845,17 @@
 		1364ED9BFE3584DDCFD2A704119A0AE4 /* YMMErrorRepresentable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMErrorRepresentable.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_armv7/YandexMobileMetrica.framework/Versions/A/Headers/YMMErrorRepresentable.h"; sourceTree = "<group>"; };
 		13668364E35C046C0FD052BDA2CFA49E /* YandexMobileMetricaCrashes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetricaCrashes-umbrella.h"; path = "static/YandexMobileMetricaCrashes.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetricaCrashes.framework/Versions/A/Headers/YandexMobileMetricaCrashes-umbrella.h"; sourceTree = "<group>"; };
 		1420CB381AD49C51466DA6C7E810210C /* GULNetworkInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkInternal.h; path = GoogleUtilities/Network/GULNetworkInternal.h; sourceTree = "<group>"; };
-		15C8F98FBF5AD5B64DFA21601CF74151 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Source/Resources/ja.lproj; sourceTree = "<group>"; };
+		15C8F98FBF5AD5B64DFA21601CF74151 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Source/Resources/ja.lproj; sourceTree = "<group>"; };
 		1641968B188EA2AB2F096A3E9EED62AD /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		17AE4C818E4A10DF22A1B27DB501BB15 /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/Core/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		17B87C1991C447C7416394E8E5CDCF47 /* YMMECommerce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMECommerce.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMECommerce.h"; sourceTree = "<group>"; };
 		17CD791602A93B8247EFEC6A49625C83 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Extensions.swift"; path = "Source/Helpers/Extensions/UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
-		180ABB1C8BB7E1CD29D25F4A68C67D61 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Source/Resources/ko.lproj; sourceTree = "<group>"; };
+		180ABB1C8BB7E1CD29D25F4A68C67D61 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = Source/Resources/ko.lproj; sourceTree = "<group>"; };
 		1812705B852AB9EAE531C3F9A92334B4 /* IGRPhotoTweaks-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IGRPhotoTweaks-umbrella.h"; sourceTree = "<group>"; };
 		183BF39A0FDCB625295C0F7283513857 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/Core/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
 		186EFB554375595D23A5163B506C469C /* Toaster-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Toaster-Info.plist"; sourceTree = "<group>"; };
 		18CF71C0619E68F15DFA943ADC6BBA18 /* SVProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		19171E63AADFBC4D9C9F0A47A541003A /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Source/Resources/nb.lproj; sourceTree = "<group>"; };
+		19171E63AADFBC4D9C9F0A47A541003A /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nb.lproj; path = Source/Resources/nb.lproj; sourceTree = "<group>"; };
 		1989F1B44D91941548061B1F04764C6D /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		1999B81CC3428F7CDDD6E1DD7F361F99 /* YPBottomPager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPBottomPager.swift; path = Source/Pages/Gallery/BottomPager/YPBottomPager.swift; sourceTree = "<group>"; };
 		19DEA2AB84991517660F582CE835424C /* IGRPhotoTweakView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGRPhotoTweakView.swift; path = IGRPhotoTweaks/PhotoTweakView/IGRPhotoTweakView.swift; sourceTree = "<group>"; };
@@ -861,10 +865,10 @@
 		1BC2CB8C9DC7FDE4849149F34550B409 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
 		1C23C1329BA890790E0C71737BB0A6B0 /* GULHeartbeatDateStorageUserDefaults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULHeartbeatDateStorageUserDefaults.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorageUserDefaults.h; sourceTree = "<group>"; };
 		1C2C87D8822AFF43E87BE05E0A59C8D4 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
-		1C3C8C67A465B8E0ADAA2CDC230F09EA /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = Source/Resources/ar.lproj; sourceTree = "<group>"; };
+		1C3C8C67A465B8E0ADAA2CDC230F09EA /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = Source/Resources/ar.lproj; sourceTree = "<group>"; };
 		1CE0D052B6A4BA26510F2A8095E759EE /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
-		1D28DE6AF9846210DB2038E52755E3B4 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Source/Resources/de.lproj; sourceTree = "<group>"; };
-		1DB28D409AD1C9B91715FD262B0E76BD /* km-KH.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "km-KH.lproj"; path = "Source/Resources/km-KH.lproj"; sourceTree = "<group>"; };
+		1D28DE6AF9846210DB2038E52755E3B4 /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = Source/Resources/de.lproj; sourceTree = "<group>"; };
+		1DB28D409AD1C9B91715FD262B0E76BD /* km-KH.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "km-KH.lproj"; path = "Source/Resources/km-KH.lproj"; sourceTree = "<group>"; };
 		1DF0E09B5D6263DE3E60A1309C615ACA /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
 		1E37EC4AE444004DA07A8E1ECDBAF901 /* SDImageFramePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFramePool.h; path = SDWebImage/Private/SDImageFramePool.h; sourceTree = "<group>"; };
 		1EE3A5895EB013324141979B8E52AB6C /* SVProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.release.xcconfig; sourceTree = "<group>"; };
@@ -894,7 +898,7 @@
 		2A26E19912ADDB11E9C79A7506C734BC /* SDAsyncBlockOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAsyncBlockOperation.h; path = SDWebImage/Private/SDAsyncBlockOperation.h; sourceTree = "<group>"; };
 		2A40503FB68BEDA9DA3032A72215F11E /* YMMProfileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMProfileAttribute.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMProfileAttribute.h"; sourceTree = "<group>"; };
 		2A84CDFB32CB0D010A94109B5D4873E2 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkLoggerProtocol.h; path = GoogleUtilities/Network/Public/GoogleUtilities/GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
-		2B425F4BA3AF69A56AFD2D7810583BF6 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Source/Resources/en.lproj; sourceTree = "<group>"; };
+		2B425F4BA3AF69A56AFD2D7810583BF6 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Source/Resources/en.lproj; sourceTree = "<group>"; };
 		2B89CD90E1C796A1B8AB5CD6D6CD0B19 /* YPVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPVideoView.swift; path = Source/Filters/Video/YPVideoView.swift; sourceTree = "<group>"; };
 		2B8CB1AAF690DB10BDFE736CC2403E6B /* YPLibrary+LibraryChange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "YPLibrary+LibraryChange.swift"; path = "Source/Pages/Gallery/YPLibrary+LibraryChange.swift"; sourceTree = "<group>"; };
 		2BE526FDD35C65D3B828D953D5BFDFC6 /* SDImageFramePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFramePool.m; path = SDWebImage/Private/SDImageFramePool.m; sourceTree = "<group>"; };
@@ -913,7 +917,7 @@
 		3223FC0470BDC0329D713B3E02E3550D /* YPTrimError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPTrimError.swift; path = Source/Models/YPTrimError.swift; sourceTree = "<group>"; };
 		32423A1196A8A8B0233D63FBF932142C /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		327539131B6E2271E1D55CF9792D50EB /* PryntTrimmerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PryntTrimmerView-prefix.pch"; sourceTree = "<group>"; };
-		32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyStoreKit; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32BDBCC367AB108845FE0320247E24C1 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/Core/SDImageCacheDefine.m; sourceTree = "<group>"; };
 		32E47195118E00F1B9FE5E0F5A29E887 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
 		3347A1AB6546F0A3977529B8F199DC41 /* PromisesObjC */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromisesObjC; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -947,7 +951,7 @@
 		3A5021491AB7BFF6C06D2CBDDEBF3B24 /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
 		3A92FD4096972304FA5D7B09831D168C /* SDFileAttributeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDFileAttributeHelper.h; path = SDWebImage/Private/SDFileAttributeHelper.h; sourceTree = "<group>"; };
 		3ADEC5214C7502E444A04CCF793C930F /* SwiftyStoreKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.release.xcconfig; sourceTree = "<group>"; };
-		3B1BAAE125AF2CAFE1B921F2BBF7D894 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = Source/Resources/id.lproj; sourceTree = "<group>"; };
+		3B1BAAE125AF2CAFE1B921F2BBF7D894 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = Source/Resources/id.lproj; sourceTree = "<group>"; };
 		3B7F1E57E3F67C87369F25602F27868A /* FBLPromise+Validate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Validate.m"; path = "Sources/FBLPromises/FBLPromise+Validate.m"; sourceTree = "<group>"; };
 		3BD85004FAA6E5DEE40AE34DC1881991 /* CropMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CropMaskView.swift; path = Sources/PryntTrimmerView/Cropper/CropMaskView.swift; sourceTree = "<group>"; };
 		3C23A2F1D84D0AF954F5F4D6CAD92E2B /* YMMUserProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMUserProfile.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMUserProfile.h"; sourceTree = "<group>"; };
@@ -984,13 +988,13 @@
 		4B8F07D3D08EB11847F099855CC9E5C7 /* YPImageSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPImageSize.swift; path = Source/Configuration/YPImageSize.swift; sourceTree = "<group>"; };
 		4BB4B3BE586974DC9EC7280851C8EB8C /* GULSceneDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULSceneDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULSceneDelegateSwizzler.h; sourceTree = "<group>"; };
 		4C1CE03D81484FB51301C2D939462761 /* GULSceneDelegateSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSceneDelegateSwizzler.m; path = GoogleUtilities/AppDelegateSwizzler/GULSceneDelegateSwizzler.m; sourceTree = "<group>"; };
-		4C311B2B65AC489E78EA77B405C56761 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = Source/Resources/fa.lproj; sourceTree = "<group>"; };
+		4C311B2B65AC489E78EA77B405C56761 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fa.lproj; path = Source/Resources/fa.lproj; sourceTree = "<group>"; };
 		4CD3669C48FF86191EF7BD6470EA5A0E /* PromisesObjC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromisesObjC-Info.plist"; sourceTree = "<group>"; };
 		4CD6373E868F885C8BDB3D1F97866FB5 /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaConfiguration.h"; sourceTree = "<group>"; };
 		4D0F266F6FE488763579BE644215AC01 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		4D6E8CE7598EE8D1729B51A89DD0F6E7 /* GULHeartbeatDateStorageUserDefaults.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULHeartbeatDateStorageUserDefaults.m; path = GoogleUtilities/Environment/GULHeartbeatDateStorageUserDefaults.m; sourceTree = "<group>"; };
 		4DDB83F1C545CD39BBA4AE27822F08A9 /* NSImage+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+Compatibility.h"; path = "SDWebImage/Core/NSImage+Compatibility.h"; sourceTree = "<group>"; };
-		4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HorizontalDial; path = HorizontalDial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HorizontalDial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9001E7055C5703D3DC7EA053B67FC0 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
 		4EB7637C300381FA0E7913AA4584E7C7 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
 		4EBFE7D45883573D6568933141DBB70A /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
@@ -999,7 +1003,7 @@
 		4F90FB35FF64DBB89DC38A22BA1BC921 /* PryntTrimmerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PryntTrimmerView-umbrella.h"; sourceTree = "<group>"; };
 		5007220FD8653F212D60A909DD39E290 /* YMMError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMError.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMError.h"; sourceTree = "<group>"; };
 		50437EF15837FE72F3359D035F076551 /* SKProductDiscount+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProductDiscount+LocalizedPrice.swift"; path = "Sources/SwiftyStoreKit/SKProductDiscount+LocalizedPrice.swift"; sourceTree = "<group>"; };
-		504EDCD5189532D0D756A7D8F044938B /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Source/Resources/it.lproj; sourceTree = "<group>"; };
+		504EDCD5189532D0D756A7D8F044938B /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = Source/Resources/it.lproj; sourceTree = "<group>"; };
 		506EE01F8F6BE654CEA754DD2F7FCEB1 /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
 		50702CB0774A65ADD4BE6A9E96C6CEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		507051FB3D44CA34BDCF3595595DAAEF /* GULNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GULNSData+zlib.m"; path = "GoogleUtilities/NSData+zlib/GULNSData+zlib.m"; sourceTree = "<group>"; };
@@ -1015,7 +1019,7 @@
 		5454AB6B674FA4FDDB86BC470EC992B9 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Testing.h"; path = "Sources/FBLPromises/include/FBLPromise+Testing.h"; sourceTree = "<group>"; };
 		550CF9FDC23EE01F79275F5F9DAF4E7A /* YMMPluginErrorDetails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMPluginErrorDetails.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_armv7/YandexMobileMetrica.framework/Versions/A/Headers/YMMPluginErrorDetails.h"; sourceTree = "<group>"; };
 		5533F6820A7861DE572A13364F166AAD /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/Core/NSImage+Compatibility.m"; sourceTree = "<group>"; };
-		557E07F5F938131A86A600C413E18BE7 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		557E07F5F938131A86A600C413E18BE7 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
 		55C558A3D990AF7451CEBB98D84751B7 /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
 		563C7E118762286C4B914342082F635B /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/Core/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		56717032638DEEF7CAD6929974670702 /* YMMRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMRevenueInfo.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMRevenueInfo.h"; sourceTree = "<group>"; };
@@ -1031,7 +1035,7 @@
 		59BBDE8C7AE5B4F2C2ABCBAF531BEAB7 /* GoogleUtilities-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GoogleUtilities-Info.plist"; sourceTree = "<group>"; };
 		5A6321A0084F1DD8BA2C2E8CB4014A0C /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		5AB52D61C5160A6BAE0CB45BAA00C4AB /* YMMYandexMetricaPluginReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPluginReporting.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPluginReporting.h"; sourceTree = "<group>"; };
-		5ABBF27704A879B0877616BDD57897D2 /* GoogleAppMeasurementIdentitySupport.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleAppMeasurementIdentitySupport.xcframework; path = Frameworks/GoogleAppMeasurementIdentitySupport.xcframework; sourceTree = "<group>"; };
+		5ABBF27704A879B0877616BDD57897D2 /* GoogleAppMeasurementIdentitySupport.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurementIdentitySupport.xcframework; path = Frameworks/GoogleAppMeasurementIdentitySupport.xcframework; sourceTree = "<group>"; };
 		5AF3791EC1F9B1331D1975797281638A /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
 		5BF529C989FF58FDC9406E0378BF8A6E /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Wrap.h"; path = "Sources/FBLPromises/include/FBLPromise+Wrap.h"; sourceTree = "<group>"; };
 		5BFE73BAA180AADEDF5BB588D1BE2E94 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVIndefiniteAnimatedView.h; path = SVProgressHUD/SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -1061,7 +1065,7 @@
 		61D19260A8E2668E736A002FF43B2443 /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
 		61EF977F3D5959C929A64BF2CFF1D6B9 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		62127A960C9EE487110CE54138BF3910 /* SDImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoder.m; path = SDWebImage/Core/SDImageCoder.m; sourceTree = "<group>"; };
-		62A61EA6C767470F4F0CCD6BD247267C /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Source/Resources/es.lproj; sourceTree = "<group>"; };
+		62A61EA6C767470F4F0CCD6BD247267C /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = Source/Resources/es.lproj; sourceTree = "<group>"; };
 		62C1D046DA42BBDF118C92AC2F4D4A8A /* YPPhotoCaptureHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPhotoCaptureHelper.swift; path = Source/Pages/Photo/YPPhotoCaptureHelper.swift; sourceTree = "<group>"; };
 		62EEEE7279EF0D4B9F081A0BA9F2A666 /* CGImage+IGRPhotoTweakExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+IGRPhotoTweakExtension.swift"; path = "IGRPhotoTweaks/Category/CGImage+IGRPhotoTweakExtension.swift"; sourceTree = "<group>"; };
 		63B52F78F4CA2F96240E90C23FE12F90 /* Pods-PlantIdentifire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlantIdentifire-umbrella.h"; sourceTree = "<group>"; };
@@ -1076,7 +1080,7 @@
 		66B4018B23F16776C92704E37A73AE57 /* SDImageCachesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManager.h; path = SDWebImage/Core/SDImageCachesManager.h; sourceTree = "<group>"; };
 		66CCBD21FC15DCF4F52CE13EFAB63CE2 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		66DE45C15F4E65174C555A9E16F381F5 /* YMMYandexMetricaPluginReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPluginReporting.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPluginReporting.h"; sourceTree = "<group>"; };
-		67D4B4594F914024C4AC19F26E83218B /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Source/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		67D4B4594F914024C4AC19F26E83218B /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-BR.lproj"; path = "Source/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
 		680CBC4B6E6029DF7FAB6B0A50B21A05 /* YPFlashMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPFlashMode.swift; path = Source/Models/YPFlashMode.swift; sourceTree = "<group>"; };
 		695E192D625DF7F5C39075BABF924D37 /* HorizontalDial.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HorizontalDial.modulemap; sourceTree = "<group>"; };
 		6971323456A2FFB03BE29FB2BCF58852 /* SDImageAWebPCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageAWebPCoder.m; path = SDWebImage/Core/SDImageAWebPCoder.m; sourceTree = "<group>"; };
@@ -1111,7 +1115,7 @@
 		7452032A31C5DCA0ACD34E68CB5C4B39 /* HorizontalDial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HorizontalDial.release.xcconfig; sourceTree = "<group>"; };
 		74BB4279A7F513A89A459E133AFD5492 /* GULLoggerCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULLoggerCodes.h; path = GoogleUtilities/Common/GULLoggerCodes.h; sourceTree = "<group>"; };
 		74EC3BA8F811CD5E5081286022DE13FF /* IGRPhotoTweakViewController+Customization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IGRPhotoTweakViewController+Customization.swift"; path = "IGRPhotoTweaks/IGRPhotoTweakViewController+Customization.swift"; sourceTree = "<group>"; };
-		752A9C7C7A4E72977150EC82C300CD6F /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = Source/Resources/tr.lproj; sourceTree = "<group>"; };
+		752A9C7C7A4E72977150EC82C300CD6F /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = Source/Resources/tr.lproj; sourceTree = "<group>"; };
 		7587463F2D1B9D547E897CF99CD94FF0 /* YPCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPCameraView.swift; path = Source/Pages/Photo/YPCameraView.swift; sourceTree = "<group>"; };
 		75F1FB82F4F3134EF75F18DBEDAFEED6 /* YPPickerVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPickerVC.swift; path = Source/YPPickerVC.swift; sourceTree = "<group>"; };
 		762D513A579ECDC511E61C3A2D847E6D /* YPPhotoSaver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPhotoSaver.swift; path = Source/Helpers/YPPhotoSaver.swift; sourceTree = "<group>"; };
@@ -1164,16 +1168,16 @@
 		8556365AD889D8D4C5937B2A48F9E0DE /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
 		8583F2170F73491433031250A7995DEB /* SDImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageIOCoder.h; path = SDWebImage/Core/SDImageIOCoder.h; sourceTree = "<group>"; };
 		8702E9BF3693EC13692658BA85771DCC /* FBLPromise+Do.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Do.m"; path = "Sources/FBLPromises/FBLPromise+Do.m"; sourceTree = "<group>"; };
-		873A28BD93D3581ADE59B93E05C7350D /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		873A28BD93D3581ADE59B93E05C7350D /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
 		87998C319B4A201A992108BCADECFF3F /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/Core/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
 		87E252003474BA2E048020DC0FFC8AD5 /* Stevia+Percentage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Percentage.swift"; path = "Source/Stevia+Percentage.swift"; sourceTree = "<group>"; };
 		87F18EE0C4324348A7E579464F41E34F /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		883C99F5C1AA2971FEF1B09CD4FB44E9 /* Pods-PlantIdentifire-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlantIdentifire-frameworks.sh"; sourceTree = "<group>"; };
 		887219FDDC6C390C2B6D4C849815F8D3 /* YPLibraryVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPLibraryVC.swift; path = Source/Pages/Gallery/YPLibraryVC.swift; sourceTree = "<group>"; };
 		887FC697619FD3759E98529BA037A53C /* SDWebImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.release.xcconfig; sourceTree = "<group>"; };
-		888AB07A9789B748E97F1EF832EA7DA3 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		888AB07A9789B748E97F1EF832EA7DA3 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
 		894C6534C1836E6DAA54EE67FDBAE796 /* YMMECommerce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMECommerce.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMECommerce.h"; sourceTree = "<group>"; };
-		895A2427D1E943C8035E46485328CA56 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
+		895A2427D1E943C8035E46485328CA56 /* UserMessagingPlatform.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = UserMessagingPlatform.xcframework; path = Frameworks/Release/UserMessagingPlatform.xcframework; sourceTree = "<group>"; };
 		8A50FF648BE4FF1D4CA4711D26A2EC4B /* SteviaLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SteviaLayout-Info.plist"; sourceTree = "<group>"; };
 		8A56BD66FB6ED830DC481893E7A309D1 /* GoogleUtilities-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleUtilities-dummy.m"; sourceTree = "<group>"; };
 		8B1D9B24A2621F88687B9BF7375C04CC /* HandlerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandlerView.swift; path = Sources/PryntTrimmerView/Trimmer/HandlerView.swift; sourceTree = "<group>"; };
@@ -1184,7 +1188,7 @@
 		8D0330F37AE904E4D879B55B70C47E73 /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		8D3E66B9E5F44F86C1F86C5E0EA532EB /* YMMReporterConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMReporterConfiguration.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMReporterConfiguration.h"; sourceTree = "<group>"; };
 		8DC1B8B0B6ADE078F537656FF062705E /* IGRPhotoTweakViewController+AspectRatio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IGRPhotoTweakViewController+AspectRatio.swift"; path = "IGRPhotoTweaks/IGRPhotoTweakViewController+AspectRatio.swift"; sourceTree = "<group>"; };
-		8F433089DF4764705251333E6BB8F329 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Source/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		8F433089DF4764705251333E6BB8F329 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Source/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
 		8FA2928E387DA55DA498AB7D943965D7 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
 		911FBC2B6FC58C09E713A1CEEBE1A441 /* YMMCompletionBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMCompletionBlocks.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_armv7/YandexMobileMetrica.framework/Versions/A/Headers/YMMCompletionBlocks.h"; sourceTree = "<group>"; };
 		9151B5A2E1F84027CD67B96110C3849A /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/Core/SDImageCacheConfig.h; sourceTree = "<group>"; };
@@ -1193,7 +1197,7 @@
 		92BD8A3049D3AC03CC2A514BEAEDC63B /* collection-view-layouts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "collection-view-layouts-prefix.pch"; sourceTree = "<group>"; };
 		934C71F7218B20F8985CBBBF8106E927 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/Core/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		935ADE0F006CA34792DB23C146D85E80 /* GULNetworkInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetworkInfo.m; path = GoogleUtilities/Environment/NetworkInfo/GULNetworkInfo.m; sourceTree = "<group>"; };
-		936B610600424E20366B869F2A73C07B /* YandexMobileMetricaCrashes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = YandexMobileMetricaCrashes.xcframework; path = static/YandexMobileMetricaCrashes.xcframework; sourceTree = "<group>"; };
+		936B610600424E20366B869F2A73C07B /* YandexMobileMetricaCrashes.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = YandexMobileMetricaCrashes.xcframework; path = static/YandexMobileMetricaCrashes.xcframework; sourceTree = "<group>"; };
 		93CF45C5254B1A81E0129E0BE53E2E0F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extensions.swift"; path = "Source/Helpers/Extensions/UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		9552D65ED97CD1D03DE6A15FFF908858 /* YPCameraVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPCameraVC.swift; path = Source/Pages/Photo/YPCameraVC.swift; sourceTree = "<group>"; };
 		95796AB188C72B8F5B7F6103B7E67AE2 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -1204,10 +1208,10 @@
 		98C3B4A2E289FC06F8A63B324D23E9A3 /* GULKeychainStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULKeychainStorage.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULKeychainStorage.h; sourceTree = "<group>"; };
 		98DC7EBE6B984D2945288255EA9EE5DB /* HorizontalDial-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizontalDial-prefix.pch"; sourceTree = "<group>"; };
 		98E10D54604BFC5E4C2788A0F799E09F /* Toaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.release.xcconfig; sourceTree = "<group>"; };
-		9988EAE31ACF7367A974756D3CB2FD93 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleMobileAds.xcframework; path = Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
+		9988EAE31ACF7367A974756D3CB2FD93 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = Frameworks/GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		99D66FC23D923E3357726871DD537DEF /* YandexMobileMetrica-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YandexMobileMetrica-umbrella.h"; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica-umbrella.h"; sourceTree = "<group>"; };
 		9A1810FE7A1E0556397CA96109AB997C /* YPColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPColors.swift; path = Source/Configuration/YPColors.swift; sourceTree = "<group>"; };
-		9A181A52C3F0721BBDA7B67C5CA76F7F /* km.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = km.lproj; path = Source/Resources/km.lproj; sourceTree = "<group>"; };
+		9A181A52C3F0721BBDA7B67C5CA76F7F /* km.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = km.lproj; path = Source/Resources/km.lproj; sourceTree = "<group>"; };
 		9A54030E63719FA37935E85B1015F9A1 /* SDWebImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.debug.xcconfig; sourceTree = "<group>"; };
 		9A5754C13648CBF4A7D2D0B7AB618D57 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/Core/SDWebImageCompat.m; sourceTree = "<group>"; };
 		9A5A0F3DBA5DB7A1718EE396CF45A888 /* FBLPromise+All.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+All.h"; path = "Sources/FBLPromises/include/FBLPromise+All.h"; sourceTree = "<group>"; };
@@ -1224,7 +1228,7 @@
 		9D574A68DF3899726DD42FC25993902E /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h"; sourceTree = "<group>"; };
 		9D6BAEEE7AFD0EF50114C32602121DA5 /* nanopb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.debug.xcconfig; sourceTree = "<group>"; };
 		9D70BEF50FE3E6AB3EFE05B1BF888D1B /* YMMYandexMetricaConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaConfiguration.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaConfiguration.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DEDD69B7939D2CB0422AEB9A916F687 /* GULApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULApplication.h; path = GoogleUtilities/AppDelegateSwizzler/Public/GoogleUtilities/GULApplication.h; sourceTree = "<group>"; };
 		9E3DC734719D72522CD20D9D28ECA43D /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Timeout.h"; path = "Sources/FBLPromises/include/FBLPromise+Timeout.h"; sourceTree = "<group>"; };
 		9EF77958E627831F53C738C3AB86E0E4 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Source/Helpers/Extensions/UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -1234,7 +1238,7 @@
 		A04F5BDFA3BF4ED02EA9B70F763B9B73 /* YMMUserProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMUserProfile.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMUserProfile.h"; sourceTree = "<group>"; };
 		A09BAC26B16DF50AE39A37D9E895FE8A /* GULHeartbeatDateStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULHeartbeatDateStorage.h; path = GoogleUtilities/Environment/Public/GoogleUtilities/GULHeartbeatDateStorage.h; sourceTree = "<group>"; };
 		A0C5C421F5ABAAB053F375498F4FC911 /* GoogleAppMeasurement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleAppMeasurement.debug.xcconfig; sourceTree = "<group>"; };
-		A0F9D7E45401FE72B8EDC4E8A7137C76 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Source/Resources/ru.lproj; sourceTree = "<group>"; };
+		A0F9D7E45401FE72B8EDC4E8A7137C76 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = Source/Resources/ru.lproj; sourceTree = "<group>"; };
 		A127351209D20221CE08AA6D42B9E13A /* FBLPromise+Async.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Async.h"; path = "Sources/FBLPromises/include/FBLPromise+Async.h"; sourceTree = "<group>"; };
 		A14A8FCEDFA9955A1181AC1E86453501 /* UIImage+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Transform.h"; path = "SDWebImage/Core/UIImage+Transform.h"; sourceTree = "<group>"; };
 		A181A78B6259BC931CBDA6B2B227B06A /* YPPagerMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPagerMenu.swift; path = Source/Pages/Gallery/BottomPager/YPPagerMenu.swift; sourceTree = "<group>"; };
@@ -1245,17 +1249,17 @@
 		A2EB97714D7DACFB92BE84790E76E5EE /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		A2FB2EE23052BF5B35583D8E8B3A2D28 /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
 		A3893BB4E5D4B0EF61080291FC9C3ADB /* CGRect+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Extensions.swift"; path = "Source/Helpers/Extensions/CGRect+Extensions.swift"; sourceTree = "<group>"; };
-		A3D09C89E84444697AA07DA4311A7E59 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Source/Resources/fr.lproj; sourceTree = "<group>"; };
+		A3D09C89E84444697AA07DA4311A7E59 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = Source/Resources/fr.lproj; sourceTree = "<group>"; };
 		A584833DADEC530A5CB77FEA3D8C3C15 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		A5986A026E69AB778500C92DE6DCCB00 /* YPImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YPImagePicker-umbrella.h"; sourceTree = "<group>"; };
 		A5D61C9C753883B7D35D8269ABB073A9 /* SteviaLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SteviaLayout.modulemap; sourceTree = "<group>"; };
 		A672293954C9CD3D7EE2D853D1803853 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
-		A6E452DB040D38243EE8FDF22ADE0996 /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = GoogleAppMeasurement.xcframework; path = Frameworks/GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
+		A6E452DB040D38243EE8FDF22ADE0996 /* GoogleAppMeasurement.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = GoogleAppMeasurement.xcframework; path = Frameworks/GoogleAppMeasurement.xcframework; sourceTree = "<group>"; };
 		A74D1C4828ABBF94A32C15E6656F8626 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULAppDelegateSwizzler_Private.h; path = GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
 		A761F546FE83DBD67C146C7CA05883A2 /* GoogleAppMeasurement-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "GoogleAppMeasurement-xcframeworks.sh"; sourceTree = "<group>"; };
 		A79E84588EA654C7584C104F568D1CE3 /* YPMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPMenuItem.swift; path = Source/Pages/Gallery/BottomPager/YPMenuItem.swift; sourceTree = "<group>"; };
 		A7B6BB255A3B6F151326ABFABB0BDAB2 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/Core/SDAnimatedImageRep.h; sourceTree = "<group>"; };
-		A80AA6F2A54BB1A5BCBDD290EB1CD67B /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Source/Resources/sv.lproj; sourceTree = "<group>"; };
+		A80AA6F2A54BB1A5BCBDD290EB1CD67B /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = Source/Resources/sv.lproj; sourceTree = "<group>"; };
 		A832BC389B8FDE49AE9C1BFB9F4FF607 /* GULURLSessionDataResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULURLSessionDataResponse.m; path = GoogleUtilities/Environment/URLSessionPromiseWrapper/GULURLSessionDataResponse.m; sourceTree = "<group>"; };
 		A891E07A05605681EEB5A042F43ED0E2 /* YMMProfileAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMProfileAttribute.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMProfileAttribute.h"; sourceTree = "<group>"; };
 		A8C60E394DF5C0C384640D3617A4DAD4 /* IGRPhotoTweakViewController+PHPhotoLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IGRPhotoTweakViewController+PHPhotoLibrary.swift"; path = "IGRPhotoTweaks/IGRPhotoTweakViewController+PHPhotoLibrary.swift"; sourceTree = "<group>"; };
@@ -1301,8 +1305,8 @@
 		BA19BC5578C70DF4481E985EBD24F445 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		BAEA46D6071CAE26E2DB111309C1AD2D /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
 		BB1F9DCC072346861360743E6B060FE6 /* SVProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
-		BB4A232CC53347E619D427C873A8E232 /* bg.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = bg.lproj; path = Source/Resources/bg.lproj; sourceTree = "<group>"; };
-		BBB7CBA3567C190C0DADC67B224BA7DD /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Source/Resources/pl.lproj; sourceTree = "<group>"; };
+		BB4A232CC53347E619D427C873A8E232 /* bg.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = bg.lproj; path = Source/Resources/bg.lproj; sourceTree = "<group>"; };
+		BBB7CBA3567C190C0DADC67B224BA7DD /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = Source/Resources/pl.lproj; sourceTree = "<group>"; };
 		BC560B80892B9B604C9BDBF94AF4834B /* YPPickerScreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPickerScreen.swift; path = Source/Configuration/YPPickerScreen.swift; sourceTree = "<group>"; };
 		BCAEAB497A6E386E6715A98AE55BA39D /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Source/Resources/Assets.xcassets; sourceTree = "<group>"; };
 		BCF4EB6A835AA8B661E0FF707EB40CA8 /* SDWebImageCacheSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheSerializer.h; path = SDWebImage/Core/SDWebImageCacheSerializer.h; sourceTree = "<group>"; };
@@ -1311,7 +1315,7 @@
 		BE1557AF2BA7B91F89F375949BAAE34F /* YPHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPHelper.swift; path = Source/Helpers/YPHelper.swift; sourceTree = "<group>"; };
 		BE37254BA79EF09EE40BA293DDF2DF28 /* YMMAdRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMAdRevenueInfo.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_armv7/YandexMobileMetrica.framework/Versions/A/Headers/YMMAdRevenueInfo.h"; sourceTree = "<group>"; };
 		BE8116483AD086620224BE66CFFA45AB /* collection-view-layouts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "collection-view-layouts-dummy.m"; sourceTree = "<group>"; };
-		BEBE2DFE59506B91AC274C7F044E4C51 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = Source/Resources/vi.lproj; sourceTree = "<group>"; };
+		BEBE2DFE59506B91AC274C7F044E4C51 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = Source/Resources/vi.lproj; sourceTree = "<group>"; };
 		BEDCF8A871F4B1F30AE31084807C5F8D /* YMMPluginErrorDetails.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMPluginErrorDetails.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMPluginErrorDetails.h"; sourceTree = "<group>"; };
 		C1184D7288BABA588528BAE12E0DBA01 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/Core/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		C1A1314E75995E70145F5E0FAE3E3F4A /* AVAssetTimeSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVAssetTimeSelector.swift; path = Sources/PryntTrimmerView/Parents/AVAssetTimeSelector.swift; sourceTree = "<group>"; };
@@ -1396,7 +1400,7 @@
 		DC4A0C46EAA2525163DFDD84A71E6D35 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 		DC4C63EC0D6E2072C42C27B6539B310B /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h"; sourceTree = "<group>"; };
 		DCB431A4E45D55B1641ECD3D5A867B9F /* SDWebImageOptionsProcessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOptionsProcessor.h; path = SDWebImage/Core/SDWebImageOptionsProcessor.h; sourceTree = "<group>"; };
-		DCF95022ED3257C843C6B61A7DDF096C /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Source/Resources/ro.lproj; sourceTree = "<group>"; };
+		DCF95022ED3257C843C6B61A7DDF096C /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ro.lproj; path = Source/Resources/ro.lproj; sourceTree = "<group>"; };
 		DD2124F831901CC896529F8CE4D5A7D3 /* YPBottomPagerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPBottomPagerView.swift; path = Source/Pages/Gallery/BottomPager/YPBottomPagerView.swift; sourceTree = "<group>"; };
 		DD578FF2494363A09F6AEAE2FC6B3E3B /* YandexMobileMetrica.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YandexMobileMetrica.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_i386_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YandexMobileMetrica.h"; sourceTree = "<group>"; };
 		DDF7A954DD8E68416022EC0347D73274 /* YMMStackTraceElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMStackTraceElement.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64/YandexMobileMetrica.framework/Versions/A/Headers/YMMStackTraceElement.h"; sourceTree = "<group>"; };
@@ -1418,7 +1422,7 @@
 		E26A0F761597DBA8B1D448C2B832DB09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		E26B23F395FFB8EB069E53F900F75D1D /* Google-Mobile-Ads-SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Google-Mobile-Ads-SDK.release.xcconfig"; sourceTree = "<group>"; };
 		E27F59D55F22921366ADE3519402E924 /* HorizontalDial-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HorizontalDial-umbrella.h"; sourceTree = "<group>"; };
-		E387CAB4380C1A2A2DD3AC4C4549F828 /* YandexMobileMetrica.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = YandexMobileMetrica.xcframework; path = static/YandexMobileMetrica.xcframework; sourceTree = "<group>"; };
+		E387CAB4380C1A2A2DD3AC4C4549F828 /* YandexMobileMetrica.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = YandexMobileMetrica.xcframework; path = static/YandexMobileMetrica.xcframework; sourceTree = "<group>"; };
 		E3958CDD08DC3A14D927F13508C9E2B5 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/Core/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		E3F4DF00638408147A3E48352492129C /* IGRCropView+AspectRatio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IGRCropView+AspectRatio.swift"; path = "IGRPhotoTweaks/PhotoTweakView/CropView/IGRCropView+AspectRatio.swift"; sourceTree = "<group>"; };
 		E51B590A2B1D36EFFD79CBE5E951486B /* IGRPhotoTweaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IGRPhotoTweaks.release.xcconfig; sourceTree = "<group>"; };
@@ -1432,7 +1436,7 @@
 		E8B6F1B9B641E6833EDCA41D9F353305 /* SDDeviceHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDeviceHelper.m; path = SDWebImage/Private/SDDeviceHelper.m; sourceTree = "<group>"; };
 		E8D0B0A3986FCB9951C3C0059A54F8BD /* RequestCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCompression.swift; path = Source/RequestCompression.swift; sourceTree = "<group>"; };
 		E95B328CF32B43273C467E932C027F0B /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
-		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVProgressHUD; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C9D80335EB31FA069515FD1C4016AE /* FBLPromise+Race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Race.h"; path = "Sources/FBLPromises/include/FBLPromise+Race.h"; sourceTree = "<group>"; };
 		E9E64D87CBA628A104A9251D99E2039F /* SDImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageFrame.h; path = SDWebImage/Core/SDImageFrame.h; sourceTree = "<group>"; };
 		E9F7E1E38F2BDDB6A3252A7A2C6CBE5C /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/Core/SDAnimatedImageView.h; sourceTree = "<group>"; };
@@ -1444,11 +1448,11 @@
 		EB22D2A4337182F6A984AE950459E5F8 /* IGRPhotoTweakView+Touch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IGRPhotoTweakView+Touch.swift"; path = "IGRPhotoTweaks/PhotoTweakView/IGRPhotoTweakView+Touch.swift"; sourceTree = "<group>"; };
 		EBC6F80FEF8172A2BB9D70B8D9367901 /* YPDragDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPDragDirection.swift; path = Source/Models/YPDragDirection.swift; sourceTree = "<group>"; };
 		EC09044D49600BD98E9B9FB8C52CF4B0 /* SDGraphicsImageRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDGraphicsImageRenderer.m; path = SDWebImage/Core/SDGraphicsImageRenderer.m; sourceTree = "<group>"; };
-		EC2EEE6BF2AA9B969ED3902DBA8BA37D /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Source/Resources/nl.lproj; sourceTree = "<group>"; };
+		EC2EEE6BF2AA9B969ED3902DBA8BA37D /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = Source/Resources/nl.lproj; sourceTree = "<group>"; };
 		EC4167367BAD06E61A1FE483510D1256 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/Core/SDImageCache.m; sourceTree = "<group>"; };
 		EC7A6613D7A7E2D9640F493C33A392F5 /* SDImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoader.m; path = SDWebImage/Core/SDImageLoader.m; sourceTree = "<group>"; };
 		EC9AED629F55824B84C89CEA422415A4 /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
-		ECB5A0475DF9BD6D6E95293D3C8FFB09 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Source/Resources/th.lproj; sourceTree = "<group>"; };
+		ECB5A0475DF9BD6D6E95293D3C8FFB09 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = th.lproj; path = Source/Resources/th.lproj; sourceTree = "<group>"; };
 		ECCCFE7ED4135684CE7B872FC062B14E /* YMMYandexMetricaPreloadInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMYandexMetricaPreloadInfo.h; path = "static/YandexMobileMetrica.xcframework/ios-arm64_armv7/YandexMobileMetrica.framework/Versions/A/Headers/YMMYandexMetricaPreloadInfo.h"; sourceTree = "<group>"; };
 		ED65721B0603B460D1D3E23199ADE4EA /* YPAlerts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPAlerts.swift; path = Source/Helpers/YPAlerts.swift; sourceTree = "<group>"; };
 		ED6A19AA1D301CE8D604C6091E67A542 /* SDWebImageDownloaderDecryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderDecryptor.m; path = SDWebImage/Core/SDWebImageDownloaderDecryptor.m; sourceTree = "<group>"; };
@@ -1460,8 +1464,8 @@
 		F02C6EE3CE2804A815A88E42DEF9A242 /* YMMRevenueInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YMMRevenueInfo.h; path = "static/YandexMobileMetrica.xcframework/tvos-arm64_x86_64-simulator/YandexMobileMetrica.framework/Versions/A/Headers/YMMRevenueInfo.h"; sourceTree = "<group>"; };
 		F08A9E742EBFE638DB75E684426F8576 /* SDWebImageDownloaderRequestModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderRequestModifier.h; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.h; sourceTree = "<group>"; };
 		F099FE6E9D9E005AFB8274143D156B00 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
-		F0B12643BB54CA19B3BF943900BC68D4 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Source/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
-		F0DB7CA81C2DA1E4669FDE2FF65B08C0 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Source/Resources/da.lproj; sourceTree = "<group>"; };
+		F0B12643BB54CA19B3BF943900BC68D4 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Source/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		F0DB7CA81C2DA1E4669FDE2FF65B08C0 /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = Source/Resources/da.lproj; sourceTree = "<group>"; };
 		F12A17F1B228F9E8A7AE98EC17297422 /* SDCallbackQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDCallbackQueue.m; path = SDWebImage/Core/SDCallbackQueue.m; sourceTree = "<group>"; };
 		F1A805A2FD0E983CD91B862A9C90C158 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GULReachabilityChecker+Internal.h"; path = "GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
 		F277954C40AE09AC5F211864823ADC2A /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
@@ -1493,7 +1497,7 @@
 		FB7F5630A9573DDCED349E29A428EF07 /* SDGraphicsImageRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDGraphicsImageRenderer.h; path = SDWebImage/Core/SDGraphicsImageRenderer.h; sourceTree = "<group>"; };
 		FBCDA61264217CDF9C6EA05F42257EE9 /* IGRCropMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGRCropMaskView.swift; path = IGRPhotoTweaks/PhotoTweakView/CropView/Mask/IGRCropMaskView.swift; sourceTree = "<group>"; };
 		FBCF8966B8813777CE2A357076825625 /* Stevia+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Style.swift"; path = "Source/Stevia+Style.swift"; sourceTree = "<group>"; };
-		FCA045B2545E9E5CE8E6800F702FE118 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Source/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		FCA045B2545E9E5CE8E6800F702FE118 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-PT.lproj"; path = "Source/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
 		FCEC5E533D8E034D18B3EE314AF2DA2A /* CGPoint+IGRPhotoTweakExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+IGRPhotoTweakExtension.swift"; path = "IGRPhotoTweaks/Category/CGPoint+IGRPhotoTweakExtension.swift"; sourceTree = "<group>"; };
 		FD0A6839905F5DC633227E812C4D6EC4 /* IGRPhotoScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IGRPhotoScrollView.swift; path = IGRPhotoTweaks/PhotoTweakView/ScrollViews/IGRPhotoScrollView.swift; sourceTree = "<group>"; };
 		FD40714363B327035C35EC2E3350EB08 /* FBLPromiseError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromiseError.m; path = Sources/FBLPromises/FBLPromiseError.m; sourceTree = "<group>"; };
@@ -1652,7 +1656,6 @@
 				D688C07F8C8CAE9D3C044342D3F9544F /* Static */,
 				63AD015D633B6819A15BD30481519652 /* Support Files */,
 			);
-			name = YandexMobileMetrica;
 			path = YandexMobileMetrica;
 			sourceTree = "<group>";
 		};
@@ -1706,7 +1709,6 @@
 				A584833DADEC530A5CB77FEA3D8C3C15 /* Validation.swift */,
 				76C36CC27ACDFCF630A467100B1E1EA6 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1751,7 +1753,6 @@
 				8737628D2E0802468D0FA91FF44D0F8B /* Frameworks */,
 				7255008D9C9513EC6DE8A23BB0F1D838 /* Support Files */,
 			);
-			name = GoogleUserMessagingPlatform;
 			path = GoogleUserMessagingPlatform;
 			sourceTree = "<group>";
 		};
@@ -1805,7 +1806,6 @@
 				5C3518DFC9B560C55C43E02F76F7A2A1 /* UIApplication+Load.swift */,
 				D53DB42F590547ABD79364F02AC56BA9 /* Support Files */,
 			);
-			name = Toaster;
 			path = Toaster;
 			sourceTree = "<group>";
 		};
@@ -1845,7 +1845,6 @@
 				F9807B94533C02D6F164859951891502 /* SwiftyStoreKit+Types.swift */,
 				CED34798A7B4B63364B8C62616236EC4 /* Support Files */,
 			);
-			name = SwiftyStoreKit;
 			path = SwiftyStoreKit;
 			sourceTree = "<group>";
 		};
@@ -1861,7 +1860,6 @@
 				536C688FCCC9665B7AB09CB22B6A7199 /* Reachability */,
 				2BFB9B92D83AB046028A13EF47FC8D40 /* Support Files */,
 			);
-			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
@@ -1911,7 +1909,6 @@
 				AE2C8D3461A5A364FBC9A6F4D83A6A0F /* UIImage+IGRPhotoTweakExtension.swift */,
 				E2722E76DEF1E75D32E87FE22EB2C185 /* Support Files */,
 			);
-			name = IGRPhotoTweaks;
 			path = IGRPhotoTweaks;
 			sourceTree = "<group>";
 		};
@@ -2055,7 +2052,6 @@
 				37A200F04C9061D1B09766080B140522 /* PinterestLayout */,
 				696C3651ADA71DC28753428537B3885F /* Support Files */,
 			);
-			name = "collection-view-layouts";
 			path = "collection-view-layouts";
 			sourceTree = "<group>";
 		};
@@ -2191,7 +2187,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				9CCDD88726494BF317592A25B42C9AFB /* collection-view-layouts */,
 				B43874C6CBB50E7134FBEC24BABFE14F /* GoogleUtilities */,
-				4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial */,
+				4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial.framework */,
 				9BEDFD7F7D12B9666390C3FC9CA0F1E4 /* IGRPhotoTweaks */,
 				06FC5C9CF96D60C50FCD47D339C91951 /* nanopb */,
 				52F6ACCC9C54079B29DAB0145E103BF0 /* Pods-PlantIdentifire */,
@@ -2199,8 +2195,8 @@
 				D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */,
 				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
 				DE90CE8A0DA0F3A5364FCDD4803AD3EC /* SteviaLayout */,
-				E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */,
-				32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit */,
+				E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */,
+				32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */,
 				BD810337F4A305D60D9250A197AA1EF1 /* Toaster */,
 				D6FF371B7028957C7DA552E10D3ED75E /* YPImagePicker */,
 			);
@@ -2255,7 +2251,6 @@
 				4A693B96C4A921D448E187FB7011893A /* Resources */,
 				2EF810352136A81A3453564E351074CF /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -2265,7 +2260,6 @@
 				D04B174EDC8E6457848B5796CF5B0758 /* Core */,
 				7DD50F95A4B7DA494DE20D91DF91802B /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -2282,7 +2276,6 @@
 				063D3D5E272C22BBACC918C4B2A08EC8 /* VideoScrollView.swift */,
 				C90380FCECBB67FEB0C2066B675817BA /* Support Files */,
 			);
-			name = PryntTrimmerView;
 			path = PryntTrimmerView;
 			sourceTree = "<group>";
 		};
@@ -2300,7 +2293,6 @@
 				9E69B838CC3762B3D3E8AE007F07EBCC /* encode */,
 				0CDF16272B68887221B049122E2F9779 /* Support Files */,
 			);
-			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -2311,7 +2303,6 @@
 				F5B7F92437B2EFE2300AC6C0E549375A /* Support Files */,
 				7B8BA3A6DAB7D2E7CD6856EBEFB77D5F /* WithoutAdIdSupport */,
 			);
-			name = GoogleAppMeasurement;
 			path = GoogleAppMeasurement;
 			sourceTree = "<group>";
 		};
@@ -2422,7 +2413,6 @@
 				9AF0878A981B175600B8DD46E14EED6C /* Resources */,
 				E5896B9231D6FE52EF6D6E5F4A6A3221 /* Support Files */,
 			);
-			name = YPImagePicker;
 			path = YPImagePicker;
 			sourceTree = "<group>";
 		};
@@ -2471,7 +2461,6 @@
 				F3CC917E52A106E57AC5682B0AE67AF2 /* FBLPromises.h */,
 				7D28041384B69B03B75EB9099C2FAC33 /* Support Files */,
 			);
-			name = PromisesObjC;
 			path = PromisesObjC;
 			sourceTree = "<group>";
 		};
@@ -2584,7 +2573,6 @@
 				FBCF8966B8813777CE2A357076825625 /* Stevia+Style.swift */,
 				FA2D167D8A8B0AEFC89EC24F19035264 /* Support Files */,
 			);
-			name = SteviaLayout;
 			path = SteviaLayout;
 			sourceTree = "<group>";
 		};
@@ -2611,7 +2599,6 @@
 				BA9076279ED99B57A33F8AE452AB2A67 /* Frameworks */,
 				7B2C46ED90C62583C73AB8A1E73267C9 /* Support Files */,
 			);
-			name = "Google-Mobile-Ads-SDK";
 			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
@@ -2919,7 +2906,6 @@
 				202B97A287EB777BD5344A4286E3207B /* HorizontalDial.swift */,
 				8F1B640DAF849C785696BA9CB5912D38 /* Support Files */,
 			);
-			name = HorizontalDial;
 			path = HorizontalDial;
 			sourceTree = "<group>";
 		};
@@ -3247,7 +3233,7 @@
 			);
 			name = SVProgressHUD;
 			productName = SVProgressHUD;
-			productReference = E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD */;
+			productReference = E97D43C46A45EE515A4DA3AF94398441 /* SVProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2BBF7206D7FAC92C82A042A99C4A98F8 /* PromisesObjC */ = {
@@ -3464,7 +3450,7 @@
 			);
 			name = HorizontalDial;
 			productName = HorizontalDial;
-			productReference = 4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial */;
+			productReference = 4E177D75AA1D63140E8F0EB0BF25EBC2 /* HorizontalDial.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
@@ -3500,7 +3486,7 @@
 			);
 			name = SwiftyStoreKit;
 			productName = SwiftyStoreKit;
-			productReference = 32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit */;
+			productReference = 32B68D5B8C0127052BE81786F59B46F6 /* SwiftyStoreKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -4654,7 +4640,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4688,7 +4674,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4791,7 +4777,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HorizontalDial/HorizontalDial-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HorizontalDial/HorizontalDial-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4826,7 +4812,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HorizontalDial/HorizontalDial-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HorizontalDial/HorizontalDial-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5199,7 +5185,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -5463,7 +5449,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SVProgressHUD/SVProgressHUD-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZt-jE-PlA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TZt-jE-PlA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1991,7 +1991,7 @@ kinds of plants living in nature. </string>
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Od2-a9-JIG">
-                                <rect key="frame" x="14" y="67" width="52" height="26"/>
+                                <rect key="frame" x="13.999999999999996" y="67" width="51.666666666666657" height="26"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2000,7 +2000,7 @@ kinds of plants living in nature. </string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtQ-o2-OY6">
-                                <rect key="frame" x="71" y="67" width="86" height="26"/>
+                                <rect key="frame" x="70.666666666666671" y="67" width="86.000000000000014" height="26"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2392,21 +2392,21 @@ Add the first one.</string>
                                                     <outlet property="delegate" destination="I9k-Ag-r31" id="4zp-6r-YU3"/>
                                                 </connections>
                                             </collectionView>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o14-42-hZ3">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o14-42-hZ3">
                                                 <rect key="frame" x="63" y="290" width="267" height="42"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="25"/>
                                                 <state key="normal" title="GET PREMIUM ACCESS">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="HELP ALL YOUR PLANTS THRIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-TQ-CVu">
-                                                <rect key="frame" x="63.333333333333343" y="342" width="266.66666666666663" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELP ALL YOUR PLANTS THRIVE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvu-TQ-CVu">
+                                                <rect key="frame" x="63.333333333333343" y="342" width="266.66666666666663" height="21.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                                                 <color key="textColor" red="0.34901960784313724" green="0.61176470588235299" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="WITH PLANT IDENTIFIER PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-ZR-BeH">
-                                                <rect key="frame" x="90" y="366.5" width="213" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WITH PLANT IDENTIFIER PRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-ZR-BeH">
+                                                <rect key="frame" x="90" y="366.33333333333331" width="213" height="19"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                                 <color key="textColor" red="0.34901960780000002" green="0.61176470589999998" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2770,7 +2770,7 @@ Add the first one.</string>
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="185"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Identification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-7g-pZv">
-                                        <rect key="frame" x="100" y="15.999999999999998" width="161" height="22.333333333333329"/>
+                                        <rect key="frame" x="100" y="15.999999999999998" width="161" height="22.333333333333321"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="19"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -4725,7 +4725,7 @@ Add the first one.</string>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-lL-VHf">
                                                 <rect key="frame" x="7.3333333333333357" y="7.6666666666666288" width="55" height="55"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gallery" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-AE-6rw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-AE-6rw">
                                                         <rect key="frame" x="14.666666666666671" y="13.333333333333371" width="26" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="26" id="B2y-JV-szc"/>
@@ -6447,6 +6447,7 @@ the photo you took</string>
         <image name="feedback" width="61" height="61"/>
         <image name="feedback1" width="120" height="120"/>
         <image name="flower" width="45" height="45"/>
+        <image name="gallery" width="163" height="162"/>
         <image name="globle" width="45" height="45"/>
         <image name="history" width="120" height="120"/>
         <image name="home" width="33" height="33"/>
